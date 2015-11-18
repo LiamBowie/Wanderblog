@@ -20,10 +20,10 @@
 
             function scroll() {
                 if ($(window).scrollTop() >= origOffsetY) {
-                    $('.sticky-sidebar').addClass('sticky');
+                    $('.sticky-sidebar').addClass('navbar-fixed-top');
                     $('.content').addClass('menu-padding');
                 } else {
-                    $('.sticky-sidebar').removeClass('sticky');
+                    $('.sticky-sidebar').removeClass('navbar-fixed-top');
                     $('.content').removeClass('menu-padding');
                 }
             }
