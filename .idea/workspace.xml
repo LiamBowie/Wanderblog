@@ -50,8 +50,8 @@
       <file leaf-file-name="adventure.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/adventure.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.14655173">
-              <caret line="106" column="15" selection-start-line="106" selection-start-column="15" selection-end-line="106" selection-end-column="15" />
+            <state vertical-scroll-proportion="0.05862069">
+              <caret line="103" column="31" selection-start-line="103" selection-start-column="31" selection-end-line="103" selection-end-column="31" />
               <folding>
                 <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -397,7 +397,13 @@
       <option name="project" value="LOCAL" />
       <updated>1447859793856</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="Edited the blog part of the adventure page">
+      <created>1447860694208</created>
+      <option name="number" value="00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1447860694208</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -436,7 +442,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Changed div class to  class=&quot;form-group&quot;" />
     <MESSAGE value="Moved the login form to the left" />
     <MESSAGE value="Moved the login form back into the list" />
     <MESSAGE value="Added style to #loginform (padding-top: 5px;)" />
@@ -461,7 +466,8 @@
     <MESSAGE value="padding-top: 75px;" />
     <MESSAGE value="padding-top has been added to &lt;body&gt; in the style.css file" />
     <MESSAGE value="padding-top has been added to &lt;body&gt; in the adventure page" />
-    <option name="LAST_COMMIT_MESSAGE" value="padding-top has been added to &lt;body&gt; in the adventure page" />
+    <MESSAGE value="Edited the blog part of the adventure page" />
+    <option name="LAST_COMMIT_MESSAGE" value="Edited the blog part of the adventure page" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -514,8 +520,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/adventure.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.14655173">
-          <caret line="106" column="15" selection-start-line="106" selection-start-column="15" selection-end-line="106" selection-end-column="15" />
+        <state vertical-scroll-proportion="0.05862069">
+          <caret line="103" column="31" selection-start-line="103" selection-start-column="31" selection-end-line="103" selection-end-column="31" />
           <folding>
             <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
