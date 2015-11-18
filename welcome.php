@@ -88,24 +88,24 @@
 							</div>
 							<div class="col-sm-6">
 								<label for="surname">Last name</label>
-								<input type="text" class="form-control" id="lastName" placeholder="Took">
+								<input type="text" class="form-control" name="lastName" placeholder="Took">
 							</div>
 						</div>
 						<div class="form-group">
 							<label for="username"><span class="glyphicon glyphicon-user"></span> Username</label>
-							<input type="text" class="form-control" id="userID" placeholder="FoolOfATook">
+							<input type="text" class="form-control" name="userID" placeholder="FoolOfATook">
 						</div>
 						<div class="form-group">
 							<label for="email"><span class="glyphicon glyphicon-envelope"></span> Email Address</label>
-							<input type="text" class="form-control" id="email" placeholder="WhatAboutSecondBreakfast@hobbitmail.com">
+							<input type="text" class="form-control" name="email" placeholder="WhatAboutSecondBreakfast@hobbitmail.com">
 						</div>
 						<div class="form-group">
 							<label for="password"><span class="glyphicon glyphicon-lock"></span> Password</label>
-							<input type="password" class="form-control" id="password" placeholder="Password">
+							<input type="password" class="form-control" name="password" placeholder="Password">
 						</div>
 						<div class="form-group">
 							<label for="passwordconfirm"><span class="glyphicon glyphicon-lock"></span> Confirm Password</label>
-							<input type="password" class="form-control" id="passwordconfirm" placeholder="Password">
+							<input type="password" class="form-control" name="passwordconfirm" placeholder="Password">
 						</div>
 						<button type="submit" class="btn btn-block">
 							Submit<span class="glyphicon glyphicon-ok"></span>
