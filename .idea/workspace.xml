@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="bc344c8e-2cfd-4899-8290-d8c617913e27" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/adventure.php" afterPath="$PROJECT_DIR$/adventure.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/style.css" afterPath="$PROJECT_DIR$/style.css" />
     </list>
     <ignored path="Wanderblog.iws" />
@@ -56,20 +55,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.9245284">
-              <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
+            <state vertical-scroll-proportion="0.15370706">
+              <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="adventure.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="adventure.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/adventure.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.87931037">
+            <state vertical-scroll-proportion="-19.615385">
               <caret line="43" column="96" selection-start-line="43" selection-start-column="96" selection-end-line="43" selection-end-column="96" />
               <folding>
                 <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -100,8 +99,8 @@
         <option value="$PROJECT_DIR$/script.js" />
         <option value="$PROJECT_DIR$/about.php" />
         <option value="$PROJECT_DIR$/welcome.php" />
-        <option value="$PROJECT_DIR$/style.css" />
         <option value="$PROJECT_DIR$/adventure.php" />
+        <option value="$PROJECT_DIR$/style.css" />
       </list>
     </option>
   </component>
@@ -210,12 +209,6 @@
       <created>1447686545483</created>
       <option name="number" value="Default" />
       <updated>1447686545483</updated>
-    </task>
-    <task id="LOCAL-00032" summary="padding-top: 75px;">
-      <created>1447859383127</created>
-      <option name="number" value="00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1447859383127</updated>
     </task>
     <task id="LOCAL-00033" summary="padding-top has been added to &lt;body&gt; in the style.css file">
       <created>1447859554432</created>
@@ -505,7 +498,13 @@
       <option name="project" value="LOCAL" />
       <updated>1447874083999</updated>
     </task>
-    <option name="localTasksCounter" value="81" />
+    <task id="LOCAL-00081" summary="Edited some values (data-offset, some css stuff)">
+      <created>1447874172176</created>
+      <option name="number" value="00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1447874172176</updated>
+    </task>
+    <option name="localTasksCounter" value="82" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -544,7 +543,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Edited the blog part of the adventure page" />
     <MESSAGE value="Edited adventure page" />
     <MESSAGE value="Edited links in side navbar" />
     <MESSAGE value="Edited side navbar" />
@@ -569,7 +567,8 @@
     <MESSAGE value="Dicking about with the data-offset attr in the body of the adventure page&#10;&#10;: 90 (Pretty sure this one will be what we're looking for! For sure this time)" />
     <MESSAGE value="Trying to edit where links take you to in a page" />
     <MESSAGE value="Trying to edit where links take you to in a page&#10;&#10;May have it!" />
-    <option name="LAST_COMMIT_MESSAGE" value="Trying to edit where links take you to in a page&#10;&#10;May have it!" />
+    <MESSAGE value="Edited some values (data-offset, some css stuff)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Edited some values (data-offset, some css stuff)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -743,21 +742,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.9245284">
-          <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/adventure.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.87931037">
+        <state vertical-scroll-proportion="-19.615385">
           <caret line="43" column="96" selection-start-line="43" selection-start-column="96" selection-end-line="43" selection-end-column="96" />
           <folding>
             <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.15370706">
+          <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+          <folding />
         </state>
       </provider>
     </entry>
