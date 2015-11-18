@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="bc344c8e-2cfd-4899-8290-d8c617913e27" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/style.css" afterPath="$PROJECT_DIR$/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/welcome.php" afterPath="$PROJECT_DIR$/welcome.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/adventure.php" afterPath="$PROJECT_DIR$/adventure.php" />
     </list>
     <ignored path="Wanderblog.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -38,10 +37,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.03074141">
+            <state vertical-scroll-proportion="-0.3207547">
               <caret line="1" column="18" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="18" />
               <folding />
             </state>
@@ -58,11 +57,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="adventure.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="adventure.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/adventure.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.65384614">
-              <caret line="38" column="9" selection-start-line="38" selection-start-column="9" selection-end-line="38" selection-end-column="9" />
+            <state vertical-scroll-proportion="0.11724138">
+              <caret line="41" column="28" selection-start-line="41" selection-start-column="28" selection-end-line="41" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -78,9 +77,9 @@
       <list>
         <option value="$PROJECT_DIR$/welcome.html" />
         <option value="$PROJECT_DIR$/about.php" />
-        <option value="$PROJECT_DIR$/adventure.php" />
         <option value="$PROJECT_DIR$/welcome.php" />
         <option value="$PROJECT_DIR$/style.css" />
+        <option value="$PROJECT_DIR$/adventure.php" />
       </list>
     </option>
   </component>
@@ -388,7 +387,19 @@
       <option name="project" value="LOCAL" />
       <updated>1447859554432</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="padding-top has been added to &lt;body&gt; in the style.css file">
+      <created>1447859678546</created>
+      <option name="number" value="00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1447859678546</updated>
+    </task>
+    <task id="LOCAL-00035" summary="padding-top has been added to &lt;body&gt; in the adventure page">
+      <created>1447859761795</created>
+      <option name="number" value="00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1447859761795</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -427,7 +438,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added a div around the inputs of the login form. The div has class=&quot;form-control&quot;" />
     <MESSAGE value="Changed div class to  class=&quot;form-group&quot;" />
     <MESSAGE value="Moved the login form to the left" />
     <MESSAGE value="Moved the login form back into the list" />
@@ -452,7 +462,8 @@
     <MESSAGE value="padding-top: 15px;" />
     <MESSAGE value="padding-top: 75px;" />
     <MESSAGE value="padding-top has been added to &lt;body&gt; in the style.css file" />
-    <option name="LAST_COMMIT_MESSAGE" value="padding-top has been added to &lt;body&gt; in the style.css file" />
+    <MESSAGE value="padding-top has been added to &lt;body&gt; in the adventure page" />
+    <option name="LAST_COMMIT_MESSAGE" value="padding-top has been added to &lt;body&gt; in the adventure page" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -485,14 +496,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/adventure.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.65384614">
-          <caret line="38" column="9" selection-start-line="38" selection-start-column="9" selection-end-line="38" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/welcome.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-11.115385">
@@ -505,8 +508,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.03074141">
+        <state vertical-scroll-proportion="-0.3207547">
           <caret line="1" column="18" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/adventure.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.11724138">
+          <caret line="41" column="28" selection-start-line="41" selection-start-column="28" selection-end-line="41" selection-end-column="28" />
           <folding />
         </state>
       </provider>
