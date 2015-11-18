@@ -135,14 +135,15 @@
 	</div>
 
 	<script>
+        $(document).ready(function () { $("#txtConfirmPassword").keyup(checkPasswordMatch); });
+
         function checkPasswordMatch() {
             var password = $("#password").val();
             var confirmPassword = $("#passwordconfirm").val();
 
-            if (password != confirmPassword)
-                $("#divCheckPasswordMatch").html("Passwords do not match!");
-            else
-                $("#divCheckPasswordMatch").html("Passwords match.");
+            if (password != confirmPassword){ $("#divCheckPasswordMatch").html("Passwords do not match!"); }
+            else{ $("#divCheckPasswordMatch").html("Passwords match."); }
+
         }
     </script>
 
