@@ -110,9 +110,7 @@
             <h4><small>PHOTOS</small></h4>
             <hr>
             <h2>Check out these photos of my adventure to LOCATION</h2>
-            <h5><span class="label label-success">TAG</span></h5><br>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            <hr>
+            <p><strong>GRID OF IMAGES. IMPLEMENT LATER. TOO LAZY JUST NOW.</strong></p>
 
             <h4>Leave a Comment:</h4>
             <form role="form">
@@ -127,7 +125,7 @@
 
             <div class="row">
                 <div class="col-sm-2 text-center">
-                    <img src="bandmember.jpg" class="img-circle" height="65" width="65" alt="Avatar">
+                    <img src="Images/jo.jpg" class="img-circle" height="65" width="65" alt="Avatar">
                 </div>
                 <div class="col-sm-10">
                     <h4>Anja <small>Sep 29, 2015, 9:12 PM</small></h4>
@@ -135,7 +133,7 @@
                     <br>
                 </div>
                 <div class="col-sm-2 text-center">
-                    <img src="bird.jpg" class="img-circle" height="65" width="65" alt="Avatar">
+                    <img src="Images/jo.jpg" class="img-circle" height="65" width="65" alt="Avatar">
                 </div>
                 <div class="col-sm-10">
                     <h4>John Row <small>Sep 25, 2015, 8:25 PM</small></h4>
@@ -144,7 +142,7 @@
                     <p><span class="badge">1</span> Comment:</p><br>
                     <div class="row">
                         <div class="col-sm-2 text-center">
-                            <img src="bird.jpg" class="img-circle" height="65" width="65" alt="Avatar">
+                            <img src="Images/jo.jpg" class="img-circle" height="65" width="65" alt="Avatar">
                         </div>
                         <div class="col-xs-10">
                             <h4>Nested Bro <small>Sep 25, 2015, 8:28 PM</small></h4>
