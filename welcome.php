@@ -70,7 +70,7 @@
 
 
 	<!-- Modal -->
-	<div class="modal fade" id="modal-reg" role="dialog">
+	<div class="modal fade" id="modal-reg" role="dialog" style="padding-top: 20px">
 		<div class="modal-dialog">
 
 			 <!-- Modal content-->
@@ -110,7 +110,7 @@
                         <div class="form-group">
                             <div class="row">
                                 <div class="col-sm-1">
-                                    <input type="hidden" name="notReallyNeeded" value="0" />
+                                    <input type="hidden" name="authorCheck" value="0" />
                                     <input type="checkbox" name="authorCheck" value="1">
                                 </div>
                                 <div class="col-sm-9">
