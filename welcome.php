@@ -11,6 +11,7 @@
 	<!--Link to personal Stylesheet-->
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link rel="shortcut icon" href="images/earth.ico">
+	<script type="text/javascript" src="script.js"></script>
 	<?php include'connect.php'; ?> <!-- include connection to db -->
 	
 	<!-- Additional Styling for Current Page -->
