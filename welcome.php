@@ -46,8 +46,8 @@
 					<li><a href="#" data-toggle="modal" data-target="#modal-reg">REGISTER</a></li>
 					<li>
 						<form style="padding-top: 10px" class="form-inline" action="login.php" method="post">
-							<input class="form-control" type="text" name="usernameInput" placeholder="Username">
-							<input class="form-control" type="password" name="passwordInput" placeholder="Password">
+							<input class="form-control" type="text" name="usernameInput" placeholder="Username" required>
+							<input class="form-control" type="password" name="passwordInput" placeholder="Password" required>
 							<button type="submit" class="btn btn-success"> LOGIN</button>
 						</form>
 					</li>
