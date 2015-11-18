@@ -1,23 +1,18 @@
-$(document).ready(function(){
-	
-	// Add smooth scrolling to all links in navbar + footer link
-	$(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+$(document).ready(function () {
 
-	// Prevent default anchor click behavior
-	event.preventDefault();
+	var menu = $('.sticky-sidebar');
+	var origOffsetY = menu.offset().top;
 
-	// Store hash
-	var hash = this.hash;
+	function scroll() {
+		if ($(window).scrollTop() >= origOffsetY) {
+			$('.sticky-sidebar').addClass('sticky');
+			$('.content').addClass('menu-padding');
+		} else {
+			$('.sticky-sidebar').removeClass('sticky');
+			$('.content').removeClass('menu-padding');
+		}
+	}
 
-	// Using jQuery's animate() method to add smooth page scroll
-	// The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
-	$('html, body').animate({
-		scrollTop: $(hash).offset().top
-	}, 900, function(){
+	document.onscroll = scroll;
 
-	// Add hash (#) to URL when done scrolling (default click behavior)
-    window.location.hash = hash;
-	
-    });
-  });
-})
+});
