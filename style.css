@@ -1,68 +1,67 @@
-<style>	
+body{
+	padding-top: 60px;
+}
 
+/* Carousel Styling */
+.carousel-inner img{
+	width: 100%;
+	min-height: 500px;
+	max-height: 500px;
+	margin: auto;
+}
 
-  
-	/* Carousel Styling */
-	.carousel-inner img{
-		width: 100%;
-		min-height: 500px;
-		max-height: 500px;
-		margin: auto;
-	}
-	
-	/* About section styling */ 	
-	.bg-grey {
-		background-color: #f6f6f6;
-	}
-	
-	.logo {
-		padding: 20px;
-		font-size: 200px;
-		color: #19BEF0;
-	}
-	
-	/* Navbar styling */
-	.navbar {
-		margin-bottom: 0;
-		background-color: #19BEF0;
-		z-index: 9999;
-		border: 0;
-		font-size: 12px !important;
-		line-height: 1.42857143 !important;
-		letter-spacing: 4px;
-		border-radius: 0;
-	}
+/* About section styling */
+.bg-grey {
+	background-color: #f6f6f6;
+}
 
-	.navbar li a, .navbar .navbar-brand {
-		color: #fff !important;
-	}
+.logo {
+	padding: 20px;
+	font-size: 200px;
+	color: #19BEF0;
+}
 
-	.navbar-nav li a:hover, .navbar-nav li.active a {
-		color: black !important;
-		background-color: #fff !important;
-	}
+/* Navbar styling */
+.navbar {
+	margin-bottom: 0;
+	background-color: #19BEF0;
+	z-index: 9999;
+	border: 0;
+	font-size: 12px !important;
+	line-height: 1.42857143 !important;
+	letter-spacing: 4px;
+	border-radius: 0;
+}
 
-	.navbar-default .navbar-toggle {
-		border-color: transparent;
-		color: #fff !important;
+.navbar li a, .navbar .navbar-brand {
+	color: #fff !important;
+}
+
+.navbar-nav li a:hover, .navbar-nav li.active a {
+	color: black !important;
+	background-color: #fff !important;
+}
+
+.navbar-default .navbar-toggle {
+	border-color: transparent;
+	color: #fff !important;
+}
+
+.dropdown-menu{
+	background-color: #19BEF0;
+}
+/* Footer Styling */
+.bg-4 {
+	background-color: #2f2f2f;
+	color: #ffffff;
+	padding: 20px;
+	height: 75px;
+}
+
+/* Responsive styling */
+@media screen and (max-width: 768px) {
+	.col-sm-4 {
+		text-align: center;
+		margin: 25px 0;
 	}
-	
-	.dropdown-menu{
-		background-color: #19BEF0;
-	}
-	/* Footer Styling */
-	.bg-4 { 
-		background-color: #2f2f2f;
-		color: #ffffff;
-		padding: 20px;
-		height: 75px;
-	}
-	
-	/* Responsive styling */
-	@media screen and (max-width: 768px) {
-		.col-sm-4 {
-			text-align: center;
-			margin: 25px 0;
-		}
-	}
-	</style>
+}

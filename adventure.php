@@ -37,9 +37,6 @@
             }
             .row.content {height: auto;}
         }
-        body{
-            padding-top: 75px;
-        }
     </style>
 </head>
 <body>
