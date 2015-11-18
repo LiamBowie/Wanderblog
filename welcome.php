@@ -107,7 +107,7 @@
 							<label for="passwordconfirm"><span class="glyphicon glyphicon-lock"></span> Confirm Password</label>
 							<input type="password" class="form-control" name="passwordconfirm" placeholder="Password" required>
 						</div>
-                        <div class="form-group">
+                        <!-- <div class="form-group">
                             <div class="row">
                                 <div class="col-sm-1">
                                     <input type="hidden" name="authorCheck" value="0" />
@@ -118,7 +118,7 @@
                                 </div>
                                 <div class="col-sm-2"></div>
                             </div>
-                        </div>
+                        </div> -->
 						<button type="submit" class="btn btn-block btn-success">
 							Submit<span class="glyphicon glyphicon-ok"></span>
 						</button>
