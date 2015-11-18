@@ -110,7 +110,8 @@
                         <div class="form-group">
                             <div class="row">
                                 <div class="col-sm-1">
-                                    <input type="checkbox">
+                                    <input type="hidden" name="notReallyNeeded" value="0" />
+                                    <input type="checkbox" name="authorCheck" value="1">
                                 </div>
                                 <div class="col-sm-9">
                                     <label>Check this box to sign up as a Wanderlog Author</label>
