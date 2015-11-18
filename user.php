@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>New Adventure</title>
+        <title>Created User</title>
         <?php
             ini_set('display_errors', 1);
             ini_set('display_startup_errors', 1);
@@ -19,7 +19,7 @@
         $output="";
         if(mysqli_num_rows($results)>0){
             while($row = mysqli_fetch_array($results)) {
-                $output = $output . "userID: " . $row['userID'] . "<br>" . "Password: " . $row['password'] . "<br>" . "firstName: " . $row['firstName'] . "<br>" . "email: " . $row['emailAddress'] . "<br>";
+                $output = $output . "userID: " . $row['userID'] . "<br>" . "Password: " . $row['password'] . "<br>" . "firstName: " . $row['firstName'] . "<br>" . "email: " . $row['emailAddress'] . "<br>" . "<br>";
             }
             echo $output;
         }
