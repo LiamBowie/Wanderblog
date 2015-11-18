@@ -12,24 +12,7 @@
     <!-- Personal links -->
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="images/earth.ico">
-    <script language="javascript" type="text/javascript">
-        $(document).ready(function () {
-
-            var menu = $('.sticky-sidebar');
-            var origOffsetY = menu.offset().top;
-
-            function scroll() {
-                if ($(window).scrollTop() >= origOffsetY) {
-                    $('.sticky-sidebar').addClass('navbar-fixed-top');
-                    $('.content').addClass('menu-padding');
-                } else {
-                    $('.sticky-sidebar').removeClass('navbar-fixed-top');
-                    $('.content').removeClass('menu-padding');
-                }
-            }
-            document.onscroll = scroll;
-        });
-    </script>
+    <script language="javascript" type="text/javascript" src="script.js"></script>
 
     <style>
         /* Set height of the grid so .sidenav can be 100% (adjust if needed) */

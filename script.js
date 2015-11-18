@@ -16,7 +16,21 @@ $(document).ready(function(){
 	}, 900, function(){
 
 	// Add hash (#) to URL when done scrolling (default click behavior)
-    window.location.hash = hash;
+	window.location.hash = hash;
+
+	var menu = $('.sticky-sidebar');
+	var origOffsetY = menu.offset().top;
+
+	function scroll() {
+		if ($(window).scrollTop() >= origOffsetY) {
+			$('.sticky-sidebar').addClass('navbar-fixed-top');
+			$('.content').addClass('menu-padding');
+		} else {
+			$('.sticky-sidebar').removeClass('navbar-fixed-top');
+			$('.content').removeClass('menu-padding');
+		}
+	}
+	document.onscroll = scroll;
 
     });
   });

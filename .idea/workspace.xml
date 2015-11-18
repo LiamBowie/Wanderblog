@@ -4,6 +4,7 @@
     <list default="true" id="bc344c8e-2cfd-4899-8290-d8c617913e27" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/adventure.php" afterPath="$PROJECT_DIR$/adventure.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/script.js" afterPath="$PROJECT_DIR$/script.js" />
     </list>
     <ignored path="Wanderblog.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -47,11 +48,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="adventure.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="adventure.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/adventure.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5553539">
-              <caret line="25" column="70" selection-start-line="25" selection-start-column="70" selection-end-line="25" selection-end-column="70" />
+            <state vertical-scroll-proportion="-2.1636364">
+              <caret line="14" column="71" selection-start-line="14" selection-start-column="71" selection-end-line="14" selection-end-column="71" />
               <folding>
                 <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#form#0;n#li#2;n#ul#0;n#div#1;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -60,11 +61,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="script.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="script.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/script.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="12" column="22" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
+            <state vertical-scroll-proportion="0.5284974">
+              <caret line="18" column="32" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -82,8 +83,8 @@
         <option value="$PROJECT_DIR$/about.php" />
         <option value="$PROJECT_DIR$/style.css" />
         <option value="$PROJECT_DIR$/welcome.php" />
-        <option value="$PROJECT_DIR$/script.js" />
         <option value="$PROJECT_DIR$/adventure.php" />
+        <option value="$PROJECT_DIR$/script.js" />
       </list>
     </option>
   </component>
@@ -469,7 +470,13 @@
       <option name="project" value="LOCAL" />
       <updated>1447864706900</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="Edited the JQuery&#10;">
+      <created>1447864870064</created>
+      <option name="number" value="00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1447864870064</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -508,7 +515,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Removed the div around the inputs of the loginform" />
     <MESSAGE value="Added classes to login form inputs" />
     <MESSAGE value="Changed form class to &quot;form-inline&quot;" />
     <MESSAGE value="Added style to the Form tag" />
@@ -533,7 +539,8 @@
     <MESSAGE value="Edited side navbar" />
     <MESSAGE value="Added jquery that will hopefully make the sidebar in adventure sticky" />
     <MESSAGE value="Added the JQuery Link" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added the JQuery Link" />
+    <MESSAGE value="Edited the JQuery&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Edited the JQuery&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -584,22 +591,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/script.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="22" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/adventure.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5553539">
-          <caret line="25" column="70" selection-start-line="25" selection-start-column="70" selection-end-line="25" selection-end-column="70" />
+        <state vertical-scroll-proportion="-2.1636364">
+          <caret line="14" column="71" selection-start-line="14" selection-start-column="71" selection-end-line="14" selection-end-column="71" />
           <folding>
             <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#form#0;n#li#2;n#ul#0;n#div#1;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5284974">
+          <caret line="18" column="32" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
+          <folding />
         </state>
       </provider>
     </entry>
