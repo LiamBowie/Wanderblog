@@ -105,8 +105,9 @@
 						</div>
 						<div class="form-group">
 							<label for="passwordconfirm"><span class="glyphicon glyphicon-lock"></span> Confirm Password</label>
-							<input type="password" class="form-control" name="passwordconfirm" placeholder="Password" required>
+							<input type="password" class="form-control" name="passwordconfirm" placeholder="Password" onChange="checkPasswordMatch();" required>
 						</div>
+                        <div class="registrationFormAlert" id="divCheckPasswordMatch"></div>
                         <div class="form-group">
                             <div class="row">
                                 <div class="col-sm-1">
@@ -133,9 +134,17 @@
 		</div>
 	</div>
 
-	<?php
-	/* PHP FOR REGISTER */
-	?>
+	<script>
+        function checkPasswordMatch() {
+            var password = $("#password).val();
+            var confirmPassword = $("#passwordconfirm").val();
+
+            if (password != confirmPassword)
+                $("#divCheckPasswordMatch").html("Passwords do not match!");
+            else
+                $("#divCheckPasswordMatch").html("Passwords match.");
+        }
+    </script>
 
 	<div class="jumbotron text-center">
 		<h1>Wanderblog</h1> 
