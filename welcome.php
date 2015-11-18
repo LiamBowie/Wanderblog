@@ -88,7 +88,7 @@
 							</div>
 							<div class="col-sm-6">
 								<label for="surname">Last name</label>
-								<input type="text" class="form-control" name="lastName" placeholder="Took">
+								<input type="text" class="form-control" name="lastName" placeholder="Took" required>
 							</div>
 						</div>
 						<div class="form-group">
@@ -97,15 +97,15 @@
 						</div>
 						<div class="form-group">
 							<label for="email"><span class="glyphicon glyphicon-envelope"></span> Email Address</label>
-							<input type="text" class="form-control" name="email" placeholder="WhatAboutSecondBreakfast@hobbitmail.com">
+							<input type="text" class="form-control" name="email" placeholder="WhatAboutSecondBreakfast@hobbitmail.com" required>
 						</div>
 						<div class="form-group">
 							<label for="password"><span class="glyphicon glyphicon-lock"></span> Password</label>
-							<input type="password" class="form-control" name="password" placeholder="Password">
+							<input type="password" class="form-control" name="password" placeholder="Password" required>
 						</div>
 						<div class="form-group">
 							<label for="passwordconfirm"><span class="glyphicon glyphicon-lock"></span> Confirm Password</label>
-							<input type="password" class="form-control" name="passwordconfirm" placeholder="Password">
+							<input type="password" class="form-control" name="passwordconfirm" placeholder="Password" required>
 						</div>
                         <div class="form-group">
                             <div class="row">
