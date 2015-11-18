@@ -109,13 +109,13 @@
 						</div>
                         <div class="form-group">
                             <div class="row">
-                                <div class="col-sm-2">
+                                <div class="col-sm-1">
                                     <input type="checkbox">
                                 </div>
-                                <div class="col-sm-2">
+                                <div class="col-sm-9">
                                     <label>Check this box to sign up as a Wanderlog Author</label>
                                 </div>
-                                <div class="col-sm-8"></div>
+                                <div class="col-sm-2"></div>
                             </div>
                         </div>
 						<button type="submit" class="btn btn-block">
