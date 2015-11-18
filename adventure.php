@@ -83,11 +83,13 @@
             <h4 class="text-center">LOCATION</h4>
             <img src="Images/jo.jpg" class="img-thumbnail img-responsive" alt="Adventure Photo">
             <h5><span class="glyphicon glyphicon-time"></span> Post by *USER*, Sep 27, 2015.</h5>
-            <ul class="nav nav-pills nav-stacked">
-                <li class="active"><a href="#">Adventure Description</a></li>
-                <li><a href="#photos">Photos</a></li>
-                <li><a href="#comments">Comments</a></li>
-            </ul><br>
+            <nav class="navbar-fixed-top">
+                <ul class="nav nav-pills nav-stacked">
+                    <li class="active"><a href="#">Adventure Description</a></li>
+                    <li><a href="#photos">Photos</a></li>
+                    <li><a href="#comments">Comments</a></li>
+                </ul><br>
+            </nav>
             <div class="input-group">
                 <input type="text" class="form-control" placeholder="Search Blog..">
                 <span class="input-group-btn">

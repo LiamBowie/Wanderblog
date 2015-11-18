@@ -4,7 +4,6 @@
     <list default="true" id="bc344c8e-2cfd-4899-8290-d8c617913e27" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/adventure.php" afterPath="$PROJECT_DIR$/adventure.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/welcome.php" afterPath="$PROJECT_DIR$/welcome.php" />
     </list>
     <ignored path="Wanderblog.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -51,8 +50,8 @@
       <file leaf-file-name="adventure.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/adventure.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.51724136">
-              <caret line="87" column="36" selection-start-line="87" selection-start-column="36" selection-end-line="87" selection-end-column="36" />
+            <state vertical-scroll-proportion="0.4863884">
+              <caret line="91" column="18" selection-start-line="91" selection-start-column="18" selection-end-line="91" selection-end-column="18" />
               <folding>
                 <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -428,7 +427,13 @@
       <option name="project" value="LOCAL" />
       <updated>1447863304439</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="Edited links in side navbar">
+      <created>1447863480198</created>
+      <option name="number" value="00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1447863480198</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -467,7 +472,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Moved the login form back into the list" />
     <MESSAGE value="Added style to #loginform (padding-top: 5px;)" />
     <MESSAGE value="Fixed a typo and changed the loginform id" />
     <MESSAGE value="Removed the div around the inputs" />
@@ -492,7 +496,8 @@
     <MESSAGE value="padding-top has been added to &lt;body&gt; in the adventure page" />
     <MESSAGE value="Edited the blog part of the adventure page" />
     <MESSAGE value="Edited adventure page" />
-    <option name="LAST_COMMIT_MESSAGE" value="Edited adventure page" />
+    <MESSAGE value="Edited links in side navbar" />
+    <option name="LAST_COMMIT_MESSAGE" value="Edited links in side navbar" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -545,8 +550,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/adventure.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.51724136">
-          <caret line="87" column="36" selection-start-line="87" selection-start-column="36" selection-end-line="87" selection-end-column="36" />
+        <state vertical-scroll-proportion="0.4863884">
+          <caret line="91" column="18" selection-start-line="91" selection-start-column="18" selection-end-line="91" selection-end-column="18" />
           <folding>
             <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
