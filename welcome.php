@@ -107,16 +107,16 @@
 						<div class="form-group">
 							<div class="col-sm-6">
 								<label for="firstname">First Name</label>
-								<input type="text" class="form-control" id="firstname" placeholder="E.g Peregrin">
+								<input type="text" class="form-control" id="firstName" placeholder="E.g Peregrin">
 							</div>
 							<div class="col-sm-6">
 								<label for="surname">Last name</label>
-								<input type="text" class="form-control" id="surname" placeholder="Took">
+								<input type="text" class="form-control" id="lastName" placeholder="Took">
 							</div>
 						</div>
 						<div class="form-group">
 							<label for="username"><span class="glyphicon glyphicon-user"></span> Username</label>
-							<input type="text" class="form-control" id="username" placeholder="FoolOfATook">
+							<input type="text" class="form-control" id="userID" placeholder="FoolOfATook">
 						</div>
 						<div class="form-group">
 							<label for="email"><span class="glyphicon glyphicon-envelope"></span> Email Address</label>
@@ -147,7 +147,9 @@
 	<?php
 	/* PHP FOR REGISTER */
 		if($_POST['passwordconfirm'] == $_POST['password']){
-			$sql = "INSERT INTO User(";
+			$sql= "INSERT INTO User VALUES(" . "'" . $_POST['userID'] . "', '" . $_POST['password'] . "', '" . $_POST['firstName'] . "', '" . $_POST['lastName'] . "', '" . $_POST['email'] . "', 0);";
+			$results=mysqli_query($conn, $query);
+			header("Location: user.php");
 		}
 	?>
 
