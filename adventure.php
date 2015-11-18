@@ -14,15 +14,15 @@
     <link rel="shortcut icon" href="images/earth.ico">
     <script type="text/javascript" src="script.js">
         $(document).ready(function(){
-            var menu = $('.menu');
+            var menu = $('.sticky-sidebar');
             var origOffsetY = menu.offset().top;
 
             function scroll() {
                 if ($(window).scrollTop() >= origOffsetY) {
-                    $('.menu').addClass('sticky');
+                    $('.sticky-sidebar').addClass('navbar-fixed-top');
                     $('.content').addClass('menu-padding');
                 } else {
-                    $('.menu').removeClass('sticky');
+                    $('.sticky-sidebar').removeClass('navbar-fixed-top');
                     $('.content').removeClass('menu-padding');
                 }
             }
