@@ -7,12 +7,12 @@
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-    <script language="javascript" type="text/javascript" src="jquery-1.8.3.js"></script>
+    <script src="jquery-1.11.3.min.js"></script>
 
     <!-- Personal links -->
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="images/earth.ico">
-    <script language="javascript" type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="script.js"></script>
 
     <style>
         /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
