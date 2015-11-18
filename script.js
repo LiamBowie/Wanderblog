@@ -17,21 +17,27 @@ $(document).ready(function(){
 
 	// Add hash (#) to URL when done scrolling (default click behavior)
 	window.location.hash = hash;
+    });
+  });
+});
 
-	var menu = $('.sticky-sidebar');
+$(document).ready(function () {
+
+	var menu = $('.menu');
 	var origOffsetY = menu.offset().top;
 
 	function scroll() {
 		if ($(window).scrollTop() >= origOffsetY) {
-			$('.sticky-sidebar').addClass('navbar-fixed-top');
+			$('.menu').addClass('sticky');
 			$('.content').addClass('menu-padding');
 		} else {
-			$('.sticky-sidebar').removeClass('navbar-fixed-top');
+			$('.menu').removeClass('sticky');
 			$('.content').removeClass('menu-padding');
 		}
+
+
 	}
+
 	document.onscroll = scroll;
 
-    });
-  });
-})
+});
