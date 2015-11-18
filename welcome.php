@@ -108,14 +108,7 @@
 							<input type="password" class="form-control" name="passwordconfirm" placeholder="Password">
 						</div>
                         <div class="form-group">
-                            <div class="row">
-                                <div class="col-sm-2">
-                                    <input type="checkbox" value="">
-                                </div>
-                                <div class="col-sm-10">
-                                    <label>Check this box to sign up as a Wanderblog Author</label>
-                                </div>
-                            </div>
+                            <label><input type="checkbox">Check this box to sign up as a Wanderblog Author</label>
 						<button type="submit" class="btn btn-block">
 							Submit<span class="glyphicon glyphicon-ok"></span>
 						</button>
