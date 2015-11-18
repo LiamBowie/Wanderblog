@@ -84,7 +84,7 @@
 						<div class="form-group">
 							<div class="col-sm-6">
 								<label for="firstname">First Name</label>
-								<input type="text" class="form-control" name="firstName" placeholder="E.g Peregrin" value="Jordan">
+								<input type="text" name="firstName" placeholder="E.g Peregrin" value="Jordan">
 							</div>
 							<div class="col-sm-6">
 								<label for="surname">Last name</label>
