@@ -13,8 +13,15 @@
 
     <body>
         <?php
+
         // Send query to db
-        $query = "SELECT * FROM User";
+        if($_GET['u']=='unknown'){
+            $query = "SELECT * FROM User";
+        }
+        else{
+            $query = "SELECT * FROM User WHERE userID='" . $_GET['u'] . "';";
+        }
+
         $results = mysqli_query($conn, $query);
 
         // Output results

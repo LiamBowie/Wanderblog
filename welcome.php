@@ -84,7 +84,7 @@
 					session_start();
 					$_SESSION['username']=$username;
 					$_SESSION['access_level']='standard_user';
-					header("Location: https://google.com");
+					header("Location: user.php?u=" . $_SESSION['username']);
 				}
 			}
 		}
