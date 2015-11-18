@@ -48,8 +48,8 @@
       <file leaf-file-name="adventure.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/adventure.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.45553538">
-              <caret line="21" column="55" selection-start-line="21" selection-start-column="55" selection-end-line="21" selection-end-column="55" />
+            <state vertical-scroll-proportion="0.085299455">
+              <caret line="9" column="77" selection-start-line="9" selection-start-column="77" selection-end-line="9" selection-end-column="77" />
               <folding />
             </state>
           </provider>
@@ -187,12 +187,6 @@
       <created>1447686545483</created>
       <option name="number" value="Default" />
       <updated>1447686545483</updated>
-    </task>
-    <task id="LOCAL-00011" summary="Changed div class to  class=&quot;form-group&quot;">
-      <created>1447695149686</created>
-      <option name="number" value="00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1447695149686</updated>
     </task>
     <task id="LOCAL-00012" summary="Moved the login form to the left">
       <created>1447695316812</created>
@@ -482,7 +476,13 @@
       <option name="project" value="LOCAL" />
       <updated>1447868522130</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="Trying the sticky sidebar from a new angle">
+      <created>1447868736579</created>
+      <option name="number" value="00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1447868736579</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -633,8 +633,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/adventure.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.45553538">
-          <caret line="21" column="55" selection-start-line="21" selection-start-column="55" selection-end-line="21" selection-end-column="55" />
+        <state vertical-scroll-proportion="0.085299455">
+          <caret line="9" column="77" selection-start-line="9" selection-start-column="77" selection-end-line="9" selection-end-column="77" />
           <folding />
         </state>
       </provider>
