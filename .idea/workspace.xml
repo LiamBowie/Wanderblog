@@ -50,8 +50,8 @@
       <file leaf-file-name="adventure.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/adventure.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.61551726">
-              <caret line="144" column="47" selection-start-line="144" selection-start-column="47" selection-end-line="144" selection-end-column="47" />
+            <state vertical-scroll-proportion="0.3629764">
+              <caret line="102" column="16" selection-start-line="102" selection-start-column="16" selection-end-line="102" selection-end-column="16" />
               <folding>
                 <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -409,14 +409,20 @@
       <option name="project" value="LOCAL" />
       <updated>1447860751101</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="Edited adventure page">
+      <created>1447861798958</created>
+      <option name="number" value="00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1447861798958</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11713031" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11713031" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -448,7 +454,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Moved the login form to the left" />
     <MESSAGE value="Moved the login form back into the list" />
     <MESSAGE value="Added style to #loginform (padding-top: 5px;)" />
     <MESSAGE value="Fixed a typo and changed the loginform id" />
@@ -473,7 +478,8 @@
     <MESSAGE value="padding-top has been added to &lt;body&gt; in the style.css file" />
     <MESSAGE value="padding-top has been added to &lt;body&gt; in the adventure page" />
     <MESSAGE value="Edited the blog part of the adventure page" />
-    <option name="LAST_COMMIT_MESSAGE" value="Edited the blog part of the adventure page" />
+    <MESSAGE value="Edited adventure page" />
+    <option name="LAST_COMMIT_MESSAGE" value="Edited adventure page" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -526,8 +532,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/adventure.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.61551726">
-          <caret line="144" column="47" selection-start-line="144" selection-start-column="47" selection-end-line="144" selection-end-column="47" />
+        <state vertical-scroll-proportion="0.3629764">
+          <caret line="102" column="16" selection-start-line="102" selection-start-column="16" selection-end-line="102" selection-end-column="16" />
           <folding>
             <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
