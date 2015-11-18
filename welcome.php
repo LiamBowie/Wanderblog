@@ -147,8 +147,7 @@
 	<?php
 	/* PHP FOR REGISTER */
 		if($_POST['passwordconfirm'] == $_POST['password']){
-			$sql="";
-			Header("Location: https://google.com");
+			$sql = "INSERT INTO User(";
 		}
 	?>
 
