@@ -111,6 +111,8 @@
             <h2>Check out these photos of my adventure to LOCATION</h2>
             <p><strong>GRID OF IMAGES. IMPLEMENT LATER. TOO LAZY JUST NOW.</strong></p>
 
+            <h4><small>COMMENTS</small></h4>
+            <hr>
             <h4>Leave a Comment:</h4>
             <form role="form">
                 <div class="form-group">
