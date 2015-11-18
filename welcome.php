@@ -103,7 +103,7 @@
 					<h4><span class="glyphicon glyphicon-lock"></span> Register your account</h4>
 				</div>
 				<div class="modal-body">
-					<form role="form" method="post" id="registerForm">
+					<form role="form" method="post" id="registerForm" action="user.php">
 						<div class="form-group">
 							<div class="col-sm-6">
 								<label for="firstname">First Name</label>
@@ -130,9 +130,9 @@
 							<label for="passwordconfirm"><span class="glyphicon glyphicon-lock"></span> Confirm Password</label>
 							<input type="password" class="form-control" id="passwordconfirm" placeholder="Password">
 						</div>
-						<button type="submit" class="btn btn-block">
+						<input type="submit" class="btn btn-block">
 							Submit<span class="glyphicon glyphicon-ok"></span>
-						</button>
+						</input>
 					</form>
 				</div>
 				<div class="modal-footer">
