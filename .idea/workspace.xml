@@ -69,7 +69,7 @@
         <entry file="file://$PROJECT_DIR$/adventure.php">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.41034484">
-              <caret line="43" column="97" selection-start-line="43" selection-start-column="97" selection-end-line="43" selection-end-column="97" />
+              <caret line="43" column="96" selection-start-line="43" selection-start-column="96" selection-end-line="43" selection-end-column="96" />
               <folding>
                 <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -209,12 +209,6 @@
       <created>1447686545483</created>
       <option name="number" value="Default" />
       <updated>1447686545483</updated>
-    </task>
-    <task id="LOCAL-00021" summary="Moved the More dropdown to the far right of the navbar">
-      <created>1447696770429</created>
-      <option name="number" value="00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1447696770429</updated>
     </task>
     <task id="LOCAL-00022" summary="Copied all of the navbar code into about.php">
       <created>1447696958736</created>
@@ -504,7 +498,13 @@
       <option name="project" value="LOCAL" />
       <updated>1447872368782</updated>
     </task>
-    <option name="localTasksCounter" value="70" />
+    <task id="LOCAL-00070" summary="Dicking about with the data-offset attr in the body of the adventure page&#10;&#10;: 100">
+      <created>1447872638762</created>
+      <option name="number" value="00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1447872638763</updated>
+    </task>
+    <option name="localTasksCounter" value="71" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -543,7 +543,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added Nav Bar" />
     <MESSAGE value="padding-top: 15px;" />
     <MESSAGE value="padding-top: 75px;" />
     <MESSAGE value="padding-top has been added to &lt;body&gt; in the style.css file" />
@@ -568,7 +567,8 @@
     <MESSAGE value="Added Scrollspy to Adventure.php" />
     <MESSAGE value="Updated scrollspy in adventure to look at the class .sticky-sidebar" />
     <MESSAGE value="Updated scrollspy id's" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated scrollspy id's" />
+    <MESSAGE value="Dicking about with the data-offset attr in the body of the adventure page&#10;&#10;: 100" />
+    <option name="LAST_COMMIT_MESSAGE" value="Dicking about with the data-offset attr in the body of the adventure page&#10;&#10;: 100" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -753,7 +753,7 @@
     <entry file="file://$PROJECT_DIR$/adventure.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.41034484">
-          <caret line="43" column="97" selection-start-line="43" selection-start-column="97" selection-end-line="43" selection-end-column="97" />
+          <caret line="43" column="96" selection-start-line="43" selection-start-column="96" selection-end-line="43" selection-end-column="96" />
           <folding>
             <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
