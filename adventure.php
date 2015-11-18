@@ -41,7 +41,7 @@
         }
     </style>
 </head>
-<body style="padding-top: 75px;" data-spy="scroll" data-target=".sticky-sidebar" data-offset="90">
+<body style="padding-top: 75px;" data-spy="scroll" data-target=".sticky-sidebar" data-offset="50">
 
 <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container-fluid">
