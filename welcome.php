@@ -48,7 +48,7 @@
 						<form style="padding-top: 10px" class="form-inline" action="login.php" method="post">
 							<input class="form-control" type="text" name="usernameInput" placeholder="Username">
 							<input class="form-control" type="password" name="passwordInput" placeholder="Password">
-							<input type="submit" class="btn btn-success" value="LOGIN">
+							<button type="submit" class="btn btn-success"> LOGIN</button>
 						</form>
 					</li>
 					<li class="dropdown">
