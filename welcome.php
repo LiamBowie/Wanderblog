@@ -84,7 +84,7 @@
 						<div class="form-group">
 							<div class="col-sm-6">
 								<label for="firstname">First Name</label>
-								<input type="text" class="form-control" name="firstName" placeholder="E.g Peregrin" value="Jordan">
+								<input type="text" class="form-control" name="firstName" placeholder="E.g Peregrin">
 							</div>
 							<div class="col-sm-6">
 								<label for="surname">Last name</label>
@@ -93,7 +93,7 @@
 						</div>
 						<div class="form-group">
 							<label for="username"><span class="glyphicon glyphicon-user"></span> Username</label>
-							<input type="text" class="form-control" name="userID" placeholder="FoolOfATook" value="jordannbeattie">
+							<input type="text" class="form-control" name="userID" placeholder="FoolOfATook">
 						</div>
 						<div class="form-group">
 							<label for="email"><span class="glyphicon glyphicon-envelope"></span> Email Address</label>
