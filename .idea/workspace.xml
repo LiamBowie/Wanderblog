@@ -48,8 +48,8 @@
       <file leaf-file-name="adventure.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/adventure.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.36724138">
-              <caret line="24" column="38" selection-start-line="24" selection-start-column="38" selection-end-line="24" selection-end-column="38" />
+            <state vertical-scroll-proportion="0.27931035">
+              <caret line="21" column="51" selection-start-line="21" selection-start-column="51" selection-end-line="21" selection-end-column="51" />
               <folding />
             </state>
           </provider>
@@ -187,12 +187,6 @@
       <created>1447686545483</created>
       <option name="number" value="Default" />
       <updated>1447686545483</updated>
-    </task>
-    <task id="LOCAL-00008" summary="Register button has been changed to a link again, this should still work as the issue was a missing &quot;#&quot; from the data-target attribute">
-      <created>1447693399327</created>
-      <option name="number" value="00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1447693399327</updated>
     </task>
     <task id="LOCAL-00009" summary="Added Login Form into the Navbar">
       <created>1447694905160</created>
@@ -482,7 +476,13 @@
       <option name="project" value="LOCAL" />
       <updated>1447867802484</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="Edited Script">
+      <created>1447867856094</created>
+      <option name="number" value="00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1447867856094</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -633,8 +633,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/adventure.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.36724138">
-          <caret line="24" column="38" selection-start-line="24" selection-start-column="38" selection-end-line="24" selection-end-column="38" />
+        <state vertical-scroll-proportion="0.27931035">
+          <caret line="21" column="51" selection-start-line="21" selection-start-column="51" selection-end-line="21" selection-end-column="51" />
           <folding />
         </state>
       </provider>
