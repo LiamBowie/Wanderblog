@@ -136,7 +136,7 @@
 
 	<script>
         function checkPasswordMatch() {
-            var password = $("#password).val();
+            var password = $("#password").val();
             var confirmPassword = $("#passwordconfirm").val();
 
             if (password != confirmPassword)
