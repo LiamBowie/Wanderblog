@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bc344c8e-2cfd-4899-8290-d8c617913e27" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Images/jo.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/adventure.php" afterPath="$PROJECT_DIR$/adventure.php" />
     </list>
@@ -49,8 +48,8 @@
       <file leaf-file-name="adventure.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/adventure.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.61551726">
-              <caret line="57" column="62" selection-start-line="57" selection-start-column="62" selection-end-line="57" selection-end-column="62" />
+            <state vertical-scroll-proportion="0.29310346">
+              <caret line="46" column="72" selection-start-line="46" selection-start-column="72" selection-end-line="46" selection-end-column="72" />
               <folding />
             </state>
           </provider>
@@ -327,7 +326,13 @@
       <option name="project" value="LOCAL" />
       <updated>1447855425431</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Wrong directory for image to appear">
+      <created>1447855588063</created>
+      <option name="number" value="00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1447855588063</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -366,7 +371,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added style to the Searches Dropdown" />
     <MESSAGE value="Added Register Modal when Register is clicked in the navbar" />
     <MESSAGE value="Made Register a link in the navbar and added the Modal Triggers into the link tag" />
     <MESSAGE value="Changed the register link to a button" />
@@ -391,7 +395,8 @@
     <MESSAGE value="Updated links in the navbar for both pages" />
     <MESSAGE value="Initial commit of Adventure Page with basic layout from w3schools.com/bootstrap" />
     <MESSAGE value="Added a profile photo and also a link to the Wanderblog Style.css" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added a profile photo and also a link to the Wanderblog Style.css" />
+    <MESSAGE value="Wrong directory for image to appear" />
+    <option name="LAST_COMMIT_MESSAGE" value="Wrong directory for image to appear" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -432,8 +437,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/adventure.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.61551726">
-          <caret line="57" column="62" selection-start-line="57" selection-start-column="62" selection-end-line="57" selection-end-column="62" />
+        <state vertical-scroll-proportion="0.29310346">
+          <caret line="46" column="72" selection-start-line="46" selection-start-column="72" selection-end-line="46" selection-end-column="72" />
           <folding />
         </state>
       </provider>
