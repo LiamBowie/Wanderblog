@@ -48,8 +48,8 @@
       <file leaf-file-name="adventure.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/adventure.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.27931035">
-              <caret line="21" column="51" selection-start-line="21" selection-start-column="51" selection-end-line="21" selection-end-column="51" />
+            <state vertical-scroll-proportion="0.27041742">
+              <caret line="87" column="14" selection-start-line="87" selection-start-column="14" selection-end-line="87" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -187,12 +187,6 @@
       <created>1447686545483</created>
       <option name="number" value="Default" />
       <updated>1447686545483</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Added Login Form into the Navbar">
-      <created>1447694905160</created>
-      <option name="number" value="00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1447694905160</updated>
     </task>
     <task id="LOCAL-00010" summary="Added a div around the inputs of the login form. The div has class=&quot;form-control&quot;">
       <created>1447695071393</created>
@@ -482,7 +476,13 @@
       <option name="project" value="LOCAL" />
       <updated>1447867856094</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="Edited Script">
+      <created>1447867969465</created>
+      <option name="number" value="00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1447867969466</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -633,8 +633,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/adventure.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.27931035">
-          <caret line="21" column="51" selection-start-line="21" selection-start-column="51" selection-end-line="21" selection-end-column="51" />
+        <state vertical-scroll-proportion="0.27041742">
+          <caret line="87" column="14" selection-start-line="87" selection-start-column="14" selection-end-line="87" selection-end-column="14" />
           <folding />
         </state>
       </provider>

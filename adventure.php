@@ -14,20 +14,13 @@
     <link rel="shortcut icon" href="images/earth.ico">
     <script type="text/javascript" src="script.js">
         $(document).ready(function(){
-            var menu = $('.sticky-sidebar');
-            var origOffsetY = menu.offset().top;
+            var $window = $(window),
+                $stickyEl = $('#sticky-sidebar'),
+                elTop = $stickyEl.offset().top;
 
-            function scroll() {
-                if ($(window).scrollTop() >= origOffsetY) {
-                    $('.sticky-sidebar').addClass('navbar-fixed-top');
-                    $('.content').addClass('menu-padding');
-                } else {
-                    $('.sticky-sidebar').removeClass('navbar-fixed-top');
-                    $('.content').removeClass('menu-padding');
-                }
-            }
-
-            document.onscroll = scroll;
+            $window.scroll(function() {
+                $stickyEl.toggleClass('sticky', $window.scrollTop() > elTop);
+            });
         });
     </script>
 
@@ -102,7 +95,7 @@
             <h4 class="text-center">LOCATION</h4>
             <img src="Images/jo.jpg" class="img-thumbnail img-responsive" alt="Adventure Photo">
             <h5><span class="glyphicon glyphicon-time"></span> Post by *USER*, Sep 27, 2015.</h5>
-            <nav class="sticky-sidebar">
+            <nav id="sticky-sidebar">
                 <ul class="nav nav-pills nav-stacked">
                     <li class="active"><a href="#">Adventure Description</a></li>
                     <li><a href="#photos">Photos</a></li>
