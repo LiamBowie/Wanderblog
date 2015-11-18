@@ -15,7 +15,7 @@
     <script type="text/javascript">
         $(document).ready(function(){
             // Add smooth scrolling to all links in navbar + footer link
-            $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+            $(".sticky-sidebar a").on('click', function(event) {
 
                 // Prevent default anchor click behavior
                 event.preventDefault();
@@ -107,7 +107,7 @@
             <h4 class="text-center">LOCATION</h4>
             <img src="Images/jo.jpg" class="img-thumbnail img-responsive" alt="Adventure Photo">
             <h5><span class="glyphicon glyphicon-time"></span> Post by *USER*, Sep 27, 2015.</h5>
-            <nav id="sticky-sidebar">
+            <nav class="sticky-sidebar">
                 <ul class="nav nav-pills nav-stacked">
                     <li class="active"><a href="#">Adventure Description</a></li>
                     <li><a href="#photos">Photos</a></li>
