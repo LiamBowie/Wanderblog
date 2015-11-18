@@ -48,8 +48,8 @@
       <file leaf-file-name="adventure.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/adventure.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.14655173">
-              <caret line="55" column="40" selection-start-line="55" selection-start-column="40" selection-end-line="55" selection-end-column="40" />
+            <state vertical-scroll-proportion="0.35172415">
+              <caret line="40" column="27" selection-start-line="40" selection-start-column="27" selection-end-line="40" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -350,7 +350,13 @@
       <option name="project" value="LOCAL" />
       <updated>1447858782447</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Added Nav Bar">
+      <created>1447859200407</created>
+      <option name="number" value="00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1447859200407</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -389,7 +395,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Changed the style of the Register button in the navbar and also changed a few of the attributes" />
     <MESSAGE value="Changed the style of the Register Button in the navbar&#10;&#10;Changed the Modal Form" />
     <MESSAGE value="Register button has been changed to a link again, this should still work as the issue was a missing &quot;#&quot; from the data-target attribute" />
     <MESSAGE value="Added Login Form into the Navbar" />
@@ -414,7 +419,8 @@
     <MESSAGE value="Changed the classes of the profile image" />
     <MESSAGE value="testing the azure local git" />
     <MESSAGE value="Aborted local git idea&#10;&#10;Updated some elements on the Adventure page. Mainly just text" />
-    <option name="LAST_COMMIT_MESSAGE" value="Aborted local git idea&#10;&#10;Updated some elements on the Adventure page. Mainly just text" />
+    <MESSAGE value="Added Nav Bar" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Nav Bar" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -455,8 +461,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/adventure.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.14655173">
-          <caret line="55" column="40" selection-start-line="55" selection-start-column="40" selection-end-line="55" selection-end-column="40" />
+        <state vertical-scroll-proportion="0.35172415">
+          <caret line="40" column="27" selection-start-line="40" selection-start-column="27" selection-end-line="40" selection-end-column="27" />
           <folding />
         </state>
       </provider>
