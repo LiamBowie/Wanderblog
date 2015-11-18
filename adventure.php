@@ -44,7 +44,7 @@
     <div class="row content">
         <div class="col-sm-3 sidenav">
             <h4>John's Blog</h4>
-            <img src="images/jo.jpg" class="img-rounded" alt="Profile Photo">
+            <img src="Images/jo.jpg" class="img-rounded" alt="Profile Photo">
             <ul class="nav nav-pills nav-stacked">
                 <li class="active"><a href="#section1">Home</a></li>
                 <li><a href="#section2">Friends</a></li>
