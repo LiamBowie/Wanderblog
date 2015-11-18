@@ -356,7 +356,13 @@
       <option name="project" value="LOCAL" />
       <updated>1447859200407</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="padding-top: 15px;">
+      <created>1447859290774</created>
+      <option name="number" value="00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1447859290774</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -395,7 +401,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Changed the style of the Register Button in the navbar&#10;&#10;Changed the Modal Form" />
     <MESSAGE value="Register button has been changed to a link again, this should still work as the issue was a missing &quot;#&quot; from the data-target attribute" />
     <MESSAGE value="Added Login Form into the Navbar" />
     <MESSAGE value="Added a div around the inputs of the login form. The div has class=&quot;form-control&quot;" />
@@ -420,7 +425,8 @@
     <MESSAGE value="testing the azure local git" />
     <MESSAGE value="Aborted local git idea&#10;&#10;Updated some elements on the Adventure page. Mainly just text" />
     <MESSAGE value="Added Nav Bar" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Nav Bar" />
+    <MESSAGE value="padding-top: 15px;" />
+    <option name="LAST_COMMIT_MESSAGE" value="padding-top: 15px;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
