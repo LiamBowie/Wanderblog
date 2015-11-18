@@ -118,7 +118,7 @@
                                 <div class="col-sm-2"></div>
                             </div>
                         </div>
-						<button type="submit" class="btn btn-block">
+						<button type="submit" class="btn btn-block btn-success">
 							Submit<span class="glyphicon glyphicon-ok"></span>
 						</button>
 					</form>
