@@ -39,7 +39,7 @@
         }
     </style>
 </head>
-<body>
+<body style="padding-top: 15px;">
 
 <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container-fluid">
