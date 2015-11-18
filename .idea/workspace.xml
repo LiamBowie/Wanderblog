@@ -68,8 +68,8 @@
       <file leaf-file-name="adventure.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/adventure.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.0258621">
-              <caret line="43" column="65" selection-start-line="43" selection-start-column="65" selection-end-line="43" selection-end-column="65" />
+            <state vertical-scroll-proportion="0.2637931">
+              <caret line="90" column="36" selection-start-line="90" selection-start-column="36" selection-end-line="90" selection-end-column="36" />
               <folding>
                 <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -209,12 +209,6 @@
       <created>1447686545483</created>
       <option name="number" value="Default" />
       <updated>1447686545483</updated>
-    </task>
-    <task id="LOCAL-00019" summary="Added style to the Form tag">
-      <created>1447696487463</created>
-      <option name="number" value="00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1447696487463</updated>
     </task>
     <task id="LOCAL-00020" summary="Moved the login to the far right of the navbar">
       <created>1447696696896</created>
@@ -504,7 +498,13 @@
       <option name="project" value="LOCAL" />
       <updated>1447872113641</updated>
     </task>
-    <option name="localTasksCounter" value="68" />
+    <task id="LOCAL-00068" summary="Updated scrollspy in adventure to look at the class .sticky-sidebar">
+      <created>1447872240721</created>
+      <option name="number" value="00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1447872240721</updated>
+    </task>
+    <option name="localTasksCounter" value="69" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -543,7 +543,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="testing the azure local git" />
     <MESSAGE value="Aborted local git idea&#10;&#10;Updated some elements on the Adventure page. Mainly just text" />
     <MESSAGE value="Added Nav Bar" />
     <MESSAGE value="padding-top: 15px;" />
@@ -568,7 +567,8 @@
     <MESSAGE value="Moved smooth scrolling js to script.js and added a link the script.js into adventure" />
     <MESSAGE value="Smooth scrolling should now work on the top navbar" />
     <MESSAGE value="Added Scrollspy to Adventure.php" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Scrollspy to Adventure.php" />
+    <MESSAGE value="Updated scrollspy in adventure to look at the class .sticky-sidebar" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated scrollspy in adventure to look at the class .sticky-sidebar" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -752,8 +752,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/adventure.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.0258621">
-          <caret line="43" column="65" selection-start-line="43" selection-start-column="65" selection-end-line="43" selection-end-column="65" />
+        <state vertical-scroll-proportion="0.2637931">
+          <caret line="90" column="36" selection-start-line="90" selection-start-column="36" selection-end-line="90" selection-end-column="36" />
           <folding>
             <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>

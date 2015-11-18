@@ -87,7 +87,7 @@
             <h5><span class="glyphicon glyphicon-time"></span> Post by *USER*, Sep 27, 2015.</h5>
             <nav class="sticky-sidebar">
                 <ul class="nav nav-pills nav-stacked">
-                    <li><a href="#">Adventure Description</a></li>
+                    <li><a href="#desc">Adventure Description</a></li>
                     <li><a href="#photos">Photos</a></li>
                     <li><a href="#comments">Comments</a></li>
                 </ul><br>
@@ -95,7 +95,7 @@
         </div>
 
         <div class="col-sm-9">
-            <h2>ADVENTURE TITLE</h2>
+            <h2 id="desc">ADVENTURE TITLE</h2>
             <hr>
             <h5><span class="label label-danger">TAG</span> <span class="label label-primary">TAG</span></h5><br>
             <p>Here is where you would describe your boring ass adventure to the supermarket to get your shitty groceries.</p>
