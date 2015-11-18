@@ -42,7 +42,7 @@
 			</div>
 			<div class="collapse navbar-collapse" id="myNavbar">
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="#carousel">TOP 5 TRIPS</a></li>
+					<li><a href="#top5">TOP 5 TRIPS</a></li>
 					<li><a href="#" data-toggle="modal" data-target="#modal-reg">REGISTER</a></li>
 					<li>
 						<form role="form" style="padding-top: 10px" class="form-inline" action="welcome.php" method="post">
@@ -165,7 +165,7 @@
 		</form>
 	</div>
 	
-	<div id="carousel" class="carousel slide" data-ride="carousel">
+	<div id="top5" class="carousel slide" data-ride="carousel">
 		<!--Indicators-->
 		<ol class="carousel-indicators">
 			<li data-target="#carousel" data-slide-to="0" class="active"></li> 
