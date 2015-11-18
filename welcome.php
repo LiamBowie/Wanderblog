@@ -112,9 +112,10 @@
                                 <div class="col-sm-2">
                                     <input type="checkbox">
                                 </div>
-                                <div class="col-sm-10">
+                                <div class="col-sm-2">
                                     <label>Check this box to sign up as a Wanderlog Author</label>
                                 </div>
+                                <div class="col-sm-8"></div>
                             </div>
                         </div>
 						<button type="submit" class="btn btn-block">
