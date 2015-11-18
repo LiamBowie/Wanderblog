@@ -48,8 +48,8 @@
       <file leaf-file-name="adventure.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/adventure.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.29310346">
-              <caret line="46" column="72" selection-start-line="46" selection-start-column="72" selection-end-line="46" selection-end-column="72" />
+            <state vertical-scroll-proportion="0.49827588">
+              <caret line="45" column="36" selection-start-line="45" selection-start-column="36" selection-end-line="45" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -332,7 +332,13 @@
       <option name="project" value="LOCAL" />
       <updated>1447855588063</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Changed the classes of the profile image">
+      <created>1447855704500</created>
+      <option name="number" value="00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1447855704500</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -371,7 +377,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added Register Modal when Register is clicked in the navbar" />
     <MESSAGE value="Made Register a link in the navbar and added the Modal Triggers into the link tag" />
     <MESSAGE value="Changed the register link to a button" />
     <MESSAGE value="Changed the style of the Register button in the navbar and also changed a few of the attributes" />
@@ -396,7 +401,8 @@
     <MESSAGE value="Initial commit of Adventure Page with basic layout from w3schools.com/bootstrap" />
     <MESSAGE value="Added a profile photo and also a link to the Wanderblog Style.css" />
     <MESSAGE value="Wrong directory for image to appear" />
-    <option name="LAST_COMMIT_MESSAGE" value="Wrong directory for image to appear" />
+    <MESSAGE value="Changed the classes of the profile image" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed the classes of the profile image" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -437,8 +443,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/adventure.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.29310346">
-          <caret line="46" column="72" selection-start-line="46" selection-start-column="72" selection-end-line="46" selection-end-column="72" />
+        <state vertical-scroll-proportion="0.49827588">
+          <caret line="45" column="36" selection-start-line="45" selection-start-column="36" selection-end-line="45" selection-end-column="36" />
           <folding />
         </state>
       </provider>
