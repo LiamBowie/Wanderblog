@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <!-- Personal links -->
+    <link rel="stylesheet" href="style.css">
+
     <style>
         /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
         .row.content {height: 1500px}
@@ -40,6 +44,7 @@
     <div class="row content">
         <div class="col-sm-3 sidenav">
             <h4>John's Blog</h4>
+            <img src="images/jo.jpg" class="img-rounded" alt="Profile Photo">
             <ul class="nav nav-pills nav-stacked">
                 <li class="active"><a href="#section1">Home</a></li>
                 <li><a href="#section2">Friends</a></li>
