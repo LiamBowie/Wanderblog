@@ -48,8 +48,8 @@
       <file leaf-file-name="adventure.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/adventure.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.27041742">
-              <caret line="87" column="14" selection-start-line="87" selection-start-column="14" selection-end-line="87" selection-end-column="14" />
+            <state vertical-scroll-proportion="0.45553538">
+              <caret line="21" column="55" selection-start-line="21" selection-start-column="55" selection-end-line="21" selection-end-column="55" />
               <folding />
             </state>
           </provider>
@@ -187,12 +187,6 @@
       <created>1447686545483</created>
       <option name="number" value="Default" />
       <updated>1447686545483</updated>
-    </task>
-    <task id="LOCAL-00010" summary="Added a div around the inputs of the login form. The div has class=&quot;form-control&quot;">
-      <created>1447695071393</created>
-      <option name="number" value="00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1447695071393</updated>
     </task>
     <task id="LOCAL-00011" summary="Changed div class to  class=&quot;form-group&quot;">
       <created>1447695149686</created>
@@ -482,7 +476,13 @@
       <option name="project" value="LOCAL" />
       <updated>1447867969466</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="Trying the sticky sidebar from a new angle">
+      <created>1447868522123</created>
+      <option name="number" value="00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1447868522130</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -521,7 +521,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Moved the More dropdown to the far right of the navbar" />
     <MESSAGE value="Copied all of the navbar code into about.php" />
     <MESSAGE value="Updated links in the navbar for both pages" />
     <MESSAGE value="Initial commit of Adventure Page with basic layout from w3schools.com/bootstrap" />
@@ -546,7 +545,8 @@
     <MESSAGE value="Adventure Page should be linked to the script file&#10;" />
     <MESSAGE value="Put script directly into the adventure.php" />
     <MESSAGE value="Edited Script" />
-    <option name="LAST_COMMIT_MESSAGE" value="Edited Script" />
+    <MESSAGE value="Trying the sticky sidebar from a new angle" />
+    <option name="LAST_COMMIT_MESSAGE" value="Trying the sticky sidebar from a new angle" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -633,8 +633,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/adventure.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.27041742">
-          <caret line="87" column="14" selection-start-line="87" selection-start-column="14" selection-end-line="87" selection-end-column="14" />
+        <state vertical-scroll-proportion="0.45553538">
+          <caret line="21" column="55" selection-start-line="21" selection-start-column="55" selection-end-line="21" selection-end-column="55" />
           <folding />
         </state>
       </provider>

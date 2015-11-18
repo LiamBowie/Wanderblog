@@ -19,7 +19,7 @@
                 elTop = $stickyEl.offset().top;
 
             $window.scroll(function() {
-                $stickyEl.toggleClass('sticky', $window.scrollTop() > elTop);
+                $stickyEl.toggleClass('navbar-fixed-top', $window.scrollTop() > elTop);
             });
         });
     </script>
@@ -102,14 +102,6 @@
                     <li><a href="#comments">Comments</a></li>
                 </ul><br>
             </nav>
-            <div class="input-group">
-                <input type="text" class="form-control" placeholder="Search Blog..">
-                <span class="input-group-btn">
-                <button class="btn btn-default" type="button">
-                    <span class="glyphicon glyphicon-search"></span>
-                </button>
-        </span>
-            </div>
         </div>
 
         <div class="col-sm-9">
