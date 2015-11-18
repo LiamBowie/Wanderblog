@@ -96,14 +96,14 @@
 	<div class="modal fade" id="modal-reg" role="dialog">
 		<div class="modal-dialog">
 
-			<!-- Modal content-->
+			 <!-- Modal content-->
 			<div class="modal-content">
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal">&times;</button>
 					<h4><span class="glyphicon glyphicon-lock"></span> Register your account</h4>
 				</div>
 				<div class="modal-body">
-					<form role="form" method="post" id="registerForm" action="user.php">
+					<form role="form" method="post" id="registerForm" action="createUser.php">
 						<div class="form-group">
 							<div class="col-sm-6">
 								<label for="firstname">First Name</label>
@@ -130,9 +130,9 @@
 							<label for="passwordconfirm"><span class="glyphicon glyphicon-lock"></span> Confirm Password</label>
 							<input type="password" class="form-control" id="passwordconfirm" placeholder="Password">
 						</div>
-						<input type="submit" class="btn btn-block">
+						<button type="submit" class="btn btn-block">
 							Submit<span class="glyphicon glyphicon-ok"></span>
-						</input>
+						</button>
 					</form>
 				</div>
 				<div class="modal-footer">
@@ -146,12 +146,6 @@
 
 	<?php
 	/* PHP FOR REGISTER */
-		//if($_POST['passwordconfirm'] == $_POST['password']){
-			//$sql= "INSERT INTO User VALUES(" . "'" . $_POST['userID'] . "', '" . $_POST['password'] . "', '" . $_POST['firstName'] . "', '" . $_POST['lastName'] . "', '" . $_POST['email'] . "', 0);";
-			$sql = "INSERT INTO User VALUES('jordannbeattie', 'Welcome1', 'Jo', 'Beattie', 'beattiejo1@gmail.com', '0');";
-			$results=mysqli_query($conn, $sql);
-			header("Location: user.php");
-		//}
 	?>
 
 	<div class="jumbotron text-center">
