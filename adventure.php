@@ -102,12 +102,12 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
             <br><br>
 
-            <h4 id="photos"><small>PHOTOS</small></h4>
+            <h4 id="photos" class="anchor"><small>PHOTOS</small></h4>
             <hr>
             <h2>Check out these photos of my adventure to LOCATION</h2>
             <p><strong>GRID OF IMAGES. IMPLEMENT LATER. TOO LAZY JUST NOW.</strong></p>
 
-            <h4 id="comments"><small>COMMENTS</small></h4>
+            <h4 id="comments" class="anchor"><small>COMMENTS</small></h4>
             <hr>
             <h4>Leave a Comment:</h4>
             <form role="form">
