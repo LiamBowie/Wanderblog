@@ -1,6 +1,6 @@
 $(document).ready(function(){
     // Add smooth scrolling to all links in navbar + footer link
-    $(".sticky-sidebar a").on('click', function(event) {
+    $(".sticky-sidebar a, .navbar a").on('click', function(event) {
 
         // Prevent default anchor click behavior
         event.preventDefault();
