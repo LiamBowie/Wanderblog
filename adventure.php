@@ -43,7 +43,7 @@
 <div class="container-fluid">
     <div class="row content">
         <div class="col-sm-3 sidenav">
-            <h4>Adventure Title TEST</h4>
+            <h4>Adventure Title</h4>
             <img src="Images/jo.jpg" class="img-thumbnail img-responsive" alt="Adventure Photo">
             <h5><span class="glyphicon glyphicon-time"></span> Post by *USER*, Sep 27, 2015.</h5>
             <ul class="nav nav-pills nav-stacked">

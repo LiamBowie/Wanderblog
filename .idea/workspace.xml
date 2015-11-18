@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bc344c8e-2cfd-4899-8290-d8c617913e27" name="Default" comment="">
+    <list default="true" id="bc344c8e-2cfd-4899-8290-d8c617913e27" name="Default" comment="testing the azure local git">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/adventure.php" afterPath="$PROJECT_DIR$/adventure.php" />
     </list>
@@ -49,7 +49,7 @@
         <entry file="file://$PROJECT_DIR$/adventure.php">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.49827588">
-              <caret line="45" column="36" selection-start-line="45" selection-start-column="36" selection-end-line="45" selection-end-column="36" />
+              <caret line="45" column="31" selection-start-line="45" selection-start-column="31" selection-end-line="45" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -338,7 +338,13 @@
       <option name="project" value="LOCAL" />
       <updated>1447855704500</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="testing the azure local git">
+      <created>1447858440505</created>
+      <option name="number" value="00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1447858440505</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -377,7 +383,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Made Register a link in the navbar and added the Modal Triggers into the link tag" />
     <MESSAGE value="Changed the register link to a button" />
     <MESSAGE value="Changed the style of the Register button in the navbar and also changed a few of the attributes" />
     <MESSAGE value="Changed the style of the Register Button in the navbar&#10;&#10;Changed the Modal Form" />
@@ -402,7 +407,8 @@
     <MESSAGE value="Added a profile photo and also a link to the Wanderblog Style.css" />
     <MESSAGE value="Wrong directory for image to appear" />
     <MESSAGE value="Changed the classes of the profile image" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed the classes of the profile image" />
+    <MESSAGE value="testing the azure local git" />
+    <option name="LAST_COMMIT_MESSAGE" value="testing the azure local git" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -444,7 +450,7 @@
     <entry file="file://$PROJECT_DIR$/adventure.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.49827588">
-          <caret line="45" column="36" selection-start-line="45" selection-start-column="36" selection-end-line="45" selection-end-column="36" />
+          <caret line="45" column="31" selection-start-line="45" selection-start-column="31" selection-end-line="45" selection-end-column="31" />
           <folding />
         </state>
       </provider>
