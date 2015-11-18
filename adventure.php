@@ -12,7 +12,24 @@
     <!-- Personal links -->
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="images/earth.ico">
-    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="script.js">
+        $(document).ready(function(){
+            var menu = $('.menu');
+            var origOffsetY = menu.offset().top;
+
+            function scroll() {
+                if ($(window).scrollTop() >= origOffsetY) {
+                    $('.menu').addClass('sticky');
+                    $('.content').addClass('menu-padding');
+                } else {
+                    $('.menu').removeClass('sticky');
+                    $('.content').removeClass('menu-padding');
+                }
+            }
+
+            document.onscroll = scroll;
+        });
+    </script>
 
     <style>
         /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
