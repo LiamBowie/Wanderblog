@@ -107,6 +107,9 @@
 							<label for="passwordconfirm"><span class="glyphicon glyphicon-lock"></span> Confirm Password</label>
 							<input type="password" class="form-control" name="passwordconfirm" placeholder="Password">
 						</div>
+                        <div class="form-group">
+                            <label><input type="checkbox" value="">Check this box to sign up as a Wanderblog Author</label>
+                        </div>
 						<button type="submit" class="btn btn-block">
 							Submit<span class="glyphicon glyphicon-ok"></span>
 						</button>
