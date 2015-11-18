@@ -13,28 +13,22 @@
 
     <body>
         <?php
+            // Send query to db
+            if($_GET['u']=='unknown'){ $query = "Select CONCAT(firstName, \" \", lastName) AS FullName, userID, emailAddress, isAdmin FROM User;"; }
+            else{ $query = "Select CONCAT(firstName, \" \", lastName) AS FullName, userID, emailAddress, isAdmin FROM User WHERE userID='" . $_GET['u'] . "';"; }
+            $results = mysqli_query($conn, $query);
 
-        // Send query to db
-        if($_GET['u']=='unknown'){
-            $query = "SELECT * FROM User";
-        }
-        else{
-            $query = "SELECT * FROM User WHERE userID='" . $_GET['u'] . "';";
-        }
-
-        $results = mysqli_query($conn, $query);
-
-        // Output results
-        $output="";
-        if(mysqli_num_rows($results)>0){
-            while($row = mysqli_fetch_array($results)) {
-                $output = $output . "userID: " . $row['userID'] . "<br>" . "Password: " . $row['password'] . "<br>" . "firstName: " . $row['firstName'] . "<br>" . "email: " . $row['emailAddress'] . "<br>" . "<br>";
+            // Output results
+            $output="";
+            if(mysqli_num_rows($results)>0){
+                while($row = mysqli_fetch_array($results)) {
+                    $output = $output . "Name: " . $row['fullName'] . "<br>" . "userID: " . $row['userID'] . "<br>" . "Email: " . $row['emailAddress'] . "<br>" . "<br>";
+                }
+                echo $output;
             }
-            echo $output;
-        }
-        else {
-            echo "0 results" . "<br>";
-        }
+            else {
+                echo "0 results" . "<br>";
+            }
         ?>
     </body>
 </html>
