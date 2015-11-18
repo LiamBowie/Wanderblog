@@ -4,6 +4,7 @@
     <list default="true" id="bc344c8e-2cfd-4899-8290-d8c617913e27" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/adventure.php" afterPath="$PROJECT_DIR$/adventure.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/style.css" afterPath="$PROJECT_DIR$/style.css" />
     </list>
     <ignored path="Wanderblog.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -55,21 +56,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="1" column="18" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="18" />
+            <state vertical-scroll-proportion="0.3074141">
+              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="adventure.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="adventure.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/adventure.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5275862">
-              <caret line="43" column="96" selection-start-line="43" selection-start-column="96" selection-end-line="43" selection-end-column="96" />
+            <state vertical-scroll-proportion="-15.038462">
+              <caret line="89" column="53" selection-start-line="89" selection-start-column="53" selection-end-line="89" selection-end-column="53" />
               <folding>
                 <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -96,11 +97,11 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/welcome.html" />
-        <option value="$PROJECT_DIR$/style.css" />
         <option value="$PROJECT_DIR$/script.js" />
         <option value="$PROJECT_DIR$/about.php" />
         <option value="$PROJECT_DIR$/welcome.php" />
         <option value="$PROJECT_DIR$/adventure.php" />
+        <option value="$PROJECT_DIR$/style.css" />
       </list>
     </option>
   </component>
@@ -209,12 +210,6 @@
       <created>1447686545483</created>
       <option name="number" value="Default" />
       <updated>1447686545483</updated>
-    </task>
-    <task id="LOCAL-00023" summary="Updated links in the navbar for both pages">
-      <created>1447697078386</created>
-      <option name="number" value="00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1447697078386</updated>
     </task>
     <task id="LOCAL-00024" summary="Initial commit of Adventure Page with basic layout from w3schools.com/bootstrap">
       <created>1447853822618</created>
@@ -504,7 +499,13 @@
       <option name="project" value="LOCAL" />
       <updated>1447872709974</updated>
     </task>
-    <option name="localTasksCounter" value="72" />
+    <task id="LOCAL-00072" summary="Dicking about with the data-offset attr in the body of the adventure page&#10;&#10;: 90 (Pretty sure this one will be what we're looking for! For sure this time)">
+      <created>1447872894708</created>
+      <option name="number" value="00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1447872894708</updated>
+    </task>
+    <option name="localTasksCounter" value="73" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -543,7 +544,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="padding-top: 75px;" />
     <MESSAGE value="padding-top has been added to &lt;body&gt; in the style.css file" />
     <MESSAGE value="padding-top has been added to &lt;body&gt; in the adventure page" />
     <MESSAGE value="Edited the blog part of the adventure page" />
@@ -568,7 +568,8 @@
     <MESSAGE value="Updated scrollspy id's" />
     <MESSAGE value="Dicking about with the data-offset attr in the body of the adventure page&#10;&#10;: 100" />
     <MESSAGE value="Dicking about with the data-offset attr in the body of the adventure page&#10;&#10;: 75 (Pretty sure this one will be what we're looking for!)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Dicking about with the data-offset attr in the body of the adventure page&#10;&#10;: 75 (Pretty sure this one will be what we're looking for!)" />
+    <MESSAGE value="Dicking about with the data-offset attr in the body of the adventure page&#10;&#10;: 90 (Pretty sure this one will be what we're looking for! For sure this time)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Dicking about with the data-offset attr in the body of the adventure page&#10;&#10;: 90 (Pretty sure this one will be what we're looking for! For sure this time)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -710,14 +711,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="1" column="18" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/connect.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -752,11 +745,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/adventure.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5275862">
-          <caret line="43" column="96" selection-start-line="43" selection-start-column="96" selection-end-line="43" selection-end-column="96" />
+        <state vertical-scroll-proportion="-15.038462">
+          <caret line="89" column="53" selection-start-line="89" selection-start-column="53" selection-end-line="89" selection-end-column="53" />
           <folding>
             <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3074141">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

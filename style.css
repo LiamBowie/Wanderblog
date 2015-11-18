@@ -2,6 +2,13 @@ body{
 	padding-top: 40px;
 }
 
+a.anchor{
+	display: block;
+	position: relative;
+	top: -250px;
+	visibility: hidden;
+}
+
 /* Carousel Styling */
 .carousel-inner img{
 	width: 100%;

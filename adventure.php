@@ -87,7 +87,7 @@
             <h5><span class="glyphicon glyphicon-time"></span> Post by *USER*, Sep 27, 2015.</h5>
             <nav class="sticky-sidebar">
                 <ul class="nav nav-pills nav-stacked">
-                    <li><a href="#desc">Adventure Description</a></li>
+                    <li><a href="#desc" class="anchor">Adventure Description</a></li>
                     <li><a href="#photos">Photos</a></li>
                     <li><a href="#comments">Comments</a></li>
                 </ul><br>
