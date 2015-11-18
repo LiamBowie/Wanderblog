@@ -19,10 +19,10 @@
 
             function scroll() {
                 if ($(window).scrollTop() >= origOffsetY) {
-                    $('menu').addClass('navbar-fixed-top');
+                    $('menu').addClass('.navbar-fixed-top');
                     $('.content').addClass('menu-padding');
                 } else {
-                    $('menu').removeClass('navbar-fixed-top');
+                    $('menu').removeClass('.navbar-fixed-top');
                     $('.content').removeClass('menu-padding');
                 }
             }
