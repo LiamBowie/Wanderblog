@@ -46,10 +46,10 @@
 					<li><a href="#top5">TOP 5 TRIPS</a></li>
 					<li><a href="#" data-toggle="modal" data-target="#modal-reg">REGISTER</a></li>
 					<li>
-						<form role="form" style="padding-top: 10px" class="form-inline" action="welcome.php" method="post">
-							<input class="form-control" type="text" name="usernameInput" placeholder="Username">
-							<input class="form-control" type="password" name="passwordInput" placeholder="Password">
-							<button type="submit" class="btn btn-success">LOGIN</button>
+						<form style="padding-top: 10px" class="form-inline" action="login.php" method="post">
+							<input class="form-control" type="text" name="usernameInput" placeholder="Username" required>
+							<input class="form-control" type="password" name="passwordInput" placeholder="Password" required>
+							<button type="submit" class="btn btn-success"> LOGIN</button>
 						</form>
 					</li>
 					<li class="dropdown">
@@ -105,7 +105,7 @@
 							<label for="passwordconfirm"><span class="glyphicon glyphicon-lock"></span> Confirm Password</label>
 							<input type="password" class="form-control" id="passwordconfirm" placeholder="Password">
 						</div>
-						<button type="submit" class="btn btn-block">
+						<button type="submit" class="btn btn-block btn-success">
 							Submit<span class="glyphicon glyphicon-ok"></span>
 						</button>
 					</form>
@@ -118,16 +118,6 @@
 			</div>
 		</div>
 	</div>
-
-	<?php
-	/* PHP FOR REGISTER */
-		if($_POST['passwordconfirm'] == $_POST['password']){
-			$sql="";
-		}
-		else{
-			Header("Location: https://google.com");
-		}
-	?>
 
 	<div class="jumbotron text-center">
 		<h1>Wanderblog</h1> 
