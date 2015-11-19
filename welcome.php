@@ -11,8 +11,7 @@
 	<!--Link to personal Stylesheet-->
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link rel="shortcut icon" href="images/earth.ico">
-	<script type="text/javascript" src="script.js"></script>
-	<?php include'connect.php'; ?> <!-- include connection to db -->
+	<?php include'connect.php'; ?> /* iclude connection to db */
 	
 	<!-- Additional Styling for Current Page -->
 	<style>
@@ -67,6 +66,9 @@
 		</div>
 	</nav>
 
+	<!-- PHP HERE -->
+
+
 	<!-- Modal -->
 	<div class="modal fade" id="modal-reg" role="dialog">
 		<div class="modal-dialog">
@@ -78,33 +80,46 @@
 					<h4><span class="glyphicon glyphicon-lock"></span> Register your account</h4>
 				</div>
 				<div class="modal-body">
-					<form role="form" method="post" id="registerForm">
+					<form role="form" method="post" id="registerForm" action="createUser.php">
 						<div class="form-group">
 							<div class="col-sm-6">
 								<label for="firstname">First Name</label>
-								<input type="text" class="form-control" id="firstname" placeholder="E.g Peregrin">
+								<input type="text" class="form-control" name="firstName" placeholder="E.g Peregrin" required>
 							</div>
 							<div class="col-sm-6">
 								<label for="surname">Last name</label>
-								<input type="text" class="form-control" id="surname" placeholder="Took">
+								<input type="text" class="form-control" name="lastName" placeholder="Took" required>
 							</div>
 						</div>
 						<div class="form-group">
 							<label for="username"><span class="glyphicon glyphicon-user"></span> Username</label>
-							<input type="text" class="form-control" id="username" placeholder="FoolOfATook">
+							<input type="text" class="form-control" name="userID" placeholder="FoolOfATook" required>
 						</div>
 						<div class="form-group">
 							<label for="email"><span class="glyphicon glyphicon-envelope"></span> Email Address</label>
-							<input type="text" class="form-control" id="email" placeholder="WhatAboutSecondBreakfast@hobbitmail.com">
+							<input type="text" class="form-control" name="email" placeholder="WhatAboutSecondBreakfast@hobbitmail.com" required>
 						</div>
 						<div class="form-group">
 							<label for="password"><span class="glyphicon glyphicon-lock"></span> Password</label>
-							<input type="password" class="form-control" id="password" placeholder="Password">
+							<input type="password" class="form-control" name="password" placeholder="Password" required>
 						</div>
 						<div class="form-group">
 							<label for="passwordconfirm"><span class="glyphicon glyphicon-lock"></span> Confirm Password</label>
-							<input type="password" class="form-control" id="passwordconfirm" placeholder="Password">
+							<input type="password" class="form-control" name="passwordconfirm" placeholder="Password" onChange="checkPasswordMatch();" required>
 						</div>
+                        <div class="registrationFormAlert" id="divCheckPasswordMatch"></div>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-sm-1">
+                                    <input type="hidden" name="authorCheck" value="0" />
+                                    <input type="checkbox" class="form-control" name="authorCheck" value="1">
+                                </div>
+                                <div class="col-sm-9">
+                                    <label>Check this box to sign up as a Wanderlog Author</label>
+                                </div>
+                                <div class="col-sm-2"></div>
+                            </div>
+                        </div>
 						<button type="submit" class="btn btn-block btn-success">
 							Submit<span class="glyphicon glyphicon-ok"></span>
 						</button>
@@ -131,17 +146,17 @@
 			<button type="button" class="btn btn-danger">Search</button>
 		</form>
 	</div>
-	
+
 	<div id="top5" class="carousel slide" data-ride="carousel">
 		<!--Indicators-->
 		<ol class="carousel-indicators">
-			<li data-target="#carousel" data-slide-to="0" class="active"></li> 
+			<li data-target="#carousel" data-slide-to="0" class="active"></li>
 			<li data-target="#carousel" data-slide-to="1"></li>
 			<li data-target="#carousel" data-slide-to="2"></li>
 			<li data-target="#carousel" data-slide-to="3"></li>
 			<li data-target="#carousel" data-slide-to="4"></li>
 		</ol>
-	
+
 		<!--Wrapper for slides-->
 		<div class="carousel-inner" roles="listbox">
 			<div class="item active">
@@ -151,7 +166,7 @@
 					<p>Lovely trip to a lake</p>
 				</div>
 			</div>
-		
+
 			<div class="item">
 				<img src="images/mountain.jpg" alt="Image">
 				<div class="carousel-caption">
@@ -159,7 +174,7 @@
 					<p>Oh look! A mountain!</p>
 				</div>
 			</div>
-		
+
 			<div class="item">
 				<img src="images/woods.jpg" alt="Image">
 				<div class="carousel-caption">
@@ -167,7 +182,7 @@
 					<p>Picturesque stroll through the woods</p>
 				</div>
 			</div>
-		
+
 			<div class="item">
 				<img src="images/canyon.jpg" alt="Image">
 				<div class="carousel-caption">
@@ -175,7 +190,7 @@
 					<p>Better not fall in! hahaha lololol</p>
 				</div>
 			</div>
-		
+
 			<div class="item">
 				<img src="images/sky.jpg" alt="Image">
 				<div class="carousel-caption">
@@ -184,7 +199,7 @@
 				</div>
 			</div>
 		</div>
-	
+
 		<a class="left carousel-control" href="#carousel" role="button" data-slide="prev">
 			<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
 			<span class="sr-only">Previous</span>
