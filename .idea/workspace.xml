@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="bc344c8e-2cfd-4899-8290-d8c617913e27" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/style.css" afterPath="$PROJECT_DIR$/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/createUser.php" afterPath="$PROJECT_DIR$/createUser.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/welcome.php" afterPath="$PROJECT_DIR$/welcome.php" />
     </list>
     <ignored path="Wanderblog.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -24,65 +25,57 @@
     <favorites_list name="Wanderblog" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="welcome.php" pinned="false" current-in-tab="false">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
+      <file leaf-file-name="welcome.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/welcome.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-88.26923">
-              <caret line="144" column="17" selection-start-line="144" selection-start-column="13" selection-end-line="144" selection-end-column="17" />
+            <state vertical-scroll-proportion="0.4376658">
+              <caret line="49" column="124" selection-start-line="49" selection-start-column="124" selection-end-line="49" selection-end-column="124" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="about.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/about.php">
+      <file leaf-file-name="login.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/login.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="33" column="45" selection-start-line="33" selection-start-column="45" selection-end-line="33" selection-end-column="45" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="connect.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/connect.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/style.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.15370706">
-              <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="adventure.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/adventure.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-19.615385">
-              <caret line="43" column="96" selection-start-line="43" selection-start-column="96" selection-end-line="43" selection-end-column="96" />
+            <state vertical-scroll-proportion="-0.7352941">
+              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
               <folding>
-                <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <marker date="1447862093785" expanded="true" signature="162:180" placeholder="SELECT * FRO..User..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="script.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/script.js">
+      <file leaf-file-name="createUser.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/createUser.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="2" column="35" selection-start-line="2" selection-start-column="35" selection-end-line="2" selection-end-column="35" />
-              <folding />
+            <state vertical-scroll-proportion="-8.461538">
+              <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+              <folding>
+                <marker date="1447869397676" expanded="true" signature="107:133" placeholder="INSERT INTO User..." />
+                <marker date="1447869397676" expanded="true" signature="107:280" placeholder="INSERT INTO User..." />
+                <marker date="1447869397676" expanded="true" signature="107:281" placeholder="INSERT INTO User..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="user.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/user.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-15.441176">
+              <caret line="21" column="75" selection-start-line="21" selection-start-column="75" selection-end-line="21" selection-end-column="75" />
+              <folding>
+                <marker date="1447860118555" expanded="true" signature="368:386" placeholder="SELECT * FRO..User..." />
+                <marker date="1447860118555" expanded="true" signature="435:466" placeholder="SELECT * FRO..User..." />
+                <marker date="1447860118555" expanded="true" signature="435:467" placeholder="SELECT * FRO..User..." />
+                <marker date="1447860118555" expanded="true" signature="435:468" placeholder="SELECT * FRO..User..." />
+                <marker date="1447860118555" expanded="true" signature="435:487" placeholder="SELECT * FRO..User..." />
+                <marker date="1447860118555" expanded="true" signature="435:489" placeholder="SELECT * FRO..User..." />
+                <marker date="1447860118555" expanded="true" signature="435:593" placeholder="SELECT * FRO..User..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -91,16 +84,20 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <push-targets>
+      <push-target-info repo="$PROJECT_DIR$" source="master" target-remote="origin" target-branch="WelcomePHP" />
+    </push-targets>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/welcome.html" />
-        <option value="$PROJECT_DIR$/script.js" />
         <option value="$PROJECT_DIR$/about.php" />
-        <option value="$PROJECT_DIR$/welcome.php" />
-        <option value="$PROJECT_DIR$/adventure.php" />
         <option value="$PROJECT_DIR$/style.css" />
+        <option value="$PROJECT_DIR$/user.php" />
+        <option value="$PROJECT_DIR$/login.php" />
+        <option value="$PROJECT_DIR$/createUser.php" />
+        <option value="$PROJECT_DIR$/welcome.php" />
       </list>
     </option>
   </component>
@@ -109,12 +106,34 @@
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
   </component>
+  <component name="PhpServers">
+    <servers />
+  </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="744" />
+    <option name="x" value="-11" />
+    <option name="y" value="-11" />
+    <option name="width" value="2182" />
+    <option name="height" value="1402" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>PHP</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>Code SmellPHP</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -161,13 +180,16 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Wanderblog-first" />
+    <property name="FullScreen" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.intentionPowerPack" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
@@ -184,11 +206,15 @@
     <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
       <method />
     </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
+      <method />
+    </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
       <node-options />
       <gulpfile />
       <tasks />
       <arguments />
+      <pass-parent-envs>true</pass-parent-envs>
       <envs />
       <method />
     </configuration>
@@ -210,308 +236,308 @@
       <option name="number" value="Default" />
       <updated>1447686545483</updated>
     </task>
-    <task id="LOCAL-00035" summary="padding-top has been added to &lt;body&gt; in the adventure page">
-      <created>1447859761795</created>
+    <task id="LOCAL-00030" summary="moved php to a file called login.php which will display results">
+      <created>1447797340704</created>
+      <option name="number" value="00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1447797340704</updated>
+    </task>
+    <task id="LOCAL-00031" summary="moved php to a file called login.php which will display results">
+      <created>1447797431513</created>
+      <option name="number" value="00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1447797431513</updated>
+    </task>
+    <task id="LOCAL-00032" summary="changed button to input">
+      <created>1447798318950</created>
+      <option name="number" value="00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1447798318950</updated>
+    </task>
+    <task id="LOCAL-00033" summary="took out form role">
+      <created>1447848530409</created>
+      <option name="number" value="00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1447848530409</updated>
+    </task>
+    <task id="LOCAL-00034" summary="took out form role">
+      <created>1447848638701</created>
+      <option name="number" value="00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1447848638701</updated>
+    </task>
+    <task id="LOCAL-00035" summary="removed jumbotron to see if changes are taking affect on the website">
+      <created>1447848849175</created>
       <option name="number" value="00035" />
       <option name="project" value="LOCAL" />
-      <updated>1447859761795</updated>
+      <updated>1447848849175</updated>
     </task>
-    <task id="LOCAL-00036" summary="padding-top has been added to &lt;body&gt; in the adventure page">
-      <created>1447859793856</created>
+    <task id="LOCAL-00036" summary="undid previous changes">
+      <created>1447848913473</created>
       <option name="number" value="00036" />
       <option name="project" value="LOCAL" />
-      <updated>1447859793856</updated>
+      <updated>1447848913473</updated>
     </task>
-    <task id="LOCAL-00037" summary="Edited the blog part of the adventure page">
-      <created>1447860694208</created>
+    <task id="LOCAL-00037" summary="moved PHP to welccome.php and removed login.php">
+      <created>1447849745377</created>
       <option name="number" value="00037" />
       <option name="project" value="LOCAL" />
-      <updated>1447860694208</updated>
+      <updated>1447849745377</updated>
     </task>
-    <task id="LOCAL-00038" summary="Edited the blog part of the adventure page">
-      <created>1447860751101</created>
+    <task id="LOCAL-00038" summary="undid comment line">
+      <created>1447850055563</created>
       <option name="number" value="00038" />
       <option name="project" value="LOCAL" />
-      <updated>1447860751101</updated>
+      <updated>1447850055563</updated>
     </task>
-    <task id="LOCAL-00039" summary="Edited adventure page">
-      <created>1447861798958</created>
+    <task id="LOCAL-00039" summary="if username and password is right, go to google. &#10;else go to bing">
+      <created>1447850208254</created>
       <option name="number" value="00039" />
       <option name="project" value="LOCAL" />
-      <updated>1447861798958</updated>
+      <updated>1447850208254</updated>
     </task>
-    <task id="LOCAL-00040" summary="Edited adventure page">
-      <created>1447862701954</created>
+    <task id="LOCAL-00040" summary="removed else">
+      <created>1447850327322</created>
       <option name="number" value="00040" />
       <option name="project" value="LOCAL" />
-      <updated>1447862701954</updated>
+      <updated>1447850327322</updated>
     </task>
-    <task id="LOCAL-00041" summary="Edited adventure page">
-      <created>1447863304439</created>
+    <task id="LOCAL-00041" summary="removed style tags">
+      <created>1447850516670</created>
       <option name="number" value="00041" />
       <option name="project" value="LOCAL" />
-      <updated>1447863304439</updated>
+      <updated>1447850516670</updated>
     </task>
-    <task id="LOCAL-00042" summary="Edited links in side navbar">
-      <created>1447863480198</created>
+    <task id="LOCAL-00042" summary="removed style tags">
+      <created>1447852155838</created>
       <option name="number" value="00042" />
       <option name="project" value="LOCAL" />
-      <updated>1447863480198</updated>
+      <updated>1447852155838</updated>
     </task>
-    <task id="LOCAL-00043" summary="Edited side navbar">
-      <created>1447863844678</created>
+    <task id="LOCAL-00043" summary="added php for register which will take you to user.php to output the results">
+      <created>1447856565920</created>
       <option name="number" value="00043" />
       <option name="project" value="LOCAL" />
-      <updated>1447863844678</updated>
+      <updated>1447856565920</updated>
     </task>
-    <task id="LOCAL-00044" summary="Added jquery that will hopefully make the sidebar in adventure sticky">
-      <created>1447864239582</created>
+    <task id="LOCAL-00044" summary="made form point to user.php">
+      <created>1447856667861</created>
       <option name="number" value="00044" />
       <option name="project" value="LOCAL" />
-      <updated>1447864239582</updated>
+      <updated>1447856667861</updated>
     </task>
-    <task id="LOCAL-00045" summary="Added jquery that will hopefully make the sidebar in adventure sticky">
-      <created>1447864401308</created>
+    <task id="LOCAL-00045" summary="updated welcome to input local values">
+      <created>1447858497869</created>
       <option name="number" value="00045" />
       <option name="project" value="LOCAL" />
-      <updated>1447864401308</updated>
+      <updated>1447858497869</updated>
     </task>
-    <task id="LOCAL-00046" summary="Added the JQuery Link">
-      <created>1447864706900</created>
+    <task id="LOCAL-00046" summary="undid previous changes and changed variable name">
+      <created>1447858994153</created>
       <option name="number" value="00046" />
       <option name="project" value="LOCAL" />
-      <updated>1447864706900</updated>
+      <updated>1447858994153</updated>
     </task>
-    <task id="LOCAL-00047" summary="Edited the JQuery&#10;">
-      <created>1447864870064</created>
+    <task id="LOCAL-00047" summary="tried to use local variables">
+      <created>1447859097923</created>
       <option name="number" value="00047" />
       <option name="project" value="LOCAL" />
-      <updated>1447864870064</updated>
+      <updated>1447859097923</updated>
     </task>
-    <task id="LOCAL-00048" summary="Edited the JQuery&#10;">
-      <created>1447865088081</created>
+    <task id="LOCAL-00048" summary="made createUser.php file for all php from the reg">
+      <created>1447859249098</created>
       <option name="number" value="00048" />
       <option name="project" value="LOCAL" />
-      <updated>1447865088081</updated>
+      <updated>1447859249098</updated>
     </task>
-    <task id="LOCAL-00049" summary="Edited the JQuery&#10;">
-      <created>1447865225213</created>
+    <task id="LOCAL-00049" summary="made createUser.php file for all php from the reg">
+      <created>1447859358745</created>
       <option name="number" value="00049" />
       <option name="project" value="LOCAL" />
-      <updated>1447865225213</updated>
+      <updated>1447859358745</updated>
     </task>
-    <task id="LOCAL-00050" summary="Edited the JQuery&#10;">
-      <created>1447865492441</created>
+    <task id="LOCAL-00050" summary="changed local userID">
+      <created>1447859679452</created>
       <option name="number" value="00050" />
       <option name="project" value="LOCAL" />
-      <updated>1447865492445</updated>
+      <updated>1447859679452</updated>
     </task>
-    <task id="LOCAL-00051" summary="Edited the JQuery&#10;">
-      <created>1447865711922</created>
+    <task id="LOCAL-00051" summary="lots of changes">
+      <created>1447860133571</created>
       <option name="number" value="00051" />
       <option name="project" value="LOCAL" />
-      <updated>1447865711922</updated>
+      <updated>1447860133571</updated>
     </task>
-    <task id="LOCAL-00052" summary="Edited the link for js in the welcome.php page&#10;">
-      <created>1447866030256</created>
+    <task id="LOCAL-00052" summary="included connect and closed connection">
+      <created>1447861055383</created>
       <option name="number" value="00052" />
       <option name="project" value="LOCAL" />
-      <updated>1447866030256</updated>
+      <updated>1447861055383</updated>
     </task>
-    <task id="LOCAL-00053" summary="Adventure Page should be linked to the script file&#10;">
-      <created>1447866334795</created>
+    <task id="LOCAL-00053" summary="updated query">
+      <created>1447861117725</created>
       <option name="number" value="00053" />
       <option name="project" value="LOCAL" />
-      <updated>1447866334799</updated>
+      <updated>1447861117726</updated>
     </task>
-    <task id="LOCAL-00054" summary="Put script directly into the adventure.php">
-      <created>1447866605055</created>
+    <task id="LOCAL-00054" summary="added real escape">
+      <created>1447861695238</created>
       <option name="number" value="00054" />
       <option name="project" value="LOCAL" />
-      <updated>1447866605055</updated>
+      <updated>1447861695239</updated>
     </task>
-    <task id="LOCAL-00055" summary="Edited Script">
-      <created>1447866814272</created>
+    <task id="LOCAL-00055" summary="moved login php to seperate file">
+      <created>1447862113408</created>
       <option name="number" value="00055" />
       <option name="project" value="LOCAL" />
-      <updated>1447866814272</updated>
+      <updated>1447862113408</updated>
     </task>
-    <task id="LOCAL-00056" summary="Edited Script">
-      <created>1447867802475</created>
+    <task id="LOCAL-00056" summary="changed submit to button">
+      <created>1447862234942</created>
       <option name="number" value="00056" />
       <option name="project" value="LOCAL" />
-      <updated>1447867802484</updated>
+      <updated>1447862234942</updated>
     </task>
-    <task id="LOCAL-00057" summary="Edited Script">
-      <created>1447867856094</created>
+    <task id="LOCAL-00057" summary="removed variable">
+      <created>1447862668494</created>
       <option name="number" value="00057" />
       <option name="project" value="LOCAL" />
-      <updated>1447867856094</updated>
+      <updated>1447862668494</updated>
     </task>
-    <task id="LOCAL-00058" summary="Edited Script">
-      <created>1447867969465</created>
+    <task id="LOCAL-00058" summary="used local variables in insertt">
+      <created>1447863105012</created>
       <option name="number" value="00058" />
       <option name="project" value="LOCAL" />
-      <updated>1447867969466</updated>
+      <updated>1447863105012</updated>
     </task>
-    <task id="LOCAL-00059" summary="Trying the sticky sidebar from a new angle">
-      <created>1447868522123</created>
+    <task id="LOCAL-00059" summary="output userID">
+      <created>1447863370954</created>
       <option name="number" value="00059" />
       <option name="project" value="LOCAL" />
-      <updated>1447868522130</updated>
+      <updated>1447863370954</updated>
     </task>
-    <task id="LOCAL-00060" summary="Trying the sticky sidebar from a new angle">
-      <created>1447868736579</created>
+    <task id="LOCAL-00060" summary="removed real escape">
+      <created>1447863465861</created>
       <option name="number" value="00060" />
       <option name="project" value="LOCAL" />
-      <updated>1447868736579</updated>
+      <updated>1447863465861</updated>
     </task>
-    <task id="LOCAL-00061" summary="Trying the sticky sidebar from a new angle">
-      <created>1447868861164</created>
+    <task id="LOCAL-00061" summary="change id to name">
+      <created>1447863574627</created>
       <option name="number" value="00061" />
       <option name="project" value="LOCAL" />
-      <updated>1447868861164</updated>
+      <updated>1447863574627</updated>
     </task>
-    <task id="LOCAL-00062" summary="updated jquery with correct classes">
-      <created>1447869553366</created>
+    <task id="LOCAL-00062" summary="updated id's to names">
+      <created>1447863739198</created>
       <option name="number" value="00062" />
       <option name="project" value="LOCAL" />
-      <updated>1447869553366</updated>
+      <updated>1447863739198</updated>
     </task>
-    <task id="LOCAL-00063" summary="removed php">
-      <created>1447869859324</created>
+    <task id="LOCAL-00063" summary="try input again">
+      <created>1447863776122</created>
       <option name="number" value="00063" />
       <option name="project" value="LOCAL" />
-      <updated>1447869859324</updated>
+      <updated>1447863776122</updated>
     </task>
-    <task id="LOCAL-00064" summary="...">
-      <created>1447870663560</created>
+    <task id="LOCAL-00064" summary="added value">
+      <created>1447864027087</created>
       <option name="number" value="00064" />
       <option name="project" value="LOCAL" />
-      <updated>1447870663560</updated>
+      <updated>1447864027087</updated>
     </task>
-    <task id="LOCAL-00065" summary="Moved smooth scrolling js to script.js and added a link the script.js into adventure">
-      <created>1447870836163</created>
+    <task id="LOCAL-00065" summary="removed class from tag">
+      <created>1447864182757</created>
       <option name="number" value="00065" />
       <option name="project" value="LOCAL" />
-      <updated>1447870836163</updated>
+      <updated>1447864182757</updated>
     </task>
-    <task id="LOCAL-00066" summary="Smooth scrolling should now work on the top navbar">
-      <created>1447870911936</created>
+    <task id="LOCAL-00066" summary="added value to userID">
+      <created>1447864282037</created>
       <option name="number" value="00066" />
       <option name="project" value="LOCAL" />
-      <updated>1447870911936</updated>
+      <updated>1447864282037</updated>
     </task>
-    <task id="LOCAL-00067" summary="Added Scrollspy to Adventure.php">
-      <created>1447872113640</created>
+    <task id="LOCAL-00067" summary="removed values">
+      <created>1447864367932</created>
       <option name="number" value="00067" />
       <option name="project" value="LOCAL" />
-      <updated>1447872113641</updated>
+      <updated>1447864367932</updated>
     </task>
-    <task id="LOCAL-00068" summary="Updated scrollspy in adventure to look at the class .sticky-sidebar">
-      <created>1447872240721</created>
+    <task id="LOCAL-00068" summary="added checkbox to modal for author signup">
+      <created>1447867137997</created>
       <option name="number" value="00068" />
       <option name="project" value="LOCAL" />
-      <updated>1447872240721</updated>
+      <updated>1447867137997</updated>
     </task>
-    <task id="LOCAL-00069" summary="Updated scrollspy id's">
-      <created>1447872368782</created>
+    <task id="LOCAL-00069" summary="moved checkbox and label into columns">
+      <created>1447867354716</created>
       <option name="number" value="00069" />
       <option name="project" value="LOCAL" />
-      <updated>1447872368782</updated>
+      <updated>1447867354716</updated>
     </task>
-    <task id="LOCAL-00070" summary="Dicking about with the data-offset attr in the body of the adventure page&#10;&#10;: 100">
-      <created>1447872638762</created>
+    <task id="LOCAL-00070" summary="moved checkbox and label into columns">
+      <created>1447867449161</created>
       <option name="number" value="00070" />
       <option name="project" value="LOCAL" />
-      <updated>1447872638763</updated>
+      <updated>1447867449161</updated>
     </task>
-    <task id="LOCAL-00071" summary="Dicking about with the data-offset attr in the body of the adventure page&#10;&#10;: 75 (Pretty sure this one will be what we're looking for!)">
-      <created>1447872709974</created>
+    <task id="LOCAL-00071" summary="closed div">
+      <created>1447867559107</created>
       <option name="number" value="00071" />
       <option name="project" value="LOCAL" />
-      <updated>1447872709974</updated>
+      <updated>1447867559107</updated>
     </task>
-    <task id="LOCAL-00072" summary="Dicking about with the data-offset attr in the body of the adventure page&#10;&#10;: 90 (Pretty sure this one will be what we're looking for! For sure this time)">
-      <created>1447872894708</created>
+    <task id="LOCAL-00072" summary="moved into columns">
+      <created>1447867988089</created>
       <option name="number" value="00072" />
       <option name="project" value="LOCAL" />
-      <updated>1447872894708</updated>
+      <updated>1447867988089</updated>
     </task>
-    <task id="LOCAL-00073" summary="Trying to edit where links take you to in a page">
-      <created>1447873148796</created>
+    <task id="LOCAL-00073" summary="moved into columns">
+      <created>1447868082432</created>
       <option name="number" value="00073" />
       <option name="project" value="LOCAL" />
-      <updated>1447873148796</updated>
+      <updated>1447868082432</updated>
     </task>
-    <task id="LOCAL-00074" summary="Trying to edit where links take you to in a page">
-      <created>1447873205085</created>
+    <task id="LOCAL-00074" summary="moved into columns">
+      <created>1447868170420</created>
       <option name="number" value="00074" />
       <option name="project" value="LOCAL" />
-      <updated>1447873205085</updated>
+      <updated>1447868170420</updated>
     </task>
-    <task id="LOCAL-00075" summary="Trying to edit where links take you to in a page">
-      <created>1447873409383</created>
+    <task id="LOCAL-00075" summary="attempted to make button green">
+      <created>1447868284298</created>
       <option name="number" value="00075" />
       <option name="project" value="LOCAL" />
-      <updated>1447873409383</updated>
+      <updated>1447868284298</updated>
     </task>
-    <task id="LOCAL-00076" summary="Trying to edit where links take you to in a page">
-      <created>1447873454716</created>
+    <task id="LOCAL-00076" summary="added hidden button for checkbox value check">
+      <created>1447868530818</created>
       <option name="number" value="00076" />
       <option name="project" value="LOCAL" />
-      <updated>1447873454716</updated>
+      <updated>1447868530819</updated>
     </task>
-    <task id="LOCAL-00077" summary="Trying to edit where links take you to in a page">
-      <created>1447873768374</created>
+    <task id="LOCAL-00077" summary="made 2 feilds required">
+      <created>1447869107424</created>
       <option name="number" value="00077" />
       <option name="project" value="LOCAL" />
-      <updated>1447873768374</updated>
+      <updated>1447869107424</updated>
     </task>
-    <task id="LOCAL-00078" summary="Trying to edit where links take you to in a page">
-      <created>1447873857549</created>
+    <task id="LOCAL-00078" summary="made all form feilds required">
+      <created>1447869243783</created>
       <option name="number" value="00078" />
       <option name="project" value="LOCAL" />
-      <updated>1447873857549</updated>
+      <updated>1447869243783</updated>
     </task>
-    <task id="LOCAL-00079" summary="Trying to edit where links take you to in a page">
-      <created>1447874041526</created>
-      <option name="number" value="00079" />
-      <option name="project" value="LOCAL" />
-      <updated>1447874041526</updated>
-    </task>
-    <task id="LOCAL-00080" summary="Trying to edit where links take you to in a page&#10;&#10;May have it!">
-      <created>1447874083999</created>
-      <option name="number" value="00080" />
-      <option name="project" value="LOCAL" />
-      <updated>1447874083999</updated>
-    </task>
-    <task id="LOCAL-00081" summary="Edited some values (data-offset, some css stuff)">
-      <created>1447874172176</created>
-      <option name="number" value="00081" />
-      <option name="project" value="LOCAL" />
-      <updated>1447874172176</updated>
-    </task>
-    <task id="LOCAL-00082" summary="Edited some values (data-offset, some css stuff)">
-      <created>1447874216940</created>
-      <option name="number" value="00082" />
-      <option name="project" value="LOCAL" />
-      <updated>1447874216940</updated>
-    </task>
-    <task id="LOCAL-00083" summary="Edited some values (data-offset, some css stuff)">
-      <created>1447874263197</created>
-      <option name="number" value="00083" />
-      <option name="project" value="LOCAL" />
-      <updated>1447874263197</updated>
-    </task>
-    <option name="localTasksCounter" value="84" />
+    <option name="localTasksCounter" value="79" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-11" y="-11" width="2182" height="1402" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11713031" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13514805" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -523,6 +549,7 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -543,40 +570,190 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Edited adventure page" />
-    <MESSAGE value="Edited links in side navbar" />
-    <MESSAGE value="Edited side navbar" />
-    <MESSAGE value="Added jquery that will hopefully make the sidebar in adventure sticky" />
-    <MESSAGE value="Added the JQuery Link" />
-    <MESSAGE value="Edited the JQuery&#10;" />
-    <MESSAGE value="Edited the link for js in the welcome.php page&#10;" />
-    <MESSAGE value="Adventure Page should be linked to the script file&#10;" />
-    <MESSAGE value="Put script directly into the adventure.php" />
-    <MESSAGE value="Edited Script" />
-    <MESSAGE value="Trying the sticky sidebar from a new angle" />
-    <MESSAGE value="updated jquery with correct classes" />
-    <MESSAGE value="removed php" />
-    <MESSAGE value="..." />
-    <MESSAGE value="Moved smooth scrolling js to script.js and added a link the script.js into adventure" />
-    <MESSAGE value="Smooth scrolling should now work on the top navbar" />
-    <MESSAGE value="Added Scrollspy to Adventure.php" />
-    <MESSAGE value="Updated scrollspy in adventure to look at the class .sticky-sidebar" />
-    <MESSAGE value="Updated scrollspy id's" />
-    <MESSAGE value="Dicking about with the data-offset attr in the body of the adventure page&#10;&#10;: 100" />
-    <MESSAGE value="Dicking about with the data-offset attr in the body of the adventure page&#10;&#10;: 75 (Pretty sure this one will be what we're looking for!)" />
-    <MESSAGE value="Dicking about with the data-offset attr in the body of the adventure page&#10;&#10;: 90 (Pretty sure this one will be what we're looking for! For sure this time)" />
-    <MESSAGE value="Trying to edit where links take you to in a page" />
-    <MESSAGE value="Trying to edit where links take you to in a page&#10;&#10;May have it!" />
-    <MESSAGE value="Edited some values (data-offset, some css stuff)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Edited some values (data-offset, some css stuff)" />
+    <MESSAGE value="lots of changes" />
+    <MESSAGE value="included connect and closed connection" />
+    <MESSAGE value="updated query" />
+    <MESSAGE value="added real escape" />
+    <MESSAGE value="moved login php to seperate file" />
+    <MESSAGE value="changed submit to button" />
+    <MESSAGE value="removed variable" />
+    <MESSAGE value="used local variables in insertt" />
+    <MESSAGE value="output userID" />
+    <MESSAGE value="removed real escape" />
+    <MESSAGE value="change id to name" />
+    <MESSAGE value="updated id's to names" />
+    <MESSAGE value="try input again" />
+    <MESSAGE value="added value" />
+    <MESSAGE value="removed class from tag" />
+    <MESSAGE value="added value to userID" />
+    <MESSAGE value="removed values" />
+    <MESSAGE value="added checkbox to modal for author signup" />
+    <MESSAGE value="moved checkbox and label into columns" />
+    <MESSAGE value="closed div" />
+    <MESSAGE value="moved into columns" />
+    <MESSAGE value="attempted to make button green" />
+    <MESSAGE value="added hidden button for checkbox value check" />
+    <MESSAGE value="made 2 feilds required" />
+    <MESSAGE value="made all form feilds required" />
+    <option name="LAST_COMMIT_MESSAGE" value="made all form feilds required" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <option name="time" value="8" />
-    </breakpoint-manager>
+    <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/about.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/welcome.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="27" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
+          <folding>
+            <marker date="1447860118555" expanded="true" signature="368:386" placeholder="SELECT * FRO..User..." />
+            <marker date="1447860118555" expanded="true" signature="435:466" placeholder="SELECT * FRO..User..." />
+            <marker date="1447860118555" expanded="true" signature="435:467" placeholder="SELECT * FRO..User..." />
+            <marker date="1447860118555" expanded="true" signature="435:468" placeholder="SELECT * FRO..User..." />
+            <marker date="1447860118555" expanded="true" signature="435:487" placeholder="SELECT * FRO..User..." />
+            <marker date="1447860118555" expanded="true" signature="435:489" placeholder="SELECT * FRO..User..." />
+            <marker date="1447860118555" expanded="true" signature="435:593" placeholder="SELECT * FRO..User..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/about.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/welcome.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="27" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
+          <folding>
+            <marker date="1447860118555" expanded="true" signature="368:386" placeholder="SELECT * FRO..User..." />
+            <marker date="1447860118555" expanded="true" signature="435:466" placeholder="SELECT * FRO..User..." />
+            <marker date="1447860118555" expanded="true" signature="435:467" placeholder="SELECT * FRO..User..." />
+            <marker date="1447860118555" expanded="true" signature="435:468" placeholder="SELECT * FRO..User..." />
+            <marker date="1447860118555" expanded="true" signature="435:487" placeholder="SELECT * FRO..User..." />
+            <marker date="1447860118555" expanded="true" signature="435:489" placeholder="SELECT * FRO..User..." />
+            <marker date="1447860118555" expanded="true" signature="435:593" placeholder="SELECT * FRO..User..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/about.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/welcome.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/about.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/welcome.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/about.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/welcome.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="43" column="46" selection-start-line="43" selection-start-column="46" selection-end-line="43" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/about.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/welcome.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -588,129 +765,12 @@
     <entry file="file://$PROJECT_DIR$/about.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="33" column="45" selection-start-line="33" selection-start-column="45" selection-end-line="33" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/connect.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="1" column="18" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/adventure.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="57" column="45" selection-start-line="57" selection-start-column="45" selection-end-line="57" selection-end-column="45" />
-          <folding>
-            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/script.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="2" column="35" selection-start-line="2" selection-start-column="35" selection-end-line="2" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/welcome.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="13" column="51" selection-start-line="13" selection-start-column="51" selection-end-line="13" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="1" column="18" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/adventure.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/script.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/welcome.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="13" column="51" selection-start-line="13" selection-start-column="51" selection-end-line="13" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="1" column="18" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/adventure.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/script.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/welcome.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="53" column="41" selection-start-line="53" selection-start-column="41" selection-end-line="53" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/about.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/connect.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -721,41 +781,77 @@
     <entry file="file://$PROJECT_DIR$/about.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="33" column="45" selection-start-line="33" selection-start-column="45" selection-end-line="33" selection-end-column="45" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/script.js">
+    <entry file="file://$PROJECT_DIR$/about.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="2" column="35" selection-start-line="2" selection-start-column="35" selection-end-line="2" selection-end-column="35" />
+        <state vertical-scroll-proportion="-0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/welcome.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-88.26923">
-          <caret line="144" column="17" selection-start-line="144" selection-start-column="13" selection-end-line="144" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/adventure.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-19.615385">
-          <caret line="43" column="96" selection-start-line="43" selection-start-column="96" selection-end-line="43" selection-end-column="96" />
-          <folding>
-            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.15370706">
-          <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.7352941">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding>
+            <marker date="1447862093785" expanded="true" signature="162:180" placeholder="SELECT * FRO..User..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.441176">
+          <caret line="21" column="75" selection-start-line="21" selection-start-column="75" selection-end-line="21" selection-end-column="75" />
+          <folding>
+            <marker date="1447860118555" expanded="true" signature="368:386" placeholder="SELECT * FRO..User..." />
+            <marker date="1447860118555" expanded="true" signature="435:466" placeholder="SELECT * FRO..User..." />
+            <marker date="1447860118555" expanded="true" signature="435:467" placeholder="SELECT * FRO..User..." />
+            <marker date="1447860118555" expanded="true" signature="435:468" placeholder="SELECT * FRO..User..." />
+            <marker date="1447860118555" expanded="true" signature="435:487" placeholder="SELECT * FRO..User..." />
+            <marker date="1447860118555" expanded="true" signature="435:489" placeholder="SELECT * FRO..User..." />
+            <marker date="1447860118555" expanded="true" signature="435:593" placeholder="SELECT * FRO..User..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/createUser.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.461538">
+          <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+          <folding>
+            <marker date="1447869397676" expanded="true" signature="107:133" placeholder="INSERT INTO User..." />
+            <marker date="1447869397676" expanded="true" signature="107:280" placeholder="INSERT INTO User..." />
+            <marker date="1447869397676" expanded="true" signature="107:281" placeholder="INSERT INTO User..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/welcome.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4376658">
+          <caret line="49" column="124" selection-start-line="49" selection-start-column="124" selection-end-line="49" selection-end-column="124" />
           <folding />
         </state>
       </provider>
