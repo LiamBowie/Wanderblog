@@ -135,7 +135,7 @@
 	</div>
 
 	<script>
-        $(document).ready(function () { $("#passwordconfirm").keyup(checkPasswordMatch); });
+        $(document).ready(function () { $("#txtConfirmPassword").keyup(checkPasswordMatch); });
 
         function checkPasswordMatch() {
             var password = $("#password").val();
