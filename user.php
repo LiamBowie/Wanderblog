@@ -20,7 +20,8 @@
     <body>
 
     <?php
-        if (isset($SESSION)){
+        if (session_status() == PHP_SESSION_NONE) {
+            session_start();
             include'navbar-login.php';
         }
         else{
@@ -36,7 +37,7 @@
             $results = mysqli_query($conn, $query);
 
             // Output results
-            $output="<br><br><br><br>";
+            $output="<br><br>";
             if(mysqli_num_rows($results)>0){
                 while($row = mysqli_fetch_array($results)) {
                     $output = $output . "Name: " . $row['FullName'] . "<br>" . "userID: " . $row['userID'] . "<br>" . "Email: " . $row['emailAddress'] . "<br>" . "<br>";
