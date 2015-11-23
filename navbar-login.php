@@ -1,5 +1,6 @@
 <?php
-$username = $_GET['u'];
+session_start();
+$username = $_SESSION['username'];
 echo '
    <style>
         /* Navbar styling */

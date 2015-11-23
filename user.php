@@ -1,5 +1,6 @@
 <html>
     <head>
+        <?php session_start(); ?>
         <title>Created User</title>
         <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
@@ -19,7 +20,7 @@
     <body>
 
     <?php
-        if ($_GET['u']!='unknown'){
+        if (isset($SESSION)){
             include'navbar-login.php';
         }
         else{
