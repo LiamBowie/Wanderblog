@@ -44,7 +44,7 @@ echo '
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#top5">TOP 5 TRIPS</a></li>
+                    <li><a href="welcome.php#top5">TOP 5 TRIPS</a></li>
                     <li><a href="#" data-toggle="modal" data-target="#modal-reg">REGISTER</a></li>
                     <li>
                         <form style="padding-top: 10px" class="form-inline" action="login.php" method="post">

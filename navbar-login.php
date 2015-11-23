@@ -45,7 +45,7 @@ echo '
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav navbar-right">
-                    <li>Logged in as' . $username . '</li>
+                    <li><p>Logged in as ' . $username . '</p></li>
                     <li><a href="#top5">TOP 5 TRIPS</a></li>
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">MORE
