@@ -19,7 +19,7 @@
     <body>
 
     <?php
-        if (isset($_SESSION['username'])){
+        if ($_GET['u']!='unknown'){
             include'navbar-login.php';
         }
         else{
