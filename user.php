@@ -10,6 +10,7 @@
     </head>
 
     <body>
+    <?php include'navbar-standard.php'; ?>
         <?php
             // Send query to db
             if($_GET['u']=='unknown'){ $query = "Select CONCAT(firstName, \" \", lastName) AS FullName, userID, emailAddress, isAdmin FROM User;"; }
