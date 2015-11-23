@@ -7,7 +7,7 @@
 
         <!--Link to personal Stylesheet-->
         <link rel="stylesheet" type="text/css" href="style.css">
-        <link rel="shortcut icon" href="images/earth.ico">
+        <link rel="shortcut icon" href="Images/earth.ico">
         <?php
             ini_set('display_errors', 1);
             ini_set('display_startup_errors', 1);
@@ -17,7 +17,17 @@
     </head>
 
     <body>
-    <?php include'navbar-standard.php'; ?>
+
+    <?php
+        if (isset($_SESSION)){
+            include'navbar-login.php';
+        }
+        else{
+            include'navbar-standard.php';
+        }
+    ?>
+
+
         <?php
             // Send query to db
             if($_GET['u']=='unknown'){ $query = "Select CONCAT(firstName, \" \", lastName) AS FullName, userID, emailAddress, isAdmin FROM User;"; }
