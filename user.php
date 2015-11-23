@@ -14,19 +14,15 @@
             ini_set('display_startup_errors', 1);
             error_reporting(E_ALL);
             include 'connect.php';
+            include 'login.php';
         ?>
     </head>
 
     <body>
 
     <?php
-        if (session_status() == PHP_SESSION_NONE) {
-            session_start();
-            include'navbar-login.php';
-        }
-        else{
-            include'navbar-standard.php';
-        }
+        if($loggedIn=false){ include 'navbar-standard.php'; }
+        else{include 'navbar-login.php';}
     ?>
 
 
