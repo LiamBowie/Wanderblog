@@ -19,6 +19,6 @@
                 }
             }
         }
-        else{}
+        else{echo'login failed'; }
 
 	?>
