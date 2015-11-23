@@ -29,7 +29,7 @@
 	}
 	</style>
 </head>
-<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+<body style="padding-top: 0">
 	<nav class="navbar navbar-default navbar-fixed-top">
 		<div class="container-fluid">
 			<div class="navbar-header">
@@ -42,7 +42,7 @@
 			</div>
 			<div class="collapse navbar-collapse" id="myNavbar">
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="#carousel">TOP 5 TRIPS</a></li>
+					<li><a href="#top5">TOP 5 TRIPS</a></li>
 					<li><a href="#" data-toggle="modal" data-target="#modal-reg">REGISTER</a></li>
 					<li>
 						<form style="padding-top: 10px" class="form-inline" action="login.php" method="post">
@@ -70,10 +70,10 @@
 
 
 	<!-- Modal -->
-	<div class="modal fade" id="modal-reg" role="dialog" style="padding-top: 20px">
+	<div class="modal fade" id="modal-reg" role="dialog">
 		<div class="modal-dialog">
 
-			 <!-- Modal content-->
+			<!-- Modal content-->
 			<div class="modal-content">
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -134,19 +134,6 @@
 		</div>
 	</div>
 
-	<script>
-        $(document).ready(function () { $("#passwordconfirm").keyup(checkPasswordMatch); });
-
-        function checkPasswordMatch() {
-            var password = $("#password").val();
-            var confirmPassword = $("#passwordconfirm").val();
-
-            if (password != confirmPassword){ $("#divCheckPasswordMatch").html("Passwords do not match!"); }
-            else{ $("#divCheckPasswordMatch").html("Passwords match."); }
-
-        }
-    </script>
-
 	<div class="jumbotron text-center">
 		<h1>Wanderblog</h1> 
 		<p>Blogging site specifically for travelers</p> 
@@ -160,8 +147,7 @@
 		</form>
 	</div>
 
-
-	<div id="carousel" class="carousel slide" data-ride="carousel">
+	<div id="top5" class="carousel slide" data-ride="carousel">
 		<!--Indicators-->
 		<ol class="carousel-indicators">
 			<li data-target="#carousel" data-slide-to="0" class="active"></li>
