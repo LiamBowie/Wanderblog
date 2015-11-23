@@ -1,5 +1,6 @@
-<html>
-    <style>
+<?php
+echo '
+   <style>
         /* Navbar styling */
         .navbar {
             margin-bottom: 0;
@@ -132,4 +133,5 @@
             </div>
         </div>
     </div>
-</html>
+</html> '
+    ?>
