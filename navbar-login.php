@@ -3,6 +3,11 @@ session_start();
 $username = $_SESSION['username'];
 echo '
    <style>
+
+        .p{
+            padding-top: 5px;
+            color: white;
+        }
         /* Navbar styling */
         .navbar {
             margin-bottom: 0;
