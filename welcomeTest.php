@@ -31,17 +31,7 @@
 </head>
 <body style="padding-top: 0">
 
-<?php
-	if(isset($_SESSION['username'])){ $loggedIn=true; }
-	else{ $loggedIn=false; }
-
-	if($loggedIn==true){ include'navbar-loggedIn.php'; }
-	else if($loggedIn==false){ include'navbar-welcome.php'; }
-	else{ header("Location: google.com"); }
-?>
-
-
-<?php include 'navbar-loggedIn.php'; ?>
+<?php include 'navbar.php'; ?>
 
 	<div class="jumbotron text-center">
 		<h1>Wanderblog</h1> 
