@@ -11,7 +11,7 @@
 	<!--Link to personal Stylesheet-->
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link rel="shortcut icon" href="images/earth.ico">
-	<?php include'connect.php'; ?> /* iclude connection to db */
+	<?php include'connect.php'; include'login.php' ?> /* iclude connection to db */
 	
 	<!-- Additional Styling for Current Page -->
 	<style>
@@ -30,6 +30,13 @@
 	</style>
 </head>
 <body style="padding-top: 0">
+
+<?php
+	if($loggedIn==true){ include'navbar-loggedIn.php'; }
+	else if($loggedIn==false){ include'navbar-welcome.php'; }
+	else{ header("Location: google.com"); }
+?>
+
 
 <?php include 'navbar-loggedIn.php'; ?>
 
