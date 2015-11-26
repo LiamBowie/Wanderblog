@@ -1,5 +1,4 @@
 <?php
-$loggedin;
 $x=$_GET['x'];
 
     if($x=='IN') {
@@ -31,5 +30,5 @@ $x=$_GET['x'];
         header("Location: welcometest.php");
     }
 
-    else{  } //do nothing
+    else{ $loggedIn=false; } //do nothing
 
