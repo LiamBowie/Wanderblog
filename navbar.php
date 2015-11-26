@@ -1,4 +1,5 @@
 <?php
+include 'login.php';
 
 if($loggedIn==true) { //if user is loggedIn to WanderBlog
     echo '<nav class="navbar navbar-default navbar-fixed-top">
