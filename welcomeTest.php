@@ -31,7 +31,7 @@
 </head>
 <body style="padding-top: 0">
 
-<?php include 'navbar-welcome.php'; ?>
+<?php include 'navbar-loggedIn.php'; ?>
 
 	<div class="jumbotron text-center">
 		<h1>Wanderblog</h1> 

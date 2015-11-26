@@ -4,7 +4,7 @@
 		$tryUsername = $_POST['usernameInput'];
 		$tryPassword = $_POST['passwordInput'];
 		$found = false;
-		$query="SELECT * FROM User;";
+        $query='Select CONCAT(firstName, " ", lastName) AS FullName, userID, emailAddress, isAdmin FROM User;';
 		$results=mysqli_query($conn, $query);
 
 		if(mysqli_num_rows($results)>0) { /* if there are results (rows>0) */
@@ -14,6 +14,7 @@
                     $username=$tryUsername;
                     session_start();
                     $_SESSION['username']=$username;
+                    $sesssion['FullName']=$row['FullName'];
                     $_SESSION['access_level']='standard_user';
                     header("Location: user.php?u=" . $_SESSION['username']);
                 }
