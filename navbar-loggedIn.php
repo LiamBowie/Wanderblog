@@ -12,8 +12,8 @@ echo'
 			</div>
 			<div class="collapse navbar-collapse" id="myNavbar">
 				<ul class="nav navbar-nav navbar-right">
+				    <li> Logged in as' . $_SESSION['FullName'] . '</li>
 					<li><a href="#top5">TOP 5 TRIPS</a></li>
-					<li> Logged in as' . $_SESSION['FullName'] . '</li>
 					<li class="dropdown">
 						<a class="dropdown-toggle" data-toggle="dropdown" href="#">MORE
 							<span class="caret"></span>
