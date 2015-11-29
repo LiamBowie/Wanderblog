@@ -1,4 +1,9 @@
 <?php
+
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 $x=$_GET['x'];
 
     if($x=='IN') {
@@ -18,7 +23,7 @@ $x=$_GET['x'];
                     $_SESSION['username'] = $tryUsername;
                     $_SESSION['FullName'] = $row['FullName'];
                     $_SESSION['access_level'] = 'standard_user';
-                    header("welcometest.php");
+                    //header("welcometest.php");
                 }
             }
         } else {} //do nothing
@@ -27,7 +32,7 @@ $x=$_GET['x'];
     else if($x=='OUT'){
         session_destroy();
         $loggedIn=false;
-        header("Location: welcometest.php");
+        //header("Location: welcometest.php");
     }
 
     else{ $loggedIn=false; } //do nothing
