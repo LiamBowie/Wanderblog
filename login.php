@@ -23,7 +23,7 @@ $operation=$_GET["operation"];
                     $_SESSION['username'] = $tryUsername;
                     $_SESSION['FullName'] = $row['FullName'];
                     $_SESSION['access_level'] = 'standard_user';
-                    header("welcometest.php");
+                    header("Location: welcometest.php");
                 }
             }
         } else {} //do nothing
@@ -32,7 +32,7 @@ $operation=$_GET["operation"];
     else if($operation=="OUT"){
         session_destroy();
         $loggedIn=false;
-        //header("Location: welcometest.php");
+        header("Location: welcometest.php");
     }
 
     else{ $loggedIn=false; } //do nothing
