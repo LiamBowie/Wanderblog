@@ -4,9 +4,10 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-$x=$_GET['x'];
+$operation=$_GET["operation"];
+echo "Operation:" . $operation;
 
-    if($x=='IN') {
+    if($operation=="IN") {
         include 'connect.php';
         $tryUsername = $_POST['usernameInput'];
         $tryPassword = $_POST['passwordInput'];
@@ -29,7 +30,7 @@ $x=$_GET['x'];
         } else {} //do nothing
     }
 
-    else if($x=='OUT'){
+    else if($operation=="OUT"){
         session_destroy();
         $loggedIn=false;
         //header("Location: welcometest.php");

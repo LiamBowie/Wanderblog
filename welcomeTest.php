@@ -67,7 +67,7 @@
 			</div>
 
 			<div class="item">
-				<img src="images/mountain.jpg" alt="Image">
+				<img src="Images/mountain.jpg" alt="Image">
 				<div class="carousel-caption">
 					<h3>Trip 2</h3>
 					<p>Oh look! A mountain!</p>
