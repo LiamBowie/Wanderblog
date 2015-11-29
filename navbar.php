@@ -1,6 +1,9 @@
 <?php
 include 'login.php';
 
+if($_SESSION['loggedIn']==true){ $loggedIn=true; }
+else{ $loggedIn=false; }
+
 if($loggedIn==true) { //if user is loggedIn to WanderBlog
     echo '<nav class="navbar navbar-default navbar-fixed-top">
 		<div class="container-fluid">
