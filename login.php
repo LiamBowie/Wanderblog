@@ -12,7 +12,7 @@ echo "Operation:" . $operation;
         $tryUsername = $_POST['usernameInput'];
         $tryPassword = $_POST['passwordInput'];
         $found = false;
-        $query = 'Select CONCAT(firstName, " ", lastName) AS FullName, userID, emailAddress, isAdmin FROM User;';
+        $query = 'Select CONCAT(firstName, " ", lastName) AS FullName, userID, emailAddress, password, isAdmin FROM User;';
         $results = mysqli_query($conn, $query);
 
         if (mysqli_num_rows($results) > 0) { /* if there are results (rows>0) */
