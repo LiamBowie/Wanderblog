@@ -24,7 +24,7 @@ echo "Operation:" . $operation;
                     $_SESSION['username'] = $tryUsername;
                     $_SESSION['FullName'] = $row['FullName'];
                     $_SESSION['access_level'] = 'standard_user';
-                    //header("welcometest.php");
+                    header("welcometest.php");
                 }
             }
         } else {} //do nothing
