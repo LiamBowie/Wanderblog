@@ -56,9 +56,9 @@
 <div class="container-fluid">
     <div class="row content">
         <div class="col-sm-3 sidenav">
-            <h4 class="text-center">LOCATION</h4>
+            <h4 class="text-center"><?php echo $row['location'] ?></h4>
             <img src="Images/jo.jpg" class="img-thumbnail img-responsive" alt="Adventure Photo">
-            <h5><span class="glyphicon glyphicon-time"></span> Post by *USER*, Sep 27, 2015.</h5>
+            <h5><span class="glyphicon glyphicon-time"></span> Post by <?php echo $row['author'] ?></h5>
             <nav class="sticky-sidebar">
                 <ul class="nav nav-pills nav-stacked">
                     <li><a href="#desc">Adventure Description</a></li>
