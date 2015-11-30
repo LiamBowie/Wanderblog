@@ -12,7 +12,7 @@
         $results = mysqli_query($conn, $sql);
         mysqli_close($conn);
 
-        header("Location: user.php?u=" . $_POST['userID']);
+        header("Location: login.php?operation=IN");
 
     }
     else{ echo "Passwords did not match"; }
