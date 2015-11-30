@@ -1,6 +1,6 @@
 <?php
-$output="Not begun";
-if($_SESSION['loggedIn']==true) {
+$output="";
+if(isset($_SESSION['loggedIn'])) {
     $output += $_SESSION['FullName'];
     $output += $_SESSION['LoggedIn'];
 }
