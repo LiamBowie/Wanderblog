@@ -46,7 +46,11 @@
 <?php include'navbar.php'; ?>
 
 <?php
-    $title = "NEW TITLE";
+    include 'connect.php';
+    $query = "Select * FROM Adventure WHERE advID='" . $_GET['adv'] . "';";
+    $results = mysqli_query($conn, $query);
+    $row = mysqli_fetch_array($results);
+    $title = $row['title'];
 ?>
 
 <div class="container-fluid">
