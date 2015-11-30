@@ -40,6 +40,7 @@ $operation=$_GET["operation"];
 
     else if($operation="REGIN"){
         include 'connect.php';
+        session_start(); //pull through existing data
         $tryUsername = $_SESSION['username'];
         $tryPassword = $_SESSION['password'];
         $found = false;
