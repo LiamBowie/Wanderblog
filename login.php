@@ -18,7 +18,6 @@ $operation=$_GET["operation"];
             while (($row = mysqli_fetch_array($results)) && ($found == false)) {
                 if ($tryUsername == $row['userID'] && $tryPassword == $row['password']) {
                     $found = true; //to jump out the loop
-                    $loggedIn=true;
                     session_start();
                     $_SESSION['username'] = $tryUsername;
                     $_SESSION['FullName'] = $row['FullName'];
