@@ -53,7 +53,7 @@
     $title=$row['title'];
 ?>
         <div class="col-sm-9">
-            <h2 id="desc" class="anchor"><?php echo $title; ?></h2>
+            <h2 id="desc" class="anchor">TITLE</h2>
             <hr>
             <h5><span class="label label-danger">TAG</span> <span class="label label-primary">TAG</span></h5><br>
             <p>Here is where you would describe your boring ass adventure to the supermarket to get your shitty groceries.</p>
