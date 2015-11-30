@@ -12,7 +12,11 @@
         $results = mysqli_query($conn, $sql);
         mysqli_close($conn);
 
-        header("Location: login.php?operation=IN");
+        session_start();
+        $_SESSION['username'] = $username;
+        $_SESSION['password'] = $_POST['password'];
+
+        header("Location: login.php?operation=REGIN");
 
     }
     else{ echo "Passwords did not match"; }
