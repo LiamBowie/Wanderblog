@@ -31,7 +31,6 @@ $operation=$_GET["operation"];
 
     else if($operation=="OUT"){
         session_destroy();
-        $loggedIn=false;
         header("Location: welcometest.php");
     }
 
