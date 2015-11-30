@@ -43,59 +43,17 @@
 </head>
 <body style="padding-top: 75px;" data-spy="scroll" data-target=".sticky-sidebar" data-offset="50">
 
-<nav class="navbar navbar-default navbar-fixed-top">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="welcome.php"><span class="glyphicon glyphicon-globe"></span></a>
-        </div>
-        <div class="collapse navbar-collapse" id="myNavbar">
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="welcome.php#top5">TOP 5 TRIPS</a></li>
-                <li><a href="#" data-toggle="modal" data-target="#modal-reg">REGISTER</a></li>
-                <li>
-                    <form role="form" style="padding-top: 10px" class="form-inline" action="welcome.php" method="post">
-                        <input class="form-control" type="text" name="usernameInput" placeholder="Username">
-                        <input class="form-control" type="password" name="passwordInput" placeholder="Password">
-                        <button type="submit" class="btn btn-success">LOGIN</button>
-                    </form>
-                </li>
-                <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">MORE
-                        <span class="caret"></span>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a href="about.php">ABOUT</a></li>
-                        <li><a href="adventuresearch.html">ADVENTURE SEARCH</a></li>
-                        <li><a href="authorsearch.html">AUTHOR SEARCH</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-    </div>
-</nav>
+<?php include'navbar.php' ?>
 
-<div class="container-fluid">
-    <div class="row content">
-        <div class="col-sm-3 sidenav">
-            <h4 class="text-center">LOCATION</h4>
-            <img src="Images/jo.jpg" class="img-thumbnail img-responsive" alt="Adventure Photo">
-            <h5><span class="glyphicon glyphicon-time"></span> Post by *USER*, Sep 27, 2015.</h5>
-            <nav class="sticky-sidebar">
-                <ul class="nav nav-pills nav-stacked">
-                    <li><a href="#desc">Adventure Description</a></li>
-                    <li><a href="#photos">Photos</a></li>
-                    <li><a href="#comments">Comments</a></li>
-                </ul><br>
-            </nav>
-        </div>
-
+<?php
+    include 'connect.php';
+    $query = 'Select * FROM Adventure WHERE advID="' . $_GET['advID'] . '";';
+    $results = mysqli_query($conn, $query);
+    $row = mysqli_fetch_array($results);
+    $title=$row['title'];
+?>
         <div class="col-sm-9">
-            <h2 id="desc" class="anchor">ADVENTURE TITLE</h2>
+            <h2 id="desc" class="anchor"><?php echo $title; ?></h2>
             <hr>
             <h5><span class="label label-danger">TAG</span> <span class="label label-primary">TAG</span></h5><br>
             <p>Here is where you would describe your boring ass adventure to the supermarket to get your shitty groceries.</p>
