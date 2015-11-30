@@ -25,7 +25,7 @@ $operation=$_GET["operation"];
                     $_SESSION['FullName'] = $row['FullName'];
                     $_SESSION['access_level'] = 'standard_user';
                     $_SESSION['loggedIn'] = true;
-                    header("Location: welcometest.php");
+                    header("Location: welcome.php");
                 }
             }
         } else {} //do nothing
@@ -34,7 +34,7 @@ $operation=$_GET["operation"];
     else if($operation=="OUT"){
         session_start();
         session_destroy();
-        header("Location: welcometest.php");
+        header("Location: welcome.php");
         echo 'Logged Out';
     }
 
@@ -58,11 +58,11 @@ $operation=$_GET["operation"];
                     $_SESSION['FullName'] = $row['FullName'];
                     $_SESSION['access_level'] = 'standard_user';
                     $_SESSION['loggedIn'] = true;
-                    header("Location: welcometest.php");
+                    header("Location: welcome.php");
                 }
             }
         } else {} //do nothing
     }
 
-    else{ $loggedIn=false; header("Location: display.php?error=else"); } //do nothing
+    else{ echo "error detected. Please contact the site administrator"; } //do nothing
 
