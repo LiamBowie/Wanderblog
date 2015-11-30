@@ -43,10 +43,9 @@
 </head>
 <body style="padding-top: 75px;" data-spy="scroll" data-target=".sticky-sidebar" data-offset="50">
 
-<?php include'navbar.php' ?>
-
+<?php include'navbar.php; '?>
         <div class="col-sm-9">
-            <h2 id="desc" class="anchor">TITLE</h2>
+            <h2 id="desc" class="anchor">ADVENTURE TITLE</h2>
             <hr>
             <h5><span class="label label-danger">TAG</span> <span class="label label-primary">TAG</span></h5><br>
             <p>Here is where you would describe your boring ass adventure to the supermarket to get your shitty groceries.</p>
