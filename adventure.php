@@ -72,7 +72,7 @@
             <h2 id="desc" class="anchor"><?php echo $title; ?></h2>
             <hr>
             <h5><span class="label label-danger">TAG</span> <span class="label label-primary">TAG</span></h5><br>
-            <p>Here is where you would describe your boring ass adventure to the supermarket to get your shitty groceries.</p>
+            <p><?php echo $row['content'] ?></p>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
             <br><br>
 
