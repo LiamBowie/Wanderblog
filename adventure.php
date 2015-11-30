@@ -50,13 +50,18 @@
     $query = "Select * FROM Adventure WHERE advID='" . $_GET['adv'] . "';";
     $results = mysqli_query($conn, $query);
     $row = mysqli_fetch_array($results);
+    $photoPath = "";
+    if($row['profPhoto'] != NULL){
+        $photoPath=$row['photo'];
+    }
+    else{ $photoPath="Images/jo.jpg"; }
 ?>
 
 <div class="container-fluid">
     <div class="row content">
         <div class="col-sm-3 sidenav">
             <h4 class="text-center"><?php echo $row['location'] ?></h4>
-            <img src= "<?php $row['profPhoto'] ?>" class="img-thumbnail img-responsive" alt="Adventure Photo">
+            <img src= "<?php echo $photoPath; ?>" class="img-thumbnail img-responsive" alt="Adventure Photo">
             <h5><span class="glyphicon glyphicon-time"></span> Post by <?php echo $row['author'] ?></h5>
             <nav class="sticky-sidebar">
                 <ul class="nav nav-pills nav-stacked">
