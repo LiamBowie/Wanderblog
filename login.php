@@ -35,5 +35,5 @@ $operation=$_GET["operation"];
         header("Location: welcometest.php");
     }
 
-    else{ $loggedIn=false; header("Location: display.php"); } //do nothing
+    else{ $loggedIn=false; header("Location: display.php?error=else"); } //do nothing
 
