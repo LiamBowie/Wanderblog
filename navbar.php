@@ -3,7 +3,7 @@
 if($_SESSION['loggedIn']==true){ $loggedIn=true; }
 else{ $loggedIn=false; }
 
-if($loggedIn==true) { //if user is loggedIn to WanderBlog
+if(isset($_SESSION['loggedIn'])) {//if user is loggedIn to WanderBlog
     echo '<nav class="navbar navbar-default navbar-fixed-top">
 		<div class="container-fluid">
 			<div class="navbar-header">
@@ -33,7 +33,7 @@ if($loggedIn==true) { //if user is loggedIn to WanderBlog
 		</div>
 	</nav>'; //Display navbar with users name
 }
-else if($loggedIn==false){ //if user is not loggedIn to Wanderblog
+else{ //if user is not loggedIn to Wanderblog
     echo'
     <nav class="navbar navbar-default navbar-fixed-top">
 		<div class="container-fluid">

@@ -23,7 +23,7 @@ $operation=$_GET["operation"];
                     $_SESSION['FullName'] = $row['FullName'];
                     $_SESSION['access_level'] = 'standard_user';
                     $_SESSION['loggedIn'] = true;
-                    header("Location: display.php");
+                    header("Location: welcometest.php");
                 }
             }
         } else {} //do nothing
