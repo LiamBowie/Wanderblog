@@ -50,14 +50,13 @@
     $query = "Select * FROM Adventure WHERE advID='" . $_GET['adv'] . "';";
     $results = mysqli_query($conn, $query);
     $row = mysqli_fetch_array($results);
-    $title = $row['title'];
 ?>
 
 <div class="container-fluid">
     <div class="row content">
         <div class="col-sm-3 sidenav">
             <h4 class="text-center"><?php echo $row['location'] ?></h4>
-            <img src="Images/jo.jpg" class="img-thumbnail img-responsive" alt="Adventure Photo">
+            <img src= "<?php $row['profPhoto'] ?>" class="img-thumbnail img-responsive" alt="Adventure Photo">
             <h5><span class="glyphicon glyphicon-time"></span> Post by <?php echo $row['author'] ?></h5>
             <nav class="sticky-sidebar">
                 <ul class="nav nav-pills nav-stacked">
@@ -69,11 +68,10 @@
         </div>
 
         <div class="col-sm-9">
-            <h2 id="desc" class="anchor"><?php echo $title; ?></h2>
+            <h2 id="desc" class="anchor"><?php echo $row['title']; ?></h2>
             <hr>
             <h5><span class="label label-danger">TAG</span> <span class="label label-primary">TAG</span></h5><br>
             <p><?php echo $row['content'] ?></p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
             <br><br>
 
             <h4 id="photos" class="anchor"><small>PHOTOS</small></h4>
