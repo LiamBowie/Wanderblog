@@ -31,7 +31,8 @@ $operation=$_GET["operation"];
 
     else if($operation=="OUT"){
         session_destroy();
-        header("Location: welcometest.php");
+        //header("Location: welcometest.php");
+        echo 'Logged Out';
     }
 
     else{ $loggedIn=false; header("Location: display.php?error=else"); } //do nothing
