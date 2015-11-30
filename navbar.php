@@ -1,5 +1,5 @@
 <?php
-session_start();
+session_start(); // include all session data
 if(isset($_SESSION['loggedIn'])) {//if user is loggedIn to WanderBlog
     echo '<nav class="navbar navbar-default navbar-fixed-top">
 		<div class="container-fluid">
