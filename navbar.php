@@ -1,8 +1,5 @@
 <?php
-
-if($_SESSION['loggedIn']==true){ $loggedIn=true; }
-else{ $loggedIn=false; }
-
+session_start();
 if(isset($_SESSION['loggedIn'])) {//if user is loggedIn to WanderBlog
     echo '<nav class="navbar navbar-default navbar-fixed-top">
 		<div class="container-fluid">
