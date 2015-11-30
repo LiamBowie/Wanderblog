@@ -1,5 +1,4 @@
 <?php
-include 'login.php';
 
 if($_SESSION['loggedIn']==true){ $loggedIn=true; }
 else{ $loggedIn=false; }
