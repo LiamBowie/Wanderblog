@@ -43,7 +43,8 @@
 </head>
 <body style="padding-top: 75px;" data-spy="scroll" data-target=".sticky-sidebar" data-offset="50">
 
-<?php include'navbar.php; '?>
+<?php include'navbar.php'; ?>
+
         <div class="col-sm-9">
             <h2 id="desc" class="anchor">ADVENTURE TITLE</h2>
             <hr>
