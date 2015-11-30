@@ -10,7 +10,7 @@
     <script type=text/javascript" src="//code.jquery.com/jquery-1.11.3.min.js"></script>
 
     <!-- Personal links -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">//link
     <link rel="shortcut icon" href="images/earth.ico">
     <script type="text/javascript" src="script.js"></script>
 
