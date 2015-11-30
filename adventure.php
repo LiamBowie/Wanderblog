@@ -45,13 +45,6 @@
 
 <?php include'navbar.php' ?>
 
-<?php
-    include 'connect.php';
-    $query = 'Select * FROM Adventure WHERE advID="' . $_GET['advID'] . '";';
-    $results = mysqli_query($conn, $query);
-    $row = mysqli_fetch_array($results);
-    $title=$row['title'];
-?>
         <div class="col-sm-9">
             <h2 id="desc" class="anchor">TITLE</h2>
             <hr>
