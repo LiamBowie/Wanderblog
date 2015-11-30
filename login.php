@@ -30,6 +30,7 @@ $operation=$_GET["operation"];
     }
 
     else if($operation=="OUT"){
+        session_start();
         session_destroy();
         //header("Location: welcometest.php");
         echo 'Logged Out';
