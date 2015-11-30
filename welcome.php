@@ -31,6 +31,22 @@
 </head>
 <body style="padding-top: 0">
 	<?php include'navbar.php'; ?>
+
+	<?php if(isset($_GET['error']) && $_GET['error']==noUser){
+		echo'
+			<div class="modal fade" id="modal-reg" role="dialog">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<p>Error Occurred</p>
+						}
+						<p>Username or Password Incorrect</p>
+						<p>Please retry</p>
+					}
+				}
+			}
+		';
+	} ?>
 	<div class="jumbotron text-center">
 		<h1>Wanderblog</h1> 
 		<p>Blogging site specifically for travelers</p> 
