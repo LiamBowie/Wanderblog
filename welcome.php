@@ -34,17 +34,7 @@
 
 	<?php if(isset($_GET['error']) && $_GET['error']=='noUser'){
 		echo'
-			<div class="modal fade" id="modal-reg" role="dialog">
-				<div class="modal-dialog">
-					<div class="modal-content">
-						<div class="modal-header">
-							<p>Error Occurred</p>
-						}
-						<p>Username or Password Incorrect</p>
-						<p>Please retry</p>
-					}
-				}
-			}
+			<script>alert("Username or Password not recognised");</script>
 		';
 	} ?>
 	<div class="jumbotron text-center">
