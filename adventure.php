@@ -81,6 +81,7 @@
             </nav>
         </div>
 
+
         <div class="col-sm-9">
             <h2 id="desc" class="anchor"><?php echo $row['title']; ?></h2>
             <hr>
