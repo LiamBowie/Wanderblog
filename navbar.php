@@ -37,7 +37,7 @@ if(isset($_SESSION['loggedIn'])) {//if user is loggedIn to WanderBlog
 	</nav> //Display navbar with users name
 
     <!-- Modal -->
-    <div class="modal fade" id="modal-reg" role="dialog">
+    <div class="modal fade" id="modal-reg" role="dialog" style="padding-top: 20px;">
 		<div class="modal-dialog">
 
 			<!-- Modal content-->
