@@ -47,7 +47,14 @@ if(isset($_SESSION['loggedIn'])) {//if user is loggedIn to WanderBlog
 					<h4><span class="glyphicon glyphicon-lock"></span> Account Info </h4>
 				</div>
 				<div class="modal-body">
-					<p>Full Name: ' . $_SESSION["FullName"]. '</p>
+				    <div class="row">
+				        <div class="col-sm-4">
+				            <p>Full Name: </p>
+				        </div>
+				        <div class="col-sm-8">
+				        ' . $_SESSION["FullName"] . '
+				        </div>
+				    </div>
 					<p>Username: ' . $_SESSION["username"]. '</p>
 					<p>Email Address: ' . $row["emailAddress"]. '</p>
 					<p>Password: ' . $row["password"]. '</p>
