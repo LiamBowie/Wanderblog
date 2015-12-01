@@ -54,8 +54,8 @@ if(isset($_SESSION['loggedIn'])) {//if user is loggedIn to WanderBlog
 
 				</div>
 				<div class="modal-footer">
-					<button type="submit" class="btn btn-danger btn-block" data-dismiss="modal">
-						<span class="glyphicon glyphicon-remove"></span> OK
+					<button type="submit" class="btn btn-success btn-block" data-dismiss="modal">
+						<span class="glyphicon glyphicon-ok"></span> OK
 					</button>
 				</div>
 			</div>
