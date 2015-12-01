@@ -48,16 +48,21 @@ if(isset($_SESSION['loggedIn'])) {//if user is loggedIn to WanderBlog
 				</div>
 				<div class="modal-body">
 				    <div class="row">
-				        <div class="col-sm-4">
-				            <p>Full Name: </p>
-				        </div>
-				        <div class="col-sm-8">
-				        ' . $_SESSION["FullName"] . '
-				        </div>
-				    </div>
-					<p>Username: ' . $_SESSION["username"]. '</p>
-					<p>Email Address: ' . $row["emailAddress"]. '</p>
-					<p>Password: ' . $row["password"]. '</p>
+				        <div class="col-sm-3"><p>Full Name: </p></div>
+				        <div class="col-sm-9">' . $_SESSION["FullName"] . '</div>
+				     </div>
+				     <div class="row">
+				        <div class="col-sm-3"><p>Username: </p></div>
+				        <div class="col-sm-9">' . $_SESSION["username"] . '</div>
+				     </div>
+					<div class="row">
+				        <div class="col-sm-3"><p>Email Address: </p></div>
+				        <div class="col-sm-9">' . $row["emailAddress"] . '</div>
+				     </div>
+				     <div class="row">
+				        <div class="col-sm-3"><p>Password: </p></div>
+				        <div class="col-sm-9">' . $row["password"] . '</div>
+				     </div>
 
 				</div>
 				<div class="modal-footer">
