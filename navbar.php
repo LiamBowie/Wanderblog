@@ -1,7 +1,8 @@
 <?php
 session_start(); // include all session data
 if(isset($_SESSION['loggedIn'])) {//if user is loggedIn to WanderBlog
-    echo '<nav class="navbar navbar-default navbar-fixed-top">
+    echo '
+<nav class="navbar navbar-default navbar-fixed-top">
 		<div class="container-fluid">
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -13,7 +14,7 @@ if(isset($_SESSION['loggedIn'])) {//if user is loggedIn to WanderBlog
 			</div>
 			<div class="collapse navbar-collapse" id="myNavbar">
 				<ul class="nav navbar-nav navbar-right">
-				    <li class="LoggedIn" style="padding-top:17px; color:white;"> Logged in as ' . $_SESSION['FullName'] . '</li>
+				    <li class="LoggedIn" style="padding-top:17px; color:white;"> Logged in as <a href="#" data-toggle="modal" data-target="#modal-reg">REGISTER ' . $_SESSION['FullName'] . '</a> </li>
 				    <li class="LogOut" style="color:white;"><a href="login.php?operation=OUT">LOG OUT</a></li>
 					<li><a href="#top5">TOP 5 TRIPS</a></li>
 					<li class="dropdown">
@@ -29,7 +30,35 @@ if(isset($_SESSION['loggedIn'])) {//if user is loggedIn to WanderBlog
 				</ul>
 			</div>
 		</div>
-	</nav>'; //Display navbar with users name
+	</nav> //Display navbar with users name
+
+    <!-- Modal -->
+    <div class="modal fade" id="modal-reg" role="dialog">
+		<div class="modal-dialog">
+
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4><span class="glyphicon glyphicon-lock"></span> Account Info </h4>
+				</div>
+				<div class="modal-body">
+					<p>Full Name: ' . $_SESSION["FullName"]. '</p>
+					<p>Username: ' . $_SESSION["username"]. '</p>
+					<p>Email Address: ' . $row["emailAddress"]. '</p>
+					<p>Password: ' . $row["password"]. '</p>
+
+				</div>
+				<div class="modal-footer">
+					<button type="submit" class="btn btn-danger btn-block" data-dismiss="modal">
+						<span class="glyphicon glyphicon-remove"></span> OK
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+';
 }
 else{ //if user is not loggedIn to Wanderblog
     echo'
