@@ -9,7 +9,7 @@ if(isset($_SESSION['loggedIn'])) {//if user is loggedIn to WanderBlog
 <script>
     function confirmLogout(){
         var logout = confirm("Are you sure you want to Log Out?");
-        if(logout){ window.location = "login.php?operation=OUT"; }
+        if(logout==true){ window.location = "login.php?operation=OUT"; }
         else{ window.location = "welcome.php" }
         else
     }
@@ -27,7 +27,7 @@ if(isset($_SESSION['loggedIn'])) {//if user is loggedIn to WanderBlog
 			<div class="collapse navbar-collapse" id="myNavbar">
 				<ul class="nav navbar-nav navbar-right">
 				    <li class="LoggedIn"><a href="#" data-toggle="modal" data-target="#modal-reg"> Logged in as  ' . $_SESSION['FullName'] . '</a> </li>
-				    <li class="LogOut" style="color:white;"><a href="#" onClick="confirmLogout()">LOG OUT</a></li>
+				    <li class="LogOut" style="color:white;"><a onClick="confirmLogout()">LOG OUT</a></li>
 					<li><a href="#top5">TOP 5 TRIPS</a></li>
 					<li class="dropdown">
 						<a class="dropdown-toggle" data-toggle="dropdown" href="#">MORE
