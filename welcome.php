@@ -32,7 +32,7 @@
 <body style="padding-top: 0">
 	<?php include'navbar.php'; ?>//include navabr
 
-	<?php if(isset($_GET['error']) && $_GET['error']==noUser){
+	<?php if(isset($_GET['error']) && $_GET['error']=='noUser'){
 		echo'
 			<div class="modal fade" id="modal-reg" role="dialog">
 				<div class="modal-dialog">
