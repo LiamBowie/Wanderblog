@@ -47,7 +47,15 @@
 
 <?php
     include 'connect.php';
-    $query = "Select * FROM Adventure WHERE advID='" . $_GET['adv'] . "';";
+    $query = "
+        SELECT Adventure.title, CONCAT(User.firstName, ' ', User.lastName) AS author, Adventure.content, Adventure.profPhoto
+        FROM Adventure
+        LEFT JOIN Author
+        ON Adventure.author=Author.authorID
+        LEFT JOIN User
+        ON Author.userID=User.userID
+        WHERE advID = '" . $_GET['adv'] . "';
+    ";
     $results = mysqli_query($conn, $query);
     $row = mysqli_fetch_array($results);
     $photoPath = "";
