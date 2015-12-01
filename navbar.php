@@ -1,6 +1,10 @@
 <?php
 session_start(); // include all session data
 if(isset($_SESSION['loggedIn'])) {//if user is loggedIn to WanderBlog
+    include 'connect.php';
+    $query = "SELECT * FROM User WHERE userID = '" . $_SESSION['username'] . "';";
+    $results = mysqli_query($conn, $query);
+    $row = mysqli_fetch_array($results);
     echo '
 <nav class="navbar navbar-default navbar-fixed-top">
 		<div class="container-fluid">
@@ -14,7 +18,7 @@ if(isset($_SESSION['loggedIn'])) {//if user is loggedIn to WanderBlog
 			</div>
 			<div class="collapse navbar-collapse" id="myNavbar">
 				<ul class="nav navbar-nav navbar-right">
-				    <li class="LoggedIn" style="padding-top:17px; color:white;"> Logged in as <a href="#" data-toggle="modal" data-target="#modal-reg">REGISTER ' . $_SESSION['FullName'] . '</a> </li>
+				    <li class="LoggedIn" style="padding-top:17px; color:white;"> Logged in as <a href="#" data-toggle="modal" data-target="#modal-reg"> ' . $_SESSION['FullName'] . '</a> </li>
 				    <li class="LogOut" style="color:white;"><a href="login.php?operation=OUT">LOG OUT</a></li>
 					<li><a href="#top5">TOP 5 TRIPS</a></li>
 					<li class="dropdown">
