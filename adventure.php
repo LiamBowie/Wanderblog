@@ -48,7 +48,7 @@
 <?php
     include 'connect.php';
     $query = "
-        SELECT Adventure.title, CONCAT(User.firstName, ' ', User.lastName) AS author, Adventure.content, Adventure.profPhoto
+        SELECT Adventure.title, CONCAT(User.firstName, ' ', User.lastName) AS authorName, Adventure.content, Adventure.profPhoto, Adventure.author
         FROM Adventure
         LEFT JOIN Author
         ON Adventure.author=Author.authorID
@@ -63,6 +63,7 @@
         $photoPath=$row['photo'];
     }
     else{ $photoPath="Images/jo.jpg"; }
+    $authorPath= "'author.php?auth=" . $row['author'] . "'";
 ?>
 
 <div class="container-fluid">
@@ -70,7 +71,7 @@
         <div class="col-sm-3 sidenav">
             <h4 class="text-center"><?php echo $row['location'] ?></h4>
             <img src= "<?php echo $photoPath; ?>" class="img-thumbnail img-responsive" alt="Adventure Photo">
-            <h5><span class="glyphicon glyphicon-time"></span> Post by <?php echo $row['author'] ?></h5>
+            <h5><span class="glyphicon glyphicon-time"></span> Post by <a href=<?php echo $authorPath; ?> > <?php echo $row['authorName'] ?></a></h5>
             <nav class="sticky-sidebar">
                 <ul class="nav nav-pills nav-stacked">
                     <li><a href="#desc">Adventure Description</a></li>
