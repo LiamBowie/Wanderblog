@@ -29,7 +29,7 @@ $operation=$_GET["operation"];
                     header("Location: welcome.php");
                 }
             }
-        } else { header("Location: welcome.php?error=noUser"); } //do nothing
+        } else { header("Location: welcome.php"); } //do nothing
     }
 
     else if($operation=="OUT"){
