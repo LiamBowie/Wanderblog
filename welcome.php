@@ -32,11 +32,6 @@
 <body style="padding-top: 0">
 	<?php include'navbar.php'; ?>//include navabr
 
-	<?php if(isset($_GET['error']) && $_GET['error']=='noUser'){
-		echo'
-			<script>alert("Username or Password not recognised");</script>
-		';
-	} ?>
 	<div class="jumbotron text-center">
 		<h1>Wanderblog</h1> 
 		<p>Blogging site specifically for travelers</p> 
@@ -116,6 +111,12 @@
 	<footer  class="container-fluid bg-4 text-center">
 		<p>Wanderblog is a part of SHB Innovative Solutions</p>
 	</footer>
+
+	<?php if(isset($_GET['error']) && $_GET['error']=='noUser'){
+		echo'
+			<script>alert("Username or Password not recognised");</script>
+		';
+	} ?>
 
 </body>
 </html>
