@@ -77,6 +77,9 @@ if(isset($_SESSION['loggedIn'])) {//if user is loggedIn to WanderBlog
 					<button type="submit" class="btn btn-success btn-block" data-dismiss="modal">
 						<span class="glyphicon glyphicon-ok"></span> OK
 					</button>
+					<button type="submit" class="btn btn-primary btn-block" data-dismiss="modal">
+						<span class="glyphicon glyphicon-pencil"></span> EDIT
+					</button>
 				</div>
 			</div>
 		</div>
