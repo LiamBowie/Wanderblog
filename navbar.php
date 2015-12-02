@@ -6,14 +6,6 @@ if(isset($_SESSION['loggedIn'])) {//if user is loggedIn to WanderBlog
     $results = mysqli_query($conn, $query);
     $row = mysqli_fetch_array($results);
     echo '
-<script>
-    function confirmLogout(){
-        var logout = confirm("Are you sure you want to Log Out?");
-        if(logout==true){ window.location = "login.php?operation=OUT"; }
-        else{ window.location = "welcome.php" }
-        else
-    }
-</script>
 <nav class="navbar navbar-default navbar-fixed-top">
 		<div class="container-fluid">
 			<div class="navbar-header">
@@ -43,6 +35,14 @@ if(isset($_SESSION['loggedIn'])) {//if user is loggedIn to WanderBlog
 			</div>
 		</div>
 	</nav> //Display navbar with users name
+
+	<script>
+    function confirmLogout(){
+        var logout = confirm("Are you sure you want to Log Out?");
+        if(logout==true){ window.location = "login.php?operation=OUT"; }
+        else{ window.location = "welcome.php" }
+    }
+    </script>
 
     <!-- Modal -->
     <div class="modal fade" id="modal-reg" role="dialog" style="padding-top: 25px;">
