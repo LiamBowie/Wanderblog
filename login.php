@@ -27,9 +27,9 @@ $operation=$_GET["operation"];
                     $_SESSION['access_level'] = 'standard_user';
                     $_SESSION['loggedIn'] = true;
                     header("Location: welcome.php");
-                }
+                }else{ header("Location: welcome.php?error=noUser"); }
             }
-        } else { header("Location: welcome.php?error=noUser"); } //do nothing
+        }
     }
 
     else if($operation=="OUT"){

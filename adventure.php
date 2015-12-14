@@ -45,12 +45,48 @@
 
 <?php include'navbar.php'; ?>
 
+<?php
+    include 'connect.php';
+    $query = "
+        SELECT Adventure.title, CONCAT(User.firstName, ' ', User.lastName) AS authorName, Adventure.content, Adventure.profPhoto, Adventure.author
+        FROM Adventure
+        LEFT JOIN Author
+        ON Adventure.author=Author.authorID
+        LEFT JOIN User
+        ON Author.userID=User.userID
+        WHERE advID = '" . $_GET['adv'] . "';
+    ";
+    $results = mysqli_query($conn, $query);
+    $row = mysqli_fetch_array($results);
+    $photoPath = "";
+    if($row['profPhoto'] != NULL){
+        $photoPath=$row['photo'];
+    }
+    else{ $photoPath="Images/jo.jpg"; }
+    $authorPath= "'author.php?auth=" . $row['author'] . "'";
+?>
+
+<div class="container-fluid">
+    <div class="row content">
+        <div class="col-sm-3 sidenav">
+            <h4 class="text-center"><?php echo $row['location'] ?></h4>
+            <img src= "<?php echo $photoPath; ?>" class="img-thumbnail img-responsive" alt="Adventure Photo">
+            <h5><span class="glyphicon glyphicon-time"></span> Post by <a href=<?php echo $authorPath; ?> > <?php echo $row['authorName'] ?></a></h5>
+            <nav class="sticky-sidebar">
+                <ul class="nav nav-pills nav-stacked">
+                    <li><a href="#desc">Adventure Description</a></li>
+                    <li><a href="#photos">Photos</a></li>
+                    <li><a href="#comments">Comments</a></li>
+                </ul><br>
+            </nav>
+        </div>
+
+
         <div class="col-sm-9">
-            <h2 id="desc" class="anchor">ADVENTURE TITLE</h2>
+            <h2 id="desc" class="anchor"><?php echo $row['title']; ?></h2>
             <hr>
             <h5><span class="label label-danger">TAG</span> <span class="label label-primary">TAG</span></h5><br>
-            <p>Here is where you would describe your boring ass adventure to the supermarket to get your shitty groceries.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <p><?php echo $row['content'] ?></p>
             <br><br>
 
             <h4 id="photos" class="anchor"><small>PHOTOS</small></h4>
