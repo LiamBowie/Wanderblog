@@ -61,7 +61,7 @@ $query = "  SELECT CONCAT(User.firstName, ' ', User.lastName) AS fullName, Autho
                 ON Author.location=Locations.locationID
                 LEFT JOIN Cities
                 ON Locations.cityID=Cities.cityID
-                WHERE authorID = AUTH00001; " ./* $_GET['auth'] . */";" ;
+                WHERE authorID = '" . $_GET['auth'] . "';" ;
 
 // Creates result table from query
 $results = mysqli_query($conn, $query);
