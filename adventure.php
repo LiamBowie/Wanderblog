@@ -10,7 +10,7 @@
     <script type=text/javascript" src="//code.jquery.com/jquery-1.11.3.min.js"></script>
 
     <!-- Personal links -->
-    <link rel="stylesheet" href="style.css">//link
+    <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="images/earth.ico">
     <script type="text/javascript" src="script.js"></script>
 
@@ -48,7 +48,7 @@
 <?php
     include 'connect.php';
     $query = "
-        SELECT Adventure.title, CONCAT(User.firstName, ' ', User.lastName) AS author, Adventure.content, Adventure.photo, Cities.cityName
+        SELECT Adventure.title, CONCAT(User.firstName, ' ', User.lastName) AS authorName, Adventure.author, Adventure.content, Adventure.photo, Cities.cityName
         FROM Adventure
         LEFT JOIN Author
         ON Adventure.author=Author.authorID
@@ -68,9 +68,9 @@
 <div class="container-fluid">
     <div class="row content">
         <div class="col-sm-3 sidenav">
-            <h4 class="text-center"><?php echo $row['location'] ?></h4>
+            <h4 class="text-center"><?php echo $row['cityName'] ?></h4>
             <img src= "<?php echo $row['photo']; ?>" class="img-thumbnail img-responsive" alt="Adventure Photo">
-            <h5><span class="glyphicon glyphicon-time"></span> Post by <a href=<?php echo $authorPath; ?> > <?php echo $row['authorName'] ?></a></h5>
+            <h5><span class="glyphicon glyphicon-time"></span> Post by <a href=<?php echo $authorPath; ?> > <?php echo $row['author'] ?></a></h5>
             <nav class="sticky-sidebar">
                 <ul class="nav nav-pills nav-stacked">
                     <li><a href="#desc">Adventure Description</a></li>
