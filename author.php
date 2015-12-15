@@ -26,14 +26,7 @@
 
     <title>
         <?php
-            if ($row['fullName'] == null)
-            {
-                echo "Author Page";
-            }
-            else
-            {
                 echo $row['fullName'];
-            }
         ?>
     </title>
     <meta charset="utf-8">
