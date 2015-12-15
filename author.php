@@ -53,7 +53,7 @@
 include 'connect.php';
 
 // Your query for SQL
-$query = "  SELECT CONCAT(User.firstName, ' ', User.lastName) AS fullName, Author.bio, Author.photo, Cities.cityName
+$query = "  SELECT CONCAT(User.firstName, ' ', User.lastName) AS fullName, Author.bio, Author.photo, Cities.cityName, Countries.countryName
                 FROM Author
                 LEFT JOIN User
                 ON  Author.userID=User.userID
