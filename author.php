@@ -57,21 +57,21 @@ include 'connect.php';
             <h5><span class="glyphicon glyphicon-time"></span> Post by <a href=<?php echo $authorPath; ?> > <?php echo $row['authorName'] ?></a></h5>
             <nav class="sticky-sidebar">
                 <ul class="nav nav-pills nav-stacked">
-                    <li><a href="#desc">Author Bio</a></li>
-                    <li><a href="#photos">Adventures</a></li>
+                    <li><a href="#bio">Author Bio</a></li>
+                    <li><a href="#adventures">Adventures</a></li>
                 </ul><br>
             </nav>
         </div>
 
 
         <div class="col-sm-9">
-            <h2 id="desc" class="anchor">Bio</h2>
+            <h2 id="bio" class="anchor">Bio</h2>
             <hr>
             <h5><span class="label label-danger">TAG</span> <span class="label label-primary">TAG</span></h5><br>
             <p><?php echo $row['content'] ?></p>
             <br><br>
 
-            <h4 id="photos" class="anchor"><small>Adventures</small></h4>
+            <h4 id="adventures" class="anchor"><small>Adventures</small></h4>
             <hr>
             <h2>Check out all these dank ass adventures I've been on!</h2>
 
