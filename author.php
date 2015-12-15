@@ -65,11 +65,19 @@ $query = "  SELECT CONCAT(User.firstName, ' ', User.lastName) AS fullName, Autho
                 ON Locations.countryID=Countries.countryID
                 WHERE authorID = '" . $_GET['auth'] . "';" ;
 
+$queryTwo = "
+    SELECT title
+	FROM adventure
+	WHERE author = '" . $_GET['auth'] . "';
+";
+
 // Creates result table from query
 $results = mysqli_query($conn, $query);
+$resultsTwo = mysqli_query($conn, $queryTwo);
 
 // Gets the row from the created table above
 $row = mysqli_fetch_array($results);
+$rowTwo = mysqli_fetch_array($resultsTwo);
 
 ?>
 <div class="container-fluid">
@@ -100,6 +108,13 @@ $row = mysqli_fetch_array($results);
             <hr>
             <h2>Check out all these dank ass adventures I've been on!</h2>
 
+            <?php
+            if (mysqli_num_rows($resultsTwo) > 0){
+                while ($row = mysqli_fetch_array($resultsTwo)) {
+                    echo "<p> Adventure: " . $rowTwo['title'] . "</p>";
+                }
+            }
+            ?>
 
         </div>
     </div>
