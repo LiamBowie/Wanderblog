@@ -104,18 +104,22 @@ $rowTwo = mysqli_fetch_array($resultsTwo);
             <h2>Check out all these dank ass adventures I've been on!</h2>
             <br><br>
 
-            <?php
-                $queryTwo = "SELECT * FROM adventure WHERE author = '" . $_GET['auth'] . "';";
-                $rowTwo = mysqli_fetch_array($results);
-                $found = false;
-                $resultsTwo = mysqli_query($conn, $queryTwo);
-                if (mysqli_num_rows($resultsTwo) > 0) { /* if there are results (rows>0) */
-                    while (($rowTwo = mysqli_fetch_array($resultsTwo)) && ($found == false)) {
-                        $advPath = "adventure.php?adv=" . $rowTwo['advID'] ;
-                        echo "<p><a href='" . $advPath . "'><img src='" . $rowTwo['photo'] . "'style='max-height:150px; max-width: 150px'><br>" . $rowTwo['title'] . "</a></p>";
+            <div class="row">
+                <?php
+                    $queryTwo = "SELECT * FROM adventure WHERE author = '" . $_GET['auth'] . "';";
+                    $rowTwo = mysqli_fetch_array($results);
+                    $found = false;
+                    $resultsTwo = mysqli_query($conn, $queryTwo);
+                    if (mysqli_num_rows($resultsTwo) > 0) { /* if there are results (rows>0) */
+                        while (($rowTwo = mysqli_fetch_array($resultsTwo)) && ($found == false)) {
+                            $advPath = "adventure.php?adv=" . $rowTwo['advID'] ;
+                            echo "<div class='col-sm-4'>";
+                                echo "<p><a href='" . $advPath . "'><img src='" . $rowTwo['photo'] . "'style='max-height:150px; max-width: 150px'><br>" . $rowTwo['title'] . "</a></p>";
+                            echo "</div>";
+                        }
                     }
-                }
-            ?>
+                ?>
+            </div>
 
         </div>
     </div>
