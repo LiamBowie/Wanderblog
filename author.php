@@ -1,6 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <?php
+    include 'connect.php';
+
+    // Your query for SQL
+    $query = "  SELECT CONCAT(User.firstName, ' ', User.lastName) AS fullName, Author.bio, Author.photo, Cities.cityName
+            FROM Author
+            LEFT JOIN User
+            ON  Author.userID=User.userID
+            LEFT JOIN Locations
+            ON Author.location=Locations.locationID
+            LEFT JOIN Cities
+            ON Locations.cityID=Cities.cityID
+            WHERE authorID = 'AUTH00001';
+         ";
+
+    // Creates result table from query
+    $results = mysqli_query($conn, $query);
+
+    // Gets the row from the created table above
+    $row = mysqli_fetch_array($results);
+
+    ?>
+
     <title>
         <?php
             if ($row['fullName'] == null)
@@ -55,29 +78,6 @@
 <body style="padding-top: 75px;" data-spy="scroll" data-target=".sticky-sidebar" data-offset="50">
 
 <?php include'navbar.php'; ?>
-
-<?php
-include 'connect.php';
-
-// Your query for SQL
-$query = "  SELECT CONCAT(User.firstName, ' ', User.lastName) AS fullName, Author.bio, Author.photo, Cities.cityName
-            FROM Author
-            LEFT JOIN User
-            ON  Author.userID=User.userID
-            LEFT JOIN Locations
-            ON Author.location=Locations.locationID
-            LEFT JOIN Cities
-            ON Locations.cityID=Cities.cityID
-            WHERE authorID = 'AUTH00001';
-         ";
-
-// Creates result table from query
-$results = mysqli_query($conn, $query);
-
-// Gets the row from the created table above
-$row = mysqli_fetch_array($results);
-
-?>
 
 <div class="container-fluid">
     <div class="row content">
