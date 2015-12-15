@@ -58,15 +58,10 @@
         ON Adventure.location=Locations.locationID
         LEFT JOIN Cities
         ON Locations.cityID=Cities.cityID
-        WHERE advID = 'ADV00001';
+        WHERE advID = '". $_GET['adv'] . "';
     ";
     $results = mysqli_query($conn, $query);
     $row = mysqli_fetch_array($results);
-    $photoPath = "";
-    if($row['profPhoto'] != NULL){
-        $photoPath=$row['photo'];
-    }
-    else{ $photoPath="Images/jo.jpg"; }
     $authorPath= "'author.php?auth=" . $row['author'] . "'";
 ?>
 
@@ -74,7 +69,7 @@
     <div class="row content">
         <div class="col-sm-3 sidenav">
             <h4 class="text-center"><?php echo $row['location'] ?></h4>
-            <img src= "<?php echo $photoPath; ?>" class="img-thumbnail img-responsive" alt="Adventure Photo">
+            <img src= "<?php echo $row['photo']; ?>" class="img-thumbnail img-responsive" alt="Adventure Photo">
             <h5><span class="glyphicon glyphicon-time"></span> Post by <a href=<?php echo $authorPath; ?> > <?php echo $row['authorName'] ?></a></h5>
             <nav class="sticky-sidebar">
                 <ul class="nav nav-pills nav-stacked">
