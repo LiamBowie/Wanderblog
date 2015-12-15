@@ -1,7 +1,7 @@
 <?php
     include'connect.php';
 
-    $query = "SELECT title FROM adventure WHERE author = '" . $_GET['auth'] . "';";
+    $query = "SELECT * FROM adventure WHERE author = '" . $_GET['auth'] . "';";
     $results = mysqli_query($conn, $query);
     $row = mysqli_fetch_array($results);
 
