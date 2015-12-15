@@ -111,7 +111,8 @@ $rowTwo = mysqli_fetch_array($resultsTwo);
                 $resultsTwo = mysqli_query($conn, $queryTwo);
                 if (mysqli_num_rows($resultsTwo) > 0) { /* if there are results (rows>0) */
                     while (($rowTwo = mysqli_fetch_array($resultsTwo)) && ($found == false)) {
-                        echo "<p> Adventure: " . $rowTwo['title'] . "</p><br>";
+                        $advPath = "adventure.php?adv='" . $row['advID'] . "';";
+                        echo "<p><a href='" . $advPath . "'" . $rowTwo['title'] . "</p>";
                     }
                 }
             ?>
