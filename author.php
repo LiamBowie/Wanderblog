@@ -72,7 +72,7 @@ $row = mysqli_fetch_array($results);
     <div class="row content">
         <div class="col-sm-3 sidenav">
             <h4 class="text-center"><?php echo $row['location'] ?></h4>
-            <img src= "<?php echo $photoPath; ?>" class="img-thumbnail img-responsive" alt="Author Photo">
+            <img src= "<?php echo $row['photo'] ?>" class="img-thumbnail img-responsive" alt="Author Photo">
             <h5><span class="glyphicon glyphicon-time"></span> Post by <a href=<?php echo $authorPath; ?> > <?php echo $row['authorName'] ?></a></h5>
             <nav class="sticky-sidebar">
                 <ul class="nav nav-pills nav-stacked">
