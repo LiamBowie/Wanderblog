@@ -7,7 +7,7 @@
 
     if (mysqli_num_rows($results) > 0){
         echo "Adventure Found";
-        while ($row = mysqli_fetch_array($results)) {
+        for($i=0; $i< mysqli_num_rows($results); $i++ ) {
             echo "Adventure: ";
         }
 
