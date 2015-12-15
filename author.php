@@ -110,7 +110,7 @@ $rowTwo = mysqli_fetch_array($resultsTwo);
 
             <?php
             if (mysqli_num_rows($resultsTwo) > 0){
-                while ($row = mysqli_fetch_array($resultsTwo)) {
+                while ($rowTwo = mysqli_fetch_array($resultsTwo)) {
                     echo "<p> Adventure: " . $rowTwo['title'] . "</p>";
                 }
             }
