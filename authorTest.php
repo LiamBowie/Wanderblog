@@ -9,5 +9,6 @@
         /*while ($row = mysqli_fetch_array($results)) {
             echo "Adventure: " . $row['author'];
         } */
+        echo "Adventure Found";
     }
-    else{ echo "No adventures"; }
+    else{ echo "No Adventures Found"; }
