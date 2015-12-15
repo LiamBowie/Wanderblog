@@ -72,7 +72,7 @@ $row = mysqli_fetch_array($results);
     <div class="row content">
         <div class="col-sm-3 sidenav">
             <h4 class="text-center"><?php echo $row['location'] ?></h4>
-            <img src= "<?php echo $row['photo'] ?>" class="img-thumbnail img-responsive" alt="Author Photo">
+            <img src= "<?php echo $row['photo'] ?>" class="img-thumbnail img-responsive img-profile" alt="Author Photo">
             <h5><span class="glyphicon glyphicon-time"></span> Post by <a href=<?php echo $authorPath; ?> > <?php echo $row['authorName'] ?></a></h5>
             <nav class="sticky-sidebar">
                 <ul class="nav nav-pills nav-stacked">
@@ -86,8 +86,7 @@ $row = mysqli_fetch_array($results);
         <div class="col-sm-9">
             <h2 id="bio" class="anchor"><?php echo $row['fullName'] ?></h2>
             <hr>
-            <h5><span class="label label-danger">TAG</span> <span class="label label-primary">TAG</span></h5><br>
-            <p><?php echo $row['content'] ?></p>
+            <p><?php echo $row['bio'] ?></p>
             <br><br>
 
             <h4 id="adventures" class="anchor"><small>Adventures</small></h4>
