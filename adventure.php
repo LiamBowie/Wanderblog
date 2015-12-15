@@ -10,7 +10,7 @@
     <script type=text/javascript" src="//code.jquery.com/jquery-1.11.3.min.js"></script>
 
     <!-- Personal links -->
-    <link rel="stylesheet" href="style.css">//link
+    <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="images/earth.ico">
     <script type="text/javascript" src="script.js"></script>
 
@@ -48,29 +48,28 @@
 <?php
     include 'connect.php';
     $query = "
-        SELECT Adventure.title, CONCAT(User.firstName, ' ', User.lastName) AS authorName, Adventure.content, Adventure.profPhoto, Adventure.author
+        SELECT Adventure.title, CONCAT(User.firstName, ' ', User.lastName) AS authorName, Adventure.author, Adventure.content, Adventure.photo, Cities.cityName
         FROM Adventure
         LEFT JOIN Author
         ON Adventure.author=Author.authorID
         LEFT JOIN User
         ON Author.userID=User.userID
-        WHERE advID = '" . $_GET['adv'] . "';
+        LEFT JOIN Locations
+        ON Adventure.location=Locations.locationID
+        LEFT JOIN Cities
+        ON Locations.cityID=Cities.cityID
+        WHERE advID = '". $_GET['adv'] . "';
     ";
     $results = mysqli_query($conn, $query);
     $row = mysqli_fetch_array($results);
-    $photoPath = "";
-    if($row['profPhoto'] != NULL){
-        $photoPath=$row['photo'];
-    }
-    else{ $photoPath="Images/jo.jpg"; }
     $authorPath= "'author.php?auth=" . $row['author'] . "'";
 ?>
 
 <div class="container-fluid">
     <div class="row content">
         <div class="col-sm-3 sidenav">
-            <h4 class="text-center"><?php echo $row['location'] ?></h4>
-            <img src= "<?php echo $photoPath; ?>" class="img-thumbnail img-responsive" alt="Adventure Photo">
+            <h4 class="text-center"><?php echo $row['cityName'] ?></h4>
+            <img src= "<?php echo $row['photo']; ?>" class="img-thumbnail img-responsive" alt="Adventure Photo">
             <h5><span class="glyphicon glyphicon-time"></span> Post by <a href=<?php echo $authorPath; ?> > <?php echo $row['authorName'] ?></a></h5>
             <nav class="sticky-sidebar">
                 <ul class="nav nav-pills nav-stacked">
