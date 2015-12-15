@@ -61,6 +61,8 @@ $query = "  SELECT CONCAT(User.firstName, ' ', User.lastName) AS fullName, Autho
                 ON Author.location=Locations.locationID
                 LEFT JOIN Cities
                 ON Locations.cityID=Cities.cityID
+                LEFT JOIN Countries
+                ON Locations.countryID=Countries.countryID
                 WHERE authorID = '" . $_GET['auth'] . "';" ;
 
 // Creates result table from query
@@ -75,7 +77,10 @@ $row = mysqli_fetch_array($results);
         <div class="col-sm-3 sidenav">
             <h4 class="text-center"><?php echo $row['location'] ?></h4>
             <img src= "<?php echo $row['photo'] ?>" class="img-thumbnail img-responsive img-profile" alt="Author Photo">
-            <h5><span class="glyphicon glyphicon-map-marker"></span><?php echo $row['fullName']?>, from <?php echo $row['cityName'] ?></a></h5>
+            <h5>
+                <span class="glyphicon glyphicon-map-marker"></span>
+                <?php echo $row['fullName']?>, from <?php echo $row['cityName'] ?>, <?php echo $row['countryName'] ?>
+            </h5>
             <nav class="sticky-sidebar">
                 <ul class="nav nav-pills nav-stacked">
                     <li><a href="#bio">Author Bio</a></li>
