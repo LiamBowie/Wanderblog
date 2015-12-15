@@ -108,7 +108,7 @@ $rowTwo = mysqli_fetch_array($resultsTwo);
                 $queryTwo = "SELECT * FROM adventure WHERE author = '" . $_GET['auth'] . "';";
                 $rowTwo = mysqli_fetch_array($results);
                 $found = false;
-                $resultsTwo = mysqli_query($conn, $query);
+                $resultsTwo = mysqli_query($conn, $queryTwo);
                 if (mysqli_num_rows($resultsTwo) > 0) { /* if there are results (rows>0) */
                     while (($rowTwo = mysqli_fetch_array($resultsTwo)) && ($found == false)) {
                         echo "<p> Adventure: " . $rowTwo['title'] . "</p><br>";
