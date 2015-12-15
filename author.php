@@ -6,15 +6,14 @@
 
     // Your query for SQL
     $query = "  SELECT CONCAT(User.firstName, ' ', User.lastName) AS fullName, Author.bio, Author.photo, Cities.cityName
-            FROM Author
-            LEFT JOIN User
-            ON  Author.userID=User.userID
-            LEFT JOIN Locations
-            ON Author.location=Locations.locationID
-            LEFT JOIN Cities
-            ON Locations.cityID=Cities.cityID
-            WHERE authorID = 'AUTH00001';
-         ";
+                FROM Author
+                LEFT JOIN User
+                ON  Author.userID=User.userID
+                LEFT JOIN Locations
+                ON Author.location=Locations.locationID
+                LEFT JOIN Cities
+                ON Locations.cityID=Cities.cityID
+                WHERE authorID = " . $_GET['auth'] . ";" ;
 
     // Creates result table from query
     $results = mysqli_query($conn, $query);
