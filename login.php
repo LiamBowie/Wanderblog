@@ -1,5 +1,6 @@
 <?php
 
+//show any errors
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
@@ -26,9 +27,9 @@ $operation=$_GET["operation"];
                     $_SESSION['access_level'] = 'standard_user';
                     $_SESSION['loggedIn'] = true;
                     header("Location: welcome.php");
-                }
+                }else{ header("Location: welcome.php?error=noUser"); }
             }
-        } else { header("Location: welcome.php?error=noUser"); } //do nothing
+        }
     }
 
     else if($operation=="OUT"){

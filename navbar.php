@@ -1,7 +1,12 @@
 <?php
 session_start(); // include all session data
 if(isset($_SESSION['loggedIn'])) {//if user is loggedIn to WanderBlog
-    echo '<nav class="navbar navbar-default navbar-fixed-top">
+    include 'connect.php';
+    $query = "SELECT * FROM User WHERE userID = '" . $_SESSION['username'] . "';";
+    $results = mysqli_query($conn, $query);
+    $row = mysqli_fetch_array($results);
+    echo '
+<nav class="navbar navbar-default navbar-fixed-top">
 		<div class="container-fluid">
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -13,8 +18,8 @@ if(isset($_SESSION['loggedIn'])) {//if user is loggedIn to WanderBlog
 			</div>
 			<div class="collapse navbar-collapse" id="myNavbar">
 				<ul class="nav navbar-nav navbar-right">
-				    <li class="LoggedIn" style="padding-top:17px; color:white;"> Logged in as ' . $_SESSION['FullName'] . '</li>
-				    <li class="LogOut" style="color:white;"><a href="login.php?operation=OUT">LOG OUT</a></li>
+				    <li class="LoggedIn"><a href="#" data-toggle="modal" data-target="#modal-reg"> Logged in as  ' . $_SESSION['FullName'] . '</a> </li>
+				    <li class="LogOut" style="color:white;"><a onclick="confirmLogout()" href="#">LOG OUT</a></li>
 					<li><a href="#top5">TOP 5 TRIPS</a></li>
 					<li class="dropdown">
 						<a class="dropdown-toggle" data-toggle="dropdown" href="#">MORE
@@ -29,7 +34,59 @@ if(isset($_SESSION['loggedIn'])) {//if user is loggedIn to WanderBlog
 				</ul>
 			</div>
 		</div>
-	</nav>'; //Display navbar with users name
+	</nav> //Display navbar with users name
+
+	<script>
+    function confirmLogout(){
+        var logout = confirm("Are you sure you want to Log Out?");
+        if(logout==true){ window.location = "login.php?operation=OUT"; }
+        else{ window.location = "welcome.php" }
+    }
+    </script>
+
+    <!-- Modal -->
+    <div class="modal fade" id="modal-reg" role="dialog" style="padding-top: 25px;">
+		<div class="modal-dialog">
+
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4><span class="glyphicon glyphicon-lock"></span> Account Info </h4>
+				</div>
+				<div class="modal-body">
+				    <div class="row">
+				        <div class="col-sm-3"><p>Full Name: </p></div>
+				        <div class="col-sm-9">' . $_SESSION["FullName"] . '</div>
+				     </div>
+				     <div class="row">
+				        <div class="col-sm-3"><p>Username: </p></div>
+				        <div class="col-sm-9">' . $_SESSION["username"] . '</div>
+				     </div>
+					<div class="row">
+				        <div class="col-sm-3"><p>Email Address: </p></div>
+				        <div class="col-sm-9">' . $row["emailAddress"] . '</div>
+				     </div>
+				     <div class="row">
+				        <div class="col-sm-3"><p>Password: </p></div>
+				        <div class="col-sm-9">' . $row["password"] . '</div>
+				     </div>
+
+				</div>
+				<div class="modal-footer">
+					<button type="submit" class="btn btn-success btn-block" data-dismiss="modal">
+						<span class="glyphicon glyphicon-ok"></span> OK
+					</button>
+					<button type="submit" class="btn btn-primary btn-block" data-dismiss="modal">
+						<span class="glyphicon glyphicon-pencil"></span> EDIT
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	//
+
+';
 }
 else{ //if user is not loggedIn to Wanderblog
     echo'
