@@ -12,9 +12,8 @@ $results = mysqli_query($conn, $query);
 $row = mysqli_fetch_array($results);
 
 if (mysqli_num_rows($results) > 0){
-    while ($row = mysqli_fetch_array($results)){
-        $advPath = "adventure.php?adv=" . $row['advID'];
-        echo "<p><a href='" . $advPath . "'>" . $row['title'] . "</a></p>";
+    while ($row = mysqli_fetch_array($results) != 0){
+        echo  $row['title'];
     }
 }
 
