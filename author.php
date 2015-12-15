@@ -83,7 +83,6 @@ $rowTwo = mysqli_fetch_array($resultsTwo);
 <div class="container-fluid">
     <div class="row content">
         <div class="col-sm-3 sidenav">
-            <h4 class="text-center"><?php echo $row['location'] ?></h4>
             <img src= "<?php echo $row['photo'] ?>" class="img-thumbnail img-responsive img-profile" alt="Author Photo">
             <h5>
                 <span class="glyphicon glyphicon-map-marker"></span>
