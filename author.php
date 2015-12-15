@@ -107,11 +107,13 @@ $rowTwo = mysqli_fetch_array($resultsTwo);
             <h4 id="adventures" class="anchor"><small>Adventures</small></h4>
             <hr>
             <h2>Check out all these dank ass adventures I've been on!</h2>
+            <br><br>
 
             <?php
                 if (mysqli_num_rows($resultsTwo) > 0){
                     for($i=0; $i< mysqli_num_rows($resultsTwo); $i++ ) {
-                        echo "<p> Adventure: " . $rowTwo['title'] . "</p>";
+                        $advPath = "adventure.php?adv=" . $rowTwo['advID'];
+                        echo "<p><a href='" . $advPath . "'>" . $rowTwo['title'] . "</a></p>";
                     }
                 }
             ?>
