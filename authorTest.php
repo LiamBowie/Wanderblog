@@ -21,11 +21,11 @@ if (mysqli_num_rows($results) > 0){
 //while ($row = mysqli_fetch_array($result2, MYSQLI_BOTH))
 
 $found = false;
-$query = 'Select CONCAT(firstName, " ", lastName) AS FullName, userID, emailAddress, password, isAdmin FROM User;';
+//$query = 'Select CONCAT(firstName, " ", lastName) AS FullName, userID, emailAddress, password, isAdmin FROM User;';
 $results = mysqli_query($conn, $query);
 
 if (mysqli_num_rows($results) > 0) { /* if there are results (rows>0) */
     while (($row = mysqli_fetch_array($results)) && ($found == false)) {
-        echo $row['userID']  . "<br>";
+        echo $row['title']  . "<br>";
     }
 }
