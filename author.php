@@ -111,7 +111,7 @@ $rowTwo = mysqli_fetch_array($resultsTwo);
                 $resultsTwo = mysqli_query($conn, $query);
                 if (mysqli_num_rows($resultsTwo) > 0) { /* if there are results (rows>0) */
                     while (($rowTwo = mysqli_fetch_array($resultsTwo)) && ($found == false)) {
-                        echo $rowTwo['title'] . "<br>";
+                        echo "<p> Adventure: " . $rowTwo['title'] . "</p><br>";
                     }
                 }
             ?>
