@@ -10,9 +10,12 @@ $results = mysqli_query($conn, $query);
 
 // Gets the row from the created table above
 $row = mysqli_fetch_array($results);
+$count = 0;
 while ($row = mysqli_fetch_array($result2, MYSQLI_BOTH)){
+    $count++;
     echo $row['title'];
 }
+echo $count;
 /*
 if (mysqli_num_rows($results) > 0){
     while ($row = mysqli_fetch_array($results) != 0){
