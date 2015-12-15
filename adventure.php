@@ -48,13 +48,17 @@
 <?php
     include 'connect.php';
     $query = "
-        SELECT Adventure.title, CONCAT(User.firstName, ' ', User.lastName) AS authorName, Adventure.content, Adventure.profPhoto, Adventure.author
+        SELECT Adventure.title, CONCAT(User.firstName, ' ', User.lastName) AS author, Adventure.content, Adventure.photo, Cities.cityName
         FROM Adventure
         LEFT JOIN Author
         ON Adventure.author=Author.authorID
         LEFT JOIN User
         ON Author.userID=User.userID
-        WHERE advID = '" . $_GET['adv'] . "';
+        LEFT JOIN Locations
+        ON Adventure.location=Locations.locationID
+        LEFT JOIN Cities
+        ON Locations.cityID=Cities.cityID
+        WHERE advID = 'ADV00001';
     ";
     $results = mysqli_query($conn, $query);
     $row = mysqli_fetch_array($results);
