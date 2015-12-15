@@ -65,11 +65,7 @@ $query = "  SELECT CONCAT(User.firstName, ' ', User.lastName) AS fullName, Autho
                 ON Locations.countryID=Countries.countryID
                 WHERE authorID = '" . $_GET['auth'] . "';" ;
 
-$queryTwo = "
-    SELECT title
-	FROM adventure
-	WHERE author = '" . $_GET['auth'] . "';
-";
+$queryTwo = "SELECT * FROM adventure WHERE author = '" . $_GET['auth'] . "';";
 
 // Creates result table from query
 $results = mysqli_query($conn, $query);
