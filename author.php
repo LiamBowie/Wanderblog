@@ -109,8 +109,8 @@ $rowTwo = mysqli_fetch_array($resultsTwo);
             <h2>Check out all these dank ass adventures I've been on!</h2>
 
             <?php
-                if (mysqli_num_rows($resultsTwo) >= 0){
-                    while ($rowTwo = mysqli_fetch_array($resultsTwo)) {
+                if (mysqli_num_rows($resultsTwo) > 0){
+                    for($i=0; $i< mysqli_num_rows($resultsTwo); $i++ ) {
                         echo "<p> Adventure: " . $rowTwo['title'] . "</p>";
                     }
                 }
