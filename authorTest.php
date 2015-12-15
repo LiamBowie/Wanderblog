@@ -6,9 +6,9 @@
     $row = mysqli_fetch_array($results);
 
     if (mysqli_num_rows($results) > 0){
-        echo "Adventure Found";
+        echo "Adventure Found \n";
         for($i=0; $i< mysqli_num_rows($results); $i++ ) {
-            echo "Adventure: ";
+            echo "Adventure: " . $row['title'];
         }
 
     }
