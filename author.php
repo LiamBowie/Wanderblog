@@ -112,7 +112,7 @@ $rowTwo = mysqli_fetch_array($resultsTwo);
                 if (mysqli_num_rows($resultsTwo) > 0) { /* if there are results (rows>0) */
                     while (($rowTwo = mysqli_fetch_array($resultsTwo)) && ($found == false)) {
                         $advPath = "adventure.php?adv=" . $rowTwo['advID'] ;
-                        echo "<p><a href='" . $advPath . "'>" . $rowTwo['photo'] . "<br>" . $rowTwo['title'] . "</a></p>";
+                        echo "<p><a href='" . $advPath . "'><img src='" . $rowTwo['photo'] . "'><br>" . $rowTwo['title'] . "</a></p>";
                     }
                 }
             ?>
