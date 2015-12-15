@@ -87,7 +87,7 @@ $rowTwo = mysqli_fetch_array($resultsTwo);
             <img src= "<?php echo $row['photo'] ?>" class="img-thumbnail img-responsive img-profile" alt="Author Photo">
             <h5>
                 <span class="glyphicon glyphicon-map-marker"></span>
-                <?php echo $row['fullName']?>, from <?php echo $row['cityName'] ?>, <?php echo $row['countryName'] ?>
+                <?php echo $row['fullName']?> from <?php echo $row['cityName'] ?>, <?php echo $row['countryName'] ?>
             </h5>
             <nav class="sticky-sidebar">
                 <ul class="nav nav-pills nav-stacked">
