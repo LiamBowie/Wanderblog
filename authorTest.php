@@ -6,8 +6,8 @@
     $row = mysqli_fetch_array($results);
 
     if (mysqli_num_rows($results) > 0){
-        while ($row = mysqli_fetch_array($results)) {
+        /*while ($row = mysqli_fetch_array($results)) {
             echo "Adventure: " . $row['author'];
-        }
+        } */
     }
     else{ echo "No adventures"; }
