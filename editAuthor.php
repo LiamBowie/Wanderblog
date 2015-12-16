@@ -104,8 +104,8 @@ function showEdit(){
 
         <div class="col-sm-9">
             <div class="row">
-                <input type="text" name="fullName" value="Bilbo Baggins">
-                <div class="col-sm-3"> <h2 id="bio" class="anchor"><?php echo $row['fullName'] ?></h2> </div>
+                <?php echo "<h2><input type='text' name='fullName' value='" . $row['fullName'] . "'></h2>" ?>
+                //<div class="col-sm-3"> <h2 id="bio" class="anchor"><?php echo $row['fullName'] ?></h2> </div>
                 <div class="col-s-2"> <p><?php showEdit() ?></p> </div>
             </div>
             <hr>
