@@ -8,7 +8,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <?php include'connect.php'; ?>
     <style>
-        
+
         .row.content {height: 450px}
 
         .sidenav{
@@ -18,7 +18,7 @@
         }
 
         footer{
-            background-color: #555;
+            
             color: white;
             padding: 15px;
         }
@@ -37,13 +37,7 @@
 <?php include 'navbar.php';?>
 
 <div class="container-fluid text-center">
-    <div class="row content">
-        <div class="col-sm-2 sidenav">
-            <p><a href="#">Link</a></p>
-            <p><a href="#">Link</a></p>
-            <p><a href="#">Link</a></p>
-        </div>
-        <div class="col-sm-8 text-left">
+        <div class="col-sm-12 text-left">
             <h1>Displaying results for *searchvalue*</h1>
 
             <hr>
@@ -69,8 +63,6 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="col-sm-2 sidenav">
         </div>
     </div>
 </div>
