@@ -98,7 +98,7 @@ function showEdit(){
 
 
         <div class="col-sm-9">
-            <h2 id="bio" class="anchor"><?php echo $row['fullName'] ?><?php showEdit() ?></h2>
+            <h2 id="bio" class="anchor"><?php echo $row['fullName'] ?></h2><p><?php showEdit() ?></p>
             <hr>
             <p><?php echo $row['bio'] ?></p>
             <br><br>
