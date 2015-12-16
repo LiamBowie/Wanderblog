@@ -11,8 +11,8 @@
 	<!--Link to personal Stylesheet-->
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link rel="shortcut icon" href="images/earth.ico">
-	<?php include'connect.php'; ?> /* iclude connection to db */
-	
+	<?php include'connect.php'; ?>
+
 	<!-- Additional Styling for Current Page -->
 	<style>
 	.jumbotron{
@@ -28,9 +28,24 @@
 		margin: auto;
 	}
 	</style>
+
+	<script>
+		window.onload = function() {
+			var xhttp = new XMLHttpRequest();
+			xhttp.onreadystatechange = function() {
+				if (xhttp.readyState == 4 && xhttp.status == 200) {
+					document.getElementById("twitter").innerHTML = xhttp.responseText;
+				}
+			};
+			xhttp.open("GET", "http://napp.azurewebsites.net", true);
+			xhttp.send();
+		}
+
+	</script>
+
 </head>
 <body style="padding-top: 0">
-	<?php include'navbar.php'; ?>//include navabr
+	<?php include'navbar.php'; ?>
 
 	<div class="jumbotron text-center">
 		<h1>Wanderblog</h1> 
@@ -44,6 +59,8 @@
 			<button type="button" class="btn btn-danger">Search</button>
 		</form>
 	</div>
+
+	<aside id="twitter"></aside>
 
 	<div id="top5" class="carousel slide" data-ride="carousel">
 		<!--Indicators-->
