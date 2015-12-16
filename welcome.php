@@ -35,16 +35,16 @@
 			xhttp.onreadystatechange = function() {
 				if (xhttp.readyState == 4 && xhttp.status == 200) {
 					var tweets = JSON.parse(xhttp.responseText);
-					var tweetArray = ["", "", ""];
+					var tweetstring = ""
 
 					for (var i =0; i< 3 ; i++)
 					{
-						tweetArray[i] = "<h4>\"" + tweets[i].text + "\"<br><span style='font-style:normal;'>" + tweets[i].name + "</span></h4>";
+						tweetstring = "<h4>\"" + tweets[i].text + "\"<br><span style='font-style:normal;'>" + tweets[i].name + "</span></h4>";
 					}
 
-					document.getElementById("id='tweetOne'").innerHTML = tweetArray[0].toString();
-					document.getElementById("id='tweetTwo'").innerHTML = tweetArray[1];
-					document.getElementById("id='tweetThree'").innerHTML = tweetArray[2];
+					document.getElementById("id='tweetOne'").innerHTML = tweetstring;
+					document.getElementById("id='tweetTwo'").innerHTML = tweetstring];
+					document.getElementById("id='tweetThree'").innerHTML = tweetstring;
 				}
 			};
 			xhttp.open("GET", "http://napp.azurewebsites.net", true);
