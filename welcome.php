@@ -42,9 +42,9 @@
 						tweetstring = "<h4>\"" + tweets[i].text + "\"<br><span style='font-style:normal;'>" + tweets[i].name + "</span></h4>";
 					}
 
-					document.getElementById("id='tweetOne'").innerHTML = tweetstring;
-					document.getElementById("id='tweetTwo'").innerHTML = tweetstring];
-					document.getElementById("id='tweetThree'").innerHTML = tweetstring;
+					document.getElementById("tweetOne").innerHTML = tweetstring;
+					document.getElementById("tweetTwo").innerHTML = tweetstring];
+					document.getElementById("tweetThree").innerHTML = tweetstring;
 				}
 			};
 			xhttp.open("GET", "http://napp.azurewebsites.net", true);
