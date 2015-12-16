@@ -15,12 +15,13 @@ if (mysqli_num_rows($results) > 0) { /* if there are results (rows>0) */
 echo $last;
 echo "<br>";
 
-//$lastArray = explode(',',$last, 0);
+$lastArray = explode(',',$last);
 //print_r(str_split($last));
-echo (str_split($last));
+//echo (str_split($last));
 
 echo "<br>";
+echo $lastArray;
 
-for($i = 0; $i < 9; $i++){
-    echo $lastArray[$i] . ", ";
-}
+//for($i = 0; $i < 9; $i++){
+//    echo $lastArray[$i] . ", ";
+//}
