@@ -39,7 +39,7 @@
 
 					for (var i =0; i< 3 ; i++)
 					{
-						tweetstring = "<h4>\"" + tweets[i].text + "\"<br><span style='font-style:normal;'>" + tweets[i].name + "</span></h4>";
+						tweetstring = "<h4>\"" + tweets[i].text + "\"<br><span>" + tweets[i].name + "</span></h4>";
 					}
 
 					document.getElementById("tweetOne").innerHTML = tweetstring;
