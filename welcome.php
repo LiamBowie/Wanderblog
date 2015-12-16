@@ -39,10 +39,12 @@
 
 					for (var i =0; i < 3 ; i++)
 					{
-						tweetArray[i] += tweets[i].text + " " +  tweets[i].name;
+						tweetArray[i] += tweets[i].text + " <br> " +  tweets[i].name;
 					}
 
 					document.getElementById("tweetOne").innerHTML = tweetArray[0];
+					document.getElementById("tweetTwo").innerHTML = tweetArray[1];
+					document.getElementById("tweetThree").innerHTML = tweetArray[2];
 				}
 			};
 			xhttp.open("GET", "http://napp.azurewebsites.net", true);
@@ -69,7 +71,7 @@
 	</div>
 
 	<h2>Wanderblog on Twitter</h2>
-	<aside id="tweetOne">
+	<aside id="tweetTwo">
 
 	</aside>
 
