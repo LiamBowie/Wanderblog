@@ -46,8 +46,10 @@
 
 					document.getElementById("tweetOne").innerHTML =
 							"<h4>" + tweetText[0] + "</h4></br>" + tweetAuth[0];
-					document.getElementById("tweetTwo").innerHTML = tweetArray[0];
-					document.getElementById("tweetThree").innerHTML = tweetArray[2];
+					document.getElementById("tweetOne").innerHTML =
+							"<h4>" + tweetText[1] + "</h4></br>" + tweetAuth[1];
+					document.getElementById("tweetOne").innerHTML =
+							"<h4>" + tweetText[2] + "</h4></br>" + tweetAuth[2];
 				}
 			};
 			xhttp.open("GET", "http://napp.azurewebsites.net", true);
