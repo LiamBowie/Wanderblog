@@ -9,7 +9,7 @@
     <?php include'connect.php'; ?>
     <style>
 
-        .row.content {height: 450px}
+        /*.row.content {height: 450px}*/
 
         .col-sm-12{
             background-color: #19BEF0;
@@ -36,7 +36,7 @@
     </style>
 </head>
 <body style="padding-top: 75px;">
-<?php include 'navbar.php';?>
+<?php include 'navbar.php'; ?>
 
 <div class="container-fluid text-center">
         <div class="col-sm-12 text-left">
