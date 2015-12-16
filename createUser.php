@@ -52,5 +52,6 @@
         $query="DELETE FROM User WHERE userID='" . $_SESSION['username'] . "';";
         $results = mysqli_query($conn, $query);
         mysqli_close($conn);
+        sessionn_start(); session_destroy();
         header("Location: welcome.php");
     }
