@@ -15,6 +15,10 @@
             background-color: #19BEF0;
         }
 
+        .thumbnail{
+            background-color: transparent;
+        }
+
 
         /*on small screens, set height to 'auto' for sidenav and grid*/
         @media screen and (max-width: 767px){
