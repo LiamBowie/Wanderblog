@@ -108,7 +108,7 @@ $row = mysqli_fetch_array($results);
             <span class="glyphicon glyphicon-remove"></span> Cancel
         </button>
 
-
+    </div>
 </div>
 
 </form>
