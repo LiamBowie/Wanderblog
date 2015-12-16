@@ -2,10 +2,11 @@
     include'connect.php';
 
     $author = $_GET['auth'];
+    $bio = $_POST['bio'];
 
     $queryTwo="
             UPDATE Author
-            SET bio='Trying this'
+            SET bio='" . $bio . "'
             WHERE authorID='" . $author . "';
     ";
     $resultsTwo = mysqli_query($conn, $queryTwo);
