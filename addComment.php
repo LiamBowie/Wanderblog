@@ -5,7 +5,10 @@
  * Date: 16/12/2015
  * Time: 16:04
  */
+
     session_start();
+
+    include 'connect.php';
 
     $comment = $_POST['comment-text'];
     $userid = $_SESSION['username'];
