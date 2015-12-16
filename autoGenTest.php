@@ -19,3 +19,4 @@ $newNum = $lastNum + 1;
 $newID = "";
 for($i=0; $i<8; $i++){ $newID = $newID . $lastArray[$i]; }
 $newID = $newID . $newNum;
+echo $newID;
