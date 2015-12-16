@@ -37,7 +37,6 @@
         session_start();
         $_SESSION['username'] = $username;
         $_SESSION['password'] = $_POST['password'];
-        if($_POST['authorCheck'] == 1) { $_SESSION['authID'] = $newID; }
 
         header("Location: login.php?operation==REGIN");
     }
