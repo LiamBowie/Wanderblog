@@ -11,6 +11,8 @@
     $userid = $_SESSION['username'];
     $advid = $_GET['adv'];
 
+echo "U: " . $userid . " C: " . $comment . " A: " . $advid;
+
     $sql = "INSERT INTO comments VALUES('" . "COM000001" . "', '" . $userid . "', '" . $advid . "', '" . $comment . "', '" . null . ");";
 
     $results = mysqli_query($conn, $sql);
