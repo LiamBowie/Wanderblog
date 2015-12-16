@@ -99,6 +99,21 @@
             <br><br>
 
             <?php
+                $queryTwo = "SELECT * FROM comments WHERE advID = '" . $_GET['adv'] . "';";
+                $rowTwo = mysqli_fetch_array($resultsTwo);
+                $found = false;
+                $resultsTwo = mysqli_query($conn, $resultsTwo);
+                if (mysqli_num_rows($resultsTwo) > 0)
+                {
+                    while (($rowTwo = mysqli_fetch_array($resultsTwo)) && ($found == false))
+                    {
+                        echo "<div class=\"col-sm-12\">";
+                        echo    "<h4>" . $rowTwo['userid'] . "</h4>";
+                        echo    "<p>" . $rowTwo['commentText']. "</p>";
+                        echo    "</br>";
+                        echo "</div>";
+                    }
+                }
 
             ?>
 
