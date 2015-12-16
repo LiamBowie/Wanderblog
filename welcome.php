@@ -35,14 +35,17 @@
 			xhttp.onreadystatechange = function() {
 				if (xhttp.readyState == 4 && xhttp.status == 200) {
 					var tweets = JSON.parse(xhttp.responseText);
-					var tweetArray = [];
+					var tweetText = [];
+					var tweetAuth = [];
 
 					for (var i =0; i < 3 ; i++)
 					{
-						tweetArray[i] += tweets[i].text  +  tweets[i].name;
+						tweetText[i] += tweets[i].text;
+						tweetAuth[i] += tweets[i].name;
 					}
 
-					document.getElementById("tweetOne").innerHTML = tweetArray[0];
+					document.getElementById("tweetOne").innerHTML =
+							"<h4>" + tweetText[0] + "<h4><br>" + tweetAuth[0];
 					document.getElementById("tweetTwo").innerHTML = tweetArray[0];
 					document.getElementById("tweetThree").innerHTML = tweetArray[2];
 				}
@@ -70,7 +73,8 @@
 		</form>
 	</div>
 
-	<h2>Wanderblog on Twitter</h2>
+	<h2 class="text-center">Wanderblog on Twitter</h2>
+
 	<aside id="tweetOne">
 
 	</aside>
