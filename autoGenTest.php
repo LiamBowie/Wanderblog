@@ -14,7 +14,7 @@ if (mysqli_num_rows($results) > 0) { /* if there are results (rows>0) */
 }
 echo $last;
 
-$lastArray = explode(',',$last, 9);
+$lastArray = explode(',',$last, 0);
 
 for($i = 0; $i < 9; $i++){
     echo $lastArray[$i] . ", ";
