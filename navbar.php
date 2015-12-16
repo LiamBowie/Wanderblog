@@ -82,7 +82,7 @@ if(isset($_SESSION['loggedIn'])) {//if user is loggedIn to WanderBlog
 					</button>
 					<a href="createUser.php?operation=delete">
                         <button type="submit" class="btn btn-danger btn-block" data-dismiss="modal">
-                            <span class="glyphicon glyphicon-remove"></span> Cancel
+                            <span class="glyphicon glyphicon-trash"></span> Delete
                         </button>
                     </a>
 				</div>
