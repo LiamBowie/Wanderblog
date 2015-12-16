@@ -29,6 +29,7 @@
         if($_POST['authorCheck'] == 1) {
             $photo = "Images/blankAuth.png";
             $sqlTwo = "INSERT INTO Author VALUES('" . $newID . "', '" . $username . "', '" . $photo . "', '" . $username . " is a new author to Wanderblog', 'LO00000');";
+            $resultsTwo = mysqli_query($conn, $sqlTwo);
         }
 
         mysqli_close($conn);
