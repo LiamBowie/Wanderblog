@@ -50,6 +50,7 @@
 <?php include'navbar.php'; ?>
 
 <?php
+session_start();
 include 'connect.php';
 
 // Your query for SQL
@@ -76,7 +77,10 @@ $row = mysqli_fetch_array($results);
 $rowTwo = mysqli_fetch_array($resultsTwo);
 
 function showEdit(){
-    echo "<span class='glyphicon glyphicon-pencil'></span>";
+    global $row;
+    if($_SESSION['username'] == $row['userID']) {
+        echo "<span class='glyphicon glyphicon-pencil'></span>";
+    }
 }
 
 ?>
