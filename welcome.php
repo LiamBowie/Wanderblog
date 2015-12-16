@@ -71,9 +71,9 @@
 	</div>
 
 	<h2>Wanderblog on Twitter</h2>
-	<div id="tweetOne">
+	<aside id="tweetOne">
 
-	</div>
+	</aside>
 	<div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
 		<!-- Indicators -->
 		<ol class="carousel-indicators">
