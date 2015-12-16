@@ -91,7 +91,6 @@ function showEdit(){
             <img src= "<?php echo $row['photo'] ?>" class="img-thumbnail img-responsive img-profile" alt="Author Photo">
             <h5>
                 <span class="glyphicon glyphicon-map-marker"></span>
-                <input type="text" vale="Bilbo">
                 <?php echo $row['fullName']?> from <?php echo $row['cityName'] ?>, <?php echo $row['countryName'] ?>
             </h5>
             <nav class="sticky-sidebar">
@@ -102,9 +101,10 @@ function showEdit(){
             </nav>
         </div>
 
-</form>
+
         <div class="col-sm-9">
             <div class="row">
+                <input type="text" name="fullName" value="Bilbo Baggins">
                 <div class="col-sm-3"> <h2 id="bio" class="anchor"><?php echo $row['fullName'] ?></h2> </div>
                 <div class="col-s-2"> <p><?php showEdit() ?></p> </div>
             </div>
@@ -137,6 +137,9 @@ function showEdit(){
         </div>
     </div>
 </div>
+
+</form>
+
 
 <footer class="container-fluid">
     <p>Footer Text</p>
