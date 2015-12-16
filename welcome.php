@@ -35,16 +35,16 @@
 			xhttp.onreadystatechange = function() {
 				if (xhttp.readyState == 4 && xhttp.status == 200) {
 					var tweets = JSON.parse(xhttp.responseText);
-					var tweetstring = "";
+					var tweetArray = ["", "", ""];
 
-					for (var i =0; i< tweets.length ; i++)
+					for (var i =0; i< 3 ; i++)
 					{
-						tweetstring += "<div class="item">";
-						tweetstring += "<h4>" + tweets[i].text + "<br><span style= 'font-style:normal;'>" + tweets[i].name + "</span></h4>";
-						tweetstring += "</div>";
+						tweetArray[i] = "<h4>\"" + tweets[i].text + "\"<br><span style='font-style:normal;'>" + tweets[i].name + "</span></h4>";
 					}
 
-					document.getElementById("twitter").innerHTML = tweetstring;
+					document.getElementById("id="tweetOne"").innerHTML = tweetArray[0];
+					document.getElementById("id="tweetTwo"").innerHTML = tweetArray[1];
+					document.getElementById("id="tweetThree"").innerHTML = tweetArray[2];
 				}
 			};
 			xhttp.open("GET", "http://napp.azurewebsites.net", true);
@@ -81,13 +81,13 @@
 
 		<!-- Wrapper for slides -->
 		<div class="carousel-inner" role="listbox">
-			<div class="item active">
+			<div class="item active" id="tweetOne">
 				<h4>"This company is the best. I am so happy with the result!"<br><span style="font-style:normal;">Michael Roe, Vice President, Comment Box</span></h4>
 			</div>
-			<div class="item">
+			<div class="item" id="tweetTwo">
 				<h4>"One word... WOW!!"<br><span style="font-style:normal;">John Doe, Salesman, Rep Inc</span></h4>
 			</div>
-			<div class="item">
+			<div class="item" id="tweetThree">
 				<h4>"Could I... BE any more happy with this company?"<br><span style="font-style:normal;">Chandler Bing, Actor, FriendsAlot</span></h4>
 			</div>
 		</div>
