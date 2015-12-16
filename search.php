@@ -37,6 +37,16 @@
 <body style="padding-top: 75px;">
 <?php include 'navbar.php'; ?>
 
+<div class="jumbotron text-center">
+    <form class="form-inline">
+        <input type="search" class="form-control" size="50" placeholder="What are you waiting for?">
+        <select class="form-control">
+            <option value="tag">Tag</option>
+            <option value="authorname">Author Name</option>
+            <option value="location">Location</option>
+        </select>
+        <button type="button" class="btn btn-danger">Search</button>
+    </form>
 <div class="container-fluid text-center">
         <div class="col-sm-12 text-left" style="padding-left: 25px; padding-right: 25px">
             <h1>Displaying results for *searchvalue*</h1>
