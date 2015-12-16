@@ -35,8 +35,8 @@
 			xhttp.onreadystatechange = function() {
 				if (xhttp.readyState == 4 && xhttp.status == 200) {
 					var tweets = JSON.parse(xhttp.responseText);
-					var tweetText = [];
-					var tweetAuth = [];
+					var tweetText = ["", "", ""]
+					var tweetAuth = ["", "", ""];
 
 					for (var i =0; i < 3 ; i++)
 					{
