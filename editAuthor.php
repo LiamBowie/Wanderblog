@@ -101,8 +101,14 @@ $row = mysqli_fetch_array($results);
             <br><br>
         </div>
 
+        <button type="submit" class="btn btn-block btn-success">
+            Submit<span class="glyphicon glyphicon-ok"></span>Save
+        </button>
+        <button type="submit" class="btn btn-danger btn-block">
+            <span class="glyphicon glyphicon-remove"></span> Cancel
+        </button>
 
-    </div>
+
 </div>
 
 </form>
