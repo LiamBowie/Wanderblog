@@ -66,22 +66,12 @@ $query = "  SELECT CONCAT(User.firstName, ' ', User.lastName) AS fullName, Autho
                 ON Locations.countryID=Countries.countryID
                 WHERE authorID = '" . $_GET['auth'] . "';" ;
 
-$queryTwo = "SELECT * FROM adventure WHERE author = '" . $_GET['auth'] . "';";
-
 // Creates result table from query
 $results = mysqli_query($conn, $query);
-$resultsTwo = mysqli_query($conn, $queryTwo);
 
 // Gets the row from the created table above
 $row = mysqli_fetch_array($results);
-$rowTwo = mysqli_fetch_array($resultsTwo);
 
-function showEdit(){
-    global $row;
-    if($_SESSION['username'] == $row['userID']) {
-        echo "<span class='glyphicon glyphicon-pencil'></span>";
-    }
-}
 
 ?>
 <form>
@@ -105,36 +95,13 @@ function showEdit(){
         <div class="col-sm-9">
             <div class="row">
                 <?php echo "<h2><input type='text' name='fullName' value='" . $row['fullName'] . "'></h2>" ?>
-                //<div class="col-sm-3"> <h2 id="bio" class="anchor"><?php echo $row['fullName'] ?></h2> </div>
-                <div class="col-s-2"> <p><?php showEdit() ?></p> </div>
             </div>
             <hr>
             <p><?php echo $row['bio'] ?></p>
             <br><br>
-
-            <h4 id="adventures" class="anchor"><small>Adventures</small></h4>
-            <hr>
-            <h2>Check out all these dank ass adventures I've been on!</h2>
-            <br><br>
-
-            <div class="row">
-                <?php
-                $queryTwo = "SELECT * FROM adventure WHERE author = '" . $_GET['auth'] . "';";
-                $rowTwo = mysqli_fetch_array($results);
-                $found = false;
-                $resultsTwo = mysqli_query($conn, $queryTwo);
-                if (mysqli_num_rows($resultsTwo) > 0) { /* if there are results (rows>0) */
-                    while (($rowTwo = mysqli_fetch_array($resultsTwo)) && ($found == false)) {
-                        $advPath = "adventure.php?adv=" . $rowTwo['advID'] ;
-                        echo "<div class='col-sm-4'>";
-                        echo "<p><a href='" . $advPath . "'><img src='" . $rowTwo['photo'] . "'style='max-height:150px; max-width: 150px'><br>" . $rowTwo['title'] . "</a></p>";
-                        echo "</div>";
-                    }
-                }
-                ?>
-            </div>
-
         </div>
+
+
     </div>
 </div>
 
