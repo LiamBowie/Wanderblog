@@ -28,6 +28,18 @@
             /*height: 100%;*/
         }
 
+        .person{
+            border: 10px solid transparent;
+            margin-bottom: 25px;
+            width: 80%;
+            height: 80%;
+            opacity: 0.7;
+        }
+
+        .person:hover{
+            border-color: #f1f1f1;
+        }
+
 
         /*on small screens, set height to 'auto' for sidenav and grid*/
         @media screen and (max-width: 767px){
