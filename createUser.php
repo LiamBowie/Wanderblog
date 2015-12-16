@@ -37,8 +37,7 @@
         session_start();
         $_SESSION['username'] = $username;
         $_SESSION['password'] = $_POST['password'];
-
-        header("Location: login.php?operation=REGIN");
+        if($_POST['authorCheck'] == 1) { $_SESSION['authID'] = $newID; }
 
     }
     else{ echo "Passwords did not match"; }
