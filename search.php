@@ -92,6 +92,9 @@
             </div>
 
             <div class="container">
+                <div class="row">
+
+
                 <div class="col-sm-4">
                     <a href="#demo" data-toggle="collapse">
                         <img src="placehold.it/600x700" class="img-circle person">
@@ -118,6 +121,7 @@
                         <p>Lord of the Rings is great</p>
                         <p>I agree with the above</p>
                     </div>
+                </div>
                 </div>
             </div>
         </div>
