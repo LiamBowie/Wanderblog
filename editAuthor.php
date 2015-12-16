@@ -73,7 +73,7 @@ $results = mysqli_query($conn, $query);
 $row = mysqli_fetch_array($results);
 
 function saveChanges(){
-    $_POST['']
+    $_POST[''];
 }
 
 ?>
