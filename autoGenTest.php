@@ -15,7 +15,7 @@ if (mysqli_num_rows($results) > 0) { /* if there are results (rows>0) */
 
 $lastArray = str_split($last);
 //$lastNum = (int)$lastArray;
-$lastNum = (int)$lastArray[4-8];
+$lastNum = (int)$lastArray[8];
 echo $lastNum;
 $newNum = $lastNum + 1;
 echo $newNum;
