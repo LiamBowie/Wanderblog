@@ -39,7 +39,7 @@
 
 					for (var i =0; i < 3 ; i++)
 					{
-						tweetArray[i] += tweets[i].text + " <br> " +  tweets[i].name;
+						tweetArray[i] += tweets[i].text + " " +  tweets[i].name;
 					}
 
 					document.getElementById("tweetOne").innerHTML = tweetArray[0];
