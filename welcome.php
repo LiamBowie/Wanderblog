@@ -35,11 +35,11 @@
 			xhttp.onreadystatechange = function() {
 				if (xhttp.readyState == 4 && xhttp.status == 200) {
 					var tweets = JSON.parse(xhttp.responseText);
-					var tweetstring = ""
+					var tweetstring = "";
 
 					for (var i =0; i< 3 ; i++)
 					{
-						tweetstring = "<h4>\"" + tweets[i].text + "\"<br><span>" + tweets[i].name + "</span></h4>";
+						tweetstring += "<h4>" + tweets[i].text + "<br><span>" + tweets[i].name + "</span></h4>";
 					}
 
 					document.getElementById("tweetOne").innerHTML = tweetstring;
