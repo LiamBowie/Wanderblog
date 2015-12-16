@@ -13,11 +13,6 @@ if (mysqli_num_rows($results) > 0) { /* if there are results (rows>0) */
     }
 }
 
-$arr1 = str_split($last);
-$arr2 = str_split($last, 3);
+$lastArray = str_split($last);
 
-//echo $arr1;
-//echo $arr2;
-
-foreach($arr1 as $entry){ echo "$entry ,"; }
-echo "<br>";
+echo $lastArray[1];
