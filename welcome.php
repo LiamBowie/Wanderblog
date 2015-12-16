@@ -46,9 +46,9 @@
 
 					document.getElementById("tweetOne").innerHTML =
 							"<h4>" + tweetText[0] + "</h4></br>" + tweetAuth[0];
-					document.getElementById("tweetOne").innerHTML =
+					document.getElementById("tweetTwo").innerHTML =
 							"<h4>" + tweetText[1] + "</h4></br>" + tweetAuth[1];
-					document.getElementById("tweetOne").innerHTML =
+					document.getElementById("tweetThree").innerHTML =
 							"<h4>" + tweetText[2] + "</h4></br>" + tweetAuth[2];
 				}
 			};
@@ -77,10 +77,28 @@
 
 	<h2 class="text-center">Wanderblog on Twitter</h2>
 
-	<aside id="tweetOne">
+	<!--<aside id="tweetOne">
 
-	</aside>
+	</aside>-->
 
+	<div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
+		<!-- Indicators -->
+		<ol class="carousel-indicators">
+			<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+			<li data-target="#myCarousel" data-slide-to="1"></li>
+			<li data-target="#myCarousel" data-slide-to="2"></li>
+		</ol>
+
+		<!-- Wrapper for slides -->
+		<div class="carousel-inner" role="listbox">
+			<div class="item active" id="tweetOne">
+			</div>
+			<div class="item" id="tweetTwo">
+			</div>
+			<div class="item" id="tweetThree">
+			</div>
+		</div>
+	</div>
 
 	<div id="top5" class="carousel slide" data-ride="carousel">
 		<!--Indicators-->
