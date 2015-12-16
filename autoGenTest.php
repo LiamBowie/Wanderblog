@@ -17,5 +17,5 @@ echo $last;
 $lastArray = explode(',',$last, 9);
 
 for($i = 0; $i < 9; $i++){
-    echo $lastArray[$i] + ", ";
+    echo $lastArray[$i] . ", ";
 }
