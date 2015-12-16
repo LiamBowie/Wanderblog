@@ -42,9 +42,9 @@
 						tweetArray[i] = "<h4>\"" + tweets[i].text + "\"<br><span style='font-style:normal;'>" + tweets[i].name + "</span></h4>";
 					}
 
-					document.getElementById("id="tweetOne"").innerHTML = tweetArray[0];
-					document.getElementById("id="tweetTwo"").innerHTML = tweetArray[1];
-					document.getElementById("id="tweetThree"").innerHTML = tweetArray[2];
+					document.getElementById("id='tweetOne'").innerHTML = tweetArray[0].toString();
+					document.getElementById("id='tweetTwo'").innerHTML = tweetArray[1];
+					document.getElementById("id='tweetThree'").innerHTML = tweetArray[2];
 				}
 			};
 			xhttp.open("GET", "http://napp.azurewebsites.net", true);
@@ -82,13 +82,10 @@
 		<!-- Wrapper for slides -->
 		<div class="carousel-inner" role="listbox">
 			<div class="item active" id="tweetOne">
-				<h4>"This company is the best. I am so happy with the result!"<br><span style="font-style:normal;">Michael Roe, Vice President, Comment Box</span></h4>
 			</div>
 			<div class="item" id="tweetTwo">
-				<h4>"One word... WOW!!"<br><span style="font-style:normal;">John Doe, Salesman, Rep Inc</span></h4>
 			</div>
 			<div class="item" id="tweetThree">
-				<h4>"Could I... BE any more happy with this company?"<br><span style="font-style:normal;">Chandler Bing, Actor, FriendsAlot</span></h4>
 			</div>
 		</div>
 	</div>
