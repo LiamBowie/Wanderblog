@@ -41,8 +41,6 @@
 <div class="container-fluid text-center">
         <div class="col-sm-12 text-left">
             <h1>Displaying results for *searchvalue*</h1>
-
-            <hr>
             <div class="container">
                 <div class="row">
                     <div class="col-sm-4">
