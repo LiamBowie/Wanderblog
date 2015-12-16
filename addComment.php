@@ -7,7 +7,7 @@
  */
     session_start();
 
-    $comment = $_POST = ['comment-text'];
+    $comment = $_POST['comment-text'];
     $userid = $_SESSION['username'];
     $advid = $_GET['adv'];
 
