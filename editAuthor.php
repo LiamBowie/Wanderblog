@@ -72,49 +72,51 @@ $results = mysqli_query($conn, $query);
 // Gets the row from the created table above
 $row = mysqli_fetch_array($results);
 
+function saveChanges(){
+    $_POST['']
+}
 
 ?>
-<form>
-<div class="container-fluid">
-    <div class="row content">
-        <div class="col-sm-3 sidenav">
-            <img src= "<?php echo $row['photo'] ?>" class="img-thumbnail img-responsive img-profile" alt="Author Photo">
-            <h5>
-                <span class="glyphicon glyphicon-map-marker"></span>
-                <?php echo $row['fullName']?> from <?php echo $row['cityName'] ?>, <?php echo $row['countryName'] ?>
-            </h5>
-            <nav class="sticky-sidebar">
-                <ul class="nav nav-pills nav-stacked">
-                    <li><a href="#bio">Author Bio</a></li>
-                    <li><a href="#adventures">Adventures</a></li>
-                </ul><br>
-            </nav>
-        </div>
+<form id="changes" action="" method="post">
+    <div class="container-fluid">
+        <div class="row content">
+            <div class="col-sm-3 sidenav">
+                <img src= "<?php echo $row['photo'] ?>" class="img-thumbnail img-responsive img-profile" alt="Author Photo">
+                <h5>
+                    <span class="glyphicon glyphicon-map-marker"></span>
+                    <?php echo $row['fullName']?> from <?php echo $row['cityName'] ?>, <?php echo $row['countryName'] ?>
+                </h5>
+                <nav class="sticky-sidebar">
+                    <ul class="nav nav-pills nav-stacked">
+                        <li><a href="#bio">Author Bio</a></li>
+                        <li><a href="#adventures">Adventures</a></li>
+                    </ul><br>
+                </nav>
+            </div>
 
 
-        <div class="col-sm-9">
+            <div class="col-sm-9">
+                <div class="row">
+                    <?php echo "<h2> . " .  $row['fullName'] . "></h2>" ?>
+                </div>
+                <hr>
+                <?php echo "<p><input type='text' name='bio' value='" . $row['bio'] . "'></p>" ?>
+                <br><br>
+            </div>
+
             <div class="row">
-                <?php echo "<h2><input type='text' name='fullName' value='" . $row['fullName'] . "'></h2>" ?>
+                <div class="col-sm-6">
+                    <button type="submit" class="btn btn-block btn-success">
+                        <span class="glyphicon glyphicon-ok"></span>Save
+                    </button>
+                    <button type="submit" class="btn btn-danger btn-block">
+                        <span class="glyphicon glyphicon-remove"></span> Cancel
+                    </button>
+                </div>
             </div>
-            <hr>
-            <?php echo "<p><input type='text' name='bio' value='" . $row['bio'] . "'></p>" ?>
-            <br><br>
-        </div>
 
-        <div class="row">
-            <div class="col-sm-6">
-                <button type="submit" class="btn btn-block btn-success">
-                    <span class="glyphicon glyphicon-ok"></span>Save
-                </button>
-                <button type="submit" class="btn btn-danger btn-block">
-                    <span class="glyphicon glyphicon-remove"></span> Cancel
-                </button>
-            </div>
         </div>
-
     </div>
-</div>
-
 </form>
 
 
