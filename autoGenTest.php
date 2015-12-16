@@ -16,7 +16,8 @@ echo $last;
 echo "<br>";
 
 //$lastArray = explode(',',$last, 0);
-print_r(str_split($last));
+//print_r(str_split($last));
+echo (str_split($last));
 
 echo "<br>";
 
