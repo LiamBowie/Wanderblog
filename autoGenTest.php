@@ -12,13 +12,12 @@ if (mysqli_num_rows($results) > 0) { /* if there are results (rows>0) */
         $last = $row['authorID'];
     }
 }
-echo $last;
-echo "<br>";
 
 $arr1 = str_split($last);
 $arr2 = str_split($last, 3);
 
-echo $arr1;
-echo $arr2;
+//echo $arr1;
+//echo $arr2;
 
-foreach($arr1 as $entry){ echo "$entry <br>"; }
+foreach($arr1 as $entry){ echo "$entry ,"; }
+echo "<br>";
