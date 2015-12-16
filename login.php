@@ -59,6 +59,7 @@ $operation=$_GET["operation"];
                     $_SESSION['FullName'] = $row['FullName'];
                     $_SESSION['access_level'] = 'standard_user';
                     $_SESSION['loggedIn'] = true;
+                    if(isset($_SESSION['authID'])){header("Location: author.php?auth=" . $_SESSION['authID'] );}
                     header("Location: welcome.php");
                 }
             }
