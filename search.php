@@ -65,7 +65,7 @@
                     </div>
                     <div class="col-sm-4">
                         <a href="#" class="thumbnail text-center">
-                            <img src="http://bit.ly/1m6Q0nF">
+                            <img src="http://placehold.it/1600x900">
                             <p style="color:#ffffff;">Insert Information here</p>
                         </a>
                     </div>
