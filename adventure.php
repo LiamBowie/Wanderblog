@@ -108,7 +108,7 @@
                     while (($rowTwo = mysqli_fetch_array($resultsTwo)) && ($found == false))
                     {
                         echo "<div class=\"col-sm-12\">";
-                        echo    "<h4>" . $rowTwo['userid'] . "</h4>";
+                        echo    "<h4>" . $rowTwo['userID'] . "</h4>";
                         echo    "<p>" . $rowTwo['commentText']. "</p>";
                         echo    "</br>";
                         echo "</div>";
