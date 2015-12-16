@@ -60,7 +60,7 @@
     </div>
 </div>
 
-<footer class="container-fluid bg-4 text-center">
+<footer class="container-fluid bg-4 text-center" style="background-color: #2f2f2f;">
     <p>Wanderblog is a part of SHB Innovative Solutions</p>
 </footer>
 </body>
