@@ -100,9 +100,9 @@
 
             <?php
                 $queryTwo = "SELECT * FROM comments WHERE advID = '" . $_GET['adv'] . "';";
-                $rowTwo = mysqli_fetch_array($resultsTwo);
+                //$rowTwo = mysqli_fetch_array($resultsTwo);
                 $found = false;
-                $resultsTwo = mysqli_query($conn, $resultsTwo);
+                $resultsTwo = mysqli_query($conn, $queryTwo);
                 if (mysqli_num_rows($resultsTwo) > 0)
                 {
                     while (($rowTwo = mysqli_fetch_array($resultsTwo)) && ($found == false))
