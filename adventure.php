@@ -92,8 +92,7 @@
             <h4>Leave a Comment:</h4>
             <form role="form" action="addComment.php?adv=<?php echo $_GET['adv']?>" method="POST">
                 <div class="form-group">
-                    <!-- <input type="text" id="comment-text" class="form-control" required> -->
-                    <input type="text" id="comment-text" >
+                    <input type="text" id="comment-text" class="form-control" required>
                 </div>
                 <button type="submit" class="btn btn-success">Submit</button>
             </form>
