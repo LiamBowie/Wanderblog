@@ -19,6 +19,10 @@
 
         }
 
+        .jumbotron{
+            background-color: #19BEF0;
+        }
+
         html, body{
             height: 100%;
         }
