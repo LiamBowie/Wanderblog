@@ -19,6 +19,10 @@
             background-color: #2f2f2f;
         }
 
+        html, body{
+            height: 100%;
+        }
+
 
         /*on small screens, set height to 'auto' for sidenav and grid*/
         @media screen and (max-width: 767px){
