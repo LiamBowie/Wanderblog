@@ -39,8 +39,9 @@
 
 					for (var i =0; i< tweets.length ; i++)
 					{
-						tweetstring += "<h3>" + tweets[i].name + "</h3> </br>";
-						tweetstring += "<p>"  + tweets[i].text + "</p>"
+						tweetstring += "<div class="item">";
+						tweetstring += "<h4>" + tweets[i].text + "<br><span style= 'font-style:normal;'>" + tweets[i].name + "</span></h4>";
+						tweetstring += "</div>";
 					}
 
 					document.getElementById("twitter").innerHTML = tweetstring;
@@ -69,9 +70,32 @@
 		</form>
 	</div>
 
-	<aside id="twitter">
+	<h2>What Twitter is Saying About Wanderblog!</h2>
+	<div id="tweetCarousel" class="carousel slide text-center" data-ride="carousel">
+		<!-- Indicators -->
+		<ol class="carousel-indicators">
+			<li data-target="#tweetCarousel" data-slide-to="0" class="active"></li>
+			<li data-target="#tweetCarousel" data-slide-to="1"></li>
+			<li data-target="#tweetCarousel" data-slide-to="2"></li>
+			<li data-target="#tweetCarousel" data-slide-to="3"></li>
+			<li data-target="#tweetCarousel" data-slide-to="4"></li>
+		</ol>
 
-	</aside>
+		<div class="carousel-inner" id="twitter" role="listbox">
+
+		</div>
+
+		<!-- Left and right controls -->
+		<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+			<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+			<span class="sr-only">Previous</span>
+		</a>
+		<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+			<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+			<span class="sr-only">Next</span>
+		</a>
+
+	</div>
 
 	<div id="top5" class="carousel slide" data-ride="carousel">
 		<!--Indicators-->
