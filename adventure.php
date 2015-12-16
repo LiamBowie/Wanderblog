@@ -99,7 +99,13 @@
             <br><br>
 
             <?php
-                $queryTwo = "SELECT * FROM comments WHERE advID = '" . $_GET['adv'] . "';";
+                $queryTwo =
+                    "SELECT Comments.userID, Comments.commentText, Author.photo
+                    FROM Comments
+                    LEFT JOIN Author
+                    ON Comments.userID = Author.userID
+                    WHERE advID = '" . $_GET['adv'] . "'
+                    ;";
                 //$rowTwo = mysqli_fetch_array($resultsTwo);
                 $found = false;
                 $resultsTwo = mysqli_query($conn, $queryTwo);
@@ -107,7 +113,10 @@
                 {
                     while (($rowTwo = mysqli_fetch_array($resultsTwo)) && ($found == false))
                     {
-                        echo "<div class=\"col-sm-12\">";
+                        echo "<div class=\"col-sm-2 text-center\">";
+                        echo    "<img src=\"Images/jo.jpg\" class=\"img-circle\" height=\"65\" width=\"65\" alt=\"Avatar\">";
+                        echo "</div>";
+                        echo "<div class=\"col-sm-10\">";
                         echo    "<h4>" . $rowTwo['userID'] . "</h4>";
                         echo    "<p>" . $rowTwo['commentText']. "</p>";
                         echo    "</br>";
