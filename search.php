@@ -9,8 +9,6 @@
     <?php include'connect.php'; ?>
     <style>
 
-        /*.row.content {height: 450px}*/
-
         .col-sm-12{
             background-color: #19BEF0;
         }
@@ -67,7 +65,7 @@
     </div>
 </div>
 
-<footer class="container-fluid bg-4 text-center" style="background-color: #2f2f2f; ">
+<footer class="container-fluid bg-4 text-center" style="background-color: #2f2f2f; padding: 50px; ">
     <p style="color: #ffffff;">Wanderblog is a part of SHB Innovative Solutions</p>
 </footer>
 </body>
