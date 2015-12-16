@@ -74,7 +74,6 @@
             <nav class="sticky-sidebar">
                 <ul class="nav nav-pills nav-stacked">
                     <li><a href="#desc">Adventure Description</a></li>
-                    <li><a href="#photos">Photos</a></li>
                     <li><a href="#comments">Comments</a></li>
                 </ul><br>
             </nav>
@@ -88,23 +87,22 @@
             <p><?php echo $row['content'] ?></p>
             <br><br>
 
-            <h4 id="photos" class="anchor"><small>PHOTOS</small></h4>
-            <hr>
-            <h2>Check out these photos of my adventure to LOCATION</h2>
-            <p><strong>GRID OF IMAGES. IMPLEMENT LATER. TOO LAZY JUST NOW.</strong></p>
-
             <h4 id="comments" class="anchor"><small>COMMENTS</small></h4>
             <hr>
             <h4>Leave a Comment:</h4>
-            <form role="form">
+            <form role="form" action="addComment.php?adv=<?php echo $_GET['adv']?>" method="POST">
                 <div class="form-group">
-                    <textarea class="form-control" rows="3" required></textarea>
+                    <textarea id="comment-text" class="form-control" rows="3" required></textarea>
                 </div>
                 <button type="submit" class="btn btn-success">Submit</button>
             </form>
             <br><br>
 
-            <p><span class="badge">2</span> Comments:</p><br>
+            <?php
+
+            ?>
+
+            <p>Comments:</p><br>
 
             <div class="row">
                 <div class="col-sm-2 text-center">
