@@ -20,3 +20,5 @@ $arr2 = str_split($last, 3);
 
 echo $arr1;
 echo $arr2;
+
+for($i=0; $i<9; $i++){ echo $row[$i] . ", "; }
