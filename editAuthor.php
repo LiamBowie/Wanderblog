@@ -97,7 +97,7 @@ $row = mysqli_fetch_array($results);
                 <?php echo "<h2><input type='text' name='fullName' value='" . $row['fullName'] . "'></h2>" ?>
             </div>
             <hr>
-            <p><?php echo $row['bio'] ?></p>
+            <?php echo "<p><input type='text' name='bio' value='" . $row['bio'] . "'></p>" ?>
             <br><br>
         </div>
 
