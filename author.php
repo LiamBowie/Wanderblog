@@ -79,7 +79,7 @@ $rowTwo = mysqli_fetch_array($resultsTwo);
 function showEdit(){
     global $row;
     if($_SESSION['username'] == $row['userID']){
-        echo "<a href='editAuthor.php?auth=" . $_GET['auth'] . "'><span class='glyphicon glyphicon-pencil'></span>";
+        echo "<a href='editAuthor.php?auth=" . $_GET['auth'] . "'><span class='glyphicon glyphicon-pencil'></span></a>";
     }
 }
 
