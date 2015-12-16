@@ -16,7 +16,7 @@
         }
 
         .thumbnail{
-            background-color: transparent;
+            background-color: #2f2f2f;
         }
 
 
@@ -43,19 +43,19 @@
                     <div class="col-sm-4">
                         <a href="#" class="thumbnail">
                             <img src="http://bit.ly/1m6Q0nF">
-                            <p>Insert Information here</p>
+                            <p style="color:#ffffff;">Insert Information here</p>
                         </a>
                     </div>
                     <div class="col-sm-4">
                         <a href="#" class="thumbnail">
                             <img src="http://bit.ly/1m6Q0nF">
-                            <p>Insert Information here</p>
+                            <p style="color:#ffffff;">Insert Information here</p>
                         </a>
                     </div>
                     <div class="col-sm-4">
                         <a href="#" class="thumbnail">
                             <img src="http://bit.ly/1m6Q0nF">
-                            <p>Insert Information here</p>
+                            <p style="color:#ffffff;">Insert Information here</p>
                         </a>
                     </div>
                 </div>
