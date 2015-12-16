@@ -86,7 +86,7 @@ function saveChanges(){
 
 
 ?>
-<form id="changes" action="updateAuthor.php" method="post">
+<form id="changes" action="updateAuthor.php?auth='<?php $_GET['auth'] ?>'" method="post">
     <div class="container-fluid">
         <div class="row content">
             <div class="col-sm-3 sidenav">
