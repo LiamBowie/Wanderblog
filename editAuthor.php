@@ -104,7 +104,7 @@ $row = mysqli_fetch_array($results);
         <div class="row">
             <div class="col-sm-6">
                 <button type="submit" class="btn btn-block btn-success">
-                    Submit<span class="glyphicon glyphicon-ok"></span>Save
+                    <span class="glyphicon glyphicon-ok"></span>Save
                 </button>
                 <button type="submit" class="btn btn-danger btn-block">
                     <span class="glyphicon glyphicon-remove"></span> Cancel
