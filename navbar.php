@@ -34,7 +34,7 @@ if(isset($_SESSION['loggedIn'])) {//if user is loggedIn to WanderBlog
 				</ul>
 			</div>
 		</div>
-	</nav> <!--Display navbar with users name-->
+	</nav>
 
 	<script>
     function confirmLogout(){

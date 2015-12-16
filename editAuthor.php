@@ -3,7 +3,7 @@
 <head>
     <title>
         <?php
-                echo $row['fullName'];
+        echo $row['fullName'];
         ?>
     </title>
     <meta charset="utf-8">
@@ -66,75 +66,69 @@ $query = "  SELECT CONCAT(User.firstName, ' ', User.lastName) AS fullName, Autho
                 ON Locations.countryID=Countries.countryID
                 WHERE authorID = '" . $_GET['auth'] . "';" ;
 
-$queryTwo = "SELECT * FROM adventure WHERE author = '" . $_GET['auth'] . "';";
-
 // Creates result table from query
 $results = mysqli_query($conn, $query);
-$resultsTwo = mysqli_query($conn, $queryTwo);
 
 // Gets the row from the created table above
 $row = mysqli_fetch_array($results);
-$rowTwo = mysqli_fetch_array($resultsTwo);
 
-function showEdit(){
-    global $row;
-    if($_SESSION['username'] == $row['userID']){
-        echo "<a href='editAuthor.php?auth=" . $_GET['auth'] . "'><span class='glyphicon glyphicon-pencil'></span></a>";
-    }
+function saveChanges(){
+    global $conn;
+    $queryTwo="
+        UPDATE Author
+        SET bio='" . $_POST['bio'] . "'
+        WHERE authorID='" . $_GET['auth'] ."';
+    ";
+    $resultsTwo = mysqli_query($conn, $queryTwo);
+    mysqli_close($conn);
+    header("Location: author.php?auth='" . $_GET['auth'] . "'");
 }
 
+
 ?>
-<div class="container-fluid">
-    <div class="row content">
-        <div class="col-sm-3 sidenav">
-            <img src= "<?php echo $row['photo'] ?>" class="img-thumbnail img-responsive img-profile" alt="Author Photo">
-            <h5>
-                <span class="glyphicon glyphicon-map-marker"></span>
-                <?php echo $row['fullName']?> from <?php echo $row['cityName'] ?>, <?php echo $row['countryName'] ?>
-            </h5>
-            <nav class="sticky-sidebar">
-                <ul class="nav nav-pills nav-stacked">
-                    <li><a href="#bio">Author Bio</a></li>
-                    <li><a href="#adventures">Adventures</a></li>
-                </ul><br>
-            </nav>
-        </div>
 
-
-        <div class="col-sm-9">
-            <div class="row">
-                <div class="col-sm-3"> <h2 id="bio" class="anchor"><?php echo $row['fullName'] ?></h2> </div>
-                <div class="col-s-2"> <p><?php showEdit() ?></p> </div>
+<?php echo "<form id='changes' action='updateAuthor.php?auth=" . $_GET['auth'] . "' method='post'>" ?>
+    <div class="container-fluid">
+        <div class="row content">
+            <div class="col-sm-3 sidenav">
+                <img src= "<?php echo $row['photo'] ?>" class="img-thumbnail img-responsive img-profile" alt="Author Photo">
+                <h5>
+                    <span class="glyphicon glyphicon-map-marker"></span>
+                    <?php echo $row['fullName']?> from <?php echo $row['cityName'] ?>, <?php echo $row['countryName'] ?>
+                </h5>
+                <nav class="sticky-sidebar">
+                    <ul class="nav nav-pills nav-stacked">
+                        <li><a href="#bio">Author Bio</a></li>
+                        <li><a href="#adventures">Adventures</a></li>
+                    </ul><br>
+                </nav>
             </div>
-            <hr>
-            <p><?php echo $row['bio'] ?></p>
-            <br><br>
 
-            <h4 id="adventures" class="anchor"><small>Adventures</small></h4>
-            <hr>
-            <h2>Check out all these dank ass adventures I've been on!</h2>
-            <br><br>
+
+            <div class="col-sm-9">
+                <div class="row">
+                    <?php echo "<h2> . " .  $row['fullName'] . "</h2>" ?>
+                </div>
+                <hr>
+                <?php echo "<p><input type='text' id='bio' name='bio' value='" . $row['bio'] . "'></p>" ?>
+                <br><br>
+            </div>
 
             <div class="row">
-                <?php
-                    $queryTwo = "SELECT * FROM adventure WHERE author = '" . $_GET['auth'] . "';";
-                    $rowTwo = mysqli_fetch_array($results);
-                    $found = false;
-                    $resultsTwo = mysqli_query($conn, $queryTwo);
-                    if (mysqli_num_rows($resultsTwo) > 0) { /* if there are results (rows>0) */
-                        while (($rowTwo = mysqli_fetch_array($resultsTwo)) && ($found == false)) {
-                            $advPath = "adventure.php?adv=" . $rowTwo['advID'] ;
-                            echo "<div class='col-sm-4'>";
-                                echo "<p><a href='" . $advPath . "'><img src='" . $rowTwo['photo'] . "'style='max-height:150px; max-width: 150px'><br>" . $rowTwo['title'] . "</a></p>";
-                            echo "</div>";
-                        }
-                    }
-                ?>
+                <div class="col-sm-6">
+                    <button type="submit" class="btn btn-block btn-success">
+                        <span class="glyphicon glyphicon-ok"></span>Save
+                    </button>
+                    <button type="submit" class="btn btn-danger btn-block">
+                        <span class="glyphicon glyphicon-remove"></span> Cancel
+                    </button>
+                </div>
             </div>
 
         </div>
     </div>
-</div>
+</form>
+
 
 <footer class="container-fluid">
     <p>Footer Text</p>
