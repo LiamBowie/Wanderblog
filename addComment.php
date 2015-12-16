@@ -15,16 +15,14 @@ include 'connect.php';
 
     session_start();
 
-
-
     $comment = $_POST['comment-text'];
     $userid = $_SESSION['username'];
     $advid = $_GET['adv'];
 
 echo "U: " . $userid . " C: " . $comment . " A: " . $advid;
 
-    $sql = "INSERT INTO comments VALUES('" . "COM000002" . "', '" . $userid . "', '" . $advid . "', '" . $comment . "', NULL);";
-    //$sql = "INSERT INTO Comments VALUES('COM000001', 'Mithrandir', 'ADV00001', 'Hello', null);";
+    // Still need auto incrementing ID
+    $sql = "INSERT INTO comments VALUES('" . "COM000003" . "', '" . $userid . "', '" . $advid . "', '" . $comment . "', NULL);";
 
     $results = mysqli_query($conn, $sql);
     mysqli_close($conn);
