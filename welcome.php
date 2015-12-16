@@ -11,8 +11,8 @@
 	<!--Link to personal Stylesheet-->
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link rel="shortcut icon" href="images/earth.ico">
-	<?php include'connect.php'; ?> /* iclude connection to db */
-	
+	<?php include'connect.php'; ?>
+
 	<!-- Additional Styling for Current Page -->
 	<style>
 	.jumbotron{
@@ -27,10 +27,49 @@
 		max-height: 500px;
 		margin: auto;
 	}
+
+	#myCarousel{
+		padding-top: 20px;
+		margin-bottom: 65px;
+	}
 	</style>
+
+	<script>
+		window.onload = function() {
+			var xhttp = new XMLHttpRequest();
+			xhttp.onreadystatechange = function() {
+				if (xhttp.readyState == 4 && xhttp.status == 200) {
+					var tweets = JSON.parse(xhttp.responseText);
+					var tweetText = ["", "", "", "", ""];
+					var tweetAuth = ["", "", "", "", ""];
+
+					for (var i = 0; i < 5; i++)
+					{
+						tweetText[i] += tweets[i].text;
+						tweetAuth[i] += tweets[i].name;
+					}
+
+					document.getElementById("tweetOne").innerHTML =
+							"<h4>" + tweetText[0] + "</h4></br>" + tweetAuth[0];
+					document.getElementById("tweetTwo").innerHTML =
+							"<h4>" + tweetText[1] + "</h4></br>" + tweetAuth[1];
+					document.getElementById("tweetThree").innerHTML =
+							"<h4>" + tweetText[2] + "</h4></br>" + tweetAuth[2];
+					document.getElementById("tweetThree").innerHTML =
+							"<h4>" + tweetText[3] + "</h4></br>" + tweetAuth[3];
+					document.getElementById("tweetThree").innerHTML =
+							"<h4>" + tweetText[4] + "</h4></br>" + tweetAuth[4];
+				}
+			};
+			xhttp.open("GET", "http://napp.azurewebsites.net", true);
+			xhttp.send();
+		}
+
+	</script>
+
 </head>
 <body style="padding-top: 0">
-	<?php include'navbar.php'; ?>//include navabr
+	<?php include'navbar.php'; ?>
 
 	<div class="jumbotron text-center">
 		<h1>Wanderblog</h1> 
@@ -43,6 +82,30 @@
 			</select>
 			<button type="button" class="btn btn-danger">Search</button>
 		</form>
+	</div>
+
+	<h2 class="text-center">Wanderblog on Twitter</h2>
+
+
+	<div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
+		<!-- Indicators -->
+		<ol class="carousel-indicators">
+			<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+			<li data-target="#myCarousel" data-slide-to="1"></li>
+			<li data-target="#myCarousel" data-slide-to="2"></li>
+			<li data-target="#myCarousel" data-slide-to="3"></li>
+			<li data-target="#myCarousel" data-slide-to="4"></li>
+		</ol>
+
+		<!-- Wrapper for slides -->
+		<div class="carousel-inner" role="listbox">
+			<div class="item active" id="tweetOne">
+			</div>
+			<div class="item" id="tweetTwo">
+			</div>
+			<div class="item" id="tweetThree">
+			</div>
+		</div>
 	</div>
 
 	<div id="top5" class="carousel slide" data-ride="carousel">
