@@ -29,7 +29,7 @@
 	}
 
 	#myCarousel{
-		margin-top: 20px;
+		padding-top: 20px;
 		margin-bottom: 65px;
 	}
 	</style>
