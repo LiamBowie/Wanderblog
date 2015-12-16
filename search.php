@@ -16,6 +16,7 @@
         .thumbnail{
             background-color: #2f2f2f;
             border: none;
+
         }
 
         html, body{
@@ -42,19 +43,19 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-4">
-                        <a href="#" class="thumbnail">
+                        <a href="#" class="thumbnail text-center">
                             <img src="http://bit.ly/1m6Q0nF">
                             <p style="color:#ffffff;">Insert Information here</p>
                         </a>
                     </div>
                     <div class="col-sm-4">
-                        <a href="#" class="thumbnail">
+                        <a href="#" class="thumbnail text-center">
                             <img src="http://bit.ly/1m6Q0nF">
                             <p style="color:#ffffff;">Insert Information here</p>
                         </a>
                     </div>
                     <div class="col-sm-4">
-                        <a href="#" class="thumbnail">
+                        <a href="#" class="thumbnail text-center">
                             <img src="http://bit.ly/1m6Q0nF">
                             <p style="color:#ffffff;">Insert Information here</p>
                         </a>
@@ -69,13 +70,6 @@
     <p style="color: #ffffff;">Wanderblog is a part of SHB Innovative Solutions</p>
 </footer>
 </body>
-<?php
-/**
- * Created by PhpStorm.
- * User: Finlay
- * Date: 18/11/2015
- * Time: 13:13
- */
-?>
+
 
 </html>
