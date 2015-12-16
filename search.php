@@ -17,6 +17,7 @@
 
         .thumbnail{
             background-color: #2f2f2f;
+            border: none;
         }
 
         html, body{
