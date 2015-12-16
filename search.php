@@ -51,9 +51,10 @@
         </select>
         <button type="button" class="btn btn-danger">Search</button>
     </form>
-<div class="container-fluid text-center">
+
+    <div class="container-fluid text-center">
         <div class="col-sm-12 text-left" style="padding-left: 25px; padding-right: 25px">
-            <h1>Displaying results for *searchvalue*</h1>
+            <h2>Displaying results for *searchvalue*</h2>
             <div class="container">
                 <div class="row">
                     <div class="col-sm-4">
