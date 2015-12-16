@@ -12,6 +12,7 @@ if (mysqli_num_rows($results) > 0) { /* if there are results (rows>0) */
         $last = $row['authorID'];
     }
 }
+echo $last;
 
 $lastArray = explode(',',$last, 9);
 
