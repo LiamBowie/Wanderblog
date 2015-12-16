@@ -25,7 +25,7 @@
         }
 
         html, body{
-            height: 100%;
+            /*height: 100%;*/
         }
 
 
@@ -75,6 +75,36 @@
                             <img src="http://bit.ly/1m6Q0nF">
                             <p style="color:#ffffff;">Insert Information here</p>
                         </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="col-sm-4">
+                    <a href="#demo" data-toggle="collapse">
+                        <img src="placehold.it/600x700" class="img-circle person">
+                    </a>
+                <div id="demo" class="collapse">
+                    <p>Lord of the Rings is great</p>
+                    <p>I agree with the above</p>
+                </div>
+                </div>
+                <div class="col-sm-4">
+                    <a href="#demo" data-toggle="collapse">
+                        <img src="placehold.it/350x350" class="img-circle person">
+                    </a>
+                    <div id="demo" class="collapse">
+                        <p>Lord of the Rings is great</p>
+                        <p>I agree with the above</p>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <a href="#demo" data-toggle="collapse">
+                        <img src="placehold.it/1600x900" class="img-circle person">
+                    </a>
+                    <div id="demo" class="collapse">
+                        <p>Lord of the Rings is great</p>
+                        <p>I agree with the above</p>
                     </div>
                 </div>
             </div>
