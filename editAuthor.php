@@ -73,11 +73,20 @@ $results = mysqli_query($conn, $query);
 $row = mysqli_fetch_array($results);
 
 function saveChanges(){
-    $_POST[''];
+    global $conn;
+    $queryTwo="
+        UPDATE Author
+        SET bio='" . $_POST['bio'] . "'
+        WHERE authorID='" . $_GET['auth'] ."';
+    ";
+    $resultsTwo = mysqli_query($conn, $queryTwo);
+    mysqli_close($conn);
+    header("Location: author.php?auth='" . $_GET['auth'] . "'");
 }
 
+
 ?>
-<form id="changes" action="" method="post">
+<form id="changes" action="updateAuthor.php" method="post">
     <div class="container-fluid">
         <div class="row content">
             <div class="col-sm-3 sidenav">
@@ -97,7 +106,7 @@ function saveChanges(){
 
             <div class="col-sm-9">
                 <div class="row">
-                    <?php echo "<h2> . " .  $row['fullName'] . "></h2>" ?>
+                    <?php echo "<h2> . " .  $row['fullName'] . "</h2>" ?>
                 </div>
                 <hr>
                 <?php echo "<p><input type='text' name='bio' value='" . $row['bio'] . "'></p>" ?>
