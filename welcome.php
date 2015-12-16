@@ -39,12 +39,10 @@
 
 					for (var i =0; i< 3 ; i++)
 					{
-						tweetstring += "<h4>" + tweets[i].text + "<br><span>" + tweets[i].name + "</span></h4>";
+						tweetstring += tweets[i].text + " " +  tweets[i].name;
 					}
 
 					document.getElementById("tweetOne").innerHTML = tweetstring;
-					document.getElementById("tweetTwo").innerHTML = tweetstring];
-					document.getElementById("tweetThree").innerHTML = tweetstring;
 				}
 			};
 			xhttp.open("GET", "http://napp.azurewebsites.net", true);
@@ -74,24 +72,7 @@
 	<aside id="tweetOne">
 
 	</aside>
-	<div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
-		<!-- Indicators -->
-		<ol class="carousel-indicators">
-			<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-			<li data-target="#myCarousel" data-slide-to="1"></li>
-			<li data-target="#myCarousel" data-slide-to="2"></li>
-		</ol>
 
-		<!-- Wrapper for slides -->
-		<div class="carousel-inner" role="listbox">
-			<div class="item active" id="tweetOne">
-			</div>
-			<div class="item" id="tweetTwo">
-			</div>
-			<div class="item" id="tweetThree">
-			</div>
-		</div>
-	</div>
 
 	<div id="top5" class="carousel slide" data-ride="carousel">
 		<!--Indicators-->
