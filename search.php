@@ -11,17 +11,10 @@
 
         .row.content {height: 450px}
 
-        .sidenav{
-            padding-top: 20px;
-            background-color: #f1f1f1;
-            height: 100%;
+        .col-sm-12{
+            background-color: #19BEF0;
         }
 
-        footer{
-            
-            color: white;
-            padding: 15px;
-        }
 
         /*on small screens, set height to 'auto' for sidenav and grid*/
         @media screen and (max-width: 767px){
