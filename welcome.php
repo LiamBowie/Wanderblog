@@ -43,7 +43,7 @@
 					}
 
 					document.getElementById("tweetOne").innerHTML = tweetArray[0];
-					document.getElementById("tweetTwo").innerHTML = tweetArray[1];
+					document.getElementById("tweetTwo").innerHTML = tweetArray[0];
 					document.getElementById("tweetThree").innerHTML = tweetArray[2];
 				}
 			};
