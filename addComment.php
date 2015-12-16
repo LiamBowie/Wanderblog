@@ -27,5 +27,5 @@ echo "U: " . $userid . " C: " . $comment . " A: " . $advid;
     $results = mysqli_query($conn, $sql);
     mysqli_close($conn);
 
-    //header("Location: adventure.php?adv=" . $advid);
+    header("Location: adventure.php?adv=" . $advid);
 ?>
