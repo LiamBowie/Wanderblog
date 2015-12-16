@@ -35,14 +35,14 @@
 			xhttp.onreadystatechange = function() {
 				if (xhttp.readyState == 4 && xhttp.status == 200) {
 					var tweets = JSON.parse(xhttp.responseText);
-					var tweetstring = "";
+					var tweetArray = [3];
 
-					for (var i =0; i< 3 ; i++)
+					for (var i =0; i < 3 ; i++)
 					{
-						tweetstring += tweets[i].text + " " +  tweets[i].name;
+						tweetArray[i] += tweets[i].text + " " +  tweets[i].name;
 					}
 
-					document.getElementById("tweetOne").innerHTML = tweetstring;
+					document.getElementById("tweetOne").innerHTML = tweetArray[0];
 				}
 			};
 			xhttp.open("GET", "http://napp.azurewebsites.net", true);
