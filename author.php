@@ -53,7 +53,7 @@
 include 'connect.php';
 
 // Your query for SQL
-$query = "  SELECT CONCAT(User.firstName, ' ', User.lastName) AS fullName, Author.bio, Author.photo, Cities.cityName, Countries.countryName
+$query = "  SELECT CONCAT(User.firstName, ' ', User.lastName) AS fullName, Author.bio, Author.photo, Cities.cityName, Countries.countryName, User.userID
                 FROM Author
                 LEFT JOIN User
                 ON  Author.userID=User.userID
@@ -75,6 +75,10 @@ $resultsTwo = mysqli_query($conn, $queryTwo);
 $row = mysqli_fetch_array($results);
 $rowTwo = mysqli_fetch_array($resultsTwo);
 
+function showEdit(){
+    echo "<span class='glyphicon glyphicon-pencil'></span>";
+}
+
 ?>
 <div class="container-fluid">
     <div class="row content">
@@ -94,7 +98,7 @@ $rowTwo = mysqli_fetch_array($resultsTwo);
 
 
         <div class="col-sm-9">
-            <h2 id="bio" class="anchor"><?php echo $row['fullName'] ?></h2>
+            <h2 id="bio" class="anchor"><?php echo $row['fullName'] . showEdit() ?></h2>
             <hr>
             <p><?php echo $row['bio'] ?></p>
             <br><br>
