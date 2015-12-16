@@ -70,7 +70,10 @@
 		</form>
 	</div>
 
-	<h2>What our customers say</h2>
+	<h2>Wanderblog on Twitter</h2>
+	<div id="tweetOne">
+
+	</div>
 	<div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
 		<!-- Indicators -->
 		<ol class="carousel-indicators">
