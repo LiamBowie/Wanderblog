@@ -16,27 +16,13 @@
         .thumbnail{
             background-color: #2f2f2f;
             border: none;
-            height: 100%;
+            height: 80%;
+            width: 80%;
 
         }
 
         .jumbotron{
             background-color: #19BEF0;
-        }
-
-        html, body{
-            /*height: 100%;*/
-        }
-
-        .person{
-            border: 10px solid transparent;
-            margin-bottom: 25px;
-            width: 80%;
-            height: 80%;
-        }
-
-        .person:hover{
-            border-color: #f1f1f1;
         }
 
 
@@ -55,7 +41,7 @@
 
 <div class="jumbotron text-center">
     <form class="form-inline">
-        <input type="search" class="form-control" size="50" placeholder="What are you waiting for?">
+        <input type="search" class="form-control" size="50" placeholder="Filter your search further">
         <select class="form-control">
             <option value="tag">Tag</option>
             <option value="authorname">Author Name</option>
