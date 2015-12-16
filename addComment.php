@@ -23,8 +23,8 @@ include 'connect.php';
 
 echo "U: " . $userid . " C: " . $comment . " A: " . $advid;
 
-    // $sql = "INSERT INTO comments VALUES('" . "COM000001" . "', '" . $userid . "', '" . $advid . "', '" . $comment . "', NULL);";
-    $sql = "INSERT INTO Comments VALUES('COM000001', 'Mithrandir', 'ADV00001', 'Hello', null);";
+    $sql = "INSERT INTO comments VALUES('" . "COM000002" . "', '" . $userid . "', '" . $advid . "', '" . $comment . "', NULL);";
+    //$sql = "INSERT INTO Comments VALUES('COM000001', 'Mithrandir', 'ADV00001', 'Hello', null);";
 
     $results = mysqli_query($conn, $sql);
     mysqli_close($conn);
