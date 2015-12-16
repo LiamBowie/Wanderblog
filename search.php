@@ -26,7 +26,7 @@
         }
     </style>
 </head>
-<body>
+<body style="padding-top: 75px;">
 <?php include 'navbar.php';?>
 
 <div class="container-fluid text-center">
