@@ -37,7 +37,7 @@
 <body style="padding-top: 75px;">
 <?php include 'navbar.php'; ?>
 
-<div class="container-fluid text-center">
+<div class="container-fluid text-center" style="padding: 100px 25px;">
         <div class="col-sm-12 text-left">
             <h1>Displaying results for *searchvalue*</h1>
             <div class="container">
