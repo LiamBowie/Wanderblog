@@ -5,6 +5,8 @@
  * Date: 16/12/2015
  * Time: 16:04
  */
+
+include 'connect.php';
     // Display any errors
     if(!$conn){ die("Connection failed: " . mysqli_error($conn));}
     ini_set('display_errors', 1);
@@ -13,7 +15,7 @@
 
     session_start();
 
-    include 'connect.php';
+
 
     $comment = $_POST['comment-text'];
     $userid = $_SESSION['username'];
