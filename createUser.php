@@ -48,7 +48,7 @@
                 $stmt->close();
             }
             else {
-                printf("Errormessage: %s\n", $conn->error);
+                header("Location: welcome.php");
             }
 
             if ($_POST['authorCheck'] == 1) {

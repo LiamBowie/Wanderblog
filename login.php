@@ -51,15 +51,11 @@ $operation=$_GET["operation"];
     }
 
     else if($operation="REGIN"){
-        echo "We're in";
         include 'connect.php';
         session_start(); //pull through existing data
         $tryUsername = $_SESSION['username'];
-        echo " " . $tryUsername;
         $tryPassword = $_SESSION['password'];
-        echo " " . $_SESSION['password'];
         $isAuthor = $_SESSION['isAuthor'];
-        echo " " . $_SESSION['isAuthor'];
         $found = false;
         $query = 'Select CONCAT(firstName, " ", lastName) AS FullName, userID, emailAddress, password, isAdmin FROM User;';
         $results = mysqli_query($conn, $query);
