@@ -1,6 +1,6 @@
 <?php
 // Jo's AutoGen for Comment ID
-
+include'connect.php';
 $found = false;                                                             //have not found id
 $query = 'SELECT * FROM Comments;';                                          //get all comments
 $results = mysqli_query($conn, $query);                                     //execute query
