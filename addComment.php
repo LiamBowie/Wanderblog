@@ -27,7 +27,7 @@ include 'connect.php';
         }
     }
     $lastArray = str_split($last);
-    $lastNum = (int)$lastArray[9];
+    $lastNum = (int)$lastArray[8];
     $newNum = $lastNum + 1;
     $newID = "";
     for ($i = 0; $i < 9; $i++) {
