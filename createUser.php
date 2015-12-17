@@ -26,15 +26,35 @@
 
         if ($_POST['passwordconfirm'] == $_POST['password']) {
 
-            $username = $_POST['userID'];
-            $sql = "INSERT INTO User VALUES('" . $username . "', '" . $_POST['password'] . "', '" . $_POST['firstName'] . "', '" . $_POST['lastName'] . "', '" . $_POST['email'] . "', 0);";
+            $sql = "INSERT INTO User (userID, password, firstName, lastName, email, isAdmin) VALUES (?, ?, ?, ?, ?, ?)";
+            $stmt = $conn->prepare($sql);
+            $stmt->bind_param("sssssi", $username, $password, $firstName, $lastName, $email, $isAdmin);
 
-            $results = mysqli_query($conn, $sql);
+            $username = $_POST['userID'];
+            $password = $_POST['password'];
+            $firstName = $_POST['firstName'];
+            $lastName = $_POST['lastName'];
+            $email = $_POST['email'];
+            $isAdmin = 0;
+
+            $stmt->execute();
+            $stmt->close();
 
             if ($_POST['authorCheck'] == 1) {
+
+                $sqlTwo = "INSERT INTO Author (authorID, userID, photo, bio, location) VALUES (?, ?, ?, ?, ?)";
+                $stmtTwo = $conn->prepare($sqlTwo);
+                $stmtTwo->bind_param("sssss", $author, $user, $photo, $bio, $location);
+
+                $author = $newID;
+                $user = $username;
                 $photo = "Images/blankAuth.png";
-                $sqlTwo = "INSERT INTO Author VALUES('" . $newID . "', '" . $username . "', '" . $photo . "', '" . $username . " is a new author to Wanderblog', 'LO00000');";
-                $resultsTwo = mysqli_query($conn, $sqlTwo);
+                $bio = $username . " is a new author to Wanderblog";
+                $location = "LO00000";
+
+                $stmtTwo->execute();
+                $stmtTwo->close();
+
             }
 
             mysqli_close($conn);
