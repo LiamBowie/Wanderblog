@@ -34,17 +34,25 @@
 
             $sql = "INSERT INTO User (userID, password, firstName, lastName, email, isAdmin) VALUES (?, ?, ?, ?, ?, ?)";
             $stmt = $conn->prepare($sql);
-            $stmt->bind_param("sssssi", $username, $password, $firstName, $lastName, $email, $isAdmin);
+            if ($stmt = $conn->prepare($sql)) {
+                $stmt->bind_param("sssssi", $username, $password, $firstName, $lastName, $email, $isAdmin);
 
-            $username = $_POST['userID'];
-            $password = $_POST['password'];
-            $firstName = $_POST['firstName'];
-            $lastName = $_POST['lastName'];
-            $email = $_POST['email'];
-            $isAdmin = 0;
+                $username = $_POST['userID'];
+                $password = $_POST['password'];
+                $firstName = $_POST['firstName'];
+                $lastName = $_POST['lastName'];
+                $email = $_POST['email'];
+                $isAdmin = 0;
 
-            $stmt->execute();
-            $stmt->close();
+                $stmt->execute();
+                $stmt->close();
+            }
+            else {
+                printf("Errormessage: %s\n", $conn->error);
+            }
+
+
+
 
             if ($_POST['authorCheck'] == 1) {
 
