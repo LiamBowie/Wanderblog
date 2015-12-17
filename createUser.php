@@ -78,7 +78,7 @@
             $_SESSION['password'] = $_POST['password'];
             if($_POST['authorCheck'] == 1){ $_SESSION['isAuthor'] = true; }
 
-            header("Location: login.php?operation==REGIN");
+            header("Location: login.php?operation=REGIN");
         } else {
             echo "Passwords did not match";
         }
