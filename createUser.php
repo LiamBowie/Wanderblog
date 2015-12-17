@@ -50,7 +50,7 @@
 
     else if($operation == 'delete'){
         echo"1";
-        sessionn_start();
+        session_start();
         echo"2";
         $query="DELETE FROM User WHERE userID='" . $_SESSION['username'] . "';";
         echo"3";
