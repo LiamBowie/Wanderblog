@@ -56,8 +56,11 @@ echo $_GET['operation'];
         include 'connect.php';
         session_start(); //pull through existing data
         $tryUsername = $_SESSION['username'];
+        echo " " . $_SESSION['username'];
         $tryPassword = $_SESSION['password'];
+        echo " " . $_SESSION['password'];
         $isAuthor = $_SESSION['isAuthor'];
+        echo " " . $_SESSION['isAuthor'];
         $found = false;
         $query = 'Select CONCAT(firstName, " ", lastName) AS FullName, userID, emailAddress, password, isAdmin FROM User;';
         $results = mysqli_query($conn, $query);
