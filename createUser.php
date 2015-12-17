@@ -35,9 +35,9 @@
             $sql = "INSERT INTO User (userID, password, firstName, lastName, email, isAdmin) VALUES (?, ?, ?, ?, ?, ?)";
             $stmt = $conn->prepare($sql);
             if ($stmt = $conn->prepare($sql)) {
-                $stmt->bind_param("sssssi", $username, $password, $firstName, $lastName, $email, $isAdmin);
+                $stmt->bind_param("sssssi", $user, $password, $firstName, $lastName, $email, $isAdmin);
 
-                $username = $_POST['userID'];
+                $user = $_POST['userID'];
                 $password = $_POST['password'];
                 $firstName = $_POST['firstName'];
                 $lastName = $_POST['lastName'];
@@ -58,10 +58,10 @@
 
                 $sqlTwo = "INSERT INTO Author (authorID, userID, photo, bio, location) VALUES (?, ?, ?, ?, ?)";
                 $stmtTwo = $conn->prepare($sqlTwo);
-                $stmtTwo->bind_param("sssss", $author, $user, $photo, $bio, $location);
+                $stmtTwo->bind_param("sssss", $author, $IDofUser, $photo, $bio, $location);
 
                 $author = $newID;
-                $user = $username;
+                $IDofUser = $user;
                 $photo = "Images/blankAuth.png";
                 $bio = $username . " is a new author to Wanderblog";
                 $location = "LO00000";

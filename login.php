@@ -6,7 +6,6 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 $operation=$_GET["operation"];
-echo $_GET['operation'];
 
     if($operation=="IN") {
         include 'connect.php';
