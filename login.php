@@ -30,13 +30,12 @@ $operation=$_GET["operation"];
                     $_SESSION['loggedIn'] = true;
 
                     while( ($rowTwo = mysqli_fetch_array($resultsTwo)) && ($foundTwo==false) ){
-                        echo $rowTwo['userID'] . ", ";
-                        /*if($rowTwo['userID'] == $_SESSION['username']){
+                        if($rowTwo['userID'] == $_SESSION['username']){
                             echo"found\n";
                             $foundTwo=true;
                             $_SESSION['isAuthor'] = true;
                         }
-                        else{ echo"else\n"; $_SESSION['isAuthor'] = false; } */
+                        else{ echo"else\n"; $_SESSION['isAuthor'] = false; }
                     }
 
                     //header("Location: welcome.php");
