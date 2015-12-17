@@ -15,7 +15,7 @@ $operation=$_GET["operation"];
         $query = 'Select CONCAT(firstName, " ", lastName) AS FullName, userID, emailAddress, password, isAdmin FROM User;';
         $results = mysqli_query($conn, $query);
         $queryTwo = 'SELECT userID FROM Author';
-        $resultsTwo = mysqli_query($conn, $query);
+        $resultsTwo = mysqli_query($conn, $queryTwo);
 
         if (mysqli_num_rows($results) > 0) { /* if there are results (rows>0) */
             while (($row = mysqli_fetch_array($results)) && ($found == false)) {
@@ -39,9 +39,9 @@ $operation=$_GET["operation"];
                         else{ echo"else\n"; $_SESSION['isAuthor'] = false; }
                     }
 
-                    //header("Location: welcome.php");
+                    header("Location: welcome.php");
                 }
-                //else{ header("Location: welcome.php?error=noUser"); }
+                else{ header("Location: welcome.php?error=noUser"); }
             }
         }
     }
