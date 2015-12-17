@@ -131,7 +131,7 @@
                         $isAuthor = false;
                         $queryThree="SELECT * FROM Author;";
                         $resultsThree = mysqli_query($conn, $queryThree);
-                        while (($rowThree = mysqli_fetch_array($resultsTwo)) && ($isAuthor == false)){
+                        while (($rowThree = mysqli_fetch_array($resultsThree)) && ($isAuthor == false)){
                             if($rowThree['userID']== $rowTwo['userID']){
                                 $isAuthor=true;
                                 $photoPath= $rowThree=['photo'];
