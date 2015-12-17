@@ -55,7 +55,7 @@ $operation=$_GET["operation"];
         include 'connect.php';
         session_start(); //pull through existing data
         $tryUsername = $_SESSION['username'];
-        echo " " . $_SESSION['username'];
+        echo " " . $tryUsername;
         $tryPassword = $_SESSION['password'];
         echo " " . $_SESSION['password'];
         $isAuthor = $_SESSION['isAuthor'];
