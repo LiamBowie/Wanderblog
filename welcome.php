@@ -76,7 +76,7 @@
 		<p>Blogging site specifically for travelers</p>
 <!-- SEARCH -->
 		<form id="search form" class="form-inline" action="search.php?ref=welc" method="POST">
-			<input type="search" id='crit' class="form-control" size="50" placeholder="What are you waiting for?">
+			<input type="search" id="crit" name="crit" class="form-control" size="50" placeholder="What are you waiting for?">
 			<select class="form-control">
 				<option value="adventure">Adventure</option>
 				<option value="author">Author</option>
