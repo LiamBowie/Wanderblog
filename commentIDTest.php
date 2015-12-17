@@ -8,7 +8,7 @@ $last = "";                                                                 //la
 //if (mysqli_num_rows($results) > 0) { /* if there are results (rows>0) */
     while (($row = mysqli_fetch_array($results)) && ($found == false)) {    //loop results
         $last = $row['commentID'];                                          //get last ID used
-        echo $last;                                                         //output last (for testing)
+        echo $last + ", ";                                                         //output last (for testing)
     }                                                                       //end while
 //}
 $lastArray = str_split($last);                                              //split into array
