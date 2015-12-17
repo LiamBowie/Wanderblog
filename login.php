@@ -39,7 +39,7 @@ $operation=$_GET["operation"];
                         else{ echo"else\n"; $_SESSION['isAuthor'] = false; }
                     }
 
-                    header("Location: welcome.php");
+                    //header("Location: welcome.php");
                 }else{ header("Location: welcome.php?error=noUser"); }
             }
         }
