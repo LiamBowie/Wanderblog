@@ -13,7 +13,7 @@ if(isset($_SESSION['loggedIn'])) {//if user is loggedIn to WanderBlog
             </a>
         ';
     }
-    else{ $myProfile =''; }
+    else{ $myProfile ='NOTHING'; }
     echo '
     <nav class="navbar navbar-default navbar-fixed-top">
 		<div class="container-fluid">
