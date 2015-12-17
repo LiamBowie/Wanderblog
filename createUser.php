@@ -51,12 +51,12 @@
 
     else if($operation == 'delete'){
         session_start();
+        if($_SESSION['isAuthor'] == true){
+            $queryTwo = "DELETE FROM Author WHERE userID='" . $_SESSION['username'] . "';";
+            $resultsTwo=mysqli_query($conn, $queryTwo);
+        }
         $query="DELETE FROM User WHERE userID='" . $_SESSION['username'] . "';";
         $results = mysqli_query($conn, $query);
-        if($_SESSION['isAuthor'] == true){
-            $query = "DELETE FROM Author WHERE userID='" . $_SESSION['username'] . "';";
-            $results=mysqli_query($conn, $query);
-        }
         mysqli_close($conn);
         session_destroy();
         header("Location: welcome.php");
