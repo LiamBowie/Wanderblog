@@ -68,7 +68,7 @@ $operation=$_GET["operation"];
                     $_SESSION['username'] = $tryUsername;
                     $_SESSION['FullName'] = $row['FullName'];
                     $_SESSION['access_level'] = 'standard_user';
-                    $_SESSION = $isAuthor;
+                    $_SESSION ['isAuthor'] = $isAuthor;
                     $_SESSION['loggedIn'] = true;
                     header("Location: welcome.php");
                 }
