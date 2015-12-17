@@ -129,8 +129,19 @@
                 {
                     while (($rowTwo = mysqli_fetch_array($resultsTwo)) && ($found == false))
                     {
+                        $isAuthor = false;
+                        $queryThree="SELECT * FROM Author;";
+                        $resultsThree = mysqli_query($conn, $queryThree);
+                        while (($rowThree = mysqli_fetch_array($resultsThree)) && ($isAuthor == false)){
+                            if($rowThree['userID']== $rowTwo['userID']){
+                                $isAuthor=true;
+                                $photoPath= $rowThree['photo'];
+                            }
+                            else{ $photoPath="Images/generic.jpg"; }
+                        }
+
                         echo "<div class=\"col-sm-2 text-center\">";
-                        echo    "<img src=\"Images/jo.jpg\" class=\"img-circle\" height=\"65\" width=\"65\" alt=\"Avatar\">";
+                        echo    "<img src='" . $photoPath . "' class=\"img-circle\" height=\"65\" width=\"65\" alt=\"Avatar\">";
                         echo "</div>";
                         echo "<div class=\"col-sm-10\">";
                         echo    "<h4>" . $rowTwo['userID'] . "</h4>";
