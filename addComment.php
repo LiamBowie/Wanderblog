@@ -42,7 +42,6 @@ include 'connect.php';
 
     echo "U: " . $userid . " C: " . $comment . " A: " . $advid;
 
-        // Still need auto incrementing ID
         $sql = "INSERT INTO comments VALUES('" . $newID . "', '" . $userid . "', '" . $advid . "', '" . $comment . "', NULL);";
 
         $results = mysqli_query($conn, $sql);
