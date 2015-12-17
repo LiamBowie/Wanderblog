@@ -61,7 +61,7 @@
             echo"2.2";
             $resultsTwo=mysqli_query($conn, $queryTwo);                                         //execute query
         }                                                                                       //end if
-        echo "3;";
+        echo "3";
         $query="DELETE FROM User WHERE userID='" . $_SESSION['username'] . "';";                //set query to delete from user
         echo "4";
         $results = mysqli_query($conn, $query);                                                 //execute query
