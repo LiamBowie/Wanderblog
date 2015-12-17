@@ -11,9 +11,11 @@ $operation=$_GET["operation"];
         include 'connect.php';
         $tryUsername = $_POST['usernameInput'];
         $tryPassword = $_POST['passwordInput'];
-        $found = false;
+        $found = false; $foundTwo = false;
         $query = 'Select CONCAT(firstName, " ", lastName) AS FullName, userID, emailAddress, password, isAdmin FROM User;';
         $results = mysqli_query($conn, $query);
+        $queryTwo = 'SELECT * FROM Author;';
+        $resultsTwo = mysqli_query($conn, $queryTwo);
 
         if (mysqli_num_rows($results) > 0) { /* if there are results (rows>0) */
             while (($row = mysqli_fetch_array($results)) && ($found == false)) {
@@ -26,17 +28,25 @@ $operation=$_GET["operation"];
                     $_SESSION['FullName'] = $row['FullName'];
                     $_SESSION['access_level'] = 'standard_user';
                     $_SESSION['loggedIn'] = true;
+
+                    while( ($rowTwo = mysqli_fetch_array($resultsTwo)) && ($foundTwo==false) ){
+                        if($rowTwo['userID'] == $_SESSION['username']){
+                            $foundTwo=true;
+                            $_SESSION['isAuthor'] = true;
+                        }
+                        else{ $_SESSION['isAuthor'] = false; }
+                    }
+
                     header("Location: welcome.php");
-                }else{ header("Location: welcome.php?error=noUser"); }
+                }
+                else{ header("Location: welcome.php?error=noUser"); }
             }
         }
     }
 
     else if($operation=="OUT"){
-        session_start();
-        session_destroy();
+        session_start(); session_destroy();
         header("Location: welcome.php");
-        echo 'Logged Out';
     }
 
     else if($operation="REGIN"){
@@ -44,6 +54,7 @@ $operation=$_GET["operation"];
         session_start(); //pull through existing data
         $tryUsername = $_SESSION['username'];
         $tryPassword = $_SESSION['password'];
+        $isAuthor = $_SESSION['isAuthor'];
         $found = false;
         $query = 'Select CONCAT(firstName, " ", lastName) AS FullName, userID, emailAddress, password, isAdmin FROM User;';
         $results = mysqli_query($conn, $query);
@@ -58,6 +69,7 @@ $operation=$_GET["operation"];
                     $_SESSION['username'] = $tryUsername;
                     $_SESSION['FullName'] = $row['FullName'];
                     $_SESSION['access_level'] = 'standard_user';
+                    $_SESSION ['isAuthor'] = $isAuthor;
                     $_SESSION['loggedIn'] = true;
                     header("Location: welcome.php");
                 }

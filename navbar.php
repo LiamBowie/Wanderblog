@@ -42,6 +42,11 @@ if(isset($_SESSION['loggedIn'])) {//if user is loggedIn to WanderBlog
         if(logout==true){ window.location = "login.php?operation=OUT"; }
         else{ window.location = "welcome.php" }
     }
+    function confirmDelete(){
+        var deleteUser = confirm("This will permanently remove your account. Are you sure you want to continue?");
+        if(deleteUser==true){ window.location = "createUser.php?operation=delete"; }
+        else{ window.location = "welcome.php"; }
+    }
     </script>
 
     <!-- Modal -->
@@ -80,6 +85,13 @@ if(isset($_SESSION['loggedIn'])) {//if user is loggedIn to WanderBlog
 					<button type="submit" class="btn btn-primary btn-block" data-dismiss="modal">
 						<span class="glyphicon glyphicon-pencil"></span> EDIT
 					</button>
+
+                    <a type="submit" class="btn btn-danger btn-block" onCLick="confirmDelete()">
+                        <!-- <a href="createUser.php?operation=delete"> -->
+                            <span class="glyphicon glyphicon-trash"></span> DELETE
+                        </a>
+                    </button>
+
 				</div>
 			</div>
 		</div>
@@ -136,7 +148,7 @@ else{ //if user is not loggedIn to Wanderblog
 					<h4><span class="glyphicon glyphicon-lock"></span> Register your account</h4>
 				</div>
 				<div class="modal-body">
-					<form role="form" method="post" id="registerForm" action="createUser.php">
+					<form role="form" method="post" id="registerForm" action="createUser.php?operation=create">
 						<div class="form-group">
 							<div class="col-sm-6">
 								<label for="firstname">First Name</label>
