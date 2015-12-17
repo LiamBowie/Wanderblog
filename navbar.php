@@ -7,8 +7,12 @@ if(isset($_SESSION['loggedIn'])) {//if user is loggedIn to WanderBlog
     $row = mysqli_fetch_array($results);
     $myProfile = "";
     if($_SESSION['isAuthor']==true){
+        $queryTwo = "SELECT authorID FROM Author WHERE userID = '" . $_SESSION['username'] . "';";
+        $resultsTwo = mysqli_query($conn, $queryTwo);
+        $rowTwo = mysqli_fetch_array($resultsTwo);
+        $profilePath='author.php?auth=' . $rowTwo['authorID'];
         $myProfile = '
-            <a type="submit" class="btn btn-info btn-block" >
+            <a type="submit" class="btn btn-info btn-block" href="' . $profilePath . '">
                 <span class="glyphicon glyphicon-user"></span> MY PROFILE
             </a>
         ';
