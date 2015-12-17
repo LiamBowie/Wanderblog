@@ -90,11 +90,11 @@
             <h4 id="comments" class="anchor"><small>COMMENTS</small></h4>
             <hr>
             <h4>Leave a Comment:</h4>
-            <form role="form" action="addComment.php?adv=<?php echo $_GET['adv']?>" method="POST">
+            <form id="commentForm" role="form" action="addComment.php?adv=<?php echo $_GET['adv']?>" method="POST">
                 <div class="form-group">
                     <input type="text" id="comment-text" name="comment-text" class="form-control" required>
                 </div>
-                <button type="submit" class="btn btn-success">Submit</button>
+                <button <?php if($_Session['username'] == null) echo 'disabled="disabled"'; ?> type="submit" class="btn btn-success">Submit</button>
             </form>
             <br><br>
 
