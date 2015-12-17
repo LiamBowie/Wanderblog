@@ -74,7 +74,7 @@
             mysqli_close($conn);
 
             session_start();
-            $_SESSION['username'] = $username;
+            $_SESSION['username'] = $user;
             $_SESSION['password'] = $_POST['password'];
             if($_POST['authorCheck'] == 1){ $_SESSION['isAuthor'] = true; }
 
