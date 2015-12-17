@@ -18,7 +18,7 @@ $comment = $_GET['comment'];
 
 $sql = "DELETE FROM Comments WHERE commentID='" . $comment . "';";
 
-$results = mysqli($conn, $sql);
+$results = mysqli_query($conn, $sql);
 
 mysqli_close($conn);
 
