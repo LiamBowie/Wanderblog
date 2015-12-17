@@ -38,6 +38,7 @@
                 $stmt->bind_param("sssssi", $user, $password, $firstName, $lastName, $email, $isAdmin);
 
                 $user = $_POST['userID'];
+                echo $user;
                 $password = $_POST['password'];
                 $firstName = $_POST['firstName'];
                 $lastName = $_POST['lastName'];
