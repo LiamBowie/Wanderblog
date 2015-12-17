@@ -5,6 +5,15 @@ if(isset($_SESSION['loggedIn'])) {//if user is loggedIn to WanderBlog
     $query = "SELECT * FROM User WHERE userID = '" . $_SESSION['username'] . "';";
     $results = mysqli_query($conn, $query);
     $row = mysqli_fetch_array($results);
+    $myProfile = "";
+    if($_SESSION['isAutor']==true){
+        $myProfile = '
+            <a type="submit" class="btn btn-danger btn-block" >
+                <span class="glyphicon glyphicon-user"></span> MY PROFILE
+            </a>
+        ';
+    }
+    else{ $myProfile =''; }
     echo '
     <nav class="navbar navbar-default navbar-fixed-top">
 		<div class="container-fluid">
@@ -85,7 +94,7 @@ if(isset($_SESSION['loggedIn'])) {//if user is loggedIn to WanderBlog
 					<button type="submit" class="btn btn-primary btn-block" data-dismiss="modal">
 						<span class="glyphicon glyphicon-pencil"></span> EDIT
 					</button>
-
+					' . $myProfile . '
                     <a type="submit" class="btn btn-danger btn-block" onCLick="confirmDelete()">
                         <!-- <a href="createUser.php?operation=delete"> -->
                             <span class="glyphicon glyphicon-trash"></span> DELETE
