@@ -31,7 +31,8 @@ include 'connect.php';
         $newNum = $lastNum + 1;                                                     //add 1 to last number
 
         if($newNum>9){ $length = 7; }
-        else{ $length = 8;}
+        else if($newNum>99){ $length = 6;}
+        else{$length=8;}
 
         $newID = "";                                                                //create blank newID
         for ($i = 0; $i < $length; $i++) {                                                //loop to 8
