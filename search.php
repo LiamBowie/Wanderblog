@@ -37,6 +37,7 @@
     </style>
 </head>
 <body style="padding-top: 75px;">
+
 <?php include 'navbar.php'; ?>
 
 <div class="jumbotron text-center">
