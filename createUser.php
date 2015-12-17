@@ -1,6 +1,12 @@
 <?php
     include'connect.php';
 
+    // Display any errors
+    if(!$conn){ die("Connection failed: " . mysqli_error($conn));}
+    ini_set('display_errors', 1);
+    ini_set('display_startup_errors', 1);
+    error_reporting(E_ALL);
+
     $operation=$_GET['operation'];
 
 // TO CREATE A NEW USER
