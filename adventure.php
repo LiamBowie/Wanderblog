@@ -49,7 +49,7 @@
 <?php
     include 'connect.php';
     $query = "
-        SELECT Adventure.title, CONCAT(User.firstName, ' ', User.lastName) AS authorName, Adventure.author, Adventure.content, Adventure.photo, Cities.cityName
+        SELECT Adventure.title, CONCAT(User.firstName, ' ', User.lastName) AS authorName, Adventure.author, Adventure.content, Adventure.photo, Cities.cityName, User.userID
         FROM Adventure
         LEFT JOIN Author
         ON Adventure.author=Author.authorID
@@ -68,6 +68,7 @@
     function showDelete()
     {
         global $row;
+        echo
         if($_SESSION['username'] == $row['userID'])
         {
             echo "<button class='btn btn-danger'>DELETE</button>";
@@ -130,13 +131,12 @@
                         echo "<div class=\"col-sm-10\">";
                         echo    "<h4>" . $rowTwo['userID'] . "</h4>";
                         echo    "<p>" . $rowTwo['commentText']. "</p>";
-                        echo showDelete();
+                        echo    showDelete();
                         echo    "</br>";
                         echo "</div>";
 
                     }
                 }
-
             ?>
         </div>
     </div>
