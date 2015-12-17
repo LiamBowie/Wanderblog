@@ -134,7 +134,7 @@
                         while (($rowThree = mysqli_fetch_array($resultsThree)) && ($isAuthor == false)){
                             if($rowThree['userID']== $rowTwo['userID']){
                                 $isAuthor=true;
-                                $photoPath= $rowThree=['photo'];
+                                $photoPath= $rowThree['photo'];
                             }
                             else{ $photoPath="Images/generic.jpg"; }
                         }
