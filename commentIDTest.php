@@ -15,7 +15,7 @@ $lastArray = str_split($last);                                              //sp
 $lastNum = (int)$lastArray[9];                                              //last number = last entry in array
 $newNum = $lastNum + 1;                                                     //add 1 to last number
 $newID = "";                                                                //create blank newID
-for ($i = 0; $i < 8; $i++) {                                                //loop to 8
+for ($i = 0; $i < 9; $i++) {                                                //loop to 8
     $newID = $newID . $lastArray[$i];                                       //add elements from last array to new ID
 }                                                                           //end loop
 $newID = $newID . $newNum;                                                  //newID = newID plus new Number
