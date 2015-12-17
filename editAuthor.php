@@ -110,7 +110,7 @@ function saveChanges(){
                     <?php echo "<h2> . " .  $row['fullName'] . "</h2>" ?>
                 </div>
                 <hr>
-                <?php echo "<p><textarea cols='50' rows='10' <!--type='text'--> id='bio' name='bio' value='" . $row['bio'] . "'></p>" ?>
+                <p><textarea cols='50' rows='10' type='text' id='bio' name='bio' value='<?php $row['bio']?>'></p>
                 <br><br>
             </div>
 
