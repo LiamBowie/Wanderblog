@@ -6,7 +6,7 @@ if(isset($_SESSION['loggedIn'])) {//if user is loggedIn to WanderBlog
     $results = mysqli_query($conn, $query);
     $row = mysqli_fetch_array($results);
     $myProfile = "";
-    if($_SESSION['isAutor']==true){
+    if($_SESSION['isAuthor']==true){
         $myProfile = '
             <a type="submit" class="btn btn-danger btn-block" >
                 <span class="glyphicon glyphicon-user"></span> MY PROFILE
