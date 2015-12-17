@@ -18,6 +18,11 @@
         $lastArray = str_split($last);
         $lastNum = (int)$lastArray[8];
         $newNum = $lastNum + 1;
+
+        if($newNum>9){ $length = 7; }
+        else if($newNum>99){ $length = 6;}
+        else{$length=8;}
+
         $newID = "";
         for ($i = 0; $i < 8; $i++) {
             $newID = $newID . $lastArray[$i];
