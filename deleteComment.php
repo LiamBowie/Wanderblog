@@ -22,6 +22,6 @@ $results = mysqli_query($conn, $sql);
 
 mysqli_close($conn);
 
-header("Location: adventure.php?adv=" . $advid . "#comments");
+header("Location: adventure.php?adv=" . $_GET['adv'] . "#comments");
 
 ?>
