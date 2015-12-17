@@ -40,7 +40,8 @@ $operation=$_GET["operation"];
                     }
 
                     //header("Location: welcome.php");
-                }else{ header("Location: welcome.php?error=noUser"); }
+                }
+                //else{ header("Location: welcome.php?error=noUser"); }
             }
         }
     }
