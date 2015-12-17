@@ -33,10 +33,8 @@ $operation=$_GET["operation"];
     }
 
     else if($operation=="OUT"){
-        session_start();
-        session_destroy();
+        session_start(); session_destroy();
         header("Location: welcome.php");
-        echo 'Logged Out';
     }
 
     else if($operation="REGIN"){

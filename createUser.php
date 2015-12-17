@@ -49,16 +49,10 @@
     }
 
     else if($operation == 'delete'){
-        echo"1";
         session_start();
-        echo"2";
         $query="DELETE FROM User WHERE userID='" . $_SESSION['username'] . "';";
-        echo"3";
         $results = mysqli_query($conn, $query);
-        echo"4";
         mysqli_close($conn);
-        echo"5";
         session_destroy();
-        echo"6";
         header("Location: welcome.php");
     }
