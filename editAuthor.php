@@ -108,7 +108,6 @@ function saveChanges(){
             <div class="col-sm-9">
                 <div class="row">
                     <?php echo "<h2> . " .  $row['fullName'] . "</h2>" ?>
-                    <textarea cols="30" rows="10"></textarea>
                 </div>
                 <hr>
                 <?php echo "<p><textarea cols='50' rows='10' type='text' id='bio' name='bio' value='" . $row['bio'] . "'></p>" ?>
