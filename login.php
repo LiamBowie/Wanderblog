@@ -15,7 +15,7 @@ $operation=$_GET["operation"];
         $query = 'Select CONCAT(firstName, " ", lastName) AS FullName, userID, emailAddress, password, isAdmin FROM User;';
         $results = mysqli_query($conn, $query);
         $queryTwo = 'SELECT * FROM Author;';
-        $resultsTwo = mysqli_query($conn, $queryTwo);
+        $resultsTwi = mysqli_query($conn, $queryTwo);
 
         if (mysqli_num_rows($results) > 0) { /* if there are results (rows>0) */
             while (($row = mysqli_fetch_array($results)) && ($found == false)) {
@@ -29,7 +29,7 @@ $operation=$_GET["operation"];
                     $_SESSION['access_level'] = 'standard_user';
                     $_SESSION['loggedIn'] = true;
 
-                    while($rowTwo = mysqli_fetch_array($resultsTwo) && $foundTwo==false){
+                    while( ($rowTwo = mysqli_fetch_array($resultsTwo)) && ($foundTwo==false) ){
                         echo $rowTwo['authorID'] . ", ";
                         /*if($rowTwo['userID'] == $_SESSION['username']){
                             echo"found\n";
