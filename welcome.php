@@ -73,15 +73,17 @@
 
 	<div class="jumbotron text-center">
 		<h1>Wanderblog</h1> 
-		<p>Blogging site specifically for travelers</p> 
-		<form class="form-inline">
+		<p>Blogging site specifically for travelers</p>
+<!-- SEARCH -->
+		<form class="form-inline" action="search.php?crit=ADV00001&loc=advID">
 			<input type="search" class="form-control" size="50" placeholder="What are you waiting for?">
 			<select class="form-control">
 				<option value="adventure">Adventure</option>
 				<option value="author">Author</option>
 			</select>
-			<button type="button" class="btn btn-danger">Search</button>
+			<a type="submit" class="btn btn-danger btn-block">Search</a>
 		</form>
+<!-- ENF OF SEARCH -->
 	</div>
 
 	<h2 class="text-center">Wanderblog on Twitter</h2>
