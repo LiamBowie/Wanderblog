@@ -67,11 +67,11 @@
 
 
 
-    function showDelete($commentID)
+    function showDelete($commentID, $commentUser)
     {
         global $row;
         $advID = $_GET['adv'];
-        if($_SESSION['username'] == $row['userID'])
+        if($_SESSION['username'] == $row['userID'] || $_SESSION['username'] == $commentUser)
         {
             echo "<form action='deleteComment.php?adv=$advID&comment=$commentID' method='POST'>";
             echo "<button class='btn btn-danger' type='submit'>DELETE</button>";
@@ -134,7 +134,7 @@
                         echo "<div class=\"col-sm-10\">";
                         echo    "<h4>" . $rowTwo['userID'] . "</h4>";
                         echo    "<p>" . $rowTwo['commentText']. "</p>";
-                        echo    showDelete($rowTwo['commentID']);
+                        echo    showDelete($rowTwo['commentID'], $rowTwo['userID']);
                         echo    "</br>";
                         echo "</div>";
 
