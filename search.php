@@ -47,7 +47,7 @@
 
 <?php include 'navbar.php'; ?>
 
-<?php $criteria=$_POST['crit'];?>
+<?php $criteria=$_POST['crit']; ?>
 
 <div class="jumbotron text-center">
     <form class="form-inline">
@@ -62,7 +62,7 @@
 
     <div class="container-fluid text-center">
         <div class="col-sm-12 text-left" style="padding-left: 25px; padding-right: 25px">
-            <h2>Displaying results for <?php $criteria ?></h2>
+            <h2>Displaying results for <?php echo $criteria ?></h2>
             <div class="container">
                 <div class="row">
                     <div class="col-sm-4">
