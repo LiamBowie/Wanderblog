@@ -78,7 +78,7 @@
 		<form id="search form" class="form-inline" action="search.php?ref=welc" method="post">
 			<input type="search" id="crit" name="crit" class="form-control" size="50" placeholder="What are you waiting for?">
 			<select class="form-control">
-				<option value="adventure">Adventure</option>
+				<option id="opt-Adventure" value="adventure">Adventure</option>
 				<option value="author">Author</option>
 			</select>
 			<button type="submit" class="btn btn-danger">

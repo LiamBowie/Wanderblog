@@ -47,7 +47,10 @@
 
 <?php include 'navbar.php'; ?>
 
-<?php $criteria = $_POST['crit']; ?>
+<?php
+    $criteria = $_POST['crit'];
+    $query="Select * FROM Adventure WHERE advID = '" . $criteria . "'";
+?>
 
 <div class="jumbotron text-center">
     <form class="form-inline">
