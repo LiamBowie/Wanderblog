@@ -28,6 +28,7 @@ $operation=$_GET["operation"];
                     $_SESSION['FullName'] = $row['FullName'];
                     $_SESSION['access_level'] = 'standard_user';
                     $_SESSION['loggedIn'] = true;
+                    $_SESSION['isAuthor'] = false;
 
                     while( ($rowTwo = mysqli_fetch_array($resultsTwo)) && ($foundTwo==false) ){
                         if($rowTwo['userID'] == $_SESSION['username']){
