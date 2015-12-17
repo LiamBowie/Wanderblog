@@ -6,6 +6,7 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 $operation=$_GET["operation"];
+echo $_GET['operation'];
 
     if($operation=="IN") {
         include 'connect.php';
@@ -51,6 +52,7 @@ $operation=$_GET["operation"];
     }
 
     else if($operation="REGIN"){
+        echo "We're in";
         include 'connect.php';
         session_start(); //pull through existing data
         $tryUsername = $_SESSION['username'];
