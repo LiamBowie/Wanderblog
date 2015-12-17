@@ -44,6 +44,10 @@
             .row.content {height: auto;}
         }
     </style>
+
+    <script language="javascript/text">
+        document.getElementById("bioText").value="text";
+    </script>
 </head>
 <body style="padding-top: 75px;" data-spy="scroll" data-target=".sticky-sidebar" data-offset="50">
 
@@ -76,7 +80,7 @@ function saveChanges(){
     global $conn;
     $queryTwo="
         UPDATE Author
-        SET bio='" . $_POST['bio'] . "'
+        SET bio='" . $_POST['bioText'] . "'
         WHERE authorID='" . $_GET['auth'] ."';
     ";
     $resultsTwo = mysqli_query($conn, $queryTwo);
@@ -107,10 +111,10 @@ function saveChanges(){
 
             <div class="col-sm-9">
                 <div class="row">
-                    <?php echo "<h2> . " .  $row['fullName'] . "</h2>" ?>
+                    <?php echo "<h2> " .  $row['fullName'] . "</h2>" ?>
                 </div>
                 <hr>
-                <?php echo "<p><input type='text' id='bio' name='bio' value='" . $row['bio'] . "'></p>" ?>
+                <?php echo "<p><textarea id='bioText' cols='50' rows='10' type='text' id='bio' name='bio' >" . $row['bio'] . "</textarea></p>"; ?>
                 <br><br>
             </div>
 
