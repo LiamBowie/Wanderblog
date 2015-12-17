@@ -65,8 +65,6 @@
     $row = mysqli_fetch_array($results);
     $authorPath= "'author.php?auth=" . $row['author'] . "'";
 
-
-
     function showDelete($commentID, $commentUser)
     {
         global $row;
@@ -84,6 +82,7 @@
 
     }
 ?>
+
 <div class="container-fluid">
     <div class="row content">
         <div class="col-sm-3 sidenav">

@@ -82,8 +82,8 @@ function showEdit(){
         echo "<a href='editAuthor.php?auth=" . $_GET['auth'] . "'><span class='glyphicon glyphicon-pencil'></span></a>";
     }
 }
-
 ?>
+
 <div class="container-fluid">
     <div class="row content">
         <div class="col-sm-3 sidenav">
@@ -131,7 +131,6 @@ function showEdit(){
                     }
                 ?>
             </div>
-
         </div>
     </div>
 </div>
