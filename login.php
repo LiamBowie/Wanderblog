@@ -30,11 +30,13 @@ $operation=$_GET["operation"];
                     $_SESSION['loggedIn'] = true;
 
                     while($rowTwo = mysqli_fetch_array($resultsTwo) && $foundTwo==false){
+                        echo "result\n";
                         if($rowTwo['userID'] == $tryUsername){
+                            echo"found\n";
                             $foundTwo=true;
                             $_SESSION['isAuthor'] = true;
                         }
-                        else{ $_SESSION['isAuthor'] = false; }
+                        else{ echo"else\n"; $_SESSION['isAuthor'] = false; }
                     }
 
                     header("Location: welcome.php");
