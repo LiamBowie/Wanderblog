@@ -8,12 +8,12 @@ if(isset($_SESSION['loggedIn'])) {//if user is loggedIn to WanderBlog
     $myProfile = "";
     if($_SESSION['isAuthor']==true){
         $myProfile = '
-            <a type="submit" class="btn btn-danger btn-block" >
+            <a type="submit" class="btn btn-info btn-block" >
                 <span class="glyphicon glyphicon-user"></span> MY PROFILE
             </a>
         ';
     }
-    else{ $myProfile ='NOT AUTHOR'; }
+    else{ $myProfile =''; }
     echo '
     <nav class="navbar navbar-default navbar-fixed-top">
 		<div class="container-fluid">
