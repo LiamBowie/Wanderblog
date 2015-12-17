@@ -74,7 +74,7 @@
         if($_SESSION['username'] == $row['userID'] || $_SESSION['username'] == $commentUser)
         {
             echo "<form action='deleteComment.php?adv=$advID&comment=$commentID' method='POST'>";
-            echo "<button class='btn btn-danger' type='submit'>DELETE</button>";
+            echo    "<button class='btn btn-danger' type='submit'>DELETE</button>";
             echo "</form>";
         }
     }
@@ -95,7 +95,7 @@
 
 
         <div class="col-sm-9">
-            <h2 id="desc" class="anchor"><?php echo $row['title']; ?>   <button class="btn btn-info">vote</button></h2>
+            <h2 id="desc" class="anchor"><?php echo $row['title']; ?>   <button <?php if($_SESSION['username'] == null){echo 'disabled="disabled"';} ?> class="btn btn-info">vote</button></h2>
             <span class="badge"><?php echo $row['noOfVotes'] ?></span>
             <hr>
             <h5><span class="label label-danger">TAG</span> <span class="label label-primary">TAG</span></h5><br>
