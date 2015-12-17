@@ -38,7 +38,6 @@
                 $stmt->bind_param("sssssi", $user, $password, $firstName, $lastName, $email, $isAdmin);
 
                 $user = $_POST['userID'];
-                echo $user;
                 $password = $_POST['password'];
                 $firstName = $_POST['firstName'];
                 $lastName = $_POST['lastName'];
@@ -51,9 +50,6 @@
             else {
                 printf("Errormessage: %s\n", $conn->error);
             }
-
-
-
 
             if ($_POST['authorCheck'] == 1) {
 
@@ -75,7 +71,7 @@
             mysqli_close($conn);
 
             session_start();
-            $_SESSION['username'] = $user;
+            $_SESSION['username'] = $_POST['userID'];
             $_SESSION['password'] = $_POST['password'];
             if($_POST['authorCheck'] == 1){ $_SESSION['isAuthor'] = true; }
 
