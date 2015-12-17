@@ -64,6 +64,15 @@
     $results = mysqli_query($conn, $query);
     $row = mysqli_fetch_array($results);
     $authorPath= "'author.php?auth=" . $row['author'] . "'";
+
+    function showDelete()
+    {
+        global $row;
+        if($_SESSION['username'] == $row['userID'])
+        {
+            echo "<button class='btn btn-danger'>DELETE</button>";
+        }
+    }
 ?>
 
 <div class="container-fluid">
@@ -108,7 +117,7 @@
                     ON Comments.userID = Author.userID
                     WHERE advID = '" . $_GET['adv'] . "'
                     ;";
-                //$rowTwo = mysqli_fetch_array($resultsTwo);
+
                 $found = false;
                 $resultsTwo = mysqli_query($conn, $queryTwo);
                 if (mysqli_num_rows($resultsTwo) > 0)
@@ -121,8 +130,10 @@
                         echo "<div class=\"col-sm-10\">";
                         echo    "<h4>" . $rowTwo['userID'] . "</h4>";
                         echo    "<p>" . $rowTwo['commentText']. "</p>";
+                        echo showDelete();
                         echo    "</br>";
                         echo "</div>";
+
                     }
                 }
 
