@@ -68,7 +68,6 @@
     function showDelete()
     {
         global $row;
-        echo
         if($_SESSION['username'] == $row['userID'])
         {
             echo "<button class='btn btn-danger'>DELETE</button>";
