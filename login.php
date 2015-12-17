@@ -14,7 +14,7 @@ $operation=$_GET["operation"];
         $found = false; $foundTwo = false;
         $query = 'Select CONCAT(firstName, " ", lastName) AS FullName, userID, emailAddress, password, isAdmin FROM User;';
         $results = mysqli_query($conn, $query);
-        $queryTwo = 'SELECT userID FROM Author';
+        $queryTwo = 'SELECT * FROM Author;';
         $resultsTwo = mysqli_query($conn, $queryTwo);
 
         if (mysqli_num_rows($results) > 0) { /* if there are results (rows>0) */
