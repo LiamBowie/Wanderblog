@@ -5,12 +5,12 @@ $found = false;                                                             //ha
 $query = 'SELECT * FROM Comments';                                          //get all comments
 $results = mysqli_query($conn, $query);                                     //execute query
 $last = "";                                                                 //last ID
-if (mysqli_num_rows($results) > 0) { /* if there are results (rows>0) */
+//if (mysqli_num_rows($results) > 0) { /* if there are results (rows>0) */
     while (($row = mysqli_fetch_array($results)) && ($found == false)) {    //loop results
         $last = $row['commentID'];
         echo $last;//get latest ID
     }
-}
+//}
 $lastArray = str_split($last);
 $lastNum = (int)$lastArray[9];
 $newNum = $lastNum + 1;
