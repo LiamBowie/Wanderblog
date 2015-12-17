@@ -65,16 +65,20 @@
     $row = mysqli_fetch_array($results);
     $authorPath= "'author.php?auth=" . $row['author'] . "'";
 
-    function showDelete()
+
+
+    function showDelete($commentID)
     {
         global $row;
+        $advID = $_GET['adv'];
         if($_SESSION['username'] == $row['userID'])
         {
-            echo "<button class='btn btn-danger'>DELETE</button>";
+            echo "<form action='deleteComment.php?adv=$advID&comment=$commentID' method='POST'>";
+            echo "<button class='btn btn-danger' type='submit'>DELETE</button>";
+            echo "</form>";
         }
     }
 ?>
-
 <div class="container-fluid">
     <div class="row content">
         <div class="col-sm-3 sidenav">
@@ -100,7 +104,7 @@
             <h4 id="comments" class="anchor"><small>COMMENTS</small></h4>
             <hr>
             <h4>Leave a Comment:</h4>
-            <form id="commentForm" role="form" action="addComment.php?adv=<?php echo $_GET['adv']?>" method="POST">
+            <form role="form" action="addComment.php?adv=<?php echo $_GET['adv']?>" method="POST">
                 <div class="form-group">
                     <input type="text" id="comment-text" name="comment-text" class="form-control" required>
                 </div>
@@ -110,8 +114,8 @@
 
             <p>Comments:</p><br>
             <?php
-                $queryTwo =
-                    "SELECT Comments.userID, Comments.commentText, Author.photo
+                $queryTwo = "
+                    SELECT Comments.commentID, Comments.userID, Comments.commentText, Author.photo
                     FROM Comments
                     LEFT JOIN Author
                     ON Comments.userID = Author.userID
@@ -130,7 +134,7 @@
                         echo "<div class=\"col-sm-10\">";
                         echo    "<h4>" . $rowTwo['userID'] . "</h4>";
                         echo    "<p>" . $rowTwo['commentText']. "</p>";
-                        echo    showDelete();
+                        echo    showDelete($rowTwo['commentID']);
                         echo    "</br>";
                         echo "</div>";
 
