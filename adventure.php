@@ -100,7 +100,7 @@
 
         <div class="col-sm-9">
             <h2 id="desc" class="anchor"><?php echo $row['title'];?></h2>
-            <span class="badge">Votes: <?php echo $row['noOfVotes'];?></span>
+            <p class="badge">Votes: <?php echo $row['noOfVotes'];?></p>
             <hr>
             <h5><span class="label label-danger">TAG</span> <span class="label label-primary">TAG</span></h5><br>
             <p><?php echo $row['content'] ?></p>
