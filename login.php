@@ -31,7 +31,7 @@ $operation=$_GET["operation"];
 
                     while($rowTwo = mysqli_fetch_array($resultsTwo) && $foundTwo==false){
                         echo "result\n";
-                        if($rowTwo['userID'] == $tryUsername){
+                        if($rowTwo['userID'] == 'jordan'){
                             echo"found\n";
                             $foundTwo=true;
                             $_SESSION['isAuthor'] = true;
