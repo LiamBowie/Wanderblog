@@ -30,7 +30,7 @@ $operation=$_GET["operation"];
                     $_SESSION['loggedIn'] = true;
 
                     while( ($rowTwo = mysqli_fetch_array($resultsTwo)) && ($foundTwo==false) ){
-                        echo $rowTwo['authorID'] . ", ";
+                        echo $rowTwo['userID'] . ", ";
                         /*if($rowTwo['userID'] == $_SESSION['username']){
                             echo"found\n";
                             $foundTwo=true;
