@@ -31,16 +31,15 @@ $operation=$_GET["operation"];
 
                     while( ($rowTwo = mysqli_fetch_array($resultsTwo)) && ($foundTwo==false) ){
                         if($rowTwo['userID'] == $_SESSION['username']){
-                            echo"found\n";
                             $foundTwo=true;
                             $_SESSION['isAuthor'] = true;
                         }
-                        else{ echo"else\n"; $_SESSION['isAuthor'] = false; }
+                        else{ $_SESSION['isAuthor'] = false; }
                     }
 
-                    //header("Location: welcome.php");
+                    header("Location: welcome.php");
                 }
-               // else{ header("Location: welcome.php?error=noUser"); }
+                else{ header("Location: welcome.php?error=noUser"); }
             }
         }
     }
