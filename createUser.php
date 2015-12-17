@@ -24,7 +24,7 @@
         else{$length=8;}
 
         $newID = "";
-        for ($i = 0; $i < 8; $i++) {
+        for ($i = 0; $i < $length; $i++) {
             $newID = $newID . $lastArray[$i];
         }
         $newID = $newID . $newNum;
