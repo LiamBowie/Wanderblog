@@ -49,7 +49,7 @@
 <?php
     include 'connect.php';
     $query = "
-        SELECT Adventure.title, CONCAT(User.firstName, ' ', User.lastName) AS authorName, Adventure.author, Adventure.content, Adventure.photo, Cities.cityName, User.userID
+        SELECT Adventure.title, CONCAT(User.firstName, ' ', User.lastName) AS authorName, Adventure.author, Adventure.content, Adventure.photo, Adventure.noOfVotes, Cities.cityName, User.userID
         FROM Adventure
         LEFT JOIN Author
         ON Adventure.author=Author.authorID
@@ -96,6 +96,7 @@
 
         <div class="col-sm-9">
             <h2 id="desc" class="anchor"><?php echo $row['title']; ?></h2>
+            <span class="badge"><?php echo $row['noOfVotes'] ?></span>
             <hr>
             <h5><span class="label label-danger">TAG</span> <span class="label label-primary">TAG</span></h5><br>
             <p><?php echo $row['content'] ?></p>
