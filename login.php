@@ -42,6 +42,7 @@ $operation=$_GET["operation"];
         session_start(); //pull through existing data
         $tryUsername = $_SESSION['username'];
         $tryPassword = $_SESSION['password'];
+        $isAuthor = $_SESSION['isAuthor'];
         $found = false;
         $query = 'Select CONCAT(firstName, " ", lastName) AS FullName, userID, emailAddress, password, isAdmin FROM User;';
         $results = mysqli_query($conn, $query);
@@ -56,6 +57,7 @@ $operation=$_GET["operation"];
                     $_SESSION['username'] = $tryUsername;
                     $_SESSION['FullName'] = $row['FullName'];
                     $_SESSION['access_level'] = 'standard_user';
+                    $_SESSION = $isAuthor;
                     $_SESSION['loggedIn'] = true;
                     header("Location: welcome.php");
                 }

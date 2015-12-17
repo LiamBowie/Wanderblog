@@ -41,6 +41,7 @@
             session_start();
             $_SESSION['username'] = $username;
             $_SESSION['password'] = $_POST['password'];
+            $_SESSION['isAuthor'] = true;
 
             header("Location: login.php?operation==REGIN");
         } else {
@@ -52,6 +53,10 @@
         session_start();
         $query="DELETE FROM User WHERE userID='" . $_SESSION['username'] . "';";
         $results = mysqli_query($conn, $query);
+        if($_SESSION['isAuthor'] == true){
+            $query = "DELETE FROM Author WHERE userID='" . $_SESSION['username'] . "';";
+            $results=mysqli_query($conn, $query);
+        }
         mysqli_close($conn);
         session_destroy();
         header("Location: welcome.php");
