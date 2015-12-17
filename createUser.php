@@ -3,6 +3,7 @@
 
     $operation=$_GET['operation'];
 
+// TO CREATE A NEW USER
     if($operation=='create') {
 
         $found = false;
@@ -49,15 +50,27 @@
         }
     }
 
+// TO DELETE A CURRENT USER
     else if($operation == 'delete'){
-        session_start();
-        if($_SESSION['isAuthor'] == true){
-            $queryTwo = "DELETE FROM Author WHERE userID='" . $_SESSION['username'] . "';";
-            $resultsTwo=mysqli_query($conn, $queryTwo);
-        }
-        $query="DELETE FROM User WHERE userID='" . $_SESSION['username'] . "';";
-        $results = mysqli_query($conn, $query);
-        mysqli_close($conn);
-        session_destroy();
-        header("Location: welcome.php");
+        echo "1";
+        session_start();                                                                        //include all previously set Session data
+        echo "2";
+        if($_SESSION['isAuthor'] == true){                                                      //if session indicates user as an author
+            echo"2.1";
+            $queryTwo = "DELETE FROM Author WHERE userID='" . $_SESSION['username'] . "';";     //set query to delete from author
+            echo"2.2";
+            $resultsTwo=mysqli_query($conn, $queryTwo);                                         //execute query
+        }                                                                                       //end if
+        echo "3;";
+        $query="DELETE FROM User WHERE userID='" . $_SESSION['username'] . "';";                //set query to delete from user
+        echo "4";
+        $results = mysqli_query($conn, $query);                                                 //execute query
+        echo"5";
+        mysqli_close($conn);                                                                    //close the connection
+        echo "6";
+        session_destroy();                                                                      //destroy the session
+        //header("Location: welcome.php");                                                        //navigate to Welcome.php
     }
+
+//IF OPERATION IS NOT SET
+    else{ echo "An issue has been detected. Please contact the Site Administrator."; }
