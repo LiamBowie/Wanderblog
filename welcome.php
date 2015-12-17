@@ -81,7 +81,7 @@
 				<option value="adventure">Adventure</option>
 				<option value="author">Author</option>
 			</select>
-			<a type="submit" class="btn btn-danger btn-block">Search</a>
+			<buton type="submit" class="btn btn-danger btn-block">Search</buton>
 		</form>
 <!-- ENF OF SEARCH -->
 	</div>
