@@ -94,7 +94,7 @@
                 <div class="form-group">
                     <input type="text" id="comment-text" name="comment-text" class="form-control" required>
                 </div>
-                <button <?php if($_Session['username'] == null) echo 'disabled="disabled"'; ?> type="submit" class="btn btn-success">Submit</button>
+                <button <?php if($_Session['username'] == null){echo 'disabled="disabled"';} ?> type="submit" class="btn btn-success">Submit</button>
             </form>
             <br><br>
 
