@@ -110,7 +110,7 @@ function saveChanges(){
                     <?php echo "<h2> . " .  $row['fullName'] . "</h2>" ?>
                 </div>
                 <hr>
-                <?php echo "<p><input type='text' id='bio' name='bio' value='" . $row['bio'] . "' style='width:420px;height:300px;'></p>" ?>
+                <?php echo "<p><input type='text' id='bio' name='bio' value='" . $row['bio'] . "' style='width:420px;height:200px;'></p>" ?>
                 <br><br>
             </div>
 
