@@ -103,15 +103,16 @@
                 <?php echo $row['title']; ?>
                 <form role="form" action="addVote.php?adv=<?php echo $_GET['adv']?>" method="POST">
                     <?php
-                    $votingQuiery = "
+                    $votingQuery = "
                     SELECT * FROM Votes
                     WHERE advID = '" . $_GET['adv'] . "';
-                ";
-                    $votingResults = mysqli_query($conn, $votingQuiery);
+                    ";
+                    $votingResults = mysqli_query($conn, $votingQuery);
                     $votingRow = mysqli_fetch_array($votingResults);
                     $numVotes = mysqli_num_rows($votingResults);
 
                     $found=false;
+
                     while (($votingRow = mysqli_fetch_array($votingResults)) && ($found==false))
                     {
                         if($_SESSION['username'] == $votingRow['userID'])
@@ -120,6 +121,7 @@
                             echo "<button disabled=\"disabled\" class=\"btn btn-success\">Voted</button>";
                         }
                     }
+
                     if($found==false)
                     {
                         if($_SESSION['username'] == null || $_SESSION['username'] == $row['userID'])
@@ -133,6 +135,14 @@
                     }
                     ?>
                 </form>
+                <?php
+                if($adminRow['isAdmin'] == 1)
+                {
+                    echo "<form role='form' action='deleteVote.php'>";
+                    echo    "<button class='btn btn-danger'>Decrement Votes</button>";
+                    echo "</form>";
+                }
+                ?>
             </h2>
             <p>votes: <?php echo $numVotes ?> </p>
             <span class="badge"><?php echo $row['noOfVotes'] ?></span>
