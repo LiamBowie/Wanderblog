@@ -112,6 +112,8 @@ if(isset($_SESSION['loggedIn'])) {//if user is loggedIn to WanderBlog
 
 				</div>
 			</div>
+		</div>
+	</div>
 <!-- NEW -->
             <div class="modal fade" id="modal-auth" role="dialog" style="padding-top: 35px;">
 		        <div class="modal-dialog">
@@ -126,7 +128,6 @@ if(isset($_SESSION['loggedIn'])) {//if user is loggedIn to WanderBlog
                             <button type="submit" class="btn btn-success btn-block" data-dismiss="modal">
                                 <span class="glyphicon glyphicon-ok"></span> DONE
                             </button>
-
                         </div>
                     </div>
                 </div>
