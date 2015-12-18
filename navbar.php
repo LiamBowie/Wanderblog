@@ -31,7 +31,24 @@ if(isset($_SESSION['loggedIn'])) {//if user is loggedIn to WanderBlog
     $queryAuthorise = "SELECT * From Authorise;";
     $resultsAuthorise = mysqli_query($conn, $queryAuthorise);
     while( $rowAuthorise = mysqli_fetch_array($resultsAuthorise) ){
-        $users = $users . ", " . $rowAuthorise['userID'];
+        $users = $users . '
+            <div class="row">
+                <div class="col-sm-6">
+                    ' . $rowAuthorise['userID'] . '
+                </div>
+                <div class="col-sm-3">
+                    <button type="submit" class="btn btn-success">
+                        <span class="glyphicon glyphicon-ok"></span>
+                    </button>
+                </div>
+                <div class="col-sm-3">
+                    <button type="submit" class="btn btn-danger">
+                        <span class="glyphicon glyphicon-remove"></span>
+                    </button>
+                </div>
+            </div>
+
+        ';
     }
 
 
