@@ -31,7 +31,7 @@
             else{$_SESSION['isAuthor'] = true;} */
 
             //header("Location: login.php?operation=REGIN");
-            //header("Location: index.php?error=Registered");
+            header("Location: index.php?error=Registered");
         } else {
             echo "Passwords did not match";
         }
