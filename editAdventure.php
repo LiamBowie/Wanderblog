@@ -45,7 +45,7 @@
 </head>
 <body style="padding-top: 75px;" data-spy="scroll" data-target=".sticky-sidebar" data-offset="50">
 <?php include'navbar.php'; ?>
-<?php
+<?php/*
 session_start();
 include 'connect.php';
 $auth = "SELECT * FROM Author WHERE userID='" . $_SESSION['username'] ."';";
@@ -62,8 +62,29 @@ function saveChanges(){
             ";
     $results = mysqli_query($conn, $query);
     mysqli_close($conn);
-}
+}*/
 
+?>
+
+<?php
+session_start();
+include 'connect.php';
+
+$queryOne = "SELECT * FROM Author WHERE userID='" . $_SESSION['username'] ."';";
+$resultsOne = mysqli_query($conn, $queryOne);
+$row = mysqli_fetch_array($resultsOne);
+
+function saveChanges(){
+global $conn;
+$query="UPDATE Adventure
+           SET content = '" . $_POST['descText'] . "'
+           SET title = '" . $_POST['advTitle'] ."'
+           SET photo = '" . $_POST['photoURL'] . "'
+           WHERE author = '" . $row['authorID'] . "';
+";
+   $results = mysqli_query($conn, $query);
+   mysqli_close($conn);
+}
 ?>
 
 <?php echo "<form id='changes' action='createAdventure.php?auth=" . $_GET['auth'] . "' method='post'>" ?>
