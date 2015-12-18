@@ -22,7 +22,7 @@ if(isset($_SESSION['loggedIn'])) {//if user is loggedIn to WanderBlog
     if($row['isAdmin'] == true){
         $authorise = '
             <a type="submit" class="btn btn-info btn-block" href="' . $profilePath . '">
-                <span class="glyphicon glyphicon-user"></span> AUTHORISE
+                <span class="glyphicon glyphicon-tasks"></span> AUTHORISE
             </a>';
     }
     else { $authorise = ''; }
@@ -71,7 +71,7 @@ if(isset($_SESSION['loggedIn'])) {//if user is loggedIn to WanderBlog
     </script>
 
     <!-- Modal -->
-    <div class="modal fade" id="modal-reg" role="dialog" style="padding-top: 25px;">
+    <div class="modal fade" id="modal-reg" role="dialog" style="padding-top: 35px;">
 		<div class="modal-dialog">
 
 			<!-- Modal content-->
