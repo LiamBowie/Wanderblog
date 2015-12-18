@@ -45,6 +45,9 @@
         html, body {
             height: 100%;
         }
+        footer{
+            position: absolute;
+        }
     </style>
 </head>
 <body style="padding-top: 0">
