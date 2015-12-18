@@ -32,16 +32,16 @@
         if ($_POST['passwordconfirm'] == $_POST['password']) {
 
             $username = $_POST['userID'];
-            $sql = "INSERT INTO User VALUES('" . $username . "', '" . $_POST['password'] . "', '" . $_POST['firstName'] . "', '" . $_POST['lastName'] . "', '" . $_POST['email'] . "', 0);";
+            $sql = "INSERT INTO Authorise VALUES('" . $username . "', '" . $_POST['password'] . "', '" . $_POST['firstName'] . "', '" . $_POST['lastName'] . "', '" . $_POST['email'] . "', 0);";
 
             $results = mysqli_query($conn, $sql);
-
+/*
             if ($_POST['authorCheck'] == 1) {
                 $photo = "Images/blankAuth.png";
                 $sqlTwo = "INSERT INTO Author VALUES('" . $newID . "', '" . $username . "', '" . $photo . "', '" . $username . " is a new author to Wanderblog', 'LO00000');";
                 $resultsTwo = mysqli_query($conn, $sqlTwo);
             }
-
+*/
             mysqli_close($conn);
 
             session_start();
