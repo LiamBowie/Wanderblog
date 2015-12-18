@@ -118,7 +118,7 @@
                         }
                     }
                     echo $found;
-                    if($found=false)
+                    if($found==false)
                     {
                         echo "<button class=\"btn btn-info\">Vote</button>";
                     }
