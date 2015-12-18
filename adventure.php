@@ -117,7 +117,6 @@
                             echo "<button disabled=\"disabled\" class=\"btn btn-success\">Voted</button>";
                         }
                     }
-                    echo $found;
                     if($found==false)
                     {
                         if($_SESSION['username'] == null)
@@ -132,7 +131,7 @@
                     ?>
                 </form>
             </h2>
-            <p>votes: <?php echo $numVotes . " " . $found ?> </p>
+            <p>votes: <?php echo $numVotes ?> </p>
             <span class="badge"><?php echo $row['noOfVotes'] ?></span>
             <hr>
             <h5><span class="label label-danger">TAG</span> <span class="label label-primary">TAG</span></h5><br>
