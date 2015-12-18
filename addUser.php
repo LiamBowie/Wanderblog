@@ -10,6 +10,7 @@ if($task == 'NO'){
     //REMOVE FROM Authorise WHERE userID = username
     $queryThree = "DELETE FROM Authorise WHERE userID ='" . $username . "';";
     $resultsThree = mysqli_query($conn, $queryThree);
+    mysqli_close($conn);
 }
 
 else if($task == 'OK'){
@@ -17,5 +18,6 @@ else if($task == 'OK'){
     while($row = mysqli_fetch_array($results)){
         $queryTwo = "INSERT INTO User VALUES('" . $username . "', '" . $row['password'] . "', '" . $row['firstName'] . "', '" . $row['lastName'] . "', '" . $row['emailAddress'] . ", 0');";
         $results = mysqli_query($conn, $queryTwo);
+        mysqli_close($conn);
     }
 }
