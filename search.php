@@ -141,9 +141,10 @@
     </div>
 </div>
 
+<!--
 <footer class="container-fluid bg-4 text-center" style="background-color: #2f2f2f; padding: 20px; ">
     <p style="color: #ffffff;">Wanderblog is a part of SHB Innovative Solutions</p>
-</footer>
+</footer> -->
 </body>
 
 
