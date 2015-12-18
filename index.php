@@ -151,7 +151,7 @@
 					else{
 						echo '<div class="item">';
 					}*/
-					echo '<div class="item">';
+					echo '<div class="item active">';
 					echo'	<img src=' . $rowTop5['photo'] . ' alt="Image">
 							<div class="carousel-caption">
 								<h3>' . $rowTop5['title'] . '</h3>
