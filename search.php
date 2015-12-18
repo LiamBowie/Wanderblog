@@ -111,7 +111,7 @@
                                     while (($row = mysqli_fetch_array($results)) && ($found == false)) {
                                         $path = "adventure.php?adv=" . $row['authorID'];
                                         echo '<div class="col-sm-4" >';
-                                        echo '<a href = "#" class="thumbnail text-center" >';
+                                        echo '<a href = "' . $path . '" class="thumbnail text-center" >';
                                         echo '<img src = "' . $row['photo'] . '" >';
                                         echo '<p style = "color:#ffffff;" > ' . $row['title'] . ' </p >';
                                         echo '</a >';
