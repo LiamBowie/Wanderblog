@@ -44,7 +44,7 @@ if(isset($_SESSION['loggedIn'])) {//if user is loggedIn to WanderBlog
                     </a>
                 </div>
                 <div class="col-sm-3">
-                    <a href="' . $NOpath . '" class="btn btn-danger">
+                    <a href="' . $nopath . '" class="btn btn-danger">
                         <span class="glyphicon glyphicon-remove"></span>
                     </a>
                 </div>
