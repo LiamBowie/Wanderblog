@@ -74,7 +74,7 @@
         global $row;
         global $adminRow;
         $advID = $_GET['adv'];
-        if($_SESSION['username'] == $row['userID'] || $_SESSION['username'] == $commentUser || $adminRow['isAdmin'] == 1)
+        if($_SESSION['username'] == $row['userID'] || $_SESSION['username'] == $commentUser || $adminRow['isAdmin'] == "")
         {
             echo "<form action='deleteComment.php?adv=$advID&comment=$commentID' method='POST'>";
             echo    "<button class='btn btn-danger' type='submit'>DELETE</button>";
@@ -85,7 +85,7 @@
 <div class="container-fluid">
     <div class="row content">
         <div class="col-sm-3 sidenav">
-            <h4 class="text-center"><?php echo $adminRow['isAdmin'] ?></h4>
+            <h4 class="text-center"><?php echo $row['cityName'] ?></h4>
             <img src= "<?php echo $row['photo']; ?>" class="img-thumbnail img-responsive" alt="Adventure Photo">
             <h5><span class="glyphicon glyphicon-time"></span> Post by <a href=<?php echo $authorPath; ?> > <?php echo $row['authorName'] ?></a></h5>
             <nav class="sticky-sidebar">
