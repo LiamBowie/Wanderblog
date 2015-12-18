@@ -52,17 +52,11 @@
     $criteria = $_POST['crit'];
     $colmSearch = $_POST['select'];
     if($colmSearch == 'firstName'){
-        $query = "  SELECT CONCAT(User.firstName, ' ', User.lastName) AS fullName, User.firstName, Author.bio, Author.photo, Cities.cityName, Countries.countryName, User.userID
+        $query = "  SELECT CONCAT(User.firstName, ' ', User.lastName) AS fullName, User.firstName, Author.photo, User.userID
                 FROM Author
                 LEFT JOIN User
                 ON  Author.userID=User.userID
-                LEFT JOIN Locations
-                ON Author.location=Locations.locationID
-                LEFT JOIN Cities
-                ON Locations.cityID=Cities.cityID
-                LEFT JOIN Countries
-                ON Locations.countryID=Countries.countryID
-                WHERE User.firstName = '" . $colmSearch . "';" ;
+                WHERE User.firstName = '" . $criteria . "';" ;
 
     }
     else{
