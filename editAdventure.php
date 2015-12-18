@@ -57,8 +57,8 @@ function saveChanges(){
             WHERE author='" . $_GET['auth'] ."'
             SET title'" . $_POST['advTitle'] ."'
             WHERE author='" . $_GET['auth'] ."'
-            SET photo'" . $_POST['photoURL'] . "';
-            WHERE author='" . $_GET['auth'] ."'
+            SET photo'" . $_POST['photoURL'] . "'
+            WHERE author='" . $_GET['$auth'] ."';
             ";
     $results = mysqli_query($conn, $query);
     mysqli_close($conn);
@@ -67,7 +67,7 @@ function saveChanges(){
 ?>
 
 <?php echo "<form id='changes' action='createAdventure.php?auth=" . $_GET['auth'] . "' method='post'>" ?>
-<?php echo "hi " . $_GET['auth'];?>
+<?php echo "hi " . $_GET['$auth'];?>
 <div class="container-fluid">
         <div class="row content">
             <div class="col-sm-3 sidenav">
