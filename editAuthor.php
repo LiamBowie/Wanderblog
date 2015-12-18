@@ -33,6 +33,7 @@
             background-color: #555;
             color: white;
             padding: 15px;
+            position: absolute;
         }
 
         /* On small screens, set height to 'auto' for sidenav and grid */
