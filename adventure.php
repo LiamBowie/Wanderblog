@@ -67,14 +67,14 @@
 
     $adminQuery = "SELECT * FROM USER WHERE userID='". $_SESSION['$username']."';";
     $adminResults = mysqli_query($conn, $adminQuery);
-    $adminRow = mysqli_fetch_array($adminRow);
+    $adminRow = mysqli_fetch_array($adminResults);
 
     function showDelete($commentID, $commentUser)
     {
         global $row;
         global $adminRow;
         $advID = $_GET['adv'];
-        if($_SESSION['username'] == $row['userID'] || $_SESSION['username'] == $commentUser || $adminRow['isAdmin'] == true)
+        if($_SESSION['username'] == $row['userID'] || $_SESSION['username'] == $commentUser || $adminRow['isAdmin'] == 1)
         {
             echo "<form action='deleteComment.php?adv=$advID&comment=$commentID' method='POST'>";
             echo    "<button class='btn btn-danger' type='submit'>DELETE</button>";
