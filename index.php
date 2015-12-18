@@ -145,7 +145,7 @@
 				$first = true;
 				while ($rowTop5 = mysqli_fetch_array($resultsTop5))
 				{
-					if($first) {
+					if($first==true) {
 						echo '<div class="item active">';
 					}
 					else{
