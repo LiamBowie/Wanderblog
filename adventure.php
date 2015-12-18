@@ -71,7 +71,7 @@
     {
         global $row;
         $advID = $_GET['adv'];
-        if($_SESSION['username'] == $row['userID'] || $_SESSION['username'] == $commentUser || $row['isAdmin'] == 1 )
+        if($_SESSION['username'] == $row['userID'] || $_SESSION['username'] == $commentUser || $row['isAdmin'] == true )
         {
             echo "<form action='deleteComment.php?adv=$advID&comment=$commentID' method='POST'>";
             echo    "<button class='btn btn-danger' type='submit'>DELETE</button>";
