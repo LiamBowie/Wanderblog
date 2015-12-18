@@ -70,26 +70,26 @@ function saveChanges(){
                     </ul><br>
                 </nav>
             </div>
-        </div>
 
-        <div class="col-sm-9">
+            <div class="col-sm-9">
+                <div class="row">
+                    <?php echo "<p><textarea id='descText' cols='50' rows='10' type='text' id='desc' >" . "</textarea></p>"; ?>
+                    <br><br>
+                </div>
+            </div>
+
             <div class="row">
-                <?php echo "<p><textarea id='descText' cols='50' rows='10' type='text' id='desc' >" . "</textarea></p>"; ?>
-                <br><br>
+                <div class="col-sm-6">
+                    <button type="submit" class="btn btn-block btn-success">
+                        <span class="glyphicon glyphicon-ok"></span>Save
+                    </button>
+                    <button type="submit" class="btn btn-danger btn-block">
+                        <span class="glyphicon glyphicon-remove"></span>Cancel
+                    </button>
+                </div>
             </div>
-        </div>
 
-        <div class="row">
-            <div class="col-sm-6">
-                <button type="submit" class="btn btn-block btn-success">
-                    <span class="glyphicon glyphicon-ok"></span>Save
-                </button>
-                <button type="submit" class="btn btn-danger btn-block">
-                    <span class="glyphicon glyphicon-remove"></span>Cancel
-                </button>
-            </div>
         </div>
-
     </div>
 </form>
 <footer class="container-fluid">
