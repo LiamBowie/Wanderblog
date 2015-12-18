@@ -27,7 +27,7 @@ if(isset($_SESSION['loggedIn'])) {//if user is loggedIn to WanderBlog
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="welcome.php"><span class="glyphicon glyphicon-globe"></span></a>
+				<a class="navbar-brand" href="index.php"><span class="glyphicon glyphicon-globe"></span></a>
 			</div>
 			<div class="collapse navbar-collapse" id="myNavbar">
 				<ul class="nav navbar-nav navbar-right">
@@ -53,12 +53,12 @@ if(isset($_SESSION['loggedIn'])) {//if user is loggedIn to WanderBlog
     function confirmLogout(){
         var logout = confirm("Are you sure you want to Log Out?");
         if(logout==true){ window.location = "login.php?operation=OUT"; }
-        else{ window.location = "welcome.php" }
+        else{ window.location = "index.php" }
     }
     function confirmDelete(){
         var deleteUser = confirm("This will permanently remove your account. Are you sure you want to continue?");
         if(deleteUser==true){ window.location = "createUser.php?operation=delete"; }
-        else{ window.location = "welcome.php"; }
+        else{ window.location = "index.php"; }
     }
     </script>
 
@@ -109,12 +109,11 @@ if(isset($_SESSION['loggedIn'])) {//if user is loggedIn to WanderBlog
 			</div>
 		</div>
 	</div>
-	//
 
 ';
 }
 else{ //if user is not loggedIn to Wanderblog
-    echo'
+    echo '
     <nav class="navbar navbar-default navbar-fixed-top">
 		<div class="container-fluid">
 			<div class="navbar-header">
@@ -123,7 +122,7 @@ else{ //if user is not loggedIn to Wanderblog
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="welcome.php"><span class="glyphicon glyphicon-globe"></span></a>
+				<a class="navbar-brand" href="index.php"><span class="glyphicon glyphicon-globe"></span></a>
 			</div>
 			<div class="collapse navbar-collapse" id="myNavbar">
 				<ul class="nav navbar-nav navbar-right">

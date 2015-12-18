@@ -37,16 +37,16 @@ $operation=$_GET["operation"];
                         else{ $_SESSION['isAuthor'] = false; }
                     }
 
-                    header("Location: welcome.php");
+                    header("Location: index.php");
                 }
-                else{ header("Location: welcome.php?error=noUser"); }
+                else{ header("Location: index.php?error=noUser"); }
             }
         }
     }
 
     else if($operation=="OUT"){
         session_start(); session_destroy();
-        header("Location: welcome.php");
+        header("Location: index.php");
     }
 
     else if($operation="REGIN"){
@@ -71,7 +71,7 @@ $operation=$_GET["operation"];
                     $_SESSION['access_level'] = 'standard_user';
                     $_SESSION ['isAuthor'] = $isAuthor;
                     $_SESSION['loggedIn'] = true;
-                    header("Location: welcome.php");
+                    header("Location: index.php");
                 }
             }
         } else {} //do nothing
