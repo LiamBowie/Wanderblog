@@ -80,14 +80,14 @@ $query="UPDATE Adventure
            SET content = '" . $_POST['descText'] . "'
            SET title = '" . $_POST['advTitle'] ."'
            SET photo = '" . $_POST['photoURL'] . "'
-           WHERE author = '" . $row['authorID'] . "';
+           WHERE author = '" . $_SESSION['username'] . "';
 ";
    $results = mysqli_query($conn, $query);
    mysqli_close($conn);
 }
 ?>
 
-<?php echo "<form id='changes' action='createAdventure.php?auth=" . $_GET[$row['authorID']] . "' method='post'>" ?>
+<?php echo "<form id='changes' action='createAdventure.php?auth=" . $_SESSION['username'] . "' method='post'>" ?>
 <?php echo "hi " . $_GET[$row['authorID']] . $_SESSION['username'];?>
 <div class="container-fluid">
         <div class="row content">
