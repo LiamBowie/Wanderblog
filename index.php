@@ -147,7 +147,6 @@
 				{
 					if($first) {
 						echo '<div class="item active">';
-						$first=false;
 					}
 					else{
 						echo '<div class="item">';
@@ -159,6 +158,7 @@
 							</div>
 						</div>
 						';
+					$first=false;
 				}
 			}
 			?>
