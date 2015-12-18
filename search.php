@@ -68,35 +68,23 @@
 
     <div class="container-fluid text-center">
         <div class="col-sm-12 text-left" style="padding-left: 25px; padding-right: 25px">
-            <?php echo "<h2>Displaying results for " . $_POST['crit'] . "</h2>" ?>
+            <?php echo "<h2 style = 'color:#ffffff;'>Displaying results for " . $_POST['crit'] . "</h2>" ?>
             <div class="container">
                 <div class="row">
                     <!-- LOOP THROUGH AND OUTPUT FOLLOWING PER EACH -->
-                    <?php
-                        if (mysqli_num_rows($results) > 0) {
-                            while (($row = mysqli_fetch_array($results)) && ($found == false)) {
-                                echo '<div class="col-sm-4" >';
-                                    echo '<a href = "#" class="thumbnail text-center" >';
-                                        echo '<img src = "' . $row['photo'] . '" >';
-                                        echo '<p style = "color:#ffffff;" > ' . $row['title'] . ' </p >';
-                                    echo '</a >';
-                                echo '</div >';
+                        <?php
+                            if (mysqli_num_rows($results) > 0) {
+                                while (($row = mysqli_fetch_array($results)) && ($found == false)) {
+                                    echo '<div class="col-sm-4" >';
+                                        echo '<a href = "#" class="thumbnail text-center" >';
+                                            echo '<img src = "' . $row['photo'] . '" >';
+                                            echo '<p style = "color:#ffffff;" > ' . $row['title'] . ' </p >';
+                                        echo '</a >';
+                                    echo '</div >';
+                                }
                             }
-                        }
-                    ?>
+                        ?>
                     <!-- END LOOP -->
-                    <div class="col-sm-4">
-                        <a href="#" class="thumbnail text-center">
-                            <img src="http://bit.ly/1m6Q0nF">
-                            <p style="color:#ffffff;">Insert Information here</p>
-                        </a>
-                    </div>
-                    <div class="col-sm-4">
-                        <a href="#" class="thumbnail text-center">
-                            <img src="http://bit.ly/1m6Q0nF">
-                            <p style="color:#ffffff;">Insert Information here</p>
-                        </a>
-                    </div>
                 </div>
             </div>
         </div>
