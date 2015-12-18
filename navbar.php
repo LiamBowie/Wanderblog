@@ -18,14 +18,6 @@ if(isset($_SESSION['loggedIn'])) {//if user is loggedIn to WanderBlog
         ';
     }
     else{ $myProfile =''; }
-    $authorise = '';
-    if($row['isAdmin'] == true){
-        $authorise = '
-            <a class="btn btn-info btn-block" href="#" data-dismiss="modal" data-target="#modal-auth">
-                <span class="glyphicon glyphicon-tasks"></span> AUTHORISE
-            </a>';
-    }
-    else { $authorise = ''; }
     echo '
     <nav class="navbar navbar-default navbar-fixed-top">
 		<div class="container-fluid">
@@ -39,9 +31,9 @@ if(isset($_SESSION['loggedIn'])) {//if user is loggedIn to WanderBlog
 			</div>
 			<div class="collapse navbar-collapse" id="myNavbar">
 				<ul class="nav navbar-nav navbar-right">
-				    <li class="LoggedIn"><a href="#" data-dismiss="modal" data-target="#modal-reg"> Logged in as  ' . $_SESSION['FullName'] . '</a> </li>
+				    <li class="LoggedIn"><a href="#" data-toggle="modal" data-target="#modal-reg"> Logged in as  ' . $_SESSION['FullName'] . '</a> </li>
 				    <li class="LogOut" style="color:white;"><a onclick="confirmLogout()" href="#">LOG OUT</a></li>
-					<li><a href="index.php#top5">TOP 5 TRIPS</a></li>
+					<li><a href="#top5">TOP 5 TRIPS</a></li>
 					<li class="dropdown">
 						<a class="dropdown-toggle" data-toggle="dropdown" href="#">MORE
 							<span class="caret"></span>
@@ -56,7 +48,6 @@ if(isset($_SESSION['loggedIn'])) {//if user is loggedIn to WanderBlog
 			</div>
 		</div>
 	</nav>
-
 	<script>
     function confirmLogout(){
         var logout = confirm("Are you sure you want to Log Out?");
@@ -69,11 +60,9 @@ if(isset($_SESSION['loggedIn'])) {//if user is loggedIn to WanderBlog
         else{ window.location = "index.php"; }
     }
     </script>
-
     <!-- Modal -->
-    <div class="modal fade" id="modal-reg" role="dialog" style="padding-top: 35px;">
+    <div class="modal fade" id="modal-reg" role="dialog" style="padding-top: 25px;">
 		<div class="modal-dialog">
-
 			<!-- Modal content-->
 			<div class="modal-content">
 				<div class="modal-header">
@@ -97,46 +86,24 @@ if(isset($_SESSION['loggedIn'])) {//if user is loggedIn to WanderBlog
 				        <div class="col-sm-3"><p>Password: </p></div>
 				        <div class="col-sm-9">' . $row["password"] . '</div>
 				     </div>
-
 				</div>
 				<div class="modal-footer">
 					<button type="submit" class="btn btn-success btn-block" data-dismiss="modal">
 						<span class="glyphicon glyphicon-ok"></span> OK
 					</button>
-					' . $myProfile . $authorise . '
+					<button type="submit" class="btn btn-primary btn-block" data-dismiss="modal">
+						<span class="glyphicon glyphicon-pencil"></span> EDIT
+					</button>
+					' . $myProfile . '
                     <a type="submit" class="btn btn-danger btn-block" onCLick="confirmDelete()">
                         <!-- <a href="createUser.php?operation=delete"> -->
                             <span class="glyphicon glyphicon-trash"></span> DELETE
                         </a>
                     </button>
-
 				</div>
 			</div>
 		</div>
 	</div>
-<!-- NEW -->
-            <div class="modal fade" id="modal-auth" role="dialog" style="padding-top: 35px;">
-		        <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            <h4><span class="glyphicon glyphicon-tasks"></span> Authorise </h4>
-                        </div>
-                        <div class="modal-body">
-                        </div>
-                        <div class="modal-footer">
-                            <button type="submit" class="btn btn-success btn-block" data-dismiss="modal">
-                                <span class="glyphicon glyphicon-ok"></span> DONE
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-<!-- END NEW -->
-
-		</div>
-	</div>
-
 ';
 }
 else{ //if user is not loggedIn to Wanderblog
@@ -153,7 +120,7 @@ else{ //if user is not loggedIn to Wanderblog
 			</div>
 			<div class="collapse navbar-collapse" id="myNavbar">
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="index.php#top5">TOP 5 TRIPS</a></li>
+					<li><a href="#top5">TOP 5 TRIPS</a></li>
 					<li><a href="#" data-toggle="modal" data-target="#modal-reg">REGISTER</a></li>
 					<li>
 						<form style="padding-top: 10px" class="form-inline" action="login.php?operation=IN" method="post">
@@ -177,9 +144,8 @@ else{ //if user is not loggedIn to Wanderblog
 		</div>
 	</nav>
 	<!-- Modal -->
-	<div class="modal fade" id="modal-reg" role="dialog" style="padding-top: 35px;">
+	<div class="modal fade" id="modal-reg" role="dialog">
 		<div class="modal-dialog">
-
 			<!-- Modal content-->
 			<div class="modal-content">
 				<div class="modal-header">
