@@ -48,6 +48,7 @@
 <?php
 session_start();
 include 'connect.php';
+$auth = "SELECT * FROM Author WHERE userID='" . $_SESSION['username'] ."';";
 
 function saveChanges(){
     global $conn;
