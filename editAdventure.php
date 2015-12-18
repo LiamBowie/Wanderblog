@@ -41,6 +41,24 @@
 <body style="padding-top: 75px;" data-spy="scroll" data-target=".sticky-sidebar" data-offset="50">
 <?php include'navbar.php'; ?>
 
-
+<?php echo ""; ?>
+    <div class="container-fluid">
+        <div class="row content">
+            <div class="col-sm-3 sidenav">
+                <h4 class="text-center"></h4>
+                <img src ="" class="img-thumbnail img-responsive" alt="Adventure Photo">
+                <h5><span class="glyphicon glyphicon-time"></span>Post by <a href='author.php?auth='></a></h5>
+                <nav class="sticky-sidebar">
+                    <ul class="nav navpills nav=stacked">
+                        <li><a href="#desc">Adventure Description</a></li>
+                        <li><a href="#comments">Comments</a></li>
+                    </ul><br>
+                </nav>
+            </div>
+        </div>
+    </div>
+<footer class="container-fluid">
+    <p>Footer Text</p>
+</footer>
 </body>
 </html>
