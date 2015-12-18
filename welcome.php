@@ -79,7 +79,7 @@
 			<input type="search" id="crit" name="crit" class="form-control" size="50" placeholder="What are you waiting for?">
 			<select class="form-control" name="select" id="select">
 				<option id="opt-Adventure" value="advID">Adventure</option>
-				<option id ="opt-author" value="authorID">Author</option>
+				<option id ="opt-author" value="author">Author</option>
 			</select>
 			<button type="submit" class="btn btn-danger">
 				<span class="glyphicon glyphicon-search"></span>
