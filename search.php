@@ -54,7 +54,8 @@
     $query="Select * FROM Adventure WHERE " . $colmSearch . " = '" . $criteria . "'; ";
     $results=mysqli_query($conn, $query);
     $found = false;
-    echo "SEACRH: " . $colmSearch;
+    echo "SEACRH: " . $colmSearch .  " FOR: " . $criteria;
+    echo "\n" . "Select * FROM Adventure WHERE " . $colmSearch . " = '" . $criteria . "'; ";
 ?>
 
 <div class="jumbotron text-center">
