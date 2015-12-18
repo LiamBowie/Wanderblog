@@ -54,6 +54,7 @@
     $query="Select * FROM Adventure WHERE " . $colmSearch . " = '" . $criteria . "'; ";
     $results=mysqli_query($conn, $query);
     $found = false;
+    echo $colmSearch;
 ?>
 
 <div class="jumbotron text-center">
