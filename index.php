@@ -142,17 +142,32 @@
 
 			if (mysqli_num_rows($resultsTop5) > 0)
 			{
+				$first = true;
 				while ($rowTop5 = mysqli_fetch_array($resultsTop5))
 				{
-					echo '
-					<div class="item">
-						<img src=' . $rowTop5['photo'] . ' alt="Image">
-						<div class="carousel-caption">
-							<h3>' . $rowTop5['title'] . '</h3>
-							<p>' . $rowTop5['author'] . '</p>
+					if($first) {
+						echo '
+						<div class="item active">
+							<img src=' . $rowTop5['photo'] . ' alt="Image">
+							<div class="carousel-caption">
+								<h3>' . $rowTop5['title'] . '</h3>
+								<p>' . $rowTop5['author'] . '</p>
+							</div>
 						</div>
-					</div>
-				';
+						';
+						$first=false;
+					}
+					else{
+						echo '
+						<div class="item">
+							<img src=' . $rowTop5['photo'] . ' alt="Image">
+							<div class="carousel-caption">
+								<h3>' . $rowTop5['title'] . '</h3>
+								<p>' . $rowTop5['author'] . '</p>
+							</div>
+						</div>
+						';
+					}
 				}
 			}
 			?>
