@@ -145,28 +145,19 @@
 				while ($rowTop5 = mysqli_fetch_array($resultsTop5))
 				{
 					if($first) {
-						echo '
-						<div class="item active">
-							<img src=' . $rowTop5['photo'] . ' alt="Image">
-							<div class="carousel-caption">
-								<h3>' . $rowTop5['title'] . '</h3>
-								<p>' . $rowTop5['author'] . '</p>
-							</div>
-						</div>
-						';
+						echo '<div class="item active">';
 						$first=false;
 					}
 					else{
-						echo '
-						<div class="item">
-							<img src=' . $rowTop5['photo'] . ' alt="Image">
+						echo '<div class="item">';
+					}
+					echo'	<img src=' . $rowTop5['photo'] . ' alt="Image">
 							<div class="carousel-caption">
 								<h3>' . $rowTop5['title'] . '</h3>
 								<p>' . $rowTop5['author'] . '</p>
 							</div>
 						</div>
 						';
-					}
 				}
 			}
 			?>
