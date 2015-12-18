@@ -65,7 +65,7 @@ function saveChanges(){
 
 ?>
 
-<?php echo "form id='changes' action='createAdventure.php?auth=" . $_GET['auth'] ."'method='post'>"; ?>
+<?php echo "form id='changes' action='createAdventure.php?auth=" . $_GET['auth'] ."' method='post'>" ?>
     <div class="container-fluid">
         <div class="row content">
             <div class="col-sm-3 sidenav">
