@@ -14,7 +14,7 @@ if($task == 'NO'){
     mysqli_close($conn);
     header("Location: index.php?error=deleted&user=" . $username);
 }
-
+//
 else if($task == 'OK'){
     //GET ALL DATA AND ADD TO User
     while($row = mysqli_fetch_array($results)){
