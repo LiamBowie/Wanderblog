@@ -82,7 +82,7 @@
 				<h4> 
 					You may be asking yourself "what makes Wanderblog so different from the rest of the blogging sites on the internet?" and the answer couldn't be simpler!
 					- There is no difference! However we both know that you are addicted to online blogs and posting pictures of where you've been as you try to pass off going
-					for your monthly shop as an "adventure" so why don't you just cut the shit and register your profile already?
+					for your monthly shop as an "adventure" so why don't you just register your profile already?
 				</h4> 
 				<p>
 					Here at Wanderblog we care deeply about our valued users and do everything we can to make sure that their experience using our site is a pleasant one. Register
