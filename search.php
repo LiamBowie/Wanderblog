@@ -72,9 +72,9 @@
 </div>
 
     <!-- <div class="container-fluid text-center"> -->
-        <!-- <div class="col-sm-12 text-left" style="padding-left: 25px; padding-right: 25px"> -->
+        <div class="col-sm-12 text-left" style="padding-left: 25px; padding-right: 25px">
             <?php echo "<h2 style = 'color:#ffffff;'>Displaying results for " . $_POST['crit'] . "</h2>" ?>
-            <!-- <div class="container"> -->
+            <div class="container">
                 <div class="row">
                     <!-- LOOP THROUGH AND OUTPUT FOLLOWING PER EACH -->
                         <?php
@@ -89,6 +89,7 @@
                                         echo '</div >';
                                     }
                                 }
+                                else{ echo "Your search returned 0 results"; }
                             }
                             else{
                                 if (mysqli_num_rows($results) > 0) {
@@ -101,12 +102,13 @@
                                         echo '</div >';
                                     }
                                 }
+                                else{ echo "Your search returned 0 results"; }
                             }
                         ?>
                     <!-- END LOOP -->
                 </div>
-            <!-- </div>
-        <!-- </div> -->
+            </div>
+        </div>
     </div>
 </div>
 
