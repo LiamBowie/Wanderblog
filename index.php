@@ -133,7 +133,7 @@
 			<?php
 			$sqlTop5 = "
 			SELECT * FROM Adventure
-		  	ORDER BY numVotes ASC;
+		  	ORDER BY numVotes DESC;
 			";
 
 			$resultsTop5 = mysqli_query($conn, $sqlTop5);
