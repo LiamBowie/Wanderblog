@@ -50,7 +50,8 @@
 <?php
     include 'connect.php';
     $criteria = $_POST['crit'];
-    $query="Select * FROM Adventure WHERE advID = '" . $criteria . "'";
+    $tableSearch = $_GET['searchx'];
+    $query="Select * FROM Adventure WHERE " . $tableSearch . " = '" . $criteria . "'; ";
     $results=mysqli_query($conn, $query);
     $found = false;
 ?>
