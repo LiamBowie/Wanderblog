@@ -78,8 +78,8 @@
 		<form id="search form" class="form-inline" action="search.php?searchx=advID" method="post">
 			<input type="search" id="crit" name="crit" class="form-control" size="50" placeholder="What are you waiting for?">
 			<select class="form-control">
-				<option id="opt-Adventure" value="adventure">Adventure</option>
-				<option value="author">Author</option>
+				<option id="opt-Adventure" value="advID">Adventure</option>
+				<option id ="opt-author" value="authorID">Author</option>
 			</select>
 			<button type="submit" class="btn btn-danger">
 				<span class="glyphicon glyphicon-search"></span>
