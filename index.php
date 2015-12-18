@@ -132,8 +132,9 @@
 		<div class="carousel-inner" roles="listbox">
 			<?php
 			$sqlTop5 = "
-			SELECT * FROM Adventure
-		  	ORDER numVotes DESC;
+			SELECT Adventure.title, Adventure.author, Adventure.photo
+			FROM Adventure
+		  	ORDER BY numVotes DESC;
 			";
 
 			$resultsTop5 = mysqli_query($conn, $sqlTop5);
