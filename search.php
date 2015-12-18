@@ -56,7 +56,10 @@
                 FROM Author
                 LEFT JOIN User
                 ON  Author.userID=User.userID
-                WHERE User.firstName = '" . $criteria . "';" ;
+                WHERE User.firstName = '" . $criteria . "'
+                OR User.lastName = '" . $criteria . "'
+                OR CONCAT(User.firstName, ' ', User.lastName) = '" . $criteria . "'
+                ;" ;
 
     }
     else{
