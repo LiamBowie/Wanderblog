@@ -78,6 +78,19 @@
             echo "</form>";
         }
     }
+
+    $votingQuiery = "
+        SELECT * FROM Votes
+        WHERE advID = '" . $_GET['adv'] . "';
+    ";
+
+    $votingResults = mysqli_query($conn, $votingQuiery);
+    $votingRow = mysqli_fetch_array($votingResults);
+    $numVotes = 0;
+    while (($votingRow = mysqli_fetch_array($votingResults)))
+    {
+        $numVotes++;
+    }
 ?>
 <div class="container-fluid">
     <div class="row content">
@@ -96,6 +109,7 @@
 
         <div class="col-sm-9">
             <h2 id="desc" class="anchor"><?php echo $row['title']; ?>   <button <?php if($_SESSION['username'] == null){echo 'disabled="disabled"';} ?> class="btn btn-info">vote</button></h2>
+            <p>votes: <?php $numVotes ?> </p>
             <span class="badge"><?php echo $row['noOfVotes'] ?></span>
             <hr>
             <h5><span class="label label-danger">TAG</span> <span class="label label-primary">TAG</span></h5><br>
