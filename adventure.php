@@ -49,7 +49,7 @@
 <?php
     include 'connect.php';
     $query = "
-        SELECT Adventure.title, CONCAT(User.firstName, ' ', User.lastName) AS authorName, Adventure.author, Adventure.content, Adventure.photo, Cities.cityName, User.userID
+        SELECT Adventure.title, CONCAT(User.firstName, ' ', User.lastName) AS authorName, Adventure.author, Adventure.content, Adventure.photo, Cities.cityName, User.userID, User.isAdmin
         FROM Adventure
         LEFT JOIN Author
         ON Adventure.author=Author.authorID
@@ -71,7 +71,7 @@
     {
         global $row;
         $advID = $_GET['adv'];
-        if($_SESSION['username'] == $row['userID'] || $_SESSION['username'] == $commentUser)
+        if($_SESSION['username'] == $row['userID'] || $_SESSION['username'] == $commentUser || $row['isAdmin'] == 1 )
         {
             echo "<form action='deleteComment.php?adv=$advID&comment=$commentID' method='POST'>";
             echo    "<button class='btn btn-danger' type='submit'>DELETE</button>";
