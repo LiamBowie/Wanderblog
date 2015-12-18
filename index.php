@@ -132,8 +132,12 @@
 		<div class="carousel-inner" roles="listbox">
 			<?php
 			$sqlTop5 = "
-			SELECT Adventure.title, Adventure.author, Adventure.photo
+			SELECT Adventure.title, CONCAT(User.firstName, ' ', User.lastName) AS authorName, Adventure.photo, Adventure.numVotes
 			FROM Adventure
+			LEFT JOIN Author
+        	ON Adventure.author=Author.authorID
+        	LEFT JOIN User
+        	ON Author.userID=User.userID
 		  	ORDER BY numVotes DESC;
 			";
 
@@ -152,8 +156,8 @@
 					}
 					echo'	<img src=' . $rowTop5['photo'] . ' alt="Image">
 							<div class="carousel-caption">
-								<h3>' . $rowTop5['title'] . '</h3>
-								<p>' . $rowTop5['author'] . '</p>
+								<h3>' . $rowTop5['title'] . '<span class="badge">' . $rowTop5['numVotes'] .'</span></h3>
+								<p>' . $rowTop5['authorName'] . '</p>
 							</div>
 						</div>
 						';
