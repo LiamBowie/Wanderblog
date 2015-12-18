@@ -188,6 +188,9 @@
 	else if(isset($_GET['error']) && $_GET['error']=='Registered'){
 		echo ' <script>alert("You have successfully registered. Once an admin has authorised your access, you will be able to login"); window.location = "index.php";</script> ';
 	}
+	else if(isset($_GET['error']) && $_GET['error']=='deleted'){
+		echo ' <script>alert("' . $_GET['user'] . ' has been removed"); window.location = "index.php";</script> ';
+	}
 	?>
 
 </body>
