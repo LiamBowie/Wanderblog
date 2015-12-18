@@ -104,7 +104,6 @@
                     SELECT * FROM Votes
                     WHERE advID = '" . $_GET['adv'] . "';
                 ";
-
                     $votingResults = mysqli_query($conn, $votingQuiery);
                     $votingRow = mysqli_fetch_array($votingResults);
                     $numVotes = mysqli_num_rows($votingResults);
@@ -118,6 +117,7 @@
                             echo "<button disabled=\"disabled\" class=\"btn btn-success\">Voted</button>";
                         }
                     }
+                    echo $found;
                     if($found=false)
                     {
                         echo "<button class=\"btn btn-info\">Vote</button>";
