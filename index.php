@@ -134,7 +134,6 @@
 			$sqlTop5 = "
 			SELECT * FROM Adventure
 			ORDER BY numVotes DESC
-			LIMIT 5;
 			";
 
 			$resultsTop5 = mysqli_query($conn, $sqlTop5);
