@@ -62,7 +62,7 @@
                 ON Locations.cityID=Cities.cityID
                 LEFT JOIN Countries
                 ON Locations.countryID=Countries.countryID
-                WHERE authorID = 'AUTH00001';" ;
+                WHERE User.firstName = '" . $colmSearch . "';" ;
 
     }
     else{
@@ -97,7 +97,7 @@ echo "SEARCH: " . $query;
                                         echo '<div class="col-sm-4" >';
                                         echo '<a href = "#" class="thumbnail text-center" >';
                                         echo '<img src = "' . $row['photo'] . '" >';
-                                        echo '<p style = "color:#ffffff;" > ' . $row['firstName'] . ' </p >';
+                                        echo '<p style = "color:#ffffff;" > ' . $row['fullName'] . ' </p >';
                                         echo '</a >';
                                         echo '</div >';
                                     }
