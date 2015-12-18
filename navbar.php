@@ -21,7 +21,7 @@ if(isset($_SESSION['loggedIn'])) {//if user is loggedIn to WanderBlog
     $authorise = '';
     if($row['isAdmin'] == true){
         $authorise = '
-            <a class="btn btn-info btn-block" href="#" data-dismiss="modal" data-target="#modal-auth">
+            <a class="btn btn-info btn-block" data-dismiss="modal" data-toggle="modal" data-target="#modal-auth">
                 <span class="glyphicon glyphicon-tasks"></span> AUTHORISE
             </a>';
     }
@@ -109,6 +109,27 @@ if(isset($_SESSION['loggedIn'])) {//if user is loggedIn to WanderBlog
 			</div>
 		</div>
 	</div>
+
+	<!-- AUTHORISE -->
+	        <div class="modal fade" id="modal-auth" role="dialog" style="padding-top: 35px;">
+		        <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4><span class="glyphicon glyphicon-tasks"></span> Authorise </h4>
+                        </div>
+                        <div class="modal-body">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-success btn-block" data-dismiss="modal">
+                                <span class="glyphicon glyphicon-ok"></span> DONE
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+	<!-- END AUTHORISE -->
+
 ';
 }
 else{ //if user is not loggedIn to Wanderblog
