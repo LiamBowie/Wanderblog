@@ -85,7 +85,7 @@
 <div class="container-fluid">
     <div class="row content">
         <div class="col-sm-3 sidenav">
-            <h4 class="text-center"><?php echo $row['cityName'] ?></h4>
+            <h4 class="text-center"><?php echo $adminRow['isAdmin'] ?></h4>
             <img src= "<?php echo $row['photo']; ?>" class="img-thumbnail img-responsive" alt="Adventure Photo">
             <h5><span class="glyphicon glyphicon-time"></span> Post by <a href=<?php echo $authorPath; ?> > <?php echo $row['authorName'] ?></a></h5>
             <nav class="sticky-sidebar">
