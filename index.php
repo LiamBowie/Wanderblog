@@ -146,11 +146,11 @@
 				while ($rowTop5 = mysqli_fetch_array($resultsTop5))
 				{
 					if($first) {
-						echo '<div class="item">';
+						echo '<div class="active">';
 						$first=false;
 					}
 					else{
-						echo '<div class="item">';
+						echo '<div>';
 					}
 					echo'	<img src=' . $rowTop5['photo'] . ' alt="Image">
 							<div class="carousel-caption">
