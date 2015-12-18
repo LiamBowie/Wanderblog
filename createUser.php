@@ -32,8 +32,7 @@
 
         if ($_POST['passwordconfirm'] == $_POST['password']) {
 
-            $sql = "INSERT INTO User (userID, password, firstName, lastName, email, isAdmin) VALUES (?, ?, ?, ?, ?, ?)";
-            $stmt = $conn->prepare($sql);
+            $stmt = $conn->prepare("INSERT INTO User (userID, password, firstName, lastName, email, isAdmin) VALUES (?, ?, ?, ?, ?, ?)");
             if ($stmt = $conn->prepare($sql)) {
                 $stmt->bind_param("sssssi", $user, $password, $firstName, $lastName, $email, $isAdmin);
 
