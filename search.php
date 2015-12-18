@@ -17,7 +17,7 @@
     <style>
 
         .col-sm-12{
-            background-color: #19BEF0;
+            /* background-color: #19BEF0; */
         }
 
         .thumbnail{
@@ -97,7 +97,7 @@
 
     <div class="container-fluid text-center">
         <div class="col-sm-12 text-left" style="padding-left: 25px; padding-right: 25px">
-            <?php echo "<h2 style = 'color:#ffffff;'>Displaying results for " . $_POST['crit'] . "</h2>" ?>
+            <?php echo "<h2>Displaying results for " . $_POST['crit'] . "</h2>" ?>
             <div class="container">
                 <div class="row">
                     <!-- LOOP THROUGH AND OUTPUT FOLLOWING PER EACH -->
