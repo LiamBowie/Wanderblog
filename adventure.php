@@ -108,7 +108,12 @@
 
 
         <div class="col-sm-9">
-            <h2 id="desc" class="anchor"><?php echo $row['title']; ?>   <button <?php if($_SESSION['username'] == null){echo 'disabled="disabled"';} ?> class="btn btn-info">vote</button></h2>
+            <h2 id="desc" class="anchor">
+                <?php echo $row['title']; ?>
+                <form role="form" action="addVote.php?adv=<?php echo $_GET['adv']?>" method="POST">
+                    <button <?php if($_SESSION['username'] == null){echo 'disabled="disabled"';} ?> class="btn btn-info">vote</button>
+                </form>
+            </h2>
             <p>votes: <?php echo $numVotes ?> </p>
             <span class="badge"><?php echo $row['noOfVotes'] ?></span>
             <hr>
