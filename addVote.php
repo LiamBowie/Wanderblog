@@ -16,13 +16,12 @@ session_start();
 
 $adventure = $_GET['adv'];
 $user = $_SESSION['username'];
-$numberVotes = $_GET['votes'];
 
 $sql = "INSERT INTO Votes VALUES('" . $user . "', '" . $adventure . "');";
 $results = mysqli_query($conn, $sql);
 
 $sqlAdv = "UPDATE Adventure
-           SET numVotes='$numberVotes+1'
+           SET numVotes=numVotes+1
            WHERE advID = '$adventure';
            ";
 $resultsAdv = mysqli_query($conn, $sqlAdv);
