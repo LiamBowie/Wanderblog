@@ -19,13 +19,14 @@ $user = $_SESSION['username'];
 $numberVotes = $_GET['votes'];
 
 $sql = "INSERT INTO Votes VALUES('" . $user . "', '" . $adventure . "');";
+$results = mysqli_query($conn, $sql);
+
 $sqlAdv = "UPDATE Adventure
            SET numVotes='$numberVotes+1'
            WHERE advID = '$adventure';
            ";
-
-$results = mysqli_query($conn, $sql);
 $resultsAdv = mysqli_query($conn, $sqlAdv);
+
 mysqli_close($conn);
 
 header("Location: adventure.php?adv=" . $adventure);
