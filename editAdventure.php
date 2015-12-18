@@ -83,6 +83,7 @@ function saveChanges(){
                     <?php echo"<p>City<input type='text'  id='city'> . </input></p>" ?>
                     <?php echo"<p>Country<input type='text' id='country' . </input></p>" ?>
                     <?php echo"<p>Title<input type='text' id='advTitle' . </input></p>" ?>
+                    <?php echo"<input>Photo URL<input type='text' id='photoURL' . </input></p>"?>
                 </div>
             </div>
 
