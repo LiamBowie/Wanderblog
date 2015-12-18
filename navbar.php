@@ -18,6 +18,14 @@ if(isset($_SESSION['loggedIn'])) {//if user is loggedIn to WanderBlog
         ';
     }
     else{ $myProfile =''; }
+    $authorise = '';
+    if($row['isAdmin'] == true){
+        $authorise = '
+            <a class="btn btn-info btn-block" href="#" data-dismiss="modal" data-target="#modal-auth">
+                <span class="glyphicon glyphicon-tasks"></span> AUTHORISE
+            </a>';
+    }
+    else { $authorise = ''; }
     echo '
     <nav class="navbar navbar-default navbar-fixed-top">
 		<div class="container-fluid">
@@ -91,10 +99,7 @@ if(isset($_SESSION['loggedIn'])) {//if user is loggedIn to WanderBlog
 					<button type="submit" class="btn btn-success btn-block" data-dismiss="modal">
 						<span class="glyphicon glyphicon-ok"></span> OK
 					</button>
-					<button type="submit" class="btn btn-primary btn-block" data-dismiss="modal">
-						<span class="glyphicon glyphicon-pencil"></span> EDIT
-					</button>
-					' . $myProfile . '
+					' . $myProfile . $authorise . '
                     <a type="submit" class="btn btn-danger btn-block" onCLick="confirmDelete()">
                         <!-- <a href="createUser.php?operation=delete"> -->
                             <span class="glyphicon glyphicon-trash"></span> DELETE
