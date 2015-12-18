@@ -31,7 +31,7 @@ if(isset($_SESSION['loggedIn'])) {//if user is loggedIn to WanderBlog
     $queryAuthorise = "SELECT * From Authorise;";
     $resultsAuthorise = mysqli_query($conn, $queryAuthorise);
     while( $rowAuthorise = mysqli_fetch_array($resultsAuthorise) ){
-        $users = $users . ", " . $rowAuthorise['username'];
+        $users = $users . ", " . $rowAuthorise['userID'];
     }
 
 
