@@ -59,7 +59,7 @@
     }
     $results=mysqli_query($conn, $query);
     $found = false;
-echo "SEARCH: " . $colmSearch;
+echo "SEARCH: " . $query;
 ?>
 
 <div class="jumbotron text-center">
