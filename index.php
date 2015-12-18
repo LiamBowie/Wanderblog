@@ -156,7 +156,8 @@
 					}
 					echo'	<img src=' . $rowTop5['photo'] . ' alt="Image">
 							<div class="carousel-caption">
-								<h3>' . $rowTop5['title'] . '<span class="badge">' . $rowTop5['numVotes'] .'</span></h3>
+								<h3>' . $rowTop5['title'] . '</h3>
+								<span class="badge"> ' . $rowTop5['numVotes'] .' votes </span>
 								<p>' . $rowTop5['authorName'] . '</p>
 							</div>
 						</div>
