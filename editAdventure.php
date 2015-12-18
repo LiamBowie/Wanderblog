@@ -40,8 +40,23 @@
 </head>
 <body style="padding-top: 75px;" data-spy="scroll" data-target=".sticky-sidebar" data-offset="50">
 <?php include'navbar.php'; ?>
+<?php
+session_start();
+include 'connect.php';
 
-<?php echo ""; ?>
+function saveChanges(){
+    global $conn;
+    $query="UPDATE Adventure
+            SET content'" . $_POST['descText'] . "'
+            WHERE authorID='" . $_GET['auth'] ."'
+            ";
+    $results = mysqli_query($conn, $query);
+    mysqli_close($conn);
+}
+
+?>
+
+<?php echo "form id='changes' action='createAdventure.php?auth=" . $_GET['auth'] ."'method='post'>"; ?>
     <div class="container-fluid">
         <div class="row content">
             <div class="col-sm-3 sidenav">
@@ -59,7 +74,7 @@
 
         <div class="col-sm-9">
             <div class="row">
-                <?php echo "<p><textarea id='descText' cols='50' rows='10' type='text' id='desc' >" . $row['desc'] . "</textarea></p>"; ?>
+                <?php echo "<p><textarea id='descText' cols='50' rows='10' type='text' id='desc' >" . "</textarea></p>"; ?>
                 <br><br>
             </div>
         </div>
