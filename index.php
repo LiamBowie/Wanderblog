@@ -181,9 +181,20 @@
 		<p>Wanderblog is a part of SHB Innovative Solutions</p>
 	</footer>
 
-	<?php if(isset($_GET['error']) && $_GET['error']=='noUser'){
+	<?php
+	if(isset($_GET['error']) && $_GET['error']=='noUser'){
 		echo ' <script>alert("Username or Password not recognised"); window.location = "index.php";</script> ';
-	} ?>
+	}
+	else if(isset($_GET['error']) && $_GET['error']=='Registered'){
+		echo ' <script>alert("You have successfully registered. Once an admin has authorised your access, you will be able to login"); window.location = "index.php";</script> ';
+	}
+	else if(isset($_GET['error']) && $_GET['error']=='deleted'){
+		echo ' <script>alert("' . $_GET['user'] . ' has been removed"); window.location = "index.php";</script> ';
+	}
+	else if(isset($_GET['error']) && $_GET['error']=='added'){
+		echo ' <script>alert("' . $_GET['user'] . ' has been added"); window.location = "index.php";</script> ';
+	}
+	?>
 
 </body>
 </html>
