@@ -78,7 +78,7 @@ function saveChanges(){
 
             <div class="col-sm-3">
                 <div class="row">
-                    <?php echo"<p>Enter location here<input type='submit' value='submit' id='location'>" ?>
+                    <?php echo"<p>Enter location here<input type='text' value='text' id='location'>" ?>
                 </div>
             </div>
 
