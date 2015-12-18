@@ -51,31 +51,37 @@
     include 'connect.php';
     $criteria = $_POST['crit'];
     $colmSearch = $_POST['select'];
-    if($colmSearch == 'firstName'){
-        $query = "  SELECT CONCAT(User.firstName, ' ', User.lastName) AS fullName, User.firstName, Author.photo, User.userID, Author.authorID
-                FROM Author
-                LEFT JOIN User
-                ON  Author.userID=User.userID
-                WHERE User.firstName = '" . $criteria . "'
-                OR User.lastName = '" . $criteria . "'
-                OR CONCAT(User.firstName, ' ', User.lastName) = '" . $criteria . "'
-                OR User.userID = '" . $criteria . "'
-                ;" ;
+        if($colmSearch == 'firstName'){
+            $query = "  SELECT CONCAT(User.firstName, ' ', User.lastName) AS fullName, User.firstName, Author.photo, User.userID, Author.authorID
+                    FROM Author
+                    LEFT JOIN User
+                    ON  Author.userID=User.userID
+                    WHERE User.firstName = '" . $criteria . "'
+                    OR User.lastName = '" . $criteria . "'
+                    OR CONCAT(User.firstName, ' ', User.lastName) = '" . $criteria . "'
+                    OR User.userID = '" . $criteria . "'
+                    ;" ;
+        }
+        else if($colmSearch == 'author') {
+            $query = "Select Adventure.photo, Adventure.title, CONCAT(User.firstName, ' ', User.lastName) AS fullName, User.firstName, User.userID, Author.authorID, Adventure.advID
+            FROM Adventure
+            LEFT JOIN Author
+            ON Adventure.author = Author.authorID
+            LEFT JOIN User
+            ON Author.userID = User.userID
+            WHERE User.firstName = '" . $criteria . "'
+                    OR User.lastName = '" . $criteria . "'
+                    OR CONCAT(User.firstName, ' ', User.lastName) = '" . $criteria . "'
+                    OR User.userID = '" . $criteria . "'
+                    ;";
+        }
+        else if($colmSearch == 'advID'){
+            $query = "Select Adventure.photo, Adventure.title, Adventure.advID
+            FROM Adventure
+            WHERE title LIKE '%" . $criteria . "%'
+                    ;";
+        }
 
-    }
-    else if($colmSearch == 'author'){
-        $query="Select Adventure.photo, Adventure.title, CONCAT(User.firstName, ' ', User.lastName) AS fullName, User.firstName, User.userID, Author.authorID, Adventure.advID
-        FROM Adventure
-        LEFT JOIN Author
-        ON Adventure.author = Author.authorID
-        LEFT JOIN User
-        ON Author.userID = User.userID
-        WHERE User.firstName = '" . $criteria . "'
-                OR User.lastName = '" . $criteria . "'
-                OR CONCAT(User.firstName, ' ', User.lastName) = '" . $criteria . "'
-                OR User.userID = '" . $criteria . "'
-                ;" ;
-    }
     $results=mysqli_query($conn, $query);
     $found = false;
 ?>
