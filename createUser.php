@@ -66,7 +66,7 @@
         $results = mysqli_query($conn, $query);                                                 //execute query
         mysqli_close($conn);                                                                    //close the connection
         session_destroy();                                                                      //destroy the session
-        header("Location: welcome.php");                                                        //navigate to Welcome.php
+        header("Location: index.php");                                                        //navigate to Welcome.php
     }
 
 //IF OPERATION IS NOT SET
