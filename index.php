@@ -126,45 +126,32 @@
 
 		<!--Wrapper for slides-->
 		<div class="carousel-inner" roles="listbox">
-			<div class="item active">
-				<img src="images/lake.jpg" alt="Image">
-				<div class="carousel-caption">
-					<h3>Trip 1</h3>
-					<p>Lovely trip to a lake</p>
-				</div>
-			</div>
+			<?php
+			$sqlTop5 = "
+			SELECT * FROM Adventure
+			ORDER BY numVotes DESC
+			LIMIT 5;
+			";
 
-			<div class="item">
-				<img src="images/mountain.jpg" alt="Image">
-				<div class="carousel-caption">
-					<h3>Trip 2</h3>
-					<p>Oh look! A mountain!</p>
-				</div>
-			</div>
+			$resultsTop5 = mysqli_query($conn, $sqlTop5);
+			$rowTop5 = mysqli_fetch_array($resultsTop5);
 
-			<div class="item">
-				<img src="images/woods.jpg" alt="Image">
-				<div class="carousel-caption">
-					<h3>Trip 3</h3>
-					<p>Picturesque stroll through the woods</p>
-				</div>
-			</div>
-
-			<div class="item">
-				<img src="images/canyon.jpg" alt="Image">
-				<div class="carousel-caption">
-					<h3>Trip 4</h3>
-					<p>Better not fall in! hahaha lololol</p>
-				</div>
-			</div>
-
-			<div class="item">
-				<img src="images/sky.jpg" alt="Image">
-				<div class="carousel-caption">
-					<h3>Trip 5</h3>
-					<p>Cheeky balloon ride! #SkyHigh #HighAsAKite #SmokeWeedEvryday</p>
-				</div>
-			</div>
+			if (mysqli_num_rows($resultsTop5) > 0)
+			{
+				while ($rowTop5 = mysqli_fetch_array($resultsTop5))
+				{
+					echo '
+					<div class="item active">
+						<img src=' . $rowTop5['photo'] . ' alt="Image">
+						<div class="carousel-caption">
+							<h3>' . $rowTop5['title'] . '</h3>
+							<p>' . $rowTop5['author'] . '</p>
+						</div>
+					</div>
+				';
+				}
+			}
+			?>
 		</div>
 
 		<a class="left carousel-control" href="#top5" role="button" data-slide="prev">
