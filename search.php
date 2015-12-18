@@ -41,6 +41,13 @@
             }
             .row.content {height: auto;}
         }
+
+        html, body {
+            height: 100%;
+
+            display: flex;
+            flex-direction: column;
+        }
     </style>
 </head>
 <body style="padding-top: 0">
