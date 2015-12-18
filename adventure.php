@@ -81,6 +81,8 @@
             echo "</form>";
         }
     }
+
+$numVotes = $row['numVotes'];
 ?>
 <div class="container-fluid">
     <div class="row content">
@@ -101,7 +103,7 @@
         <div class="col-sm-9">
             <h2 id="desc" class="anchor">
                 <?php echo $row['title']; ?>
-                <form role="form" action="addVote.php?adv=<?php echo $_GET['adv']?>" method="POST">
+                <form role="form" action="addVote.php?adv=<?php echo $_GET['adv']?>&votes=<?php $numVotes ?>" method="POST">
                     <?php
                     $votingQuery = "
                     SELECT * FROM Votes
@@ -109,7 +111,7 @@
                     ";
                     $votingResults = mysqli_query($conn, $votingQuery);
                     $votingRow = mysqli_fetch_array($votingResults);
-                    $numVotes = $row['numVotes'];
+
 
                     $found=false;
 
