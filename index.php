@@ -145,7 +145,7 @@
 				while ($rowTop5 = mysqli_fetch_array($resultsTop5))
 				{
 					echo '
-					<div class="item active">
+					<div class="item">
 						<img src=' . $rowTop5['photo'] . ' alt="Image">
 						<div class="carousel-caption">
 							<h3>' . $rowTop5['title'] . '</h3>
