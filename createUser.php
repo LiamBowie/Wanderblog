@@ -33,7 +33,7 @@
 
             $username = $_POST['userID'];
             $author = $_POST['authorCheck'];
-            $sql = "INSERT INTO Authorise VALUES('" . $username . "', '" . $_POST['password'] . "', '" . $_POST['firstName'] . "', '" . $_POST['lastName'] . "', '" . $_POST['email'] . "' " . $author . ");";
+            $sql = "INSERT INTO Authorise VALUES('" . $username . "', '" . $_POST['password'] . "', '" . $_POST['firstName'] . "', '" . $_POST['lastName'] . "', '" . $_POST['email'] . "', " . $author . ");";
 
             $results = mysqli_query($conn, $sql);
 
