@@ -37,6 +37,11 @@
             .row.content {height: auto;}
         }
     </style>
+
+    <script language="javascript/text">
+        document.getElementById("descText").value="text";
+    </script>
+
 </head>
 <body style="padding-top: 75px;" data-spy="scroll" data-target=".sticky-sidebar" data-offset="50">
 <?php include'navbar.php'; ?>
@@ -48,7 +53,7 @@ function saveChanges(){
     global $conn;
     $query="UPDATE Adventure
             SET content'" . $_POST['descText'] . "'
-            WHERE authorID='" . $_GET['auth'] ."'
+            WHERE author='" . $_GET['auth'] ."'
             ";
     $results = mysqli_query($conn, $query);
     mysqli_close($conn);
@@ -69,6 +74,12 @@ function saveChanges(){
                         <li><a href="#comments">Comments</a></li>
                     </ul><br>
                 </nav>
+            </div>
+
+            <div class="col-sm-3">
+                <div class="row">
+                    <?php echo"<p>Enter location here<input type='submit' value='submit' id='location'>" ?>
+                </div>
             </div>
 
             <div class="col-sm-9">
