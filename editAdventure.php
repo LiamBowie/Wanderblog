@@ -88,7 +88,7 @@ $query="UPDATE Adventure
 ?>
 
 <?php echo "<form id='changes' action='createAdventure.php?auth=" . $_GET[$row['authorID']] . "' method='post'>" ?>
-<?php echo "hi " . $_GET[$row['authorID']];?>
+<?php echo "hi " . $_GET[$row['authorID']] . $_SESSION['username'];?>
 <div class="container-fluid">
         <div class="row content">
             <div class="col-sm-3 sidenav">
