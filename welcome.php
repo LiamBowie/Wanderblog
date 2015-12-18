@@ -74,6 +74,7 @@
 	<div class="jumbotron text-center">
 		<h1>Wanderblog</h1> 
 		<p>Blogging site specifically for travelers</p>
+		<?php include'searchArea.php' ?>
 <!-- SEARCH --><!--
 		<form id="search form" class="form-inline" action="search.php?searchx=advID" method="post">
 			<input type="search" id="crit" name="crit" class="form-control" size="50" placeholder="What are you waiting for?">
