@@ -125,7 +125,7 @@
                     ?>
                 </form>
             </h2>
-            <p>votes: <?php echo $numVotes ?> </p>
+            <p>votes: <?php echo $numVotes . $found ?> </p>
             <span class="badge"><?php echo $row['noOfVotes'] ?></span>
             <hr>
             <h5><span class="label label-danger">TAG</span> <span class="label label-primary">TAG</span></h5><br>
