@@ -124,7 +124,10 @@
                         {
                             echo "<button disabled=\"disabled\" class=\"btn btn-info\">Vote</button>";
                         }
-                        echo "<button class=\"btn btn-info\">Vote</button>";
+                        else
+                        {
+                            echo "<button class=\"btn btn-info\">Vote</button>";
+                        }
                     }
                     ?>
                 </form>
