@@ -56,6 +56,8 @@ function saveChanges(){
             WHERE author='" . $_GET['auth'] ."'
             SET title'" . $_POST['advTitle'] ."'
             WHERE author='" . $_GET['auth'] ."'
+            SET photo'" . $_POST['photoURL'] . "';
+            WHERE author='" . $_GET['auth'] ."'
             ";
     $results = mysqli_query($conn, $query);
     mysqli_close($conn);
