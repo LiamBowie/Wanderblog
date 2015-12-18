@@ -78,7 +78,9 @@
             echo "</form>";
         }
     }
-
+function votingButton()
+{
+    global $conn;
     $votingQuiery = "
         SELECT * FROM Votes
         WHERE advID = '" . $_GET['adv'] . "';
@@ -86,11 +88,16 @@
 
     $votingResults = mysqli_query($conn, $votingQuiery);
     $votingRow = mysqli_fetch_array($votingResults);
-    $numVotes = mysqli_num_rows($votingResults); $found=false;
-//    while (($votingRow = mysqli_fetch_array($votingResults)) && ($found==false))
-//    {
-//        $numVotes++;
-//    }
+    $numVotes = mysqli_num_rows($votingResults);
+
+    $found = false;
+    while (($votingRow = mysqli_fetch_array($votingResults)) && ($found == false)) {
+        if ($_SESSION['username'] == null || $_SESSION['username'] == $votingRow['userID']) {
+            $found = true;
+            echo 'disabled="disabled"';
+        }
+    }
+}
 ?>
 <div class="container-fluid">
     <div class="row content">
@@ -111,7 +118,7 @@
             <h2 id="desc" class="anchor">
                 <?php echo $row['title']; ?>
                 <form role="form" action="addVote.php?adv=<?php echo $_GET['adv']?>" method="POST">
-                    <button <?php if($_SESSION['username'] == null){echo 'disabled="disabled"';} ?> class="btn btn-info">vote</button>
+                    <button <?php  ?> class="btn btn-info">vote</button>
                 </form>
             </h2>
             <p>votes: <?php echo $numVotes ?> </p>
