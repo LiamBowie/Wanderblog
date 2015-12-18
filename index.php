@@ -132,7 +132,7 @@
 		<div class="carousel-inner" roles="listbox">
 			<?php
 			$sqlTop5 = "
-			SELECT Adventure.title, CONCAT(User.firstName, ' ', User.lastName) AS authorName, Adventure.photo, Adventure.numVotes
+			SELECT Adventure.advID, Adventure.title, CONCAT(User.firstName, ' ', User.lastName) AS authorName, Adventure.photo, Adventure.numVotes
 			FROM Adventure
 			LEFT JOIN Author
         	ON Adventure.author=Author.authorID
