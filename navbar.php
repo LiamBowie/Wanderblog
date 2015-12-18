@@ -155,7 +155,7 @@ else{ //if user is not loggedIn to Wanderblog
 		</div>
 	</nav>
 	<!-- Modal -->
-	<div class="modal fade" id="modal-reg" role="dialog">
+	<div class="modal fade" id="modal-reg" role="dialog" style="padding-top: 25px;">
 		<div class="modal-dialog">
 
 			<!-- Modal content-->
