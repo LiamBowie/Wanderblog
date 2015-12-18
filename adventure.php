@@ -49,7 +49,7 @@
 <?php
     include 'connect.php';
     $query = "
-        SELECT Adventure.title, CONCAT(User.firstName, ' ', User.lastName) AS authorName, Adventure.author, Adventure.content, Adventure.photo, Cities.cityName, User.userID, User.isAdmin
+        SELECT Adventure.title, CONCAT(User.firstName, ' ', User.lastName) AS authorName, Adventure.author, Adventure.content, Adventure.photo, Cities.cityName, User.userID
         FROM Adventure
         LEFT JOIN Author
         ON Adventure.author=Author.authorID
