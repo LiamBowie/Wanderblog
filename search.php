@@ -64,7 +64,7 @@
 
     }
     else if($colmSearch == 'author'){
-        $query="Select Adventure.photo, Adventure.title, CONCAT(User.firstName, ' ', User.lastName) AS fullName, User.firstName, Author.photo, User.userID, Author.authorID
+        $query="Select Adventure.photo, Adventure.title, CONCAT(User.firstName, ' ', User.lastName) AS fullName, User.firstName, User.userID, Author.authorID, Adventure.advID
         FROM Adventure
         LEFT JOIN Author
         ON Adventure.author = Author.authorID
@@ -87,7 +87,7 @@
 
     <div class="container-fluid text-center">
         <div class="col-sm-12 text-left" style="padding-left: 25px; padding-right: 25px">
-            <?php echo "<h2 style = 'color:#ffffff;'>Displaying results for " . $_POST['crit'] . " IN " . $colmSearch . "</h2>" ?>
+            <?php echo "<h2 style = 'color:#ffffff;'>Displaying results for " . $_POST['crit'] . "</h2>" ?>
             <div class="container">
                 <div class="row">
                     <!-- LOOP THROUGH AND OUTPUT FOLLOWING PER EACH -->
@@ -109,6 +109,7 @@
                             else{
                                 if (mysqli_num_rows($results) > 0) {
                                     while (($row = mysqli_fetch_array($results)) && ($found == false)) {
+                                        $path = "adventure.php?adv=" . $row['authorID'];
                                         echo '<div class="col-sm-4" >';
                                         echo '<a href = "#" class="thumbnail text-center" >';
                                         echo '<img src = "' . $row['photo'] . '" >';
