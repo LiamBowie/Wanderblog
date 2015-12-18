@@ -65,7 +65,7 @@
     $row = mysqli_fetch_array($results);
     $authorPath= "'author.php?auth=" . $row['author'] . "'";
 
-    $adminQuery = "SELECT * FROM User WHERE userID='". $_SESSION['$username']."';";
+    $adminQuery = "SELECT isAdmin FROM User WHERE userID='". $_SESSION['$username']."';";
     $adminResults = mysqli_query($conn, $adminQuery);
     $adminRow = mysqli_fetch_array($adminResults);
 
