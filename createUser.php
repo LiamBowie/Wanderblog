@@ -32,13 +32,15 @@
         if ($_POST['passwordconfirm'] == $_POST['password']) {
 
             $username = $_POST['userID'];
-            $sql = "INSERT INTO Authorise VALUES('" . $username . "', '" . $_POST['password'] . "', '" . $_POST['firstName'] . "', '" . $_POST['lastName'] . "', '" . $_POST['email'] . "');";
+            $author = $_POST['authorCheck'];
+            $sql = "INSERT INTO Authorise VALUES('" . $username . "', '" . $_POST['password'] . "', '" . $_POST['firstName'] . "', '" . $_POST['lastName'] . "', '" . $_POST['email'] . "' " . $author . ");";
 
             $results = mysqli_query($conn, $sql);
 
+            /*
             if ($_POST['authorCheck'] == 1) {
                 header("Location: createUser.php?operation=author");
-            }
+            } */
 
             mysqli_close($conn);
 
