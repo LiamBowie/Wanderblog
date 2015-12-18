@@ -52,7 +52,18 @@
     $criteria = $_POST['crit'];
     $colmSearch = $_POST['select'];
     if($colmSearch == 'firstName'){
-        $query="Select * FROM Author WHERE firstName = '" . $criteria . "'; ";
+        $query = "  SELECT CONCAT(User.firstName, ' ', User.lastName) AS fullName, User.firstName, Author.bio, Author.photo, Cities.cityName, Countries.countryName, User.userID
+                FROM Author
+                LEFT JOIN User
+                ON  Author.userID=User.userID
+                LEFT JOIN Locations
+                ON Author.location=Locations.locationID
+                LEFT JOIN Cities
+                ON Locations.cityID=Cities.cityID
+                LEFT JOIN Countries
+                ON Locations.countryID=Countries.countryID
+                WHERE authorID = 'AUTH00001';" ;
+
     }
     else{
         $query="Select * FROM Adventure WHERE " . $colmSearch . " = '" . $criteria . "'; ";
@@ -80,14 +91,28 @@ echo "SEARCH: " . $query;
                 <div class="row">
                     <!-- LOOP THROUGH AND OUTPUT FOLLOWING PER EACH -->
                         <?php
-                            if (mysqli_num_rows($results) > 0) {
-                                while (($row = mysqli_fetch_array($results)) && ($found == false)) {
-                                    echo '<div class="col-sm-4" >';
+                            if($colmSearch == 'firstName') {
+                                if (mysqli_num_rows($results) > 0) {
+                                    while (($row = mysqli_fetch_array($results)) && ($found == false)) {
+                                        echo '<div class="col-sm-4" >';
                                         echo '<a href = "#" class="thumbnail text-center" >';
-                                            echo '<img src = "' . $row['photo'] . '" >';
-                                            echo '<p style = "color:#ffffff;" > ' . $row['title'] . ' </p >';
+                                        echo '<img src = "' . $row['photo'] . '" >';
+                                        echo '<p style = "color:#ffffff;" > ' . $row['firstName'] . ' </p >';
                                         echo '</a >';
-                                    echo '</div >';
+                                        echo '</div >';
+                                    }
+                                }
+                            }
+                            else{
+                                if (mysqli_num_rows($results) > 0) {
+                                    while (($row = mysqli_fetch_array($results)) && ($found == false)) {
+                                        echo '<div class="col-sm-4" >';
+                                        echo '<a href = "#" class="thumbnail text-center" >';
+                                        echo '<img src = "' . $row['photo'] . '" >';
+                                        echo '<p style = "color:#ffffff;" > ' . $row['title'] . ' </p >';
+                                        echo '</a >';
+                                        echo '</div >';
+                                    }
                                 }
                             }
                         ?>
