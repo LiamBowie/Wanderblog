@@ -191,6 +191,9 @@
 	else if(isset($_GET['error']) && $_GET['error']=='deleted'){
 		echo ' <script>alert("' . $_GET['user'] . ' has been removed"); window.location = "index.php";</script> ';
 	}
+	else if(isset($_GET['error']) && $_GET['error']=='added'){
+		echo ' <script>alert("' . $_GET['user'] . ' has been added"); window.location = "index.php";</script> ';
+	}
 	?>
 
 </body>
