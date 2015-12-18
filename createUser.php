@@ -5,30 +5,7 @@
 
 // TO CREATE A NEW USER
     if($operation=='create') {
-
-        $found = false;
-        $query = 'SELECT * FROM Author';
-        $results = mysqli_query($conn, $query);
-        $last = "";
-        if (mysqli_num_rows($results) > 0) { /* if there are results (rows>0) */
-            while (($row = mysqli_fetch_array($results)) && ($found == false)) {
-                $last = $row['authorID'];
-            }
-        }
-        $lastArray = str_split($last);
-        $lastNum = (int)$lastArray[8];
-        $newNum = $lastNum + 1;
-
-        if($newNum>9){ $length = 7; }
-        else if($newNum>99){ $length = 6;}
-        else{$length=8;}
-
-        $newID = "";
-        for ($i = 0; $i < $length; $i++) {
-            $newID = $newID . $lastArray[$i];
-        }
-        $newID = $newID . $newNum;
-
+        include'connect.php';
         if ($_POST['passwordconfirm'] == $_POST['password']) {
 
             $username = $_POST['userID'];
@@ -42,13 +19,16 @@
                 header("Location: createUser.php?operation=author");
             } */
 
+            echo $sql;
+
             mysqli_close($conn);
 
+            /*
             session_start();
             $_SESSION['username'] = $username;
             $_SESSION['password'] = $_POST['password'];
             if($_POST['authorCheck'] == 1){ $_SESSION['isAuthor'] = true; }
-            else{$_SESSION['isAuthor'] = true;}
+            else{$_SESSION['isAuthor'] = true;} */
 
             //header("Location: login.php?operation=REGIN");
             header("Location: index.php?error=Registered");

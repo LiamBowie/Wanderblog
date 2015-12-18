@@ -14,12 +14,13 @@ if($task == 'NO'){
     mysqli_close($conn);
     header("Location: index.php?error=deleted&user=" . $username);
 }
-
+//
 else if($task == 'OK'){
     //GET ALL DATA AND ADD TO User
     while($row = mysqli_fetch_array($results)){
         echo $username;
         $queryTwo = "INSERT INTO User VALUES('" . $username . "', '" . $row['password'] . "', '" . $row['firstName'] . "', '" . $row['lastName'] . "', '" . $row['emailAddress'] . "', 0);";
+        $resultsTwo = mysqli_query($conn, $queryTwo);
         if ($row['author'] == 1) {
             $found = false;
             $query = 'SELECT * FROM Author';
