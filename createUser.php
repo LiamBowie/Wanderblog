@@ -5,6 +5,7 @@
 
 // TO CREATE A NEW USER
     if($operation=='create') {
+        include'connect.php';
         if ($_POST['passwordconfirm'] == $_POST['password']) {
 
             $username = $_POST['userID'];
