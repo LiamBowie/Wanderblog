@@ -79,13 +79,14 @@ function saveChanges(){
             <div class="col-sm-3">
                 <div class="row">
                     <?php echo"<p>City<input type='text'  id='city'> . </input></p>" ?>
-                    <?php echo"<p>Country<input type='text' id='country' . </input></p>"?>
+                    <?php echo"<p>Country<input type='text' id='country' . </input></p>" ?>
+                    <?php echo"<p>Title<input type='text' id='title' . </input></p>" ?>
                 </div>
             </div>
 
             <div class="col-sm-9">
                 <div class="row">
-                    <?php echo "<p><textarea id='descText' cols='50' rows='10' type='text' id='desc' >" . "</textarea></p>"; ?>
+                    <?php echo "<p><textarea id='descText' cols='50' rows='10' type='text' id='desc' placeholder='Describe your adventure'>" . "</textarea></p>"; ?>
                     <br><br>
                 </div>
             </div>
