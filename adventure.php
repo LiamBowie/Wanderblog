@@ -78,26 +78,6 @@
             echo "</form>";
         }
     }
-function votingButton()
-{
-    global $conn;
-    $votingQuiery = "
-        SELECT * FROM Votes
-        WHERE advID = '" . $_GET['adv'] . "';
-    ";
-
-    $votingResults = mysqli_query($conn, $votingQuiery);
-    $votingRow = mysqli_fetch_array($votingResults);
-    $numVotes = mysqli_num_rows($votingResults);
-
-    $found = false;
-    while (($votingRow = mysqli_fetch_array($votingResults)) && ($found == false)) {
-        if ($_SESSION['username'] == null || $_SESSION['username'] == $votingRow['userID']) {
-            $found = true;
-            echo 'disabled="disabled"';
-        }
-    }
-}
 ?>
 <div class="container-fluid">
     <div class="row content">
@@ -114,11 +94,35 @@ function votingButton()
         </div>
 
 
+
         <div class="col-sm-9">
             <h2 id="desc" class="anchor">
                 <?php echo $row['title']; ?>
                 <form role="form" action="addVote.php?adv=<?php echo $_GET['adv']?>" method="POST">
-                    <button <?php  ?> class="btn btn-info">vote</button>
+                    <?php
+                    $votingQuiery = "
+                    SELECT * FROM Votes
+                    WHERE advID = '" . $_GET['adv'] . "';
+                ";
+
+                    $votingResults = mysqli_query($conn, $votingQuiery);
+                    $votingRow = mysqli_fetch_array($votingResults);
+                    $numVotes = mysqli_num_rows($votingResults);
+
+                    $found=false;
+                    while (($votingRow = mysqli_fetch_array($votingResults)) && ($found==false))
+                    {
+                        if($_SESSION['username'] == $votingRow['userID'])
+                        {
+                            $found = true;
+                            echo "<button disabled=\"disabled\" class=\"btn btn-success\">Voted</button>";
+                        }
+                    }
+                    if($found=false)
+                    {
+                        echo "<button class=\"btn btn-info\">Vote</button>";
+                    }
+                    ?>
                 </form>
             </h2>
             <p>votes: <?php echo $numVotes ?> </p>
