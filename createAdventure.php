@@ -32,7 +32,8 @@
         $results = mysqli_query($conn, $sql);
         $temp = $_SESSION['username'];
         $authID = 'SELECT authID FROM Author WHERE userID = temp';
-        $sql = "INSERT INTO Adventure VALUES('" . $newID . "', '" . $title . "', '" . $authID . "', '" . $location . "', '" . $content . "', '" . $photo . "')";
+        //$sql = "INSERT INTO Adventure VALUES('" . $newID . "', '" . $title . "', '" . $authID . "', '" . $location . "', '" . $content . "', '" . $photo . "')";
+        $sql = "INSERT INTO Adventure VALUES('" . $newID . "', '" . $title . "', '" . $authID . "', '" . $location . "', '" . $content . "', '" . $photo . ", 0');";
 //advID, title, author, location, content, photo
 
 //need to add a query to get authorid instead of authorname, select * from author where authid = session authorname id
