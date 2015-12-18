@@ -49,6 +49,7 @@ if(isset($_SESSION['loggedIn'])) {//if user is loggedIn to WanderBlog
                     </a>
                 </div>
             </div>
+            <br>
 
         ';
     }
