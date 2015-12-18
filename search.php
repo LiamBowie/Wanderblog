@@ -71,7 +71,7 @@
     <?php include'searchArea.php' ?>
 </div>
 
-    <!-- <div class="container-fluid text-center"> -->
+    <div class="container-fluid text-center">
         <div class="col-sm-12 text-left" style="padding-left: 25px; padding-right: 25px">
             <?php echo "<h2 style = 'color:#ffffff;'>Displaying results for " . $_POST['crit'] . "</h2>" ?>
             <div class="container">
