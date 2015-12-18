@@ -142,7 +142,7 @@
 			if (mysqli_num_rows($resultsTop5) > 0)
 			{
 				$first = true;
-				while ($rowTop5 = mysqli_fetch_array($resultsTop5))
+				for ($i = 0; $i < 5; $i++ )
 				{
 					if($first) {
 						echo '
