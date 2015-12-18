@@ -157,8 +157,8 @@
 					echo'	<img src=' . $rowTop5['photo'] . ' alt="Image">
 							<div class="carousel-caption">
 								<h3><a href="adventure.php?adv=' . $rowTop5['advID'] . '" >' . $rowTop5['title'] . '</a></h3>
-								<span class="badge"> ' . $rowTop5['numVotes'] .' votes </span>
-								<p>' . $rowTop5['authorName'] . '</p>
+								<p><a href="author.php?auth=' . $rowTop5['advID'] . '" >' . $rowTop5['authorName'] . '</a></p>
+								<span class="badge"> ' . $rowTop5['numVotes'] . ' votes </span>
 							</div>
 						</div>
 						';
