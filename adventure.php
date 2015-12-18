@@ -86,8 +86,8 @@
 
     $votingResults = mysqli_query($conn, $votingQuiery);
     $votingRow = mysqli_fetch_array($votingResults);
-    $numVotes = 0;
-    while (($votingRow = mysqli_fetch_array($votingResults)))
+    $numVotes; $found=false;
+    while (($votingRow = mysqli_fetch_array($votingResults)) && ($found==false))
     {
         $numVotes++;
     }
