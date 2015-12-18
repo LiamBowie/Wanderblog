@@ -140,7 +140,7 @@ $numVotes = $row['numVotes'];
                 <?php
                 if($adminRow['isAdmin'] == 1)
                 {
-                    echo "<form role='form' action='deleteVote.php'>";
+                    echo "<form role='form' action='deleteVote.php?adv=" . $_GET['adv'] . "' method='POST' >";
                     echo    "<button class='btn btn-danger'>Decrement Votes</button>";
                     echo "</form>";
                 }
