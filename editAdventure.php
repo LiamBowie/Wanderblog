@@ -74,7 +74,7 @@ $queryOne = "SELECT * FROM Author WHERE userID='" . $_SESSION['username'] ."';";
 $resultsOne = mysqli_query($conn, $queryOne);
 $row = mysqli_fetch_array($resultsOne);
 
-function saveChanges(){
+function saveChanges($row){
 global $conn;
 $query="UPDATE Adventure
            SET content = '" . $_POST['descText'] . "'
