@@ -67,15 +67,23 @@
 ?>
 
 <div class="jumbotron text-center">
-    <form class="form-inline">
-        <input type="search" class="form-control" size="50" placeholder="Filter your search further">
-        <select class="form-control">
-            <option value="tag">Tag</option>
-            <option value="authorname">Author Name</option>
-            <option value="location">Location</option>
-        </select>
-        <button type="button" class="btn btn-danger">Search</button>
-    </form>
+    <h1>Wanderblog</h1>
+    <p>Blogging site specifically for travelers</p>
+    <?php include'searchArea.php' ?>
+    <!-- SEARCH --><!--
+		<form id="search form" class="form-inline" action="search.php?searchx=advID" method="post">
+			<input type="search" id="crit" name="crit" class="form-control" size="50" placeholder="What are you waiting for?">
+			<select class="form-control" name="select" id="select">
+				<option id="opt-Adventure" value="advID">Adventure (by Title)</option>
+				<option id ="opt-AdvAuthor" value="author">Adventure (by Author)</option>
+				<option id ="opt-Author" value="firstName">Author (by Name)</option>
+			</select>
+			<button type="submit" class="btn btn-danger">
+				<span class="glyphicon glyphicon-search"></span>Search
+			</button>
+		</form>
+<!-- ENF OF SEARCH -->
+</div>
 
     <div class="container-fluid text-center">
         <div class="col-sm-12 text-left" style="padding-left: 25px; padding-right: 25px">
