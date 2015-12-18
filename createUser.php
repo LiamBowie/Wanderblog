@@ -32,7 +32,7 @@
         if ($_POST['passwordconfirm'] == $_POST['password']) {
 
             $username = $_POST['userID'];
-            $sql = "INSERT INTO Authorise VALUES('" . $username . "', '" . $_POST['password'] . "', '" . $_POST['firstName'] . "', '" . $_POST['lastName'] . "', '" . $_POST['email'] . "', 0);";
+            $sql = "INSERT INTO Authorise VALUES('" . $username . "', '" . $_POST['password'] . "', '" . $_POST['firstName'] . "', '" . $_POST['lastName'] . "', '" . $_POST['email'] . "');";
 
             $results = mysqli_query($conn, $sql);
 /*
