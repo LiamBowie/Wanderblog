@@ -54,6 +54,8 @@ function saveChanges(){
     $query="UPDATE Adventure
             SET content'" . $_POST['descText'] . "'
             WHERE author='" . $_GET['auth'] ."'
+            SET title'" . $_POST['advTitle'] ."'
+            WHERE author='" . $_GET['auth'] ."'
             ";
     $results = mysqli_query($conn, $query);
     mysqli_close($conn);
@@ -80,7 +82,7 @@ function saveChanges(){
                 <div class="row">
                     <?php echo"<p>City<input type='text'  id='city'> . </input></p>" ?>
                     <?php echo"<p>Country<input type='text' id='country' . </input></p>" ?>
-                    <?php echo"<p>Title<input type='text' id='title' . </input></p>" ?>
+                    <?php echo"<p>Title<input type='text' id='advTitle' . </input></p>" ?>
                 </div>
             </div>
 
