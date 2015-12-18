@@ -182,7 +182,7 @@
 	</footer>
 
 	<?php if(isset($_GET['error']) && $_GET['error']=='noUser'){
-		echo' <script>alert("Username or Password not recognised"); window.location = "welcome.php";</script> ';
+		echo ' <script>alert("Username or Password not recognised"); window.location = "index.php";</script> ';
 	} ?>
 
 </body>
