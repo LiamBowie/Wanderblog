@@ -143,15 +143,14 @@
 			if (mysqli_num_rows($resultsTop5) > 0)
 			{
 				$first = true;
-				while ($rowTop5 = mysqli_fetch_array($resultsTop5))
+				while ($rowTop5 == mysqli_fetch_array($resultsTop5))
 				{
-					/*if($first==true) {
+					if($first) {
 						echo '<div class="item active">';
 					}
 					else{
 						echo '<div class="item">';
-					}*/
-					echo '<div class="item active">';
+					}
 					echo'	<img src=' . $rowTop5['photo'] . ' alt="Image">
 							<div class="carousel-caption">
 								<h3>' . $rowTop5['title'] . '</h3>
