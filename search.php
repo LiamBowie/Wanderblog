@@ -64,7 +64,7 @@
 
     }
     else if($colmSearch == 'author'){
-        $query="Select Adventure.photo, Asventure.title, CONCAT(User.firstName, ' ', User.lastName) AS fullName, User.firstName, Author.photo, User.userID, Author.authorID
+        $query="Select Adventure.photo, Adventure.title, CONCAT(User.firstName, ' ', User.lastName) AS fullName, User.firstName, Author.photo, User.userID, Author.authorID
         FROM Adventure
         LEFT JOIN Author
         ON Adventure.author = Author.authorID
