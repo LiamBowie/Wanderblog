@@ -72,6 +72,7 @@
     function showDelete($commentID, $commentUser)
     {
         global $row;
+        global $adminRow;
         $advID = $_GET['adv'];
         if($_SESSION['username'] == $row['userID'] || $_SESSION['username'] == $commentUser || $adminRow['isAdmin'])
         {
