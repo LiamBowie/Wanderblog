@@ -24,17 +24,19 @@
         }                                                                           //end loop
         $newID = $newID . $newNum;                                                  //newID = newID plus new Number
 		//END AUTOGEN
-        $photo = "https://placehold.it/350x150";
+        $photo = $_POST['photoURL'];
         $title = $_POST['title'];
         //$_SESSION['username'] = $authorName;
         $location = LO00000;
         $content = $_POST['content'];
-        $results = mysqli_query($conn, $sql);
+
         $temp = $_SESSION['username'];
         $authID = 'SELECT authID FROM Author WHERE userID = temp';
         //$sql = "INSERT INTO Adventure VALUES('" . $newID . "', '" . $title . "', '" . $authID . "', '" . $location . "', '" . $content . "', '" . $photo . "')";
         $sql = "INSERT INTO Adventure VALUES('" . $newID . "', '" . $title . "', '" . $authID . "', '" . $location . "', '" . $content . "', '" . $photo . ", 0');";
 //advID, title, author, location, content, photo
+        $results = mysqli_query($conn, $sql);
+        sqli_close($conn);
 
 //need to add a query to get authorid instead of authorname, select * from author where authid = session authorname id
 
