@@ -55,9 +55,9 @@
 							"<h4>" + tweetText[1] + "</h4></br>" + tweetAuth[1];
 					document.getElementById("tweetThree").innerHTML =
 							"<h4>" + tweetText[2] + "</h4></br>" + tweetAuth[2];
-					document.getElementById("tweetThree").innerHTML =
+					document.getElementById("tweetFour").innerHTML =
 							"<h4>" + tweetText[3] + "</h4></br>" + tweetAuth[3];
-					document.getElementById("tweetThree").innerHTML =
+					document.getElementById("tweetFive").innerHTML =
 							"<h4>" + tweetText[4] + "</h4></br>" + tweetAuth[4];
 				}
 			};
@@ -110,6 +110,10 @@
 			<div class="item" id="tweetTwo">
 			</div>
 			<div class="item" id="tweetThree">
+			</div>
+			<div class="item" id="tweetFour">
+			</div>
+			<div class="item" id="tweetFive">
 			</div>
 		</div>
 	</div>
