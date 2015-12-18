@@ -26,6 +26,15 @@ if(isset($_SESSION['loggedIn'])) {//if user is loggedIn to WanderBlog
             </a>';
     }
     else { $authorise = ''; }
+
+    $users = "";
+    $queryAuthorise = "SELECT * From Authorise;";
+    $resultsAuthorise = mysqli_query($conn, $queryAuthorise);
+    while( $rowAuthorise = mysqli_fetch_array($resultsAuthorise) ){
+        $users = $users . ", " . $row['username'];
+    }
+
+
     echo '
     <nav class="navbar navbar-default navbar-fixed-top">
 		<div class="container-fluid">
@@ -119,6 +128,9 @@ if(isset($_SESSION['loggedIn'])) {//if user is loggedIn to WanderBlog
                             <h4><span class="glyphicon glyphicon-tasks"></span> Authorise </h4>
                         </div>
                         <div class="modal-body">
+                            <!-- OUTPUT HERE-->
+                            ' . $users . '
+                            <!-- END OUTPUT -->
                         </div>
                         <div class="modal-footer">
                             <button type="submit" class="btn btn-success btn-block" data-dismiss="modal">
