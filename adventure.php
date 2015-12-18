@@ -122,7 +122,7 @@
                     }
                     if($found==false)
                     {
-                        if($_SESSION['username'] == null)
+                        if($_SESSION['username'] == null || $_SESSION['username'] == $row['userID'])
                         {
                             echo "<button disabled=\"disabled\" class=\"btn btn-info\">Vote</button>";
                         }
