@@ -1,4 +1,5 @@
 <?php
+include'connect.php';
 
 $task = $_GET['task'];
 $username = $_GET['user'];
