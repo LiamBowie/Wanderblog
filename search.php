@@ -52,18 +52,29 @@
     $criteria = $_POST['crit'];
     $colmSearch = $_POST['select'];
     if($colmSearch == 'firstName'){
-        $query = "  SELECT CONCAT(User.firstName, ' ', User.lastName) AS fullName, User.firstName, Author.photo, User.userID
+        $query = "  SELECT CONCAT(User.firstName, ' ', User.lastName) AS fullName, User.firstName, Author.photo, User.userID, Author.authorID
                 FROM Author
                 LEFT JOIN User
                 ON  Author.userID=User.userID
                 WHERE User.firstName = '" . $criteria . "'
                 OR User.lastName = '" . $criteria . "'
                 OR CONCAT(User.firstName, ' ', User.lastName) = '" . $criteria . "'
+                OR User.userID = '" . $criteria . "'
                 ;" ;
 
     }
-    else{
-        $query="Select * FROM Adventure WHERE " . $colmSearch . " = '" . $criteria . "'; ";
+    else if($colmSearch == 'author'){
+        $query="Select Adventure.photo, Asventure.title, CONCAT(User.firstName, ' ', User.lastName) AS fullName, User.firstName, Author.photo, User.userID, Author.authorID
+        FROM Adventure
+        LEFT JOIN Author
+        ON Adventure.author = Author.authorID
+        LEFT JOIN User
+        ON Author.userID = User.userID
+        WHERE User.firstName = '" . $criteria . "'
+                OR User.lastName = '" . $criteria . "'
+                OR CONCAT(User.firstName, ' ', User.lastName) = '" . $criteria . "'
+                OR User.userID = '" . $criteria . "'
+                ;" ;
     }
     $results=mysqli_query($conn, $query);
     $found = false;
@@ -84,8 +95,9 @@
                             if($colmSearch == 'firstName') {
                                 if (mysqli_num_rows($results) > 0) {
                                     while (($row = mysqli_fetch_array($results)) && ($found == false)) {
+                                        $path = "author.php?auth=" . $row['authorID'];
                                         echo '<div class="col-sm-4" >';
-                                        echo '<a href = "#" class="thumbnail text-center" >';
+                                        echo '<a href = "' . $path . '" class="thumbnail text-center" >';
                                         echo '<img src = "' . $row['photo'] . '" >';
                                         echo '<p style = "color:#ffffff;" > ' . $row['fullName'] . ' </p >';
                                         echo '</a >';
