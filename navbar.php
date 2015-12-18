@@ -39,7 +39,7 @@ if(isset($_SESSION['loggedIn'])) {//if user is loggedIn to WanderBlog
 			</div>
 			<div class="collapse navbar-collapse" id="myNavbar">
 				<ul class="nav navbar-nav navbar-right">
-				    <li class="LoggedIn"><a href="#" data-toggle="modal" data-target="#modal-reg"> Logged in as  ' . $_SESSION['FullName'] . '</a> </li>
+				    <li class="LoggedIn"><a href="#" data-dismiss="modal" data-toggle="modal" data-target="#modal-reg"> Logged in as  ' . $_SESSION['FullName'] . '</a> </li>
 				    <li class="LogOut" style="color:white;"><a onclick="confirmLogout()" href="#">LOG OUT</a></li>
 					<li><a href="index.php#top5">TOP 5 TRIPS</a></li>
 					<li class="dropdown">
