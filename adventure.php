@@ -120,6 +120,10 @@
                     echo $found;
                     if($found==false)
                     {
+                        if($_SESSION['username'] == null)
+                        {
+                            echo "<button disabled=\"disabled\" class=\"btn btn-info\">Vote</button>";
+                        }
                         echo "<button class=\"btn btn-info\">Vote</button>";
                     }
                     ?>
