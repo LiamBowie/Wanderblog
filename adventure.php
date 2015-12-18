@@ -65,7 +65,7 @@
     $row = mysqli_fetch_array($results);
     $authorPath= "'author.php?auth=" . $row['author'] . "'";
 
-    $adminQuery = "SELECT isAdmin FROM User WHERE userID='". $_SESSION['$username']."';";
+    $adminQuery = "SELECT * FROM User WHERE userID='". $_SESSION['$username']."';";
     $adminResults = mysqli_query($conn, $adminQuery);
     $adminRow = mysqli_fetch_array($adminResults);
 
@@ -85,7 +85,7 @@
 <div class="container-fluid">
     <div class="row content">
         <div class="col-sm-3 sidenav">
-            <h4 class="text-center"><?php echo $row['cityName'] ?></h4>
+            <h4 class="text-center"><?php echo "isAdmin: " . $adminRow['isAdmin'] ?></h4>
             <img src= "<?php echo $row['photo']; ?>" class="img-thumbnail img-responsive" alt="Adventure Photo">
             <h5><span class="glyphicon glyphicon-time"></span> Post by <a href=<?php echo $authorPath; ?> > <?php echo $row['authorName'] ?></a></h5>
             <nav class="sticky-sidebar">
