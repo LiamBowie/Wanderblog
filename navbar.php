@@ -30,7 +30,7 @@ if(isset($_SESSION['loggedIn'])) {//if user is loggedIn to WanderBlog
     $users = "";
     $queryAuthorise = "SELECT * From Authorise;";
     $resultsAuthorise = mysqli_query($conn, $queryAuthorise);
-    if(mysqli_num_rows($resultsAuthoriseu) >0){
+    if(mysqli_num_rows($resultsAuthorise) >0){
         while( $rowAuthorise = mysqli_fetch_array($resultsAuthorise) ) {
             $OKpath = "addUser.php?task=OK&user=" . $rowAuthorise['userID'];
             $nopath = "addUser.php?task=NO&user=" . $rowAuthorise['userID'];
