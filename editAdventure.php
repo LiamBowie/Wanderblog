@@ -109,7 +109,7 @@ function saveChanges(){
     </div>
 </form>
 <footer class="container-fluid text-center">
-    <p>Footer Text</p>
+    <p>Wanderblog is brought to you by SHB Innovative Solutions</p>
 </footer>
 </body>
 </html>
