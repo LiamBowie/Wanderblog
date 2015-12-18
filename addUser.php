@@ -25,6 +25,6 @@ else if($task == 'OK'){
         $resultsTwo = mysqli_query($conn, $queryTwo);
         $resultsFour =  mysqli_query($conn, $queryFour);
         mysqli_close($conn);
-        header("Location: index.php?error=added&user=" . $username);
+       // header("Location: index.php?error=added&user=" . $username);
     }
 }
