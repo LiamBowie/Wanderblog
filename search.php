@@ -51,11 +51,14 @@
     include 'connect.php';
     $criteria = $_POST['crit'];
     $colmSearch = $_POST['select'];
-    $query="Select * FROM Adventure WHERE " . $colmSearch . " = '" . $criteria . "'; ";
+    if($colmSearch == 'firstName'){
+        $query="Select * FROM Author WHERE firstName = '" . $criteria . "'; ";
+    }
+    else{
+        $query="Select * FROM Adventure WHERE " . $colmSearch . " = '" . $criteria . "'; ";
+    }
     $results=mysqli_query($conn, $query);
     $found = false;
-    echo "SEACRH: " . $colmSearch .  " FOR: " . $criteria;
-    echo "\n" . "Select * FROM Adventure WHERE " . $colmSearch . " = '" . $criteria . "'; ";
 ?>
 
 <div class="jumbotron text-center">
