@@ -12,6 +12,7 @@ if($task == 'NO'){
     $queryThree = "DELETE FROM Authorise WHERE userID ='" . $username . "';";
     $resultsThree = mysqli_query($conn, $queryThree);
     mysqli_close($conn);
+    header("Location: index.php?error=deleted&user=" . $username);
 }
 
 else if($task == 'OK'){
