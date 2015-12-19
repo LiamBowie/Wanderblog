@@ -112,7 +112,7 @@ function showEdit(){
 
             <h4 id="adventures" class="anchor"><small>Adventures</small></h4>
             <hr>
-            <h2>Check out all these dank ass adventures I've been on!</h2>
+            <h2>Adventures</h2>
             <br><br>
 
             <div class="row">
