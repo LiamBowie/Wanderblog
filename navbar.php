@@ -99,7 +99,7 @@ if(isset($_SESSION['loggedIn'])) {//if user is loggedIn to WanderBlog
         else{ window.location = "index.php" }
     }
     function confirmDelete(){
-        var deleteUser = confirm("This will permanently remove your account. Are you sure you want to continue?");
+        var deleteUser = confirm("This will permanently remove your existence from Wanderblog. Are you sure you want to continue?");
         if(deleteUser==true){ window.location = "createUser.php?operation=delete"; }
         else{ window.location = "index.php"; }
     }
@@ -138,7 +138,7 @@ if(isset($_SESSION['loggedIn'])) {//if user is loggedIn to WanderBlog
 					' . $myProfile . $authorise . '
                     <a type="submit" class="btn btn-danger btn-block" onCLick="confirmDelete()">
                         <!-- <a href="createUser.php?operation=delete"> -->
-                            <span class="glyphicon glyphicon-trash"></span> DELETE
+                            <span class="glyphicon glyphicon-trash"></span> DELETE ACCOUNT
                         </a>
                     </button>
 				</div>
