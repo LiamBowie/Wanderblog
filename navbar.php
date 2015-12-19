@@ -156,7 +156,7 @@ if(isset($_SESSION['loggedIn'])) {//if user is loggedIn to WanderBlog
                         </div>
                         <div class="modal-body">
                             <!-- OUTPUT HERE-->
-                            \' . $users . \'
+                            ' . $users . '
                             <!-- END OUTPUT -->
                         </div>
                         <div class="modal-footer">
@@ -169,7 +169,7 @@ if(isset($_SESSION['loggedIn'])) {//if user is loggedIn to WanderBlog
             </div>
 	<!-- END AUTHORISE -->
 
-    <!-- AUTHORISE -->
+    <!-- CREATE ADVENTURE -->
 	        <div class="modal fade" id="modal-adv" role="dialog" style="padding-top: 35px;">
 		        <div class="modal-dialog">
                     <div class="modal-content">
@@ -188,7 +188,7 @@ if(isset($_SESSION['loggedIn'])) {//if user is loggedIn to WanderBlog
                     </div>
                 </div>
             </div>
-	<!-- END AUTHORISE -->
+	<!-- END CREATE ADVENTURE -->
 
 ';
 }
