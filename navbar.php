@@ -15,7 +15,7 @@ if(isset($_SESSION['loggedIn'])) {//if user is loggedIn to WanderBlog
             <a type="submit" class="btn btn-info btn-block" href="' . $profilePath . '">
                 <span class="glyphicon glyphicon-user"></span> MY PROFILE
             </a>
-            <a class="btn btn-info btn-block" data-dismiss="modal" data-toggle="modal" data-target="#modal-auth">
+            <a class="btn btn-primary btn-block" data-dismiss="modal" data-toggle="modal" data-target="#modal-adv">
                 <span class="glyphicon glyphicon-edit"></span> CREATE ADVENTURE
             </a>
         ';
@@ -156,8 +156,29 @@ if(isset($_SESSION['loggedIn'])) {//if user is loggedIn to WanderBlog
                         </div>
                         <div class="modal-body">
                             <!-- OUTPUT HERE-->
-                            ' . $users . '
+                            \' . $users . \'
                             <!-- END OUTPUT -->
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-success btn-block" data-dismiss="modal">
+                                <span class="glyphicon glyphicon-ok"></span> DONE
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+	<!-- END AUTHORISE -->
+
+    <!-- AUTHORISE -->
+	        <div class="modal fade" id="modal-adv" role="dialog" style="padding-top: 35px;">
+		        <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4><span class="glyphicon glyphicon-edit"></span> Create Adventure </h4>
+                        </div>
+                        <div class="modal-body">
+                            <p> This section is not yet functional </p>
                         </div>
                         <div class="modal-footer">
                             <button type="submit" class="btn btn-success btn-block" data-dismiss="modal">
