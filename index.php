@@ -138,7 +138,8 @@
         	ON Adventure.author=Author.authorID
         	LEFT JOIN User
         	ON Author.userID=User.userID
-		  	ORDER BY numVotes DESC;
+		  	ORDER BY numVotes DESC
+		  	LIMIT 5;
 			";
 
 			$resultsTop5 = mysqli_query($conn, $sqlTop5);
