@@ -77,7 +77,7 @@ if(isset($_SESSION['loggedIn'])) {//if user is loggedIn to WanderBlog
 				<ul class="nav navbar-nav navbar-right">
 				    <li class="LoggedIn"><a href="#" data-toggle="modal" data-target="#modal-reg"> Logged in as  ' . $_SESSION['FullName'] . '</a> </li>
 				    <li class="LogOut" style="color:white;"><a onclick="confirmLogout()" href="#">LOG OUT</a></li>
-					<li><a href="#top5">TOP 5 TRIPS</a></li>
+					<li><a href="index.php#top5">TOP 5 TRIPS</a></li>
 					<li class="dropdown">
 						<a class="dropdown-toggle" data-toggle="dropdown" href="#">MORE
 							<span class="caret"></span>
@@ -206,7 +206,7 @@ else{ //if user is not loggedIn to Wanderblog
 			</div>
 			<div class="collapse navbar-collapse" id="myNavbar">
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="#top5">TOP 5 TRIPS</a></li>
+					<li><a href="index.php#top5">TOP 5 TRIPS</a></li>
 					<li><a href="#" data-toggle="modal" data-target="#modal-reg">REGISTER</a></li>
 					<li>
 						<form style="padding-top: 10px" class="form-inline" action="login.php?operation=IN" method="post">
