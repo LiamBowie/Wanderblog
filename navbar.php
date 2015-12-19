@@ -15,6 +15,9 @@ if(isset($_SESSION['loggedIn'])) {//if user is loggedIn to WanderBlog
             <a type="submit" class="btn btn-info btn-block" href="' . $profilePath . '">
                 <span class="glyphicon glyphicon-user"></span> MY PROFILE
             </a>
+            <a class="btn btn-info btn-block" data-dismiss="modal" data-toggle="modal" data-target="#modal-auth">
+                <span class="glyphicon glyphicon-edit"></span> CREATE ADVENTURE
+            </a>
         ';
     }
     else{ $myProfile =''; }
@@ -23,7 +26,8 @@ if(isset($_SESSION['loggedIn'])) {//if user is loggedIn to WanderBlog
         $authorise = '
             <a class="btn btn-info btn-block" data-dismiss="modal" data-toggle="modal" data-target="#modal-auth">
                 <span class="glyphicon glyphicon-tasks"></span> AUTHORISE
-            </a>';
+            </a>
+        ';
     }
     else { $authorise = ''; }
 
