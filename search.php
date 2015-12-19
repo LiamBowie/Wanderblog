@@ -50,7 +50,7 @@
         }
     </style>
 </head>
-<body style="padding-top: 0">
+<body style='padding-top: 0; background-image: url("https://upload.wikimedia.org/wikipedia/commons/5/5b/Middle-earth.svg");'>
 
 <?php include 'navbar.php'; ?>
 
@@ -99,7 +99,7 @@
 </div>
 
     <div class="container-fluid text-center">
-        <div class="col-sm-12 text-left" style='padding-left: 25px; padding-right: 25px; background-image: url("https://upload.wikimedia.org/wikipedia/commons/5/5b/Middle-earth.svg");'>
+        <div class="col-sm-12 text-left" style='padding-left: 25px; padding-right: 25px;'>
             <?php echo "<h2>Displaying results for " . $_POST['crit'] . "</h2>" ?>
             <div class="container">
                 <div class="row">
