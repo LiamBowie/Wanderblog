@@ -73,21 +73,8 @@
 
 	<div class="jumbotron text-center">
 		<h1>Wanderblog</h1> 
-		<p><i>"Not All Who Wander Are Lost"<i> - J. R. R. Tolkien</p>
+		<p><i>"Not All Who Wander Are Lost"</i> - J. R. R. Tolkien</p>
 		<?php include'searchArea.php' ?>
-<!-- SEARCH --><!--
-		<form id="search form" class="form-inline" action="search.php?searchx=advID" method="post">
-			<input type="search" id="crit" name="crit" class="form-control" size="50" placeholder="What are you waiting for?">
-			<select class="form-control" name="select" id="select">
-				<option id="opt-Adventure" value="advID">Adventure (by Title)</option>
-				<option id ="opt-AdvAuthor" value="author">Adventure (by Author)</option>
-				<option id ="opt-Author" value="firstName">Author (by Name)</option>
-			</select>
-			<button type="submit" class="btn btn-danger">
-				<span class="glyphicon glyphicon-search"></span>Search
-			</button>
-		</form>
-<!-- ENF OF SEARCH -->
 	</div>
 
 	<h2 class="text-center">Wanderblog on Twitter</h2>
