@@ -73,7 +73,7 @@
 
 	<div class="jumbotron text-center">
 		<h1>Wanderblog</h1> 
-		<p>Blogging site specifically for travelers</p>
+		<p><i>"Not All Who Wander Are Lost"<i> - J. R. R. Tolkien</p>
 		<?php include'searchArea.php' ?>
 <!-- SEARCH --><!--
 		<form id="search form" class="form-inline" action="search.php?searchx=advID" method="post">
