@@ -36,7 +36,7 @@
         $advID = $newID;
 
         //GET AUTHOR ID FROM CURRENT USER
-        $authQuery = 'SELECT authorID FROM Author WHERE userID = ' . $_SESSION['username'] . ';';
+        $authQuery = 'SELECT authorID FROM Author WHERE userID = "' . $_SESSION['username'] . '";';
         $authResults = mysqli_query($conn, $authQuery);
         $authRow = mysqli_fetch_array($results);
         $authID = $row['authorID'];
