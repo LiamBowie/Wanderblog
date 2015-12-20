@@ -138,13 +138,12 @@ $numVotes = $row['numVotes'];
                             echo "<button class=\"btn btn-info\">Vote</button>";
                         }
                     }
-
-                    if($adminRow['isAdmin'] == 1 || $_SESSION['username'] == $row['userID'] ){
-                        echo "<p></p><p></p><button class='btn btn-danger'>Delete Adventure</button>";
-                    }
                     ?>
                 </form>
                 <?php
+                if($adminRow['isAdmin'] == 1 || $_SESSION['username'] == $row['userID'] ){
+                    echo "<p></p><p></p><button class='btn btn-danger'>Delete Adventure</button>";
+                }
                 if($adminRow['isAdmin'] == 1)
                 {
                     echo "<form role='form' action='deleteVote.php?adv=" . $_GET['adv'] . "' method='POST' >";
