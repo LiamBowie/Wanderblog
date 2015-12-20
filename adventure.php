@@ -320,8 +320,10 @@ $numVotes = $row['numVotes'];
             </div>
 	<!-- END CREATE ADVENTURE -->
         ';
+    echo $modal;
     ?>
 <!-- END EDITING ADVENTURE -->
+
 
 <footer class="container-fluid">
     <p>Footer Text</p>
