@@ -93,7 +93,7 @@ $numVotes = $row['numVotes'];
         $votingRow = mysqli_fetch_array($votingResults);
 
         $found=false;
-        $vote = '';
+        $vote = '<div class="col-sm-2">';
 
         while (($votingRow = mysqli_fetch_array($votingResults)) && ($found==false)){
             if($_SESSION['username'] == $votingRow['userID']){ //user has voted
@@ -109,16 +109,16 @@ $numVotes = $row['numVotes'];
                 $vote = $vote . '<button class="btn btn-info"><span class="glyphicon glyphicon-arrow-up"></span></button>';
             }
         }
-        //$vote = $vote . '</div>';
+        $vote = $vote . '</div>';
 
     //GET DECREMENT VARIABLES
             if($adminRow['isAdmin'] == 1){
-                $decrement = '';
-                //$decrement = '<div class="col-sm-2">';
+                //$decrement = '';
+                $decrement = '<div class="col-sm-2">';
                     $decrement = $decrement . '<form role="form" action="deleteVote.php?adv="' . $_GET['adv'] . '" method="post" >';
                         $decrement = $decrement . '<button class="btn btn-danger"><span class="glyphicon glyphicon-arrow-down"></span></button>';
                     $decrement = $decrement . '</form>';
-                //$decrement = $decrement . '</div>';
+                $decrement = $decrement . '</div>';
             }
             else{
                 $decrement = "";
@@ -126,10 +126,10 @@ $numVotes = $row['numVotes'];
 
     //GET EDIT VARIABLES
         if( $_SESSION['username'] == $row['userID'] ) {
-            $edit = '';
-            //$edit = '<div class="col-sm-2">';
+            //$edit = '';
+            $edit = '<div class="col-sm-2">';
                 $edit =  $edit . '<a href="#" data-toggle="modal" data-target="#modal-edit" class="btn btn-primary"><span class="glyphicon glyphicon-edit"></span></a>';
-            //$edit = $edit . '</div>';
+            $edit = $edit . '</div>';
         }
         else{
             $edit = "";
@@ -137,9 +137,9 @@ $numVotes = $row['numVotes'];
 
     //GET DELETE VARIABLE
         if($adminRow['isAdmin'] == 1 || $_SESSION['username'] == $row['userID'] ){
-            $delete = '';
+            $delete = '<div class="col-sm-2">';
                 $delete = $delete . '<a class="btn btn-danger" href="delAdv.php?adv=' . $_GET['adv'] . '"><span class="glyphicon glyphicon-trash"></span></a>';
-           //$delete = $delete . '</div>';
+           $delete = $delete . '</div>';
         }
         else{
             $delete = "";
@@ -168,10 +168,14 @@ $numVotes = $row['numVotes'];
                 <?php echo $row['title']; ?>
                 <?php
                     echo '<div class="row">';
-                        echo $vote . $edit . $delete;
+                        echo '<div class="col-sm-6">';
+                            echo $vote . $edit . $delete;
+                        echo '</div>';
                     echo '</div>';
                     echo '<div class="row">';
-                        echo $decrement;
+                        echo '<div class="col-sm-6">';
+                            echo $decrement;
+                        echo '</div>';
                     echo '</div>';
                 ?>
             </h2>
