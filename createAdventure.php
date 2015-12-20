@@ -44,7 +44,8 @@
         //$sql = "INSERT INTO Adventure VALUES('" . $newID . "', '" . $title . "', '" . $authID . "', '" . $location . "', '" . $content . "', '" . $photo . "')";
         //$sql = "INSERT INTO Adventure VALUES('" . $newID . "', '" . $title . "', '" . $authID . "', '" . $location . "', '" . $content . "', '" . $photo . ", 0');";
         //advID, title, author, location, content, photo
-        $insertQuery = "INSERT INTO Adventure VALUES ('" . $advID . "', '" . $title . "', '" . $authID . "', '" . $location . "', '" . $content . "', '" . $photo . "', 0);";
+//      $insertQuery = "INSERT INTO Adventure VALUES('advID', 'title', 'authID', 'location', 'content', 'photoURL', 0);";
+        $insertQuery = "INSERT INTO Adventure VALUES ('" . $advID . "', '" . $title . "','". $authID . "', '" . $location . "', '" . $content . "', '" . $photo . "', 0);";
         $results = mysqli_query($conn, $insertQuery);
         echo $insertQuery;
         mysqli_close($conn);
