@@ -66,6 +66,8 @@ else if($operation=='DELETE'){
         $query = "
                 DELETE FROM Comments
                 WHERE advID = '" . $adventure . "';
+                DELETE FROM Votes
+                WHERE advID = '" . $adventure . "';
                 DELETE FROM Adventure
                 WHERE advID = '" . $adventure . "';
         ";
