@@ -85,6 +85,68 @@
 
 $numVotes = $row['numVotes'];
 ?>
+
+<?php
+    //GET VOTE VARIABLE
+        $votingQuery = "SELECT * FROM Votes WHERE advID='" . $_GET['adv'] . "';";
+        $votingResults = mysqli_query($conn, $votingQuery);
+        $votingRow = mysqli_fetch_array($votingResults);
+
+        $found=false;
+        $vote = '<div class="col-sm-2">';
+
+        while (($votingRow = mysqli_fetch_array($votingResults)) && ($found==false)){
+            if($_SESSION['username'] == $votingRow['userID']){ //user has voted
+                $found=true; //end loop
+                $vote = $vote .'<button disabled="disabled" class="btn btn-success"><span class="glyphicon glyphicon-arrow-up"></span></button>';
+            }
+        }
+        if($found==false){
+            if($_SESSION['username'] == null || $_SESSION['username'] == $row['userID']){ //user is not logged in or is the author
+                $vote = $vote . '<button disabled="disabled" class="btn btn-info"><span class="glyphicon glyphicon-thumbs-up"></span></button>';
+            }
+            else{
+                $vote = $vote . '<button class="btn btn-info"><span class="glyphicon glyphicon-arrow-up"></span></button>';
+            }
+        }
+        $vote = $vote . '</div>';
+
+    //GET DECREMENT VARIABLES
+            if($adminRow['isAdmin'] == 1){
+                //$decrement = '';
+                $decrement = '<div class="col-sm-2">';
+                    $decrement = $decrement . '<form role="form" action="deleteVote.php?adv="' . $_GET['adv'] . '" method="post" >';
+                        $decrement = $decrement . '<button class="btn btn-danger"><span class="glyphicon glyphicon-thumbs-down"></span></button>';
+                    $decrement = $decrement . '</form>';
+                $decrement = $decrement . '</div>';
+            }
+            else{
+                $decrement = "";
+            }
+
+    //GET EDIT VARIABLES
+        if( $_SESSION['username'] == $row['userID'] ) {
+            //$edit = '';
+            $edit = '<div class="col-sm-2">';
+                $edit =  $edit . '<a href="#" data-toggle="modal" data-target="#modal-edit" class="btn btn-primary"><span class="glyphicon glyphicon-edit"></span></a>';
+            $edit = $edit . '</div>';
+        }
+        else{
+            $edit = "";
+        }
+
+    //GET DELETE VARIABLE
+        if($adminRow['isAdmin'] == 1 || $_SESSION['username'] == $row['userID'] ){
+            $delete = '<div class="col-sm-2">';
+                $delete = $delete . '<a class="btn btn-danger" href="delAdv.php?adv=' . $_GET['adv'] . '"><span class="glyphicon glyphicon-trash"></span></a>';
+           $delete = $delete . '</div>';
+        }
+        else{
+            $delete = "";
+        }
+
+?>
+
 <div class="container-fluid">
     <div class="row content">
         <div class="col-sm-3 sidenav">
@@ -103,58 +165,19 @@ $numVotes = $row['numVotes'];
 
         <div class="col-sm-9">
             <h2 id="desc" class="anchor">
+                <?php echo $row['title']; ?>
                 <?php
-                    echo $row['title'];
-                ?>
-                <form role="form" action="addVote.php?adv=<?php echo $_GET['adv']?>" method="POST">
-                    <?php
-                    $votingQuery = "
-                    SELECT * FROM Votes
-                    WHERE advID = '" . $_GET['adv'] . "';
-                    ";
-                    $votingResults = mysqli_query($conn, $votingQuery);
-                    $votingRow = mysqli_fetch_array($votingResults);
-
-
-                    $found=false;
-
-                    while (($votingRow = mysqli_fetch_array($votingResults)) && ($found==false))
-                    {
-                        if($_SESSION['username'] == $votingRow['userID'])
-                        {
-                            $found = true;
-                            echo "<button disabled=\"disabled\" class=\"btn btn-success\">Voted</button>";
-                        }
-                    }
-
-                    if($found==false)
-                    {
-                        if($_SESSION['username'] == null || $_SESSION['username'] == $row['userID'])
-                        {
-                            echo "<button disabled=\"disabled\" class=\"btn btn-info\">Vote</button>";
-                        }
-                        else
-                        {
-                            echo "<button class=\"btn btn-info\">Vote</button>";
-                        }
-                    }
-                    ?>
-                </form>
-                <?php
-
-                if($adminRow['isAdmin'] == 1)
-                {
-                    echo "<form role='form' action='deleteVote.php?adv=" . $_GET['adv'] . "' method='POST' >";
-                    echo    "<button class='btn btn-danger'>Decrement Votes</button>";
-                    echo "</form>";
-                }
-                if($adminRow['isAdmin'] == 1 || $_SESSION['username'] == $row['userID'] ){
-                    echo "<p></p><p></p><a class='btn btn-danger' href='delAdv.php?adv=" . $_GET['adv'] . "'>Delete Adventure</a>";
-                }
+                    echo '<div class="row">';
+                        echo '<div class="col-sm-6">';
+                            echo '<div class="col-sm-6">';
+                                echo $vote . $decrement . $edit . $delete;
+                            echo '</div>';
+                        echo '</div>';
+                    echo '</div>';
                 ?>
             </h2>
-            <p>votes: <?php echo $numVotes ?> </p>
-            <span class="badge"><?php echo $row['noOfVotes'] ?></span>
+                <p>votes: <?php echo $numVotes ?> </p>
+                <span class="badge"><?php echo $row['noOfVotes'] ?></span>
             <hr>
             <h5><span class="label label-danger">TAG</span> <span class="label label-primary">TAG</span></h5><br>
             <p><?php echo $row['content'] ?></p>
@@ -214,6 +237,86 @@ $numVotes = $row['numVotes'];
         </div>
     </div>
 </div>
+
+<!-- EDITING THE ADVENTURE -->
+    <?php
+
+        //GET LOCATION OPTIONS
+            $locQuery = "
+                SELECT Cities.cityName, Locations.locationID
+                FROM Locations
+                LEFT JOIN Cities
+                ON Locations.cityID = cities.cityID;
+            ";
+            $locResults = mysqli_query($conn, $locQuery);
+            $locOutput = "";
+            while($locRow = mysqli_fetch_array($locResults)){
+                $locOutput = $locOutput . "
+                    <option id='opt-" . $locRow['cityName'] . "' value='" . $locRow['locationID'] . "'>" . $locRow['cityName'] . "</option>
+                ";
+            }
+
+        $modal = '
+            <!-- CREATE ADVENTURE -->
+	        <div class="modal fade" id="modal-edit" role="dialog" style="padding-top: 35px;">
+		        <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4><span class="glyphicon glyphicon-edit"></span> Edit Adventure </h4>
+                        </div>
+                        <form id="createAdv" action="editAdventure.php?adv=' . $_GET['adv'] . '" method="post">
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="col-sm-3"><p>Title: </p></div>
+                                    <div class="col-sm-9"><input type="text" name="title" id="title" class="form-control" value="' . $row['title'] . '"></div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-sm-3"><p>Content: </p></div>
+                                    <div class="col-sm-9">
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <input type="text" name="content" id="content" class="form-control" value="' . $row['content'] . '">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <p>Please <b><u>do not</u></b> input any of the following characters: ", \', \,;</p >
+                                            </div >
+                                        </div >
+                                    </div >
+                                </div >
+                                <br >
+                                <div class="row" >
+                                    <div class="col-sm-3" ><p > Location: </p ></div >
+                                    <div class="col-sm-9" >
+                                        <select class="form-control" name = "location" id = "location" class="form-control" >
+                                            ' . $locOutput . '
+                                        </select>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-sm-3"><p>Photo URL: </p></div>
+                                    <div class="col-sm-9"><input type="text" name="photo" id="photo" class="form-control" value="' . $row['photo'] . '"></div>
+                                </div>
+                             </div>
+                            <div class="modal-footer">
+                                <button type="submit" class="btn btn-success btn-block">
+                                    <span class="glyphicon glyphicon-ok"></span> CREATE
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+	<!-- END CREATE ADVENTURE -->
+        ';
+    echo $modal;
+    ?>
+<!-- END EDITING ADVENTURE -->
+
 
 <footer class="container-fluid">
     <p>Footer Text</p>
