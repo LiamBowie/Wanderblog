@@ -170,7 +170,7 @@ $numVotes = $row['numVotes'];
                     echo '<div class="row">';
                         echo '<div class="col-sm-6">';
                             echo '<div class="col-sm-6">';
-                                echo $vote . $dec . $edit . $delete;
+                                echo $vote . $decrement . $edit . $delete;
                             echo '</div>';
                         echo '</div>';
                     echo '</div>';
