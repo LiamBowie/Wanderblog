@@ -9,7 +9,7 @@
         $conn = mysqli_connect($servername, $username, $password, $dbname);
 
     // Display any errors
-        if(!$conn){ die("Connection failed: " . mysqli_error($conn));}
+        if(!$conn){ die("Connect.php: Connection failed: " . mysqli_error($conn));}
 
         //ini_set('display_errors', 1);
         //ini_set('display_startup_errors', 1);

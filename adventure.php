@@ -149,7 +149,7 @@ $numVotes = $row['numVotes'];
                     echo "</form>";
                 }
                 if($adminRow['isAdmin'] == 1 || $_SESSION['username'] == $row['userID'] ){
-                    echo "<p></p><p></p><a class='btn btn-danger' href='delAdve.php?adv=" . $_GET['adv'] . "'>Delete Adventure</a>";
+                    echo "<p></p><p></p><a class='btn btn-danger' href='delAdv.php?adv=" . $_GET['adv'] . "'>Delete Adventure</a>";
                 }
                 ?>
             </h2>
