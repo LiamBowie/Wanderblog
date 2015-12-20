@@ -48,7 +48,7 @@
         echo $insertQuery;
         mysqli_close($conn);
 
-//header("Location: adventure.php?adv=" . $advID);
+header("Location: adventure.php?adv=" . $advID);
 
 //need to add a query to get authorid instead of authorname, select * from author where authid = session authorname id
 
