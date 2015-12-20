@@ -221,8 +221,8 @@ else{ //if user is not loggedIn to Wanderblog
 						</a>
 						<ul class="dropdown-menu">
 							<li><a href="about.php">ABOUT</a></li>
-							<li><a href="adventuresearch.html">ADVENTURE SEARCH</a></li>
-							<li><a href="authorsearch.html">AUTHOR SEARCH</a></li>
+							<li><a href="search.php?search=adv">ADVENTURE SEARCH</a></li>
+							<li><a href="search.php?search=auth">AUTHOR SEARCH</a></li>
 						</ul>
 					</li>
 				</ul>
