@@ -16,17 +16,17 @@ include'connect.php';
     $authID = $authRow['authorID'];
     echo $authQuery;
 
-$updateQuery = "
-    UPDATE Adventure
-    SET photo = '" . $photo . "'
-    SET title = '" . $title . "'
-    SET content = '" . $content . "'
-    SET location = '" . $location . "'
-    WHERE advID = '" . $adv . "'
-";
+$updatePhoto = " UPDATE Adventure SET photo = '" . $photo . "' WHERE advID = '" . $adv . "';";
+$updateTitle = " UPDATE Adventure SET title = '" . $title . "' WHERE advID = '" . $adv . "';";
+$updateContent = " UPDATE Adventure SET content = '" . $content . "' WHERE advID = '" . $adv . "';";
+$updateLoc = " UPDATE Adventure SET location = '" . $location . "' WHERE advID = '" . $adv . "';";
 
-$results = mysqli_query($conn, $updateQuery);
-echo $updateQuery;
+$results = mysqli_query($conn, $updatePhoto);
+$results1 = mysqli_query($conn, $updateTitle);
+$results2 = mysqli_query($conn, $updateContent);
+$results3 = mysqli_query($conn, $updateLoc);
+
+echo $updatePhoto . "<br>" . $updateTitle . "<br>" . $updateContent . "<br>" . $updateLoc . "<br>";
 mysqli_close($conn);
 
 header("Location: adventure.php?adv=" . $adv);
