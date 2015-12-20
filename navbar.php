@@ -177,13 +177,26 @@ if(isset($_SESSION['loggedIn'])) {//if user is loggedIn to WanderBlog
                             <button type="button" class="close" data-dismiss="modal">&times;</button>
                             <h4><span class="glyphicon glyphicon-edit"></span> Create Adventure </h4>
                         </div>
-                        <div class="modal-body">
-                            <p> This section is not yet functional </p>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="submit" class="btn btn-success btn-block" data-dismiss="modal">
-                                <span class="glyphicon glyphicon-ok"></span> DONE
-                            </button>
+                        <form id="createAdv" action="createAdventure.php" method="post">
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="col-sm-3"><p>Title: </p></div>
+                                    <div class="col-sm-9"><input type="text" name="title" id="title"></div>
+                                 </div>
+                                 <div class="row">
+                                    <div class="col-sm-3"><p>Content: </p></div>
+                                    <div class="col-sm-9"><input type="text" name="content" id="content"></div>
+                                 </div>
+                                <div class="row">
+                                    <div class="col-sm-3"><p>Photo URL: </p></div>
+                                    <div class="col-sm-9"><input type="text" name="photo" id="photo"></div>
+                                 </div>
+                             </div>
+                            <div class="modal-footer">
+                                <button type="submit" class="btn btn-success btn-block" data-dismiss="modal">
+                                    <span class="glyphicon glyphicon-ok"></span> CREATE
+                                </button>
+                            </form>
                         </div>
                     </div>
                 </div>
