@@ -31,9 +31,10 @@
         //GET VALUES FOR INPUT
         $photo = $_POST['photo'];
         $title = $_POST['title'];
-        $location = 'LO00000';
+        //$location = 'LO00000';
         $content = $_POST['content'];
         $advID = $newID;
+        $location = $_POST['location'];
 
         //GET AUTHOR ID FROM CURRENT USER
         $authQuery = "SELECT authorID FROM Author WHERE userID = '" . $_SESSION['username'] . "';";
@@ -42,16 +43,12 @@
         $authID = $authRow['authorID'];
         echo $authQuery;
 
-        //$sql = "INSERT INTO Adventure VALUES('" . $newID . "', '" . $title . "', '" . $authID . "', '" . $location . "', '" . $content . "', '" . $photo . "')";
-        //$sql = "INSERT INTO Adventure VALUES('" . $newID . "', '" . $title . "', '" . $authID . "', '" . $location . "', '" . $content . "', '" . $photo . ", 0');";
-        //advID, title, author, location, content, photo
-//      $insertQuery = "INSERT INTO Adventure VALUES('advID', 'title', 'authID', 'location', 'content', 'photoURL', 0);";
         $insertQuery = "INSERT INTO Adventure VALUES ('" . $advID . "', '" . $title . "', '". $authID . "', '" . $location . "', '" . $content . "', '" . $photo . "', 0);";
         $results = mysqli_query($conn, $insertQuery);
         echo $insertQuery;
         mysqli_close($conn);
 
-header("Location: adventure.php?adv=" . $advID);
+//header("Location: adventure.php?adv=" . $advID);
 
 //need to add a query to get authorid instead of authorname, select * from author where authid = session authorname id
 
