@@ -183,6 +183,9 @@
 	else if(isset($_GET['error']) && $_GET['error']=='added'){
 		echo ' <script>alert("' . $_GET['user'] . ' has been added"); window.location = "index.php";</script> ';
 	}
+	else if(isset($_GET['error']) && $_GET['error']=='advdeleted'){
+		echo ' <script>alert("The adventure has been deleted"); window.location = "index.php";</script> ';
+	}
 	?>
 
 </body>
