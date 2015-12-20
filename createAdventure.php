@@ -1,7 +1,9 @@
 <?php
-//AUTO GENERATION OF NEW ID
+
         include'connect.php';
         session_start();
+
+//AUTO GENERATION OF NEW ID
         $found = false;                                                             //have not found id
         $query = 'SELECT * FROM Adventure;';                                          //get all comments
         $results = mysqli_query($conn, $query);                                     //execute query
@@ -23,20 +25,29 @@
             $newID = $newID . $lastArray[$i];                                       //add elements from last array to new ID
         }                                                                           //end loop
         $newID = $newID . $newNum;                                                  //newID = newID plus new Number
-		//END AUTOGEN
-        $photo = $_POST['photoURL'];
-        $title = $_POST['title'];
-        //$_SESSION['username'] = $authorName;
-        $location = LO00000;
-        $content = $_POST['content'];
+//END AUTOGEN
 
-        $temp = $_SESSION['username'];
-        $authID = 'SELECT authID FROM Author WHERE userID = temp';
+//JO CREATE ADV
+        //GET VALUES FOR INPUT
+        $photo = $_POST['photo'];
+        $title = $_POST['title'];
+        $location = 'LO00000';
+        $content = $_POST['content'];
+        $advID = $newID;
+
+        //GET AUTHOR ID FROM CURRENT USER
+        $authQuery = 'SELECT authID FROM Author WHERE userID = ' . $_SESSION['username'] . ';';
+        $authResults = mysqli_query($conn, $authQuery);
+        $authRow = mysqli_fetch_array($results);
+        $authID = $row['authorID'];
+
         //$sql = "INSERT INTO Adventure VALUES('" . $newID . "', '" . $title . "', '" . $authID . "', '" . $location . "', '" . $content . "', '" . $photo . "')";
-        $sql = "INSERT INTO Adventure VALUES('" . $newID . "', '" . $title . "', '" . $authID . "', '" . $location . "', '" . $content . "', '" . $photo . ", 0');";
-//advID, title, author, location, content, photo
-        $results = mysqli_query($conn, $sql);
-        sqli_close($conn);
+        //$sql = "INSERT INTO Adventure VALUES('" . $newID . "', '" . $title . "', '" . $authID . "', '" . $location . "', '" . $content . "', '" . $photo . ", 0');";
+        //advID, title, author, location, content, photo
+        $insertQuery = "INSERT INTO Adventure VALUES (" . $advID . ", " . $title . ", " . $authID . ", " . $location . ", " . $content . ", " . $photo . ", 0);";
+        $results = mysqli_query($conn, $insertQuery);
+        echo $insertQuery;
+        mysqli_close($conn);
 
 //need to add a query to get authorid instead of authorname, select * from author where authid = session authorname id
 
