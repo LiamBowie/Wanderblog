@@ -39,7 +39,7 @@
         $authQuery = "SELECT authorID FROM Author WHERE userID = '" . $_SESSION['username'] . "';";
         $authResults = mysqli_query($conn, $authQuery);
         $authRow = mysqli_fetch_array($results);
-        $authID = $row['authorID'];
+        $authID = $authRow['authorID'];
         echo $authQuery;
 
         //$sql = "INSERT INTO Adventure VALUES('" . $newID . "', '" . $title . "', '" . $authID . "', '" . $location . "', '" . $content . "', '" . $photo . "')";
