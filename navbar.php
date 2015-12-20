@@ -183,10 +183,12 @@ if(isset($_SESSION['loggedIn'])) {//if user is loggedIn to WanderBlog
                                     <div class="col-sm-3"><p>Title: </p></div>
                                     <div class="col-sm-9"><input type="text" name="title" id="title" class="form-control"></div>
                                 </div>
+                                <br>
                                 <div class="row">
                                     <div class="col-sm-3"><p>Content: </p></div>
                                     <div class="col-sm-9"><input type="text" name="content" id="content" class="form-control"></div>
                                 </div>
+                                <br>
                                 <div class="row">
                                     <div class="col-sm-3"><p>Location: </p></div>
                                     <div class="col-sm-9">
@@ -196,6 +198,7 @@ if(isset($_SESSION['loggedIn'])) {//if user is loggedIn to WanderBlog
                                         </select>
                                     </div>
                                 </div>
+                                <br>
                                 <div class="row">
                                     <div class="col-sm-3"><p>Photo URL: </p></div>
                                     <div class="col-sm-9"><input type="text" name="photo" id="photo" class="form-control"></div>
