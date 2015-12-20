@@ -103,7 +103,7 @@ $numVotes = $row['numVotes'];
         }
         if($found==false){
             if($_SESSION['username'] == null || $_SESSION['username'] == $row['userID']){ //user is not logged in or is the author
-                $vote = $vote . '<button disabled="disabled" class="btn btn-info"><span class="glyphicon glyphicon-arrow-up"></span></button>';
+                $vote = $vote . '<button disabled="disabled" class="btn btn-info"><span class="glyphicon glyphicon-thumbs-up"></span></button>';
             }
             else{
                 $vote = $vote . '<button class="btn btn-info"><span class="glyphicon glyphicon-arrow-up"></span></button>';
@@ -116,7 +116,7 @@ $numVotes = $row['numVotes'];
                 //$decrement = '';
                 $decrement = '<div class="col-sm-2">';
                     $decrement = $decrement . '<form role="form" action="deleteVote.php?adv="' . $_GET['adv'] . '" method="post" >';
-                        $decrement = $decrement . '<button class="btn btn-danger"><span class="glyphicon glyphicon-arrow-down"></span></button>';
+                        $decrement = $decrement . '<button class="btn btn-danger"><span class="glyphicon glyphicon-thumbs-down"></span></button>';
                     $decrement = $decrement . '</form>';
                 $decrement = $decrement . '</div>';
             }
