@@ -98,7 +98,7 @@
             FROM Adventure;
             ";
         }
-        else if($navLink == 'adv')
+        else if($navLink == 'auth')
         {
             $query = "Select Adventure.photo, Adventure.title, CONCAT(User.firstName, ' ', User.lastName) AS fullName, User.firstName, User.userID, Author.authorID, Adventure.advID
             FROM Adventure
