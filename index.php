@@ -175,7 +175,7 @@
 		echo ' <script>alert("Username or Password not recognised"); window.location = "index.php";</script> ';
 	}
 	else if(isset($_GET['error']) && $_GET['error']=='Registered'){
-		echo ' <script>alert("You have successfully registered. Once an admin has authorised your access, you will be able to login"); window.location = "index.php";</script> ';
+		echo ' <script>alert("Sorry, your password must contain a capital letter, two numbers, a symbol, an inspiring message, a spell, a hieroglyph and the blood of a virgin \\n\\nJust Kidding! You have successfully registered. Once an admin has authorised your access, you will be able to login"); window.location = "index.php";</script> ';
 	}
 	else if(isset($_GET['error']) && $_GET['error']=='deleted'){
 		echo ' <script>alert("' . $_GET['user'] . ' has been removed"); window.location = "index.php";</script> ';
