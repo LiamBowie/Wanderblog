@@ -5,8 +5,6 @@
 
 $operation = $_GET['operation'];
 
-if($operation == 'CREATE') {
-
         //AUTO GENERATION OF NEW ID
         $found = false;                                                             //have not found id
         $query = 'SELECT * FROM Adventure;';                                          //get all comments
@@ -59,20 +57,5 @@ if($operation == 'CREATE') {
         header("Location: adventure.php?adv=" . $advID);
 
         //need to add a query to get authorid instead of authorname, select * from author where authid = session authorname id
-}
 
-else if($operation=='DELETE'){
-        $adventure = $_GET['adv'];
-        $query = "
-                DELETE FROM Comments
-                WHERE advID = '" . $adventure . "';
-                DELETE FROM Votes
-                WHERE advID = '" . $adventure . "';
-                DELETE FROM Adventure
-                WHERE advID = '" . $adventure . "';
-        ";
-        $results = mysqli_query($conn, $query);
-        echo $query;
-        //header("Location: index.php?error=advdeleted");
-}
 
