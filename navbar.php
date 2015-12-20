@@ -186,7 +186,14 @@ if(isset($_SESSION['loggedIn'])) {//if user is loggedIn to WanderBlog
                                 <br>
                                 <div class="row">
                                     <div class="col-sm-3"><p>Content: </p></div>
-                                    <div class="col-sm-9"><input type="text" name="content" id="content" class="form-control"></div>
+                                    <div class="col-sm-9">
+                                        <div class="row">
+                                            <input type="text" name="content" id="content" class="form-control">
+                                        </div>
+                                        <div class="row">
+                                            <p>Please <b><u>do not</u></b> input any of the following characters: ", \', \, ;</p>
+                                        </div>
+                                    </div>
                                 </div>
                                 <br>
                                 <div class="row">
