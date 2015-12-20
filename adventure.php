@@ -85,6 +85,66 @@
 
 $numVotes = $row['numVotes'];
 ?>
+
+<?php
+    //GET VOTE VARIABLE
+        $votingQuery = "SELECT * FROM Votes WHERE advID='" . $_GET['adv'] . "';";
+        $votingResults = mysqli_query($conn, $votingQuery);
+        $votingRow = mysqli_fetch_array($votingResults);
+
+        $found=false;
+        $vote = '<div class="col-sm-2">';
+
+        while (($votingRow = mysqli_fetch_array($votingResults)) && ($found==false)){
+            if($_SESSION['username'] == $votingRow['userID']){ //user has voted
+                $found=true; //end loop
+                $vote = $vote .'<button disabled="disabled" class="btn btn-success">Voted</button>';
+            }
+        }
+        if($found=false){
+            if($_SESSION['username'] == null || $_SESSION['username'] == $row['userID']){ //user is not logged in or is the author
+                $vote = $vote . '<button disabled="disabled" class="btn btn-info">Vote</button>';
+            }
+            else{
+                $vote = $vote . '<button class="btn btn-info">Vote</button>';
+            }
+        }
+        $vote = $vote . '</div>';
+
+    //GET DECREMENT VARIABLES
+            if($adminRow['isAdmin'] == 1){
+                $decrement = '<div class="col-sm-2">';
+                    $decrement = $decrement . '<form role="form" action="deleteVote.php?adv="' . $_GET['adv'] . '" method="post" >';
+                        $decrement = $decrement . '<button class="btn btn-danger">Decrement Votes</button>';
+                    $decrement = $decrement . '</form>';
+                $decrement = $decrement . '</div>';
+            }
+            else{
+                $decrement = "";
+            }
+
+    //GET EDIT VARIABLES
+        if( $_SESSION['username'] == $row['userID'] ) {
+            $edit = '<div class="col-sm-2">';
+                $edit =  $edit . '<a href="#" data-toggle="modal" data-target="#modal-edit" class="btn btn-primary">Edit Adventure</a>';
+            $edit = $edit . '</div>';
+        }
+        else{
+            $edit = "";
+        }
+
+    //GET DELETE VARIABLE
+        if($adminRow['isAdmin'] == 1 || $_SESSION['username'] == $row['userID'] ){
+            $delete = '<div class="col-sm-2">';
+                $delete = $delete . '<a class="btn btn-danger" href="delAdv.php?adv=' . $_GET['adv'] . '">Delete Adventure</a>';
+            $delete = $delete . '</div>';
+        }
+        else{
+            $delete = "";
+        }
+
+?>
+
 <div class="container-fluid">
     <div class="row content">
         <div class="col-sm-3 sidenav">
@@ -103,61 +163,18 @@ $numVotes = $row['numVotes'];
 
         <div class="col-sm-9">
             <h2 id="desc" class="anchor">
+                <?php echo $row['title']; ?>
                 <?php
-                    echo $row['title'];
-                ?>
-                <form role="form" action="addVote.php?adv=<?php echo $_GET['adv']?>" method="POST">
-                    <?php
-                        $votingQuery = "
-                        SELECT * FROM Votes
-                        WHERE advID = '" . $_GET['adv'] . "';
-                        ";
-                        $votingResults = mysqli_query($conn, $votingQuery);
-                        $votingRow = mysqli_fetch_array($votingResults);
-
-
-                        $found=false;
-
-                        while (($votingRow = mysqli_fetch_array($votingResults)) && ($found==false))
-                        {
-                            if($_SESSION['username'] == $votingRow['userID'])
-                            {
-                                $found = true;
-                                echo "<button disabled=\"disabled\" class=\"btn btn-success\">Voted</button>";
-                            }
-                        }
-
-                        if($found==false)
-                        {
-                            if($_SESSION['username'] == null || $_SESSION['username'] == $row['userID'])
-                            {
-                                echo "<button disabled=\"disabled\" class=\"btn btn-info\">Vote</button>";
-                            }
-                            else
-                            {
-                                echo "<button class=\"btn btn-info\">Vote</button>";
-                            }
-                        }
-                    ?>
-                </form>
-                <?php
-
-                if($adminRow['isAdmin'] == 1)
-                {
-                    echo "<form role='form' action='deleteVote.php?adv=" . $_GET['adv'] . "' method='POST' >";
-                    echo    "<button class='btn btn-danger'>Decrement Votes</button>";
-                    echo "</form>";
-                }
-                if($adminRow['isAdmin'] == 1 || $_SESSION['username'] == $row['userID'] ){
-                    echo "<p></p><p></p><a class='btn btn-danger' href='delAdv.php?adv=" . $_GET['adv'] . "'>Delete Adventure</a>";
-                }
-                if( $_SESSION['username'] == $row['userID'] ) {
-                    echo '<p></p><p></p><a href="#" data-toggle="modal" data-target="#modal-edit" class="btn btn-primary">Edit Adventure</a>';
-                }
+                    echo '<div class="row">';
+                        echo $vote . $edit . $delete;
+                    echo '</div>';
+                    echo '<div class="row">';
+                        echo $decrement;
+                    echo '</div>';
                 ?>
             </h2>
-            <p>votes: <?php echo $numVotes ?> </p>
-            <span class="badge"><?php echo $row['noOfVotes'] ?></span>
+                <p>votes: <?php echo $numVotes ?> </p>
+                <span class="badge"><?php echo $row['noOfVotes'] ?></span>
             <hr>
             <h5><span class="label label-danger">TAG</span> <span class="label label-primary">TAG</span></h5><br>
             <p><?php echo $row['content'] ?></p>
