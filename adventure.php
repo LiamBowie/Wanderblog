@@ -93,7 +93,7 @@ $numVotes = $row['numVotes'];
         $votingRow = mysqli_fetch_array($votingResults);
 
         $found=false;
-        $vote = '<div class="col-sm-2">';
+        $vote = '';
 
         while (($votingRow = mysqli_fetch_array($votingResults)) && ($found==false)){
             if($_SESSION['username'] == $votingRow['userID']){ //user has voted
@@ -109,7 +109,7 @@ $numVotes = $row['numVotes'];
                 $vote = $vote . '<button class="btn btn-info"><span class="glyphicon glyphicon-arrow-up"></span></button>';
             }
         }
-        $vote = $vote . '</div>';
+        //$vote = $vote . '</div>';
 
     //GET DECREMENT VARIABLES
             if($adminRow['isAdmin'] == 1){
@@ -137,9 +137,9 @@ $numVotes = $row['numVotes'];
 
     //GET DELETE VARIABLE
         if($adminRow['isAdmin'] == 1 || $_SESSION['username'] == $row['userID'] ){
-            $delete = '<div class="col-sm-2">';
+            $delete = '';
                 $delete = $delete . '<a class="btn btn-danger" href="delAdv.php?adv=' . $_GET['adv'] . '"><span class="glyphicon glyphicon-trash"></span></a>';
-            $delete = $delete . '</div>';
+           //$delete = $delete . '</div>';
         }
         else{
             $delete = "";
