@@ -193,7 +193,7 @@ if(isset($_SESSION['loggedIn'])) {//if user is loggedIn to WanderBlog
                                  </div>
                              </div>
                             <div class="modal-footer">
-                                <button type="submit" class="btn btn-success btn-block" data-dismiss="modal">
+                                <button type="submit" class="btn btn-success btn-block" >
                                     <span class="glyphicon glyphicon-ok"></span> CREATE
                                 </button>
                             </form>
