@@ -16,9 +16,9 @@
         $lastNum = (int)$lastArray[7];                                              //last number = last entry in array
         $newNum = $lastNum + 1;                                                     //add 1 to last number
 
-        if($newNum>9){ $length = 7; }
-        else if($newNum>99){ $length = 6;}
-        else{$length=8;}
+        if($newNum>9){ $length = 6; }
+        else if($newNum>99){ $length = 5;}
+        else{$length=7;}
 
         $newID = "";                                                                //create blank newID
         for ($i = 0; $i < $length; $i++) {                                                //loop to 8
