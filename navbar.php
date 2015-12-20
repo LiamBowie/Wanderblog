@@ -2,6 +2,9 @@
 session_start(); // include all session data
 if(isset($_SESSION['loggedIn'])) {//if user is loggedIn to WanderBlog
     include 'connect.php';
+
+//CREATE AUTHOR VARIABLES
+//SHOW CERTAIN PARTS IF USER IS AN AUTHOR
     $query = "SELECT * FROM User WHERE userID = '" . $_SESSION['username'] . "';";
     $results = mysqli_query($conn, $query);
     $row = mysqli_fetch_array($results);
@@ -21,6 +24,24 @@ if(isset($_SESSION['loggedIn'])) {//if user is loggedIn to WanderBlog
         ';
     }
     else{ $myProfile =''; }
+
+    //GET LOCATION OPTIONS
+    $locQuery = "
+        SELECT Cities.cityName, Locations.locationID
+        FROM Locations
+        LEFT JOIN Cities
+        ON Locations.cityID = cities.cityID;
+    ";
+    $locResults = mysqli_query($conn, $locQuery);
+    $locOutput = "";
+    while($locRow = mysqli_fetch_array($locResults)){
+        $locOutput = $locOutput . "
+            <option id='opt-" . $locRow['cityName'] . "' value='" . $locRow['locationID'] . "'>" . $locRow['cityName'] . "</option>
+        ";
+    }
+
+//CREATE ADMIN VARIABLES
+//SHOW CERTAIN PARTS IF USER IS AN ADMIN
     $authorise = '';
     if($row['isAdmin'] == true){
         $authorise = '
@@ -62,6 +83,7 @@ if(isset($_SESSION['loggedIn'])) {//if user is loggedIn to WanderBlog
     else{ $users = "No users are awaiting authorisation"; }
 
 
+//OUTPUT
     echo '
     <nav class="navbar navbar-default navbar-fixed-top">
 		<div class="container-fluid">
@@ -204,8 +226,7 @@ if(isset($_SESSION['loggedIn'])) {//if user is loggedIn to WanderBlog
                                     <div class="col-sm-3"><p>Location: </p></div>
                                     <div class="col-sm-9">
                                         <select class="form-control" name="location" id="location" class="form-control">
-                                            <option id="opt-location" value="1">One</option>
-                                            <option id="opt-location" value="1">Two</option>
+                                            ' . $locOutput . '
                                         </select>
                                     </div>
                                 </div>
