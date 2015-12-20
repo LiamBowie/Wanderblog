@@ -170,17 +170,17 @@ $numVotes = $row['numVotes'];
                     echo '<div class="row">';
                         echo '<div class="col-sm-6">';
                             echo '<div class="col-sm-6">';
-                                echo $vote . $edit . $delete;
+                                echo $vote . $dec . $edit . $delete;
                             echo '</div>';
                         echo '</div>';
                     echo '</div>';
-                    echo '<div class="row">';
+                    /* echo '<div class="row">';
+                    echo '<div class="col-sm-6">';
                         echo '<div class="col-sm-6">';
-                            echo '<div class="col-sm-6">';
-                                echo $decrement;
-                            echo '</div>';
+                            echo $decrement;
                         echo '</div>';
                     echo '</div>';
+                    echo '</div>'; */
                 ?>
             </h2>
                 <p>votes: <?php echo $numVotes ?> </p>
