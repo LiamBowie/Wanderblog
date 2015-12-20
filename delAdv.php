@@ -7,12 +7,16 @@ error_reporting(E_ALL);
 
 $adventure = $_GET['adv'];
 
-$queryDel = "DELETE FROM Comments WHERE advID = '" . $adventure . "'; DELETE FROM Votes WHERE advID = '" . $adventure . "'; DELETE FROM Adventure WHERE advID = '" . $adventure . "'; ";
-$resultsDel = mysqli_query($conn, $queryDel);
-//mysqli_query($conn, $queryDel);
+$delComments = "DELETE FROM Comments WHERE advID = '" . $adventure . "';";
+$delVotes = "DELETE FROM Votes WHERE advID = '" . $adventure . "'; ";
+$delAdv = "DELETE FROM Adventure WHERE advID = '" . $adventure . "'; ";
+//$resultsDel = mysqli_query($conn, $queryDel);
+mysqli_query($conn, $delComments);
+mysqli_query($conn, $delVotes);
+mysqli_query($conn, $delAdv);
 mysqli_close($conn);
 
-echo $queryDel;
+//echo $queryDel;
 
 if(!$conn){ die("Connection failed: " . mysqli_error($conn));}
 ini_set('display_errors', 1);
