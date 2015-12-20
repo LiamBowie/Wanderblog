@@ -140,7 +140,7 @@ $numVotes = $row['numVotes'];
                     }
 
                     if($adminRow['isAdmin'] == 1 || $_SESSION['username'] == $row['userID'] ){
-                        echo "<button class='btn btn-danger'><span class=\"glyphicon glyphicon-trash\">Remove Adventure</span></button>";
+                        echo "<button class='btn btn-danger'>Delete Adventure</button>";
                     }
                     ?>
                 </form>
