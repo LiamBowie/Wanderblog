@@ -65,6 +65,7 @@
     $row = mysqli_fetch_array($results);
     $authorPath= "'author.php?auth=" . $row['author'] . "'";
 
+
     $adminQuery = "SELECT * FROM User WHERE userID='" .$_SESSION['username']  . "';";
     $adminResults = mysqli_query($conn, $adminQuery);
     $adminRow = mysqli_fetch_array($adminResults);
@@ -102,7 +103,12 @@ $numVotes = $row['numVotes'];
 
         <div class="col-sm-9">
             <h2 id="desc" class="anchor">
-                <?php echo $row['title']; ?>
+                <?php
+                    echo $row['title'];
+                    if($adminRow['isAdmin'] == 1 || $_SESSION['username'] == $row['userID'] ){
+                        echo "<button class='btn btn-danger'><span class=\"glyphicon glyphicon-trash\">Remove Adventure</span></button>";
+                    }
+                ?>
                 <form role="form" action="addVote.php?adv=<?php echo $_GET['adv']?>" method="POST">
                     <?php
                     $votingQuery = "
