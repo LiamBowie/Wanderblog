@@ -38,7 +38,7 @@
         //GET AUTHOR ID FROM CURRENT USER
         $authQuery = "SELECT authorID FROM Author WHERE userID = '" . $_SESSION['username'] . "';";
         $authResults = mysqli_query($conn, $authQuery);
-        $authRow = mysqli_fetch_array($results);
+        $authRow = mysqli_fetch_array($authResults);
         $authID = $authRow['authorID'];
         echo $authQuery;
 
