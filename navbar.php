@@ -187,13 +187,22 @@ if(isset($_SESSION['loggedIn'])) {//if user is loggedIn to WanderBlog
                                     <div class="col-sm-3"><p>Content: </p></div>
                                     <div class="col-sm-9"><input type="text" name="content" id="content"></div>
                                  </div>
+                                 <div class="row">
+                                    <div class="col-sm-3"><p>Location: </p></div>
+                                    <div class="col-sm-9">
+                                        <select class="form-control" name="location" id="location">
+                                            <option id="opt-location" value="1">One</option>
+                                            <option id="opt-location" value="1">Two</option>
+                                        </select>
+                                    </div>
+                                 </div>
                                 <div class="row">
                                     <div class="col-sm-3"><p>Photo URL: </p></div>
                                     <div class="col-sm-9"><input type="text" name="photo" id="photo"></div>
                                  </div>
                              </div>
                             <div class="modal-footer">
-                                <button type="submit" class="btn btn-success btn-block" >
+                                <button type="submit" class="btn btn-success btn-block">
                                     <span class="glyphicon glyphicon-ok"></span> CREATE
                                 </button>
                             </form>
