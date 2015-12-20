@@ -29,7 +29,5 @@ $results = mysqli_query($conn, $updateQuery);
 echo $updateQuery;
 mysqli_close($conn);
 
-header("Location: adventure.php?adv=" . $advID);
+//header("Location: adventure.php?adv=" . $advID);
 
-
-header("Location: author.php?auth=" . $_GET['auth'] . "");
