@@ -36,7 +36,7 @@
         $advID = $newID;
 
         //GET AUTHOR ID FROM CURRENT USER
-        $authQuery = 'SELECT authID FROM Author WHERE userID = ' . $_SESSION['username'] . ';';
+        $authQuery = 'SELECT authorID FROM Author WHERE userID = ' . $_SESSION['username'] . ';';
         $authResults = mysqli_query($conn, $authQuery);
         $authRow = mysqli_fetch_array($results);
         $authID = $row['authorID'];
@@ -45,7 +45,7 @@
         //$sql = "INSERT INTO Adventure VALUES('" . $newID . "', '" . $title . "', '" . $authID . "', '" . $location . "', '" . $content . "', '" . $photo . ", 0');";
         //advID, title, author, location, content, photo
 //      $insertQuery = "INSERT INTO Adventure VALUES('advID', 'title', 'authID', 'location', 'content', 'photoURL', 0);";
-        $insertQuery = "INSERT INTO Adventure VALUES ('" . $advID . "', 'title', '". $authID . "', '" . $location . "', '" . $content . "', '" . $photo . "', 0);";
+        $insertQuery = "INSERT INTO Adventure VALUES ('" . $advID . "', '" . $title . "', '". $authID . "', '" . $location . "', '" . $content . "', '" . $photo . "', 0);";
         $results = mysqli_query($conn, $insertQuery);
         echo $insertQuery;
         mysqli_close($conn);
