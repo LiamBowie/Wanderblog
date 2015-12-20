@@ -101,7 +101,7 @@ $numVotes = $row['numVotes'];
                 $vote = $vote .'<button disabled="disabled" class="btn btn-success">Voted</button>';
             }
         }
-        if($found=false){
+        if($found==false){
             if($_SESSION['username'] == null || $_SESSION['username'] == $row['userID']){ //user is not logged in or is the author
                 $vote = $vote . '<button disabled="disabled" class="btn btn-info">Vote</button>';
             }
