@@ -72,6 +72,7 @@ else if($operation=='DELETE'){
                 WHERE advID = '" . $adventure . "';
         ";
         $results = mysqli_query($conn, $query);
-        header("Location: index.php?error=advdeleted");
+        echo $query;
+        //header("Location: index.php?error=advdeleted");
 }
 
