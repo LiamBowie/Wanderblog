@@ -100,12 +100,10 @@
         }
         else if($navLink == 'auth')
         {
-            $query = "Select Adventure.photo, Adventure.title, CONCAT(User.firstName, ' ', User.lastName) AS fullName, User.firstName, User.userID, Author.authorID, Adventure.advID
-            FROM Adventure
-            LEFT JOIN Author
-            ON Adventure.author = Author.authorID
-            LEFT JOIN User
-            ON Author.userID = User.userID;
+            $query = "  SELECT CONCAT(User.firstName, ' ', User.lastName) AS fullName, User.firstName, Author.photo, User.userID, Author.authorID
+                    FROM Author
+                    LEFT JOIN User
+                    ON  Author.userID=User.userID
             ";
         }
     $results=mysqli_query($conn, $query);
