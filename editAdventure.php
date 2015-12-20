@@ -18,16 +18,16 @@ include'connect.php';
 
 $updateQuery = "
     UPDATE Adventure
-    SET photo = " . $photo . "
-    SET title = " . $title . "
-    SET content = " . $content . "
-    SET location = " . $location . "
-    WHERE advID = " . $adv . "
+    SET photo = '" . $photo . "'
+    SET title = '" . $title . "'
+    SET content = '" . $content . "'
+    SET location = '" . $location . "'
+    WHERE advID = '" . $adv . "'
 ";
 
 $results = mysqli_query($conn, $updateQuery);
 echo $updateQuery;
 mysqli_close($conn);
 
-//header("Location: adventure.php?adv=" . $advID);
+header("Location: adventure.php?adv=" . $advID);
 
