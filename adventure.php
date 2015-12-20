@@ -152,7 +152,7 @@ $numVotes = $row['numVotes'];
                     echo "<p></p><p></p><a class='btn btn-danger' href='delAdv.php?adv=" . $_GET['adv'] . "'>Delete Adventure</a>";
                 }
                 if( $_SESSION['username'] == $row['userID'] ) {
-                    echo '<p></p><p></p><a href="#" data-toggle="modal" data-target="#modal-edit">Edit Adventure</a>';
+                    echo '<p></p><p></p><a href="#" data-toggle="modal" data-target="#modal-edit" class="btn btn-primary">Edit Adventure</a>';
                 }
                 ?>
             </h2>
