@@ -58,6 +58,9 @@
     include 'connect.php';
     $criteria = $_POST['crit'];
     $colmSearch = $_POST['select'];
+    $navLink = $_GET['search'];
+
+
         if($colmSearch == 'firstName'){
             $query = "  SELECT CONCAT(User.firstName, ' ', User.lastName) AS fullName, User.firstName, Author.photo, User.userID, Author.authorID
                     FROM Author
@@ -88,7 +91,21 @@
             WHERE title LIKE '%" . $criteria . "%'
                     ;";
         }
-
+        else if($navLink == 'adv')
+        {
+            $query = "
+            Select Adventure.photo, Adventure.title, Adventure.advID
+            FROM Adventure;
+            ";
+        }
+        else if($navLink == 'auth')
+        {
+            $query = "  SELECT CONCAT(User.firstName, ' ', User.lastName) AS fullName, User.firstName, Author.photo, User.userID, Author.authorID
+                    FROM Author
+                    LEFT JOIN User
+                    ON  Author.userID=User.userID
+            ";
+        }
     $results=mysqli_query($conn, $query);
     $found = false;
 ?>
@@ -105,7 +122,7 @@
                 <div class="row">
                     <!-- LOOP THROUGH AND OUTPUT FOLLOWING PER EACH -->
                         <?php
-                            if($colmSearch == 'firstName') {
+                            if($colmSearch == 'firstName' || $navLink == 'auth') {
                                 if (mysqli_num_rows($results) > 0) {
                                     while (($row = mysqli_fetch_array($results)) && ($found == false)) {
                                         $path = "author.php?auth=" . $row['authorID'];
