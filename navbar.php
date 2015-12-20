@@ -191,7 +191,7 @@ if(isset($_SESSION['loggedIn'])) {//if user is loggedIn to WanderBlog
                                             <input type="text" name="content" id="content" class="form-control">
                                         </div>
                                         <div class="row">
-                                            <p>Please <b><u>do not</u></b> input any of the following characters: ", \', \, ;</p>
+                                            <p class="form-control">Please <b><u>do not</u></b> input any of the following characters: ", \', \, ;</p>
                                         </div>
                                     </div>
                                 </div>
