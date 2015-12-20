@@ -105,9 +105,6 @@ $numVotes = $row['numVotes'];
             <h2 id="desc" class="anchor">
                 <?php
                     echo $row['title'];
-                    if($adminRow['isAdmin'] == 1 || $_SESSION['username'] == $row['userID'] ){
-                        echo "<button class='btn btn-danger'><span class=\"glyphicon glyphicon-trash\">Remove Adventure</span></button>";
-                    }
                 ?>
                 <form role="form" action="addVote.php?adv=<?php echo $_GET['adv']?>" method="POST">
                     <?php
@@ -140,6 +137,10 @@ $numVotes = $row['numVotes'];
                         {
                             echo "<button class=\"btn btn-info\">Vote</button>";
                         }
+                    }
+
+                    if($adminRow['isAdmin'] == 1 || $_SESSION['username'] == $row['userID'] ){
+                        echo "<button class='btn btn-danger'><span class=\"glyphicon glyphicon-trash\">Remove Adventure</span></button>";
                     }
                     ?>
                 </form>
