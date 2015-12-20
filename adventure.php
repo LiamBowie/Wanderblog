@@ -174,13 +174,6 @@ $numVotes = $row['numVotes'];
                             echo '</div>';
                         echo '</div>';
                     echo '</div>';
-                    /* echo '<div class="row">';
-                    echo '<div class="col-sm-6">';
-                        echo '<div class="col-sm-6">';
-                            echo $decrement;
-                        echo '</div>';
-                    echo '</div>';
-                    echo '</div>'; */
                 ?>
             </h2>
                 <p>votes: <?php echo $numVotes ?> </p>
@@ -270,13 +263,13 @@ $numVotes = $row['numVotes'];
                     <div class="modal-content">
                         <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            <h4><span class="glyphicon glyphicon-edit"></span> Create Adventure </h4>
+                            <h4><span class="glyphicon glyphicon-edit"></span> Edit Adventure </h4>
                         </div>
-                        <form id="createAdv" action="createAdventure.php" method="post">
+                        <form id="createAdv" action="editAdventure.php?adv=' . $_GET['adv'] . '" method="post">
                             <div class="modal-body">
                                 <div class="row">
                                     <div class="col-sm-3"><p>Title: </p></div>
-                                    <div class="col-sm-9"><input type="text" name="title" id="title" class="form-control"></div>
+                                    <div class="col-sm-9"><input type="text" name="title" id="title" class="form-control" value="' . $row['title'] . '"></div>
                                 </div>
                                 <br>
                                 <div class="row">
@@ -284,7 +277,7 @@ $numVotes = $row['numVotes'];
                                     <div class="col-sm-9">
                                         <div class="row">
                                             <div class="col-sm-12">
-                                                <input type="text" name="content" id="content" class="form-control">
+                                                <input type="text" name="content" id="content" class="form-control" value="' . $row['content'] . '">
                                             </div>
                                         </div>
                                         <div class="row">
@@ -306,7 +299,7 @@ $numVotes = $row['numVotes'];
                                 <br>
                                 <div class="row">
                                     <div class="col-sm-3"><p>Photo URL: </p></div>
-                                    <div class="col-sm-9"><input type="text" name="photo" id="photo" class="form-control"></div>
+                                    <div class="col-sm-9"><input type="text" name="photo" id="photo" class="form-control" value="' . $row['photo'] . '"></div>
                                 </div>
                              </div>
                             <div class="modal-footer">
