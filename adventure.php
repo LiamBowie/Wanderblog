@@ -98,26 +98,27 @@ $numVotes = $row['numVotes'];
         while (($votingRow = mysqli_fetch_array($votingResults)) && ($found==false)){
             if($_SESSION['username'] == $votingRow['userID']){ //user has voted
                 $found=true; //end loop
-                $vote = $vote .'<button disabled="disabled" class="btn btn-success">Voted</button>';
+                $vote = $vote .'<button disabled="disabled" class="btn btn-success"><span class="glyphicon glyphicon-arrow-up"></span></button>';
             }
         }
         if($found==false){
             if($_SESSION['username'] == null || $_SESSION['username'] == $row['userID']){ //user is not logged in or is the author
-                $vote = $vote . '<button disabled="disabled" class="btn btn-info">Vote</button>';
+                $vote = $vote . '<button disabled="disabled" class="btn btn-info"><span class="glyphicon glyphicon-arrow-up"></span></button>';
             }
             else{
-                $vote = $vote . '<button class="btn btn-info">Vote</button>';
+                $vote = $vote . '<button class="btn btn-info"><span class="glyphicon glyphicon-arrow-up"></span></button>';
             }
         }
         $vote = $vote . '</div>';
 
     //GET DECREMENT VARIABLES
             if($adminRow['isAdmin'] == 1){
-                $decrement = '<div class="col-sm-2">';
+                $decrement = '';
+                //$decrement = '<div class="col-sm-2">';
                     $decrement = $decrement . '<form role="form" action="deleteVote.php?adv="' . $_GET['adv'] . '" method="post" >';
-                        $decrement = $decrement . '<button class="btn btn-danger">Decrement Votes</button>';
+                        $decrement = $decrement . '<button class="btn btn-danger"><span class="glyphicon glyphicon-arrow-down"></span></button>';
                     $decrement = $decrement . '</form>';
-                $decrement = $decrement . '</div>';
+                //$decrement = $decrement . '</div>';
             }
             else{
                 $decrement = "";
@@ -125,9 +126,10 @@ $numVotes = $row['numVotes'];
 
     //GET EDIT VARIABLES
         if( $_SESSION['username'] == $row['userID'] ) {
-            $edit = '<div class="col-sm-2">';
-                $edit =  $edit . '<a href="#" data-toggle="modal" data-target="#modal-edit" class="btn btn-primary">Edit Adventure</a>';
-            $edit = $edit . '</div>';
+            $edit = '';
+            //$edit = '<div class="col-sm-2">';
+                $edit =  $edit . '<a href="#" data-toggle="modal" data-target="#modal-edit" class="btn btn-primary"><span class="glyphicon glyphicon-edit"></span></a>';
+            //$edit = $edit . '</div>';
         }
         else{
             $edit = "";
@@ -136,7 +138,7 @@ $numVotes = $row['numVotes'];
     //GET DELETE VARIABLE
         if($adminRow['isAdmin'] == 1 || $_SESSION['username'] == $row['userID'] ){
             $delete = '<div class="col-sm-2">';
-                $delete = $delete . '<a class="btn btn-danger" href="delAdv.php?adv=' . $_GET['adv'] . '">Delete Adventure</a>';
+                $delete = $delete . '<a class="btn btn-danger" href="delAdv.php?adv=' . $_GET['adv'] . '"><span class="glyphicon glyphicon-trash"></span></a>';
             $delete = $delete . '</div>';
         }
         else{
